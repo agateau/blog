@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+
+{% block htmlhead -%}
+    <title>{% block title %}Home{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css" type="text/css">
+    <link rel="stylesheet" href="/static/wp-support.css" type="text/css">
+    <link rel="alternate" href="/feed.atom" title="Recent Blog Posts" type="application/atom+xml">
+    {%- for link in links %}
+    <link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.media %} media="{{ link.media }}"{% endif %} type="{{ link.type }}">
+    {%- endfor -%}
+{%- endblock %}
+
+<link rel="stylesheet" href="/static/colorbox.css" />
+<script src="/static/jquery.js"></script>
+<script src="/static/jquery.colorbox-min.js"></script>
+<script>
+function onReady() {
+    $('a.image-reference').colorbox({rel:'gal'});
+}
+$(document).ready(onReady);
+</script>
+</head>
+<body>
+<div class="container">
+    <div class="header">
+        <div class="navigation">
+            <ul>
+                <li><a href="/">blog</a>
+                <li><a href="/archive/">archive</a>
+                <li><a href="/projects/">projects</a>
+                <li><a href="/article-series/">article series</a>
+                <li><a href="/about-me/">about</a>
+                <li><a href="/tags/">tags</a>
+                <li><a href="/feed.atom">syndication</a>
+            </ul>
+        </div>
+    </div>
+    <div class="body">
+        {% block body %}{% endblock %}
+    </div>
+    <div class="footer">
+        <p>&copy; Aurélien Gâteau</p>
+    </div>
+</div>
+
+<!-- Start of StatCounter Code for Default Guide -->
+<script type="text/javascript">
+var sc_project=7728056;
+var sc_invisible=1;
+var sc_security="2ef4a631";
+</script>
+<script type="text/javascript" src="http://www.statcounter.com/counter/counter_xhtml.js"></script>
+
+</body>
+</html>

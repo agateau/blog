@@ -1,0 +1,6 @@
+active_modules: [pygments, blog, tags, thumbimg]
+author: Aurélien Gâteau
+canonical_url: http://agateau.com/
+modules:
+  pygments:
+      style: tango
