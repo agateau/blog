@@ -1,6 +1,9 @@
-active_modules: [pygments, blog, tags, thumbimg]
+active_modules: [pygments, blog, tags, thumbimg, disqus]
 author: Aurélien Gâteau
 canonical_url: http://agateau.com/
 modules:
-  pygments:
-      style: tango
+    pygments:
+        style: tango
+    disqus:
+        shortname: agateau
+        developer: 1
