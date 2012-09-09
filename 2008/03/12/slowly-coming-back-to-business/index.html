@@ -1,0 +1,10 @@
+public: yes
+tags: ["Gwenview","KDE","job"]
+title: "Slowly coming back to business"
+
+<p>As you <a href="http://agateau.wordpress.com/2008/01/04/available-for-hire/">may remember</a>, I have been trying to find a Qt/KDE-related, free-software-friendly job for a while. Unfortunately it didn't work out, so I had to resign myself to look for a more ordinary position.</p>
+<p>After publishing my resume on a popular <a href="http://monster.fr">french job website</a>, I got literally overflowed by consulting companies willing to hire me. I had to take my resume down after three days in order to shut off the fire hose and prevent my answering machine from segfaulting.</p>
+<p>Of course, it's great to feel like everyone "wants me", but it makes for exhausting weeks made of three or four interviews a day. And I am not talking about half-hour interviews: the average interview is two hours long, and requires you to meet two or three different people.</p>
+<p>Now I am facing an interesting problem: which employer should I choose? This is a "good problem to have", but it's still a problem. Most of my potential employers are consulting companies, I am having a hard time trying to find out which one would be better than the others. Any hint on that?</p>
+<p>On Gwenview side, I am slowly getting more active now that looking for a job is becoming less time-hungry. Today I improved zooming and scrolling by throwing away most of my previous code: it seems Qt image scaling has become fast enough that it's no longer necessary to worry about threading it. It's not finished yet, more on that later.</p>
+<p>I also improved the way the thumbnail view reacts with regard to thumbnail generation and scrolling. From now on thumbnail generation stops when you start scrolling the view and resumes when you are done, generating thumbnails for the newly visible images. Hopefully I didn't introduce any regression, feedback is welcomed!</p>

@@ -1,0 +1,37 @@
+public: yes
+tags: ["KDE","Tips"]
+title: "Introducing KDualAction: It all started because of a sunken Pause button"
+
+<p>I have a few pet peeves in KDE. One of them was the Play/Pause button in Dragon Player. It looked really weird to me that the Pause button would stay sunken will playing:</p>
+<a href="dragon-pause-before.png" class=" image-reference"><img src="thumb_dragon-pause-before.png" title="Dragon Player before KDualAction" height="39" width="300" alt="" class="aligncenter size-medium wp-image-532"/></a>
+<p>I could have gone the easy way and fixed this in Dragon Player code, but I went the longer way instead because I thought there was something to do to make the life of KDE developers easier.</p>
+<p>When there is a need for an action which change from one set of icons and texts to another when triggered, developers often end up using <a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKToggleAction.html">KToggleAction</a> to implement it, because the <a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKToggleAction.html#a22ba13df6bebeacf041574639161aaaf">setCheckedState()</a> method looks just like what is needed (despite the warning in its doc saying "Note that this does not replace the check box in front of the menu.")</p>
+<p>The first step was to write a page on toggle buttons for KDE HIG, getting it reviewed and accepted on kde-usability mailing list. You can <a href="http://techbase.kde.org/Projects/Usability/HIG/Toggle_Buttons">find it here</a>. This page documents when toggle buttons should be used and when they should not (and one of the examples is a Play/Pause button, how surprising!).</p>
+<p>The second step was to write an action class to make it easier for developers to create actions which changes their icons and texts without being toggle actions. I first thought I could modify KToggleAction, but it turned out not to be possible, so I wrote a new class instead: <a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKDualAction.html">KDualAction</a>.</p>
+<p>KDualAction features two states: active and inactive. Each state has setters and getters for icon, text and tooltip. Defining a KDualAction looks like this:</p>
+<div class="highlight"><pre><span class="n">KDualAction</span><span class="o">*</span> <span class="n">action</span> <span class="o">=</span> <span class="k">new</span> <span class="n">KDualAction</span><span class="p">(</span><span class="n">parent</span><span class="p">);</span>
+<span class="c1">// Define inactive state</span>
+<span class="n">action</span><span class="o">-&gt;</span><span class="n">setInactiveIcon</span><span class="p">(</span><span class="n">KIcon</span><span class="p">(</span><span class="s">"media-play"</span><span class="p">));</span>
+<span class="n">action</span><span class="o">-&gt;</span><span class="n">setInactiveText</span><span class="p">(</span><span class="n">i18n</span><span class="p">(</span><span class="s">"Play"</span><span class="p">));</span>
+<span class="c1">// Define active state</span>
+<span class="n">action</span><span class="o">-&gt;</span><span class="n">setActiveIcon</span><span class="p">(</span><span class="n">KIcon</span><span class="p">(</span><span class="s">"media-pause"</span><span class="p">));</span>
+<span class="n">action</span><span class="o">-&gt;</span><span class="n">setActiveText</span><span class="p">(</span><span class="n">i18n</span><span class="p">(</span><span class="s">"Pause"</span><span class="p">));</span>
+<span class="c1">// Connect our action</span>
+<span class="n">connect</span><span class="p">(</span><span class="n">action</span><span class="p">,</span> <span class="n">SIGNAL</span><span class="p">(</span><span class="n">activeChanged</span><span class="p">(</span><span class="kt">bool</span><span class="p">)),</span> <span class="n">SLOT</span><span class="p">(</span><span class="n">doSomething</span><span class="p">(</span><span class="kt">bool</span><span class="p">)));</span>
+</pre></div>
+<p>
+Note that the icon and text must describe which state the application will be in <em>after</em> the action is triggered. That's why in this example the text is "Play" when the action state is inactive (aka paused).</p>
+<p>The class is designed so that it is easy to replace a KToggleAction. The documentation describes the necessary steps to replace a KToggleAction with a KDualAction.</p>
+<p>It has a few extra features:
+<ul>
+<li>An option to disable "auto toggle". This means the action won't automatically change from active to inactive and back when clicked. This is useful if there may be some case where clicking the action can fail, for example if Dragon Player is asked to play a non-existing file...
+</li>
+<li>A signal named "activeChangedByUser(bool)", which is similar to "activeChanged(bool)" except it is triggered when the user triggers the action but not when you call "setActive(bool)". This avoids the need to use "QObject::blockSignals()" when you want to adjust the action to reflect the current state of the system.
+</li>
+</ul></p>
+<p>Dragon Player has now been patched to use KDualAction, its toolbar looks better now (at least according to me):
+<a href="dragon-pause-after.png" class=" image-reference"><img src="thumb_dragon-pause-after.png" title="Dragon Player with KDualAction" height="36" width="300" alt="" class="aligncenter size-medium wp-image-531"/></a></p>
+<p>KDualAction is part of kdelibs 4.6, so any KDE trunk application can use it now.</p>
+<p>Note: I initially thought about porting all the "Show/hide 'ui element'" actions in KDE to use KDualAction, but it proved to be a bad idea: the Settings menus were more difficult to read after the change. If your application uses KToggleAction to toggle a user interface element with "Show Element" as unchecked state and "Hide Element" as checked state, you should not port your action to KDualAction, instead you should just remove the call to "setCheckedState("Hide Element")".</p>
+<a href="http://flattr.com/thing/83567/Introducing-KDualAction" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

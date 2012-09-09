@@ -1,0 +1,42 @@
+public: yes
+tags: ["KDE","ui"]
+title: "Common user interface mistakes in KDE applications, part 2: Dialog layouts"
+
+<h2>Too much borders</h2>
+<p>It is not uncommon to find dialogs which contains tabs, which themselves contain groups, which contain other groups. That's quite a lot of borders... Not only does it look crowded, it also eats valuable content space. There are a few easy tricks you can use to avoid this issue.</p>
+<ul>
+<li>Maybe you can use fixed-height spacers and labels to replace some of your group boxes, especially if your group box is the only element in the dialog.
+</li>
+<li>If you use a QTabWidget (or its KDE descendant, KTabWidget), try setting the "documentMode" property to true. When this property is set, the tab widget does not draw a border around its content, it only draws the top bar. Here is a before/after screenshot of KMix to illustrate:
+<a href="kmix-tabs.png" class=" image-reference"><img src="thumb_kmix-tabs.png" title="KMix tabs before/after" height="131" width="300" alt="" class="aligncenter size-medium wp-image-660"/></a>
+</li>
+</ul>
+<h2>Double margins</h2>
+<p>This problem seems to be less common lately, but I still encounter it regularly, especially in configuration dialogs. The bookmark editor demonstrates this problem quite well:</p>
+<a href="kedit-bookmarks-before-oxygen.png" class=" image-reference"><img src="thumb_kedit-bookmarks-before-oxygen.png" title="Bookmark Editor with Oxygen, before" height="170" width="300" alt="" class="aligncenter size-medium wp-image-672"/></a>
+<p>Oxygen tends to hide the problem a bit, it is much more visible with the the Plastique style, as you can see on this annotated screenshot:</p>
+<a href="kedit-bookmarks-before-plastique-annotated.png" class=" image-reference"><img src="thumb_kedit-bookmarks-before-plastique-annotated.png" title="Bookmark Editor with Plastique, before" height="170" width="300" alt="" class="aligncenter size-medium wp-image-673"/></a>
+<p>The change is very simple to do. Here is what it looks like now:</p>
+<a href="kedit-bookmarks-after-oxygen.png" class=" image-reference"><img src="thumb_kedit-bookmarks-after-oxygen.png" title="Bookmark Editor with Oxygen, after" height="170" width="300" alt="" class="aligncenter size-medium wp-image-670"/></a>
+<a href="kedit-bookmarks-after-plastique.png" class=" image-reference"><img src="thumb_kedit-bookmarks-after-plastique.png" title="Bookmark Editor with Plastique, after" height="170" width="300" alt="" class="aligncenter size-medium wp-image-671"/></a>
+<p>Note that I only removed the top and left part of the inner double margin: I first tried removing margins from all sides, but the line edits looked cramped when squashed against the window borders. </p>
+<p/>
+<h2>Widgets aligned on borders</h2>
+<p>Sometimes widgets are aligned to the right border of their container, and their labels are aligned to the left border. It looks like this:</p>
+<a href="spread-widgets.png" class=" image-reference"><img src="thumb_spread-widgets.png" title="Spread widgets in KOrganizer" height="276" width="300" alt="" class="aligncenter size-medium wp-image-661"/></a>
+<p>This is wrong because the eye has a lot of work to do to associate the widget with its label. For this reason, the KDE HIG suggests using right-aligned labels and left-aligned widgets in the <a href="http://techbase.kde.org/Projects/Usability/HIG/Dialogs">Dialogs</a> page.</p>
+<p>The easiest way to get the correct layout is to use the QFormLayout (which comes with the added bonus of adjusting label alignment according to the platform, so one gets left-aligned labels when running on GNOME). QFormLayout is sometimes painful though and in this case you have to use the more generic QGridLayout. If you do this, be sure to right-align your labels.</p>
+<h2>Reversed check boxes</h2>
+<p>Now... this one is probably going to be controversial, so keep in mind this is just my opinion.</p>
+<p>From time to time we see check boxes with labels on the left. For example, reversed checkboxes appeared in KSnapshot:
+<a href="reversed-checkboxes-ksnapshot.png" class=" image-reference"><img src="reversed-checkboxes-ksnapshot.png" title="Reversed checkboxes in KSnapshot" height="473" width="413" alt="" class="aligncenter size-full wp-image-664"/></a></p>
+<p>It is my understanding that this change was made so that all labels are on the left and clickable elements on the right. It certainly looks nice and balanced in KSnapshot, but the idea of reversed checkboxes is still wrong for at least two reasons:
+<ol>
+<li>Small mouse target: in a normal checkbox, both the box and its text are clickable. With reversed checkboxes there is only a box, so you get a much smaller mouse target.</li>
+<li>Inconsistency: having both normal and reversed checkboxes is inconsistent. This can't be fixed easily because we have to take checkable group boxes into account. Look at this screenshot of KGet configuration dialog to understand what I mean: <a href="reversed-checkboxes-kget.png" class=" image-reference"><img src="thumb_reversed-checkboxes-kget.png" title="Reversed checkboxes in KGet" height="239" width="300" alt="" class="aligncenter size-medium wp-image-663"/></a></li>
+</ol></p>
+<p>I agree the problem reversed checkboxes tries to address is valid, though: checkboxes sometimes break the visual alignment of widgets in a dialog. However I suggest a different fix: try to figure out a label for your checkboxes. For example, KSnapshot could be changed to look like this:</p>
+<a href="ksnapshot-proposal.png" class=" image-reference"><img src="ksnapshot-proposal-e1293404825396.png" title="KSnapshot proposal" height="164" width="412" alt="" class="aligncenter size-full wp-image-665"/></a>
+<p>The KDE HIG actually mentions this checkbox issue in <a href="http://techbase.kde.org/Projects/Usability/HIG/Form_Label_Alignment">Form_Label_Alignment</a> and suggests a similar, but more generic, fix: Put the description of your checkbox in a QLabel on the left of the checkbox and set the checkbox text to a generic word like "On" or "Enabled".</p>
+<a href="http://flattr.com/thing/107142/Common-user-interface-mistakes-in-KDE-applications-part-2-Dialog-layouts" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

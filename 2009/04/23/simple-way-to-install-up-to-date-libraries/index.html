@@ -1,0 +1,30 @@
+public: yes
+tags: ["Tips","libraries"]
+title: "Simple way to install up-to-date libraries"
+
+<p>Following a quite heated discussion on #kde-devel about minimum versions of libraries required to build KDE trunk, I decided to describe how I install up-to-date libraries without messing with my distribution packages.</p>
+<p>Installing a library by hand can usually be done in three places:
+<ol>
+<li>Install in <code>/usr</code>: this is a sure way to annoy the packaging system of your distribution...</li>
+<li>Install in <code>/usr/local</code>: this is the traditional way to install libraries by hand, but it is a bit difficult to uninstall things because files are scattered in the traditional <code>lib</code>, <code>share</code>, <code>bin</code>... folders.</li>
+<li>Install in <code>/opt/library_name</code>: this makes libraries easy to install and uninstall, but it needs a bit more work to make the library available to the rest of the system.</li>
+</ol></p>
+<p>I personally like to use option #3. Installing a library this way requires specifying the prefix at configuration time. For libraries using autotools, this is done with <code>./configure --prefix=/opt/library_name</code>. For libraries using CMake, use <code>cmake -DCMAKE_INSTALL_PREFIX=/opt/library_name</code>.</p>
+<p>As I said, when you are done, you need to make the library available to the system. To do so, I use a simple shell script like this one:
+</p><pre>
+pkgs="xine poppler qca exiv2"
+
+for pkg in $pkgs ; do
+    prefix=/opt/$pkg
+    export PKG_CONFIG_PATH=$prefix/lib/pkgconfig:$PKG_CONFIG_PATH
+    export CMAKE_PREFIX_PATH=$prefix:$CMAKE_PREFIX_PATH
+    export PATH=$prefix/bin:$PATH
+    export LD_LIBRARY_PATH=$prefix/lib:$LD_LIBRARY_PATH
+done
+</pre><p/>
+<p>Replace the contente of the <code>$pkgs</code> variable with your package list and put this in a file sourced by your environment at startup. This can be your shell profile file or a file in the <code>$HOME/.kde/env/</code> dir.</p>
+<p>This script takes care of $PKG_CONFIG_PATH and $CMAKE_PREFIX_PATH, which should cover most library detection systems. Adding <code>$prefix/bin</code> to $PATH can also be useful if the library provide binaries. Adding libraries to $LD_LIBRARY_PATH is necessary to start programs using these libraries.</p>
+<p>The nice thing about this setup is that it's easy to enable/disable libraries. For example, after a distribution update you may find that you no longer need a hand-made version of a library: just remove its dir and its name from the shell script and you are done.</p>
+<p>It is also possible to keep multiple versions of libraries installed on the same machine. You can then switch between them by adjusting the library name in the shell script or using symlinks.</p>
+<p>Finally, if you replace <code>/opt</code> with say <code>$HOME/opt</code>, then you can easily install additional libraries without administrator privileges.</p>
+<p>I hope this can help you to track KDE svn or other projects without too much pain.</p>

@@ -1,0 +1,26 @@
+public: yes
+tags: ["Other projects","systemtray","statusnotifieritem","appindicator","qt"]
+title: "StatusNotifierItem (aka App Indicators) for Qt applications"
+
+<h3>In the beginning there was XEmbed...</h3>
+For years, icons in the <span title="foo">"System tray"</span> (alias "Notification area", the small area which traditionally sits close to your clock and where some applications can insert an icon) were implemented using a protocol based on XEmbed. This protocol required the application to create a tiny 24x24 window which would be  "swallowed" by the panel. This led to a lot of inconsistency as each application were responsible for the rendering and the behavior of their tiny windows.
+<h3>Then came SNI</h3>
+Back in the KDE 4.4 days, Plasma developers introduced a new protocol to replace this XEmbed-based protocol: "Status notifier items" (SNI). This new protocol helps providing better consistency among these icons. Instead of creating and managing tiny windows for the icons, applications describe their icon over DBus, then the UI element (panel or applet or whatever) responsible for displaying the icons takes care of rendering them and handling mouse events, notifying the application when a user wants to show a menu or activate an icon. This makes it possible to provide consistent mouse behavior and rendering (consistent mouse-click behaviors, mouse-over effects, tooltips, desktop-theme-based icon replacements...).
+<p>The first implementation of this protocol was available in kdelibs, meaning only KDE applications were able to make use of it.</p>
+<h3>libappindicator was introduced a bit later</h3>
+In Ubuntu 10.04 (Lucid Lynx), Canonical Desktop Experience team introduced a new library named libappindicator, an implementation of the SNI protocol targeting GTK applications, making the SNI protocol usable by a wider range of applications.
+<h3>Introducing sni-qt</h3>
+Unfortunately there was no way for a Qt-only application to use the SNI protocol: kdelibs is for KDE applications only, and libappindicator is for GTK or GNOME applications.
+<p>This is no longer the case in the upcoming Ubuntu 11.10 (Oneiric Ocelot). As part of my work in the Desktop Experience team, I have been working on adding transparent support for the SNI protocol to all Qt applications. This work has been integrated in Oneiric a few weeks ago, and brings SNI goodness to Qt-only applications such as Mumble. Since it does not require any modification of the application itself, it also works for proprietary applications (think Skype).</p>
+<h3>How it works</h3>
+SNI support for Qt applications is made of two parts:
+<ol>
+<li>A Qt patch which provides a plugin system for the QSystemTrayIcon class. The default plugin uses  the old XEmbed-based protocol. The code for this plugin is in the "qsystemtrayicon-plugin-system-4.7" Qt branch of my <a href="http://gitorious.org/~agateau/qt/agateau-qt">Qt clone on Gitorious</a>.</li>
+<li>sni-qt: a QSystemTrayIcon plugin which implements the SNI protocol. sni-qt is hosted on Launchpad: <a href="https://launchpad.net/sni-qt">launchpad.net/sni-qt</a>.</li>
+</ol>
+<p>The design for this plugin was put together with Qt devs, but the patch will most likely never be integrated upstream in a 4.x release, it is too late for it to go into Qt 4.8 and there is no plan for a 4.9 release. But that only means it will have to go in one of the 5.x releases.</p>
+<p>Here are some screenshots of it in action on KDE Plasma Workspace and Unity.</p>
+<a href="mumble-kde.png" class=" image-reference"><img src="mumble-kde.png" title="Mumble on KDE" height="150" width="378" alt="" class="aligncenter size-full wp-image-933"/></a>
+<em>Mumble on KDE Plasma Workspace. Since the icon is exposed as an SNI, it gets a nice Plasma-themed tooltip.</em>
+<a href="mumble-unity-3d.png" class=" image-reference"><img src="mumble-unity-3d.png" title="Mumble on Unity" height="150" width="360" alt="" class="aligncenter size-full wp-image-934"/></a>
+<em>Mumble on Unity. Notice the menubar border around the icon, moving the mouse to the network icon on the right would close Mumble menu and open the network menu, just like a regular menubar.</em>

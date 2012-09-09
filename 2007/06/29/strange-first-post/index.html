@@ -1,0 +1,10 @@
+public: yes
+tags: ["Tips","Vim"]
+title: "Strange first post"
+
+<p>I thought I would try to write something special for my first post since I moved from kdedevelopers.org, but I just stumbled upon a nice vim trick I want to remember. Hopefully you will like it too.</p>
+<p>Search and replace is easy in vim, it's done this way:</p>
+<code>:%s/from/to/</code>
+<p>What I ignored for a long time was how to insert new lines in the <strong>to</strong> field. Now I know. You need to use <strong>\r</strong>, like this:</p>
+<code>:%s/from/one line\ranother line/</code>
+<p>Great, isn't it?</p>

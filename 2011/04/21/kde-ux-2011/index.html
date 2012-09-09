@@ -1,0 +1,36 @@
+public: yes
+tags: ["KDE"]
+title: "KDE UX 2011"
+
+<p>KDE UX sprint 2011 ended up last Sunday in Berlin. I was really looking forward this sprint: I had quite a few ideas I wanted to discuss and was really enthusiast to have the occasion to meet Peter Sikking. In case you don't know him, Peter is a User Interaction Architect, founder of <a href="http://www.mmiworks.net/eng/index.html">man + machine interface works</a>. Among other things, he is working with GIMP developers and has also helped Krita developers define their project vision.</p>
+<h1>Friday</h1>
+<p>We kicked off the sprint on Friday (late) morning with a round of introductions. On his turn, Sebas impressed anyone with the number of devices he managed to get out of his bag, all of them running Plasma Active. We then talked about QML and what impact it would have on the future before puting together a rough plan of what we would do during the sprint.</p>
+<p>We split in different groups on Friday afternoon and a few of us dissected the idea of standardizing an emerging UI trend: modeless inline bars. These bars are used to:
+<ul>
+<li>provide feedback ("User deleted", "Invalid password"...)</li>
+<li>present what we called "opportunistic interactions", for example bars like Firefox "Do you want to remember password for this site" bar</li>
+<li>create bottom "find" or "find and replace" bars</li>
+</ul></p>
+<p>I came here with a very rough idea and was amazed at how Peter and his colleague Kate methodically broke it down to reconstruct it into a much more precise vision. I did not expect us to spend so much time on it, but I think I learned a lot from the discussion, both on the subject itself and on the way to approach such problems.</p>
+<p>More details can be found on this <a href="http://community.kde.org/Sprints/UX2011/KMessageWidget">wiki page</a>. I started implementing it on Sunday evening. Here is a montage of what this early version looks like:</p>
+<a href="kmessagewidget.png" class=" image-reference"><img src="thumb_kmessagewidget.png" title="Different KMessageWidget layouts" height="254" width="300" alt="" class="aligncenter size-medium wp-image-831"/></a>
+<p>Implementation is in <a href="https://projects.kde.org/projects/kde/kdelibs/repository/show?rev=agateau%2Fkmessagewidget">agateau/kmessagewidget</a> branch of kdelibs, in kdeui/widgets/. Example program is in <a href="https://projects.kde.org/projects/kde/kdeexamples/repository/show?rev=agateau%2Fkmessagewidget">agateau/kmessagewidget</a> branch of kdeexamples, in kmessagewidget/.</p>
+<h1>Saturday</h1>
+K3b was the subject for Saturday morning... We discussed how we could make it easier for new users to get started on common tasks. The new version should be easier to use, and thanks to Nuno, beautiful. It's not ready yet and will probably evolve, so no screenshot for now.
+<p>We switched to Calligra for the afternoon: Casper Boemann wanted to discuss ways to improve the main window layout of Calligra applications. It turned out to be quite difficult to define a layout which:
+<ul>
+<li>works well on 4:3 and wide screens</li>
+<li>does not look too closely similar to Microsoft Office Ribbon</li>
+<li>is adapted to the various Calligra applications</li>
+</ul></p>
+<p>Unfortunately, I am having trouble remembering the exact outcome of the discussion, I blame a lack of sleep/caffeine for that :)</p>
+<h1>Sunday</h1>
+Cyrille Berger, of Krita fame, got us started on Sunday morning with his idea of flexible UIs. The idea of getting widgets to adapt and eventually change their appearance to depending on the amount of screen space they can use. This is certainly interesting for widgets used in sidebars such as those found in Krita and other Calligra applications.
+<p>He presented an interesting demo showing list views which turned themselves into combo boxes or popup buttons if vertical or respectively horizontal space become too small. You can learn more on this <a href="http://community.kde.org/Sprints/UX2011/Flexible_UIs">wiki page</a> and get the demo <a href="http://quickgit.kde.org/?p=scratch%2Fberger%2FFluidLayouts.git&amp;a=summary">from here</a>.</p>
+<p>In the afternoon we switched to discussing "Activity-centered desktop" an idea from Bj&#246;rn Balazs (who worked on the design of Kontact Mobile). Bj&#246;rn idea is quite ambitious: make the computer smart enough to adapt its interface based on what the user wants to do. His example was the user writing a letter to a friend: in Bj&#246;rn vision, the user would be presented with a place to type his letter grouped with relevant entries from Akonadi address book. This interface would be different from the interface the computer would propose to the user if the recipient of a letter were, for example, an institution. In the long run, Bj&#246;rn envisions a system which would no longer work with separate applications, but rather non-ui components providing services and ui components based on the non-ui ones and assembled together to present adapted interfaces.</p>
+<p>Will there are quite a few dark areas to me, in particular how the computer would guess the user needs, I think this vision has a lot of potential.</p>
+<p>We wrapped up the day and the sprint with a discussion on how to continue cooperating to work on KDE user experience. Right now we have the kde-usability mailing list and the #kde-usability Freenode IRC channel. We used to have regular IRC meetings which we agreed were interesting and productive, Celeste said she was worried those meeting would not happen if she did not do the work to set them up (Bus factor is close to 1 there unfortunately). Nevertheless she agreed to resurrect them. I am happy to see the meetings coming back, as I really enjoyed them.</p>
+<p>Finally, it was time to get back home, exhausted but delighted to have met so many nice people. My mind is even more filled with ideas for nice and usable user interfaces in KDE applications, time will tell if I can turn some of them into real code.</p>
+<p>Thanks a lot to all the people involved in setting up this sprint, in particular to Celeste and to <a href="http://www.relevantive.de/index_e.html">Relevantive</a> for letting us use their amazing office for the time of the sprint!</p>
+<a href="http://flattr.com/thing/172596/KDE-UX-2011" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

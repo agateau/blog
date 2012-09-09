@@ -1,0 +1,15 @@
+public: yes
+tags: ["Tips","gdb"]
+title: "Gdb trick: the poor man loop"
+
+<p>Suppose you are in the middle of a gdb session, and need to print the content of an array or a class implementing operator[]. Here is a simple way to do that which I just discovered:</p>
+<p>(gdb) set $pos=0</p>
+<p>(gdb) print array[$pos++]</p>
+<em>content of array[0]</em>
+<p>(gdb)</p>
+<em>content of array[1]</em>
+<p>(gdb)</p>
+<em>content of array[2]</em>
+<p>...</p>
+<p>The blank "(gdb)" lines mean i just pressed "return". In this case, gdb executes the previous command again, printing array and incrementing $pos one more time.</p>
+<p>Hope this helps, and feel free to comment on any better way to achieve this!</p>

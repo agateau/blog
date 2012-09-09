@@ -1,0 +1,12 @@
+public: yes
+tags: ["KDE","Misc.","mlt","kdenlive"]
+title: "Kdenlive rocks!"
+
+<p>Last weekend my daugther participated in her first school race. She performed well and enjoyed it quite a lot. As a loving dad, I was there to record the performance with my video camera.</p>
+<b>Not willing to bore relatives to death...</b>
+<p>Since I pity those who get trapped into watching raw video footage (it's even worse than raw photo footage, isn't it?), I decided to create a simple montage to make it more enjoyable. I remembered playing with <a href="http://www.kdenlive.org/">Kdenlive</a> back in the KDE3 days, but haven't had the occasion to play with the KDE4 version. I was really pleasantly surprised. After closing a few docks (I like simplicity), the interface was quite enjoyable. I especially appreciated the subtle hover animations to add transitions and to crop a sequence.</p>
+<b>I see white artefacts...</b>
+<p>It was all great except for one thing: the preview was filled with small white artefacts. I initially ignored it because I thought it was a tiny preview bug, but the artefacts were also present in the rendered video... After <a href="http://www.kdenlive.org/forum/white-lines-after-rendering-solved">some</a> <a href="https://bugs.launchpad.net/openshot/+bug/571954">googling</a>, I found out it was a bug in <a href="http://www.mltframework.org/">mlt 0.5.4</a>, a media toolkit used by Kdenlive and <a href="http://www.openshotvideo.com/">OpenShot</a>, a video editor for GNOME. The reports indicated the bug was fixed in mlt git, so since I know a bit about packaging nowadays, I created an update of the libmlt 0.5.4 Ubuntu Lucid packages which can be found in <a href="https://launchpad.net/~agateau/+archive/ppa/">my PPA (Personal Package Archive)</a>. Be warned though: it worked well for me, but I know just enough about packaging to be dangerous for myself and users of my PPA...</p>
+<b>Success!</b>
+<p>So, except for those artefacts, which were not Kdenlive fault, it was a nice experience: the software was stable and responsive. I will certainly be editing more video footage later. Those interested can look at <a href="http://www.flickr.com/photos/12502017@N08/4692939647/">the result here</a>. Note that it's not really a show-off of Kdenlive possibilities, only a few dissolves between sequences and a fade to black at the end.
+</p>

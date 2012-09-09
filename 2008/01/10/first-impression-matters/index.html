@@ -1,0 +1,15 @@
+public: yes
+tags: ["KDE"]
+title: "First impression matters"
+
+<p>A critic I often heard about KDE applications is that they are usually not correctly sized. I mean: when you start a KDE application for the first time, you often need to resize the window or adjust splitters to get a comfortable user interface.</p>
+<p>Back in the old Windows days, people were complaining that they couldn't resize most of the dialogs, such as the file dialog. We, KDE users, have been able to resize things the way we want for a long time. But while being able to resize is good, not having to resize is even better!</p>
+<p>As an example, here is the KMix main window on my laptop on the first start (rm ~/.kde/share/config/kmixrc to check how it looks on your machine):
+<div style="text-align:center;"><img src="kmix_before.png" alt="First impression matters"/></div>
+Not really handy, is it?</p>
+<p>After fiddling a bit with the code, here is it what I got:
+<div style="text-align:center;"><img src="kmix_after.png" alt="First impression matters"/></div>
+Probably not perfect yet, but I believe it's much more usable this way. If nothing goes wrong, I'll probably commit my changes this evening.</p>
+<p>This is not rocket science, changes required to provide correctly sized widgets on first start usually involve reimplementing QWidget::sizeHint() or setting some minimum sizes here and there.</p>
+<p>If you want to read a bit more about first impressions, I suggest you have a look at <a href="http://gettingreal.37signals.com/ch09_The_Blank_Slate.php">The Blank State</a>, an essay from "Getting Real", a book by <a href="http://37signals.com/">37signals</a>.</p>
+<i>PS: No offense to KMix developers, I just needed an example for this post.</i>

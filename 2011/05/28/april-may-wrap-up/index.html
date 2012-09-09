@@ -1,0 +1,53 @@
+public: yes
+tags: ["Gwenview","KDE","Misc.","fsday"]
+title: "April May 2011 wrap-up"
+
+<p>Woah... I have been neglecting my blogging duties lately... I spent the first two weeks of May away from home: Started with a Canonical sprint, followed by 2 days at Ubuntu Developer Summit (UDS), followed by 2 days at Solutions Linux. I didn't manage to write any April wrap-up post while I was away and it felt lame to write one in the middle of May so I am going to sum up both April and May in this post.</p>
+<h3>KMessageWidget</h3>
+<p>
+KMessageWidget got integrated into kdelibs in time for 4.7! I am quite happy with this. There are one or two bugs I need to address and a few features I would like to add later, but it is already useful.
+</p>
+<p>
+It feels good to read about other projects starting to use it. I am looking forward to being surprised by a KMessageWidget poping up in applications I use.
+</p>
+<h3>Gwenview</h3>
+<p>
+Besides KMessageWidget, I worked a bit on Gwenview, mostly fixing bugs:
+</p>
+<ul>
+<li>Fixed build with libjpeg-turbo</li>
+<li>Improved the image info sidebar:
+    <ul>
+<li>Fixed display of megapixel count</li>
+<li>Show tooltips for cropped texts</li>
+<li>Made it possible to select text</li>
+</ul>
+</li>
+<li>Some work on keyboard handling:
+    <ul>
+<li>Prevent Nepomuk description field from stealing focus</li>
+<li>Made it possible to switch between two images with Tab and Shift+Tab</li>
+<li>Added a shortcut to the "Synchronize document views" action (Ctrl+Y)</li>
+<li>At startup, focus the current document view, instead of the zoom slider</li>
+</ul>
+</li>
+<li>When browsing the trash, it is now possible to restore files</li>
+<li>Fixed the nasty "Images are renamed on double-click" bug: If you ran KDE in double-click mode, double-clicking an image would show it but it would also trigger the inline rename, if you then pressed "space" to go to the next image it would stay there and replace the image name with " "...
+  </li>
+<li>Do not block the UI while loading KIPI plugins. That one has been bothering me for a while: before this fix, Gwenview would block while loading plugins when you first clicked the "Plugins" menu. Now it loads them in the background and show a disabled "Loading..." entry in the menu.</li>
+<li>Replaced some custom widgets with KMessageWidget</li>
+<li>Got rid of the error dialog which appeared sometimes when an image failed to load</li>
+</ul>
+<h3>UDS and Solutions Linux</h3>
+<p>These two days at UDS was quite productive. It felt good to hang out again with Kubuntu regulars and to get to meet others like Micha&#322; Zaj&#261;c and Alex Fiestas (another KDE developer getting involved in Kubuntu, yeah!) for the first time.</p>
+<p>Alex gave me some interesting feedback on KMessageWidget, which he started to use in Bluedevil control module.</p>
+<p>I am also particularly pleased I was able to work with Jonathan Thomas on some UI polish for Muon. You may have <a href="http://jontheechidna.wordpress.com/2011/05/23/muon-suite-1-2-beta-released/">read about it</a> on Jonathan blog. And Muon is now using KMessageWidget too, how awesome is that?</p>
+<p>I would have preferred to stay the full week at UDS but I also wanted to attend Solutions Linux, a French Linux exhibition where I have been helping manning the KDE booth for a few years now. So I flew back from Budapest to Paris in the early morning of Wednesday.</p>
+<p>Solutions Linux was great as usual. Contrary to previous years, we didn't have any Kubuntu CD. This year we gave away some nice OpenSuSE DVD. I had a bunch of Kubuntu goodies however: there were some leftover stickers and pens from last year which I brought back this year. And I still have some left for Solutions Linux 2012! (Yes I got <b>a lot</b> of goodies last year)</p>
+<p>As usual we were located next to our GNOME friends. It seems every year they aim for a more minimalist booth: last year the booth was sometimes unmanned... but on the last day this year they managed to reach a whole new level: a computer-less booth! And to say people do not believe us when we tell them GNOME is all about removing options :). Since we are competitors, but gentlemen nevertheless, we lend them a laptop on which they ran the GNOME 3 live DVD.</p>
+<p>I played a bit with GNOME 3: it's quite nice actually, there are a few ideas I really like. I am probably going to install it on my machine to play with it a bit more.</p>
+<h3>Diary</h3>
+<p>In other news, I started writing a daily diary. Sometimes at the end of the day I feel like I haven't been doing anything, writing down tasks I did like this avoid that feeling and helps improving my mood :). It should also be quite helpful to write future wrap ups.</p>
+<p>I keep this diary in a plain-old paper-based notebook as I came to really enjoy the feeling of writing lines with a pen on plain paper and taking a break from the keyboard, but I am a bit torn: I would love to have a way to grep my diary! Unfortunately I don't think anyone has created grep-able notebooks yet, too bad.</p>
+<a href="http://flattr.com/thing/291310/April-May-wrap-up" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

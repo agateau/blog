@@ -1,0 +1,46 @@
+public: yes
+tags: ["KDE","akonadi","krunner","powerdevil"]
+title: "KRunner is more powerful than it looks"
+
+<p>The other day I got a bit fed up of having a "Starting Akonadi server" dialog showing up each time I logged on my KDE4 trunk session, so I decided to investigate what was causing this dialog to appear.</p>
+<p>It turned out it was triggered by KRunner. In case you don't know what KRunner is, it's the cute little window which comes up when you press Alt+F2.
+</p><p style="text-align:center;"><img src="krunner.png" title="krunner" height="47" width="400" alt="krunner" class="size-full wp-image-131 aligncenter"/></p>
+<p>How can such an innocent window start an Akonadi server? The answer is: KRunner is much more powerful than it looks :). Notice the little wrench button on the left of the window? This is were the power is hidden. If you
+click on it, you will be greeted with a configuration dialog like this:
+</p><p style="text-align:center;"><img src="thumb_krunner-config.png" title="krunner-config" height="300" width="231" alt="krunner-config" class="size-medium wp-image-133 aligncenter"/></p>
+<p>If you are in the same situation as me when I opened this dialog for the first time, then all "Features" are likely to be checked. The responsible for the Akonadi start up, is the "Contacts" feature. Uncheck it and enjoy a faster login!
+<h2>More goodness</h2>
+While we are here, let's explore this dialog a bit more. There are quite a few interesting features waiting to be discovered.
+<h3>Calculator</h3>
+Need to crunch a few numbers, this is probably the fastest way to do it. Enter '=' and type your operation, Calculator will display the results as you type:
+</p><p style="text-align:center;"><img src="krunner-calculator.png" title="krunner-calculator" height="284" width="400" alt="krunner-calculator" class="size-full wp-image-132 aligncenter"/></p>
+<p>Do not forget the leading '=', otherwise it won't work.
+<h3>Powerdevil</h3>
+The Powerdevil feature is neat too: it makes it easy to suspend your computer from the keyboard. Start typing "suspend" and then select in the list on the bottom the suspend mode you wish to enter.
+</p><p style="text-align:center;"><img src="krunner-suspend.png" title="krunner-suspend" height="284" width="400" alt="krunner-suspend" class="size-full wp-image-134 aligncenter"/></p>
+<p>Nitpick: This feature should provide different icons for the different suspend modes. Right now the only way to know which is which is to select one and look up its title below the text entry.
+<h3>Command Line</h3>
+Command line is the most common feature, it starts your programs. If you want a light KRunner, you can uncheck all features but this one. You will still be able to start programs, the only thing you will miss is the application icon
+and description.</p>
+<p>Nitpick: This feature lets you select a few options from its configuration dialog, such as "Run in terminal window" or "Run as a different user". The problem is these options are the kind of settings you want to set when you run
+particular commands. You probably do not want to make them permanent. As a result I think they are quite useless.</p>
+<p>It would be more useful to add new keywords, like "run-in-term" or "run-as". This way when I want to run an app in a terminal I can type "run-in-term". And to run as a different user: "run-as  ".
+<h2>Even more goodness</h2>
+The second tab of the config dialog let you choose between "Command oriented" and "Task oriented" user interfaces.</p>
+<p>The "Task oriented" interface looks like this:
+</p><p style="text-align:center;"><img src="thumb_krunner-task-oriented.png" title="krunner-task-oriented" height="74" width="300" alt="krunner-task-oriented" class="size-medium wp-image-135 aligncenter"/></p>
+<p>It's quite nice and let you easily go through the "run candidates" by pressing the left and right arrow, with a nice animation between them.</p>
+<p>It has a few drawbacks though:
+<ul>
+<li> I find the popup list on the right useless and not that nice.</li>
+<li> One needs to press Enter once to select the run candidate, then another time to start it. Pressing Enter once should be enough.</li>
+<li> There is not way to enter text, which makes it impossible to enter command parameters, use the calculator or paste an url.</li>
+</ul>
+<h2>Final words</h2>
+KRunner really has more than meet the eyes. With a bit of work to make this raw power more visible, it would be even better. Here are a few ideas:
+<ul>
+<li>The features should have a way to communicate how they work, for example by stating which "words" they provide. This way Powerdevil could tell me it understands various "suspend" words and I could probably figure out how the "Unit Converter" feature works :).
+This could be done with a master-detail view: selecting a feature could show an info page on the right of the list.</li>
+<li>There should be multiple lines of text below the icons so that it's easier to distinguish between them (it would help Powerdevil for example)</li>
+</ul>
+Hmm... I should probably fill some Bugzilla wishes for those.</p>

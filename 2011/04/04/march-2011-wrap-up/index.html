@@ -1,0 +1,29 @@
+public: yes
+tags: ["Gwenview","KDE","fsday"]
+title: "March 2011 wrap-up"
+
+<p>4th of April, time for March wrap-up...</p>
+<h2>What happened in March?</h2>
+<h3>Gwenview compare mode</h3>
+In <a href="http://agateau.wordpress.com/2011/02/26/february-2011-wrap-up/">last month wrap-up</a>, I presented my work on Gwenview compare mode, but was not satisfied with the user interface for the compare mode: I thought it was too busy. I simplified it by getting rid of the concept of best-candidate, instead you just select more than one (and up to 6) documents and Gwenview will show them side by side. The only user interface specific to compare-mode is a small HUD at the bottom of the document views, allowing you to either deselect the document or trash it.
+<p>After a few improvements like adding a synchronize feature, +/- select buttons for items in the thumbnail bar and highlighting of the current item in the thumbnail bar, I decided it was good enough to be merged to master. There are still a few adjustments I want to do, but nothing too intrusive.</p>
+<div><a href="gwenview2.png" class=" image-reference"><img src="thumb_gwenview2.png" title="Comparing two images" height="188" width="300" alt="" class="size-medium wp-image-813"/></a></div>
+<em>Compare two images</em>
+<div><a href="gwenview6.png" class=" image-reference"><img src="thumb_gwenview6.png" title="Comparing 6 images at a time!" height="246" width="300" alt="" class="size-medium wp-image-815"/></a></div>
+<em>Or go crazy and compare 6 of them... (I hope you have a big screen!)</em>
+<div><a href="gwenview2-fs.png" class=" image-reference"><img src="thumb_gwenview2-fs.png" title="Comparing images in fullscreen mode" height="168" width="300" alt="" class="size-medium wp-image-814"/></a></div>
+<em>Compare mode works in fullscreen too</em>
+<h3>Communication</h3>
+Spent some time preparing my slides for the two presentations I gave at the KDE 4.6 Release Party organized by the Toulibre association in Toulouse. The event was really great, a warm thank-you to Toulibre. I think both presentations went rather well, except for some hiccup while demonstrating Gwenview Importer. Presentations have been recorded, videos as well as slides should be online soon.
+<p>I also wrote a new post for my series on common UI errors in KDE applications: <a href="http://agateau.wordpress.com/2011/03/26/common-user-interface-mistakes-in-kde-applications-part-4-being-gnome-friendly/">Being GNOME friendly</a>. It received a mixed reception, but given the subject, that was to be expected.</p>
+<h3>Other contributions</h3>
+Since I took KDE Partition Manager as an example of margins being wrong in my UI errors article, I tried to make up for pointing fingers by patching the problem. Patch has been accepted. Here is a montage showing the space savings:
+<a href="partition-manager1.png" class=" image-reference"><img src="thumb_partition-manager1.png" title="KDE Partition Manager, before and after fixing double margins" height="99" width="300" alt="" class="aligncenter size-medium wp-image-820"/></a>
+<p>Note that you should also get a bit more usable space when using Oxygen theme, even if it reduces the effects of double-margins.</p>
+<p>I also resumed my use of <a href="http://rsibreak.org">RSIBreak</a>, "thanks" to the return of my left wrist pain. This led me to port it from <a href="http://doc.qt.nokia.com/4.7/qsystemtrayicon.html">QSystemTrayIcon</a> to <a href="http://api.kde.org/4.5-api/kdelibs-apidocs/kdeui/html/classKStatusNotifierItem.html">KStatusNotifierItem</a>. Patch is in, you can now enjoy nicer tooltips and mouse-over effects (and even get a fully functional RSIBreak if, like me, you find yourself running Unity 2D in a nested session from within a KDE session, but I guess it's not a common situation...)</p>
+<a href="rsibreak.png" class=" image-reference"><img src="thumb_rsibreak.png" title="KStatusNotifierItem'ified RSIBreak" height="166" width="300" alt="" class="aligncenter size-medium wp-image-817"/></a>
+<h2>What's planned for April?</h2>
+<p>For April I'd like to make the latest adjustments to Gwenview compare mode and maybe start working on some metadata-related bugs... I am not too sure yet, we'll see. I am also attending <a href="http://community.kde.org/Sprints/UX2011">KDE UX Sprint</a> in Berlin, which I am looking forward to. Who knows what will come out of it?</p>
+<p>So, not much planned, but that does not mean I plan to slack! Don't worry, <a href="support/">your contributions</a> will be put into good use :)</p>
+<a href="http://flattr.com/thing/162447/March-2011-wrap-up" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

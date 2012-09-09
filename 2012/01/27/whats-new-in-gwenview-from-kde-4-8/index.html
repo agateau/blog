@@ -1,0 +1,40 @@
+public: yes
+tags: ["Gwenview","KDE"]
+title: "What's new in Gwenview from KDE 4.8"
+
+<p>Now that KDE 4.8 has been released, it's time to recap all changes you will find in Gwenview.</p>
+<p>The main change is the addition of animations when viewing images: crossfading between images and nicer-to-use comparisons. You can learn more from <a href="/2011/10/19/crossfade/">this previous blog article</a>.</p>
+<p>This change was not nice for users of some graphic cards whose OpenGL drivers do not support what Gwenview tries to do. I decided to play it safe for now: animations in Gwenview now use software rendering by default. For better performance, you can enable OpenGL rendering in the configuration dialog.</p>
+<p>This new version of Gwenview also comes with a lot of smaller changes, some of them caused by the limitations which were introduced by the new animation system.</p>
+<h2>Scrolling and Zooming</h2>
+<ul>
+<li>No more scrollbars: A bird-eye view lets you scroll the image. <a href="bird-eye-view.png" class=" image-reference"><img src="thumb_bird-eye-view.png" title="The bird-eye view in the top right corner" height="242" width="300" alt="" class="aligncenter size-medium wp-image-1065"/></a></li>
+<li>Nicer zoom cursor. I realized Qt now supports truecolor cursors, so I drew a nicer magnifying glass cursor instead of the black+white+1bit-alpha-channel version. Holding down Ctrl to zoom won't bring you back to the 90s anymore!</li>
+<li>Pressing 'F' toggles zoom-to-fit on and off.</li>
+<li>More consistent behavior: SVG images can now be scrolled using the same shortcuts as scrolling raster images.</li>
+</ul>
+<h2>Global User interface changes</h2>
+<ul>
+<li>The "sidebar collapser", the little arrow on the left of the view which let you hide the sidebar is gone. It has been replaced by a button in the statusbar.</li>
+<li>Labels for some of the toolbar buttons have been removed, reducing its width. It should now be more usable on small netbook-like screens.</li>
+</ul>
+<h2>Tools</h2>
+<ul>
+<li>The red-eye reduction and crop tools no longer show floating widgets over the image, a thin bar slides from the bottom of the window instead. <a href="crop-tool.png" class=" image-reference"><img src="thumb_crop-tool.png" title="Crop Tool bar at the bottom" height="248" width="300" alt="" class="aligncenter size-medium wp-image-1066"/></a></li>
+</ul>
+<h2>Behavior</h2>
+<ul>
+<li>Compared images follow thumbnail view order: previously when one selected two or more images to compare them, they would not necessarily appear in the same order as in the thumbnail bar.</li>
+<li>Arrow-key navigation in zoom-to-fit mode. This one has been requested by quite a few people. When an image is in zoom-to-fit mode, you can go to the previous and next image with the arrow keys. When you zoom in, arrow keys are used to scroll the image. This is very similar to the behavior provided by phones or digital cameras.</li>
+</ul>
+<h2>Video support</h2>
+<ul>
+<li>The on-screen-display is now transparent. <a href="video-osd.png" class=" image-reference"><img src="thumb_video-osd.png" title="The transparent video OSD" height="237" width="300" alt="" class="aligncenter size-medium wp-image-1067"/></a></li>
+<li>One can use the left and right arrow keys to seek</li>
+<li>A late addition: an undocumented shortcut (P) to toggle playback</li>
+<li>Note that video support is a bit fishy right now: it seems Phonon does not always play well with its video widget being embedded in a QGraphicsView, known symptoms are wrong colors or wrong aspect ratio. Hopefully this will improve in the next releases.</li>
+</ul>
+<p>4.8.1 should bring you its usual series of bug fixes, among them is generating thumbnails for all images of the current folder, not only the currently visible ones. This fix is a bit bigger than usual *.1 fixes, so testers are welcome: the code lives in Gwenview git repository, in the "gen-all-thumbnails" branch.</p>
+<p>I hope you enjoy this new Gwenview!</p>
+<a href="http://flattr.com/thing/472020/httpagateau-wordpress-com20120127whats-new-in-gwenview-from-kde-4-8" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

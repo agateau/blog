@@ -1,0 +1,26 @@
+public: yes
+tags: ["Gwenview","KDE","akademy"]
+title: "Gwenview in KDE SC 4.5"
+
+<p>
+<span style="float:right;"><a href="20100630-size-in-thumbnails.png" class=" image-reference"><img src="thumb_20100630-size-in-thumbnails.png" title="Gwenview, showing image size below thumbnails" height="142" width="150" alt="" class="alignright size-thumbnail wp-image-404"/></a></span>
+</p><p>As usual, I have been busy with too many projects during KDE SC 4.5 development cycle, so I am afraid the new Gwenview does not feature any ground-breaking changes. Still I managed to fix some annoying bugs and integrated a few nice features. Here is a commented list of the most interesting changes:
+<ul>
+<li><em>Gwenview is now much more asynchronous.</em>
+This is where I spent most of my Gwenview development time. In previous versions, operations like rotation or image saving would block the UI. This is no longer the case, all operations which used to block the UI now show a spinner on the affected image and let you continue browsing while Gwenview is busy working. It does not sound like much, but it required quite a bit of refactoring and it lays down the foundations for some interesting ideas I have in mind, hopefully for KDE SC 4.6.</li>
+<li><em>EXIF information is no longer lost after a crop, a resize or a red eye reduction...</em>
+I am a bit ashamed I did not fix that one earlier. Gwenview used to keep EXIF information for lossless operations like rotations, but would get rid of them as soon as you did some lossy work...</li>
+<li><em>Wrap around when panning images, patch by Ismael Barros.</em>
+I was a bit skeptical about this, but it turns out to be really great to be able to pan large images without having to release the mouse button.</li>
+<li><em>Show image size and file size below thumbnails, patch by Aaron Seigo and me</em>
+This one got started after a somewhat inflammatory review of KDE applications in Linux Journal, I am glad it's here even if it's still a bit buggy, need to fix it.</li>
+<li><em>One of the most wanted option: "Disabling video support" has finally been added.</em>
+This option can unfortunately come handy if you are unlucky to have videos which Phonon dislike to the point of causing crashes...</li>
+</ul>
+So, not much changes, but hopefully changes you will find useful.
+</p>
+<p>
+In other news, I am happy to tell you that I will be in Finland next week because
+<img src="igta2010.png" alt="" height="200" width="380" title="I'm going to Akademy 2010"/><br/>
+Jonathan Riddell and I will be doing a "What's cooking in Kubuntu for KDE" BoF. This could be a great way for you to learn what I have been working on instead of hacking on Gwenview!
+</p>

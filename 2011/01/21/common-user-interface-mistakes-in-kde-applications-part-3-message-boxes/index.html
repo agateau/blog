@@ -1,0 +1,41 @@
+public: yes
+tags: ["KDE","ui"]
+title: "Common user interface mistakes in KDE applications, part 3: Message Boxes"
+
+<p>Message boxes are part of the ordinary pain the user has to face daily while using his computer. One should strive to avoid them whenever possible: a good message box is a dead message box! Aza Raskin wrote a great article on the subject: "<a href="http://www.alistapart.com/articles/neveruseawarning/">Never use a warning when you mean undo</a>".</p>
+<h2>"OK-only" message boxes</h2>
+With "OK-only" I mean a message box which shows some text and an "OK" button to close it.
+<p>There is almost no good reason to use "OK-only" message boxes. These message boxes can be turned into information panes at the top of the application window (<a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKTitleWidget.html">KTitleWidget</a> can be used for this, but maybe we need a more specialized widget) or turned into notifications.</p>
+<p>My latest most-hated "OK-only" message box is the one which pops a minute or two after login when Nepomuk is disabled:</p>
+<a href="akonadi-no-nepomuk.png" class=" image-reference"><img src="akonadi-no-nepomuk.png" title="Nepomuk Indexing Disabled" height="265" width="423" alt="" class="aligncenter size-full wp-image-706"/></a>
+<p>Ideally, such information should be displayed when the user disables Nepomuk, not each time he logs in (I understand this is probably not easy to implement because Nepomuk KCM does not know about Akonadi, hence the "ideally").</p>
+<h2>One can't always avoid messages boxes</h2>
+<p>Sometimes you have to resort to message boxes, maybe it is too late in the development cycle to introduce an undo feature, or the action you are about to perform cannot be undone or because you really need a clue from the user as to what to do next. In this case, you want to avoid a few common mistakes.</p>
+<h2>Picking a KMessageBox method</h2>
+<a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKMessageBox.html">KMessageBox API</a> is quite complete, to the point where it is difficult to choose which method to use. The most useful "sets" of methods are <em>warningContinueCancel*</em> and <em>questionYesNo*</em>.
+<p>The API is unfortunately not very intuitive: you should make your choice based on the following criteria:
+<ul>
+<li><strong>What kind of message box do you need?</strong><br/>If your application is about to do something dangerous, you want to use one of the <em>warning*</em> methods. If your application needs more information before performing an action, you should use one of the <em>question*</em> methods.
+</li>
+<li><strong>Do you need a Cancel button?</strong><br/>If so, pick a method whose name ends with <em>Cancel</em></li>
+<li><strong>Do you need one or two action buttons?</strong><br/>If you need one, pick one of the <em>*Continue*</em> methods. If you need two, pick one of the <em>*YesNo*</em> methods.<br/>Note: the fact that the buttons will be labeled "Yes" and "No" does not matter, we will fix this in the next section.</li>
+</ul></p>
+<p>A warning message box:
+<a href="warning-continue-cancel1.png" class=" image-reference"><img src="warning-continue-cancel1.png" title="warningContinueCancel" height="147" width="360" alt="" class="aligncenter size-full wp-image-710"/></a></p>
+<p>A question message box (ignore the buttons for now!):
+<a href="question-yes-no-cancel1.png" class=" image-reference"><img src="question-yes-no-cancel1.png" title="questionYesNoCancel" height="147" width="371" alt="" class="aligncenter size-full wp-image-708"/></a></p>
+<h2>Making your buttons more useful</h2>
+Users are lazy creatures: when a message box pops up, they want to get rid of it with as little work as possible. For this reason, a lot of them won't bother to read the message box text if they can take a decision by only reading the buttons. It is a lot more difficult for them to choose if the button says "OK", "Yes" or "No" ("Cancel" is usually not a problem). This is why you want to ensure the message box buttons provide enough information for them to make an informed choice.
+<p>KMessageBox makes this easy: most of its methods accept optional parameters to define their buttons. These parameters are <a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKGuiItem.html">KGuiItem</a>, a simple class which can be used to define the icon and text of a button, among other things.</p>
+<p>Here are our message boxes, with explicit button items:
+<a href="warning-continue-cancel21.png" class=" image-reference"><img src="warning-continue-cancel21.png" title="warningContinueCancel2" height="147" width="360" alt="" class="aligncenter size-full wp-image-729"/></a></p>
+<a href="question-yes-no-cancel2.png" class=" image-reference"><img src="question-yes-no-cancel2.png" title="questionYesNoCancel2" height="147" width="383" alt="" class="aligncenter size-full wp-image-709"/></a>
+<p>Before you start fixing all your message boxes with custom KGuiItem, be sure to have a look at the <a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/namespaceKStandardGuiItem.html">KStandardGuiItem</a> namespace first. This namespace provides ready-to-use KGuiItem for common actions such as Discard, Save, DontSave, SaveAs, Apply, Clear and a few others. Whenever possible, using items from this namespace is preferred. Doing so ensures the buttons of your message boxes use icons and texts which are consistent with other KDE applications.</p>
+<h2>The "Do not ask again" check box</h2>
+KMessageBox provides a simple way to add a "Do not ask again" check box to your message boxes. I personally dislike those check boxes. Whenever the user is faced with such a dialog it feels like he is making a very definitive decision. Most users won't know for sure whether they may need this dialog in the future and will refrain from checking the box for fear of missing a safeguard later. Furthermore it is not always possible to undo the check of this box later and when it is possible it means hunting the option in the configuration dialog.
+I think it is our duty as application developers to make choices and decide whether a message box is really needed here or if it is "just in case".
+<h2>Conclusion</h2>
+That's all for today, now go fix your or others' message boxes!
+<p>If you are not already bored to death by message boxes, here is another interesting read on the subject: "<a href="http://www.uxdesignedge.com/2010/06/are-you-sure-how-to-write-effective-confirmations/">Are you sure? How to write effective confirmations</a>".</p>
+<a href="http://flattr.com/thing/121151/Common-user-interface-mistakes-in-KDE-applications-part-3-Message-Boxes" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

@@ -1,0 +1,45 @@
+public: yes
+tags: ["Gwenview","KDE","rating","nepomuk"]
+title: "Gwenview, Nepomuk and rating"
+
+<p>Gwenview has always been file-system oriented, but with the advance of Nepomuk,
+associating semantic information to your files is becoming more ubiquitous.</p>
+<p>I started adding support for Nepomuk in Gwenview since KDE 4.1. It still needs
+a lot of work, but it is becoming quite usable now. In this article I am going
+to present how you can easily rate your images in Gwenview.</p>
+<h2>Sidebar</h2>
+<p>In the sidebar you can now see all Nepomuk information in the "Semantic
+Information" group. This includes:</p>
+<ul>
+<li>Rating</li>
+<li>Description</li>
+<li>Tags (more on this in another article)</li>
+</ul>
+<a href="20081029-rating-sidebar2.png" class=" image-reference"><img src="thumb_20081029-rating-sidebar2.png" title="20081029-rating-sidebar" height="211" width="300" alt="" class="alignnone size-medium wp-image-90"/></a>
+<h2>Browse mode</h2>
+<p>In browse mode, there is clickable rating stars below each thumbnail, making it
+convenient to quickly rate images.</p>
+<a href="20081029-rating-browse-mode.png" class=" image-reference"><img src="thumb_20081029-rating-browse-mode.png" title="20081029-rating-browse-mode" height="211" width="300" alt="" class="alignnone size-medium wp-image-86"/></a>
+<h2>View mode</h2>
+<p>View mode is still about showing your image with a minimum distraction, so
+there is no always-present rating widget. You can rate images through the
+menu, using Edit &gt; Rating, but it's much more convenient to use the shortcut
+keys: Press keys 0 to 5 to associate a rating value. When you press these keys
+a rating indicator is shown over the images for a few seconds:</p>
+<a href="20081029-rating-view-mode.png" class=" image-reference"><img src="thumb_20081029-rating-view-mode.png" title="20081029-rating-view-mode" height="211" width="300" alt="" class="alignnone size-medium wp-image-88"/></a>
+<p>This makes it fast and easy to rate images while browsing for keyboard friendly
+users: go fullscreen, press a key between 0 and 5 to rate image, press Space to
+go to the next one, repeat.</p>
+<h2>Filtering</h2>
+<p>Rating images is interesting, but it is of marginal use unless you can filter
+images to show only the highest rated ones. I am currently reworking the user
+interface for this feature, but it is already possible to filter your folder:
+in browse mode, click on the combobox in the bottom left of the window and
+select "Filter by rating". Now click on the rating widget to only show images
+with a rating greater or equal to the rating you want.</p>
+<a href="20081029-filtering.png" class=" image-reference"><img src="thumb_20081029-filtering.png" title="20081029-filtering" height="211" width="300" alt="" class="alignnone size-medium wp-image-85"/></a>
+<h2>Availability</h2>
+<p>Hopefully this will be available in KDE 4.2. Right now to give it a try you
+need to build kdegraphics with the
+<code>-DGWENVIEW_SEMANTICINFO_BACKEND=Nepomuk</code>
+cmake option.</p>

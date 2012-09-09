@@ -1,0 +1,19 @@
+public: yes
+tags: ["Tips","make","cmake","make dist"]
+title: "CMake and \"make dist\", the simpler version"
+
+<p>I wrote about <a href="http://agateau.wordpress.com/2009/08/09/cmake-and-make-dist/">using CPack to create a make dist target</a> earlier today, but it turns out there is a much simpler way to do this, thanks to Christophe Fergeau for pointing me to it.</p>
+<p>Note that this won't work if your project is not using a version control system (but if you are not, then you are asking for trouble!).</p>
+<p>Here are the necessary lines to add to your CMakeLists.txt file if your project is using Git:
+</p><pre>set(PROJECT_VERSION "0.2.3")
+set(ARCHIVE_NAME ${CMAKE_PROJECT_NAME}-${PROJECT_VERSION})
+add_custom_target(dist
+    COMMAND git archive --prefix=${ARCHIVE_NAME}/ HEAD
+        | bzip2 &gt; ${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.bz2
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})</pre><p>
+If your project uses Bazaar, replace the "add_custom_target" line with:
+</p><pre>add_custom_target(dist
+    COMMAND bzr export --root=${ARCHIVE_NAME}
+        ${CMAKE_BINARY_DIR}/${ARCHIVE_NAME}.tar.bz2
+    WORKING_DIRECTORY ${CMAKE_SOURCE_DIR})</pre><p>
+If you know how to do this with another version control system, please add a comment!</p>

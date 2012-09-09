@@ -1,0 +1,18 @@
+public: yes
+tags: ["Gwenview","KDE","fsday"]
+title: "February 2011 wrap-up"
+
+<p>February did not went as expected: there was quite a lot of work to do on Unity 2D before Ubuntu Natty feature freeze, so I was asked to work on two Fridays. Not exactly what I planned...</p>
+<p>So, what did I manage to get done in February nevertheless?</p>
+<p>Gwenview and the SVG KPart moved to git. The repositories are here: <a href="https://projects.kde.org/projects/kde/kdegraphics/gwenview/repository">Gwenview</a> and <a href="https://projects.kde.org/projects/kde/kdegraphics/svgpart/repository">SVG KPart</a>. Thanks a lot to the KDE git people and to Marcel Wiesweg of digiKam fame, for his detailed instructions regarding the move of kdegraphics modules.</p>
+<p>I initially planned to work on simplifying Gwenview importer but decided to give up for now as it was becoming too complex and not as important as another feature I have been wanting to implement for years now: a compare "mode".</p>
+<a href="20110226-compare-mode.png" class=" image-reference"><img src="thumb_20110226-compare-mode.png" title="Gwenview in compare mode" height="203" width="300" alt="" class="aligncenter size-medium wp-image-773"/></a>
+<p>I am not fully happy with the behavior yet. I like that it is not a separate mode: to compare pictures from browse mode you only have to select two pictures and switch to view or fullscreen. From view mode, control-click on a second picture in the thumbnail bar to compare it with the current one. As you can see on the screenshot I went for an asymmetric layout: the "best" picture is on the left and the "candidate" on the right. I am afraid it might be too complex, I need to try it with some real-world set of pictures (and real-world users). It is also missing a "synchronize" checkbox to be able to zoom and scroll the two pictures at once.</p>
+<p>You can find the code in the compare-mode branch of Gwenview repository.</p>
+<p>What to expect from march?</p>
+<p>I am invited to a <a href="http://toulibre.org/kde46">KDE SC 4.6 Release Party</a> in the beautiful city of Toulouse, organized by the Toulibre association. I won't be just staying there chatting, eating and drinking though: a great Jedi, who shall remain anonymous (hi Kevin!) managed to mind-trick me into giving two presentations, so I am going to spend some time to prepare them.</p>
+<p>I also plan to continue working on Gwenview compare mode. I hope to get it mostly ready by the end of this month.</p>
+<p>Finally I want to resume the "Common UI Mistakes" series, since I did not have the time to write anything in February.</p>
+<p>If you like what happened in February (not that there is that much to like this month!) or are interested in what is planned for March, consider <a href="/support">supporting my work</a>.</p>
+<a href="http://flattr.com/thing/138888/February-2011-wrap-up" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

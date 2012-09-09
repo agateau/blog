@@ -1,0 +1,14 @@
+public: yes
+tags: ["Gwenview","qgraphicsview","cross-fade","opengl","animations"]
+title: "Crossfade!"
+
+<p>I have been a bit quiet lately, but haven't been slacking :) Among other things, I started working on implementing one of the oldest most-wanted feature of Gwenview: crossfade transitions between images. I have pushed the code to Gwenview git repository. It still lives in topic branches for now though.</p>
+<p>I first worked with an evolution of the QWidget-based code. This is quite stable but it is too slow at HD (1920x1080) resolution. You can find this work in the "agateau/xfade" branch.</p>
+<p>I thus decided to bite the bullet and start a massive refactor of the code, rebasing it on QGraphicsView with an OpenGL viewport. This is the much-faster-but-currently-full-of-regressions "agateau/xfade-qgv" branch.</p>
+<p>This change makes Gwenview much smoother to use when going through images but it also helps quite a bit in comparison mode: images move around when selected and unselected, making it easier to track where they go.</p>
+<p>I recorded a short video to demonstrate the current state of the xfade-qgv branch. It demonstrates both going through images and image comparison. In this video Gwenview runs on a HD monitor. Note that I had to record it with a digital camera, desktop recorders did not produce a smooth animation, so the video quality is not exactly optimal.</p>
+<p><iframe src="http://blip.tv/play/AYLZlHAC.html?p=1" width="584" height="378" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#AYLZlHAC" style="display:none"></embed>
+(<a href="http://blip.tv/aurlien-gteau/demonstrate-gwenview-crossfade-transitions-5655052">Watch on blip.tv</a>)</p>
+<p>I hope I can bring the xfade-qgv branch back to feature-parity with master so that it can be merged in  before Soft Feature Freeze (October 27th!).</p>
+<a href="http://flattr.com/thing/418555/Crossfade" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

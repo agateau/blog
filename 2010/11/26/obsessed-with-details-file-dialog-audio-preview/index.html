@@ -1,0 +1,35 @@
+public: yes
+tags: ["KDE","ui"]
+title: "Obsessed with details: file dialog audio preview"
+
+<p>The other day I was setting up an audio reminder in KAlarm, and was going through /usr/share/sounds with the file dialog. I remembered the file dialog had a preview pane, accessible via "(wrench icon) &gt; Show Aside Preview". Sure enough the file dialog can preview sound files, but the preview pane looked like that:</p>
+<a href="kfileaudiopreview-before.png" class=" image-reference"><img src="thumb_kfileaudiopreview-before.png" title="KDE file dialog audio preview, before" height="197" width="300" alt="" class="aligncenter size-medium wp-image-566"/></a>
+<p>I decided that pane could use a bit of UI cleanup: the space is so cramped the seek slider is invisible. I sat in front of my computer one evening to see what I could do about it (click the cropped screenshots for full window versions).</p>
+<p>First step: remove the group box: it wastes space and I assume everybody will be able to recognize what this interface is for:</p>
+<a href="kfileaudiopreview-after1.png" class=" image-reference">
+<img src="kfileaudiopreview-after1-cropped.png" height="80" class="aligncenter" width="294"/>
+</a>
+<p>Next: use the same button sizes as other parts of the dialog:</p>
+<a href="kfileaudiopreview-after2.png" class=" image-reference">
+<img src="kfileaudiopreview-after2-cropped.png" height="80" class="aligncenter" width="294"/>
+</a>
+<p>The seek slider is a bit more usable now, but it's still quite narrow. Do we need all these buttons?
+Let's be bold and remove the "stop" and "toggle looping" button (yes, it's a "toggle looping" button, using the "reload" icon for lack of a better one).</p>
+<a href="kfileaudiopreview-after3.png" class=" image-reference">
+<img src="kfileaudiopreview-after3-cropped.png" height="80" class="aligncenter" width="294"/>
+</a>
+<p>That's better, but there is still an icon to the left of the seek slider which is wasting space. Fortunately that icon, which is provided by the Phonon::SeekSlider widget, is easy to remove: one call to setIconVisible(false) and a few layout adjustments later and we got this.</p>
+<a href="kfileaudiopreview-after4.png" class=" image-reference">
+<img src="kfileaudiopreview-after4-cropped.png" height="80" class="aligncenter" width="294"/>
+</a>
+<p>This is nicer (at least according to me), but it still takes quite some horizontal space, which could be used to show more files in the list on the left.</p>
+<p>I could drop the volume slider, but I already dropped the "stop" and "toggle looping" buttons, I don't want all the KDE lolcats to start running after me shouting: "stop dropin' featurz, u iz turning kde into ze gnome!" (yes, I suck at lolcats).</p>
+<p>Let's do something a bit more clever: the volume slider is less important than the seek slider, so we can just hide it if there isn't enough room. Now if we drag the splitter pane to shrink it, the volume slider goes away, leaving us with this:</p>
+<a href="kfileaudiopreview-after5.png" class=" image-reference">
+<img src="kfileaudiopreview-after5-cropped.png" height="80" class="aligncenter" width="294"/>
+</a>
+<p>That's it, I hope you prefer this version to the previous one. It looks quite nice with video preview as well:</p>
+<a href="kfileaudiopreview-after5-video.png" class=" image-reference"><img src="thumb_kfileaudiopreview-after5-video.png" title="Ariya is in your file dialog!" height="197" width="300" alt="" class="aligncenter size-medium wp-image-577"/></a>
+<p>The code is in trunk and will be in KDE SC 4.6.</p>
+<a href="http://flattr.com/thing/88957/Obsessed-with-details-file-dialog-audio-preview" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>
