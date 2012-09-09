@@ -6,6 +6,3 @@ build:
 
 serve:
 	run-rstblog serve
-
-newblog:
-	./newblog.sh
