@@ -1,0 +1,23 @@
+* {
+	background-color: white;
+}
+
+QPushButton {
+	border: 1px solid #aaa;
+	border-radius: 10px;
+	margin: 4px;
+	padding: 2px;
+}
+
+#playingLabel {
+	background-color:
+		qlineargradient(
+			x1:0, y1:0, x2:0, y2:1,
+			stop: 0 #aaa,
+			stop: 1 #eee
+		);
+	border: 1px solid #bbb;
+	border-bottom-left-radius: 6px;
+	border-bottom-right-radius: 6px;
+	padding: 10px;
+}

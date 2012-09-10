@@ -1,0 +1,235 @@
+<ui version="4.0" >
+ <class>MainWindow</class>
+ <widget class="QWidget" name="MainWindow" >
+  <property name="geometry" >
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>361</width>
+    <height>139</height>
+   </rect>
+  </property>
+  <property name="windowTitle" >
+   <string>Music Player</string>
+  </property>
+  <property name="styleSheet" >
+   <string/>
+  </property>
+  <layout class="QVBoxLayout" >
+   <property name="spacing" >
+    <number>0</number>
+   </property>
+   <property name="leftMargin" >
+    <number>0</number>
+   </property>
+   <property name="topMargin" >
+    <number>0</number>
+   </property>
+   <property name="rightMargin" >
+    <number>0</number>
+   </property>
+   <property name="bottomMargin" >
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="QLabel" name="playingLabel" >
+     <property name="text" >
+      <string>Playing : Moby - 18</string>
+     </property>
+     <property name="alignment" >
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="buttonFrame" >
+     <property name="frameShape" >
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" >
+      <property name="spacing" >
+       <number>0</number>
+      </property>
+      <property name="leftMargin" >
+       <number>0</number>
+      </property>
+      <property name="rightMargin" >
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QPushButton" name="playButton" >
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="icon" >
+         <iconset>media-playback-start.png</iconset>
+        </property>
+        <property name="iconSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="pauseButton" >
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="icon" >
+         <iconset>media-playback-pause.png</iconset>
+        </property>
+        <property name="iconSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="stopButton" >
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="icon" >
+         <iconset>media-playback-stop.png</iconset>
+        </property>
+        <property name="iconSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="prevButton" >
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="icon" >
+         <iconset>media-skip-backward.png</iconset>
+        </property>
+        <property name="iconSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="nextButton" >
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="icon" >
+         <iconset>media-skip-forward.png</iconset>
+        </property>
+        <property name="iconSize" >
+         <size>
+          <width>32</width>
+          <height>32</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="timeVolumeFrame" >
+     <property name="frameShape" >
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow" >
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QHBoxLayout" >
+      <property name="leftMargin" >
+       <number>0</number>
+      </property>
+      <property name="rightMargin" >
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="timeLabel" >
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="pixmap" >
+         <pixmap>player-time.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="timeSlider" >
+        <property name="sizePolicy" >
+         <sizepolicy vsizetype="Fixed" hsizetype="Expanding" >
+          <horstretch>1</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="value" >
+         <number>15</number>
+        </property>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="volumeLabel" >
+        <property name="text" >
+         <string/>
+        </property>
+        <property name="pixmap" >
+         <pixmap>player-volume.png</pixmap>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QSlider" name="volumeSlider" >
+        <property name="value" >
+         <number>99</number>
+        </property>
+        <property name="orientation" >
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QToolButton" name="themesButton" >
+        <property name="text" >
+         <string>...</string>
+        </property>
+        <property name="icon" >
+         <iconset>theme.png</iconset>
+        </property>
+        <property name="iconSize" >
+         <size>
+          <width>22</width>
+          <height>22</height>
+         </size>
+        </property>
+        <property name="shortcut" >
+         <string>Ctrl+R</string>
+        </property>
+        <property name="popupMode" >
+         <enum>QToolButton::InstantPopup</enum>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

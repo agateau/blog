@@ -1,0 +1,37 @@
+.QFrame {
+	border-image: url("bg.png") 24 12 24 12 stretch stretch;
+	border-width: 13px;
+}
+
+QPushButton {
+	border-image: url("button.png") 4 4 4 4 stretch stretch;
+	border-width: 4px 0px 4px 4px;
+	padding: 10px 1px 1px 1px;
+}
+
+#nextButton {
+	border-width: 4px;
+}
+
+QPushButton:hover {
+}
+
+QPushButton:pressed {
+	padding: 11px 0px 0px 2px;
+}
+
+QToolButton::hover {
+	border: 1px solid #666;
+	border-radius: 4px;
+}
+
+QMenu {
+	background-color: #444;
+	color: white;
+}
+
+#playingLabel {
+	border-image: url("lcd.png") 14 60 7 60 stretch stretch;
+	border-width: 14px 60px 7px 60px;
+	color: #e1771a;
+}

@@ -1,0 +1,44 @@
+ require 'rake/clean'
+
+# Outputs
+TARBALL = "developper-avec-qml.tar.bz2"
+OUT_HTML = "developper-avec-qml.html"
+QUICK_OUT_HTML = "work-" + OUT_HTML
+
+# Intermediary
+FULL_MARKDOWN = "developper-avec-qml-full.markdown"
+
+# Vars to run landslide
+LSDIR = "$HOME/opt/landslide"
+PYTHONPATH = "#{LSDIR}/lib/python2.7/site-packages"
+LSCMD = "PYTHONPATH=#{PYTHONPATH} #{LSDIR}/bin/landslide"
+
+# Input files
+QML_FILES = FileList["**/*.qml"]
+IMG_FILES = FileList["**/*.png"]
+SRC_FILES = QML_FILES + FileList["**/*.{h,cpp,pro,qrc,qmlproject}"]
+
+CLEAN.include(QUICK_OUT_HTML, FULL_MARKDOWN, OUT_HTML, TARBALL)
+
+task :default => QUICK_OUT_HTML
+task :standalone => OUT_HTML
+
+file FULL_MARKDOWN => ["developper-avec-qml.markdown"] + QML_FILES do |t|
+    puts "Running txtinclude"
+    system "txtinclude #{t.prerequisites[0]} > #{t.name}"
+end
+
+file QUICK_OUT_HTML => FULL_MARKDOWN do |t|
+    puts "Running landslide"
+    system "#{LSCMD} #{t.prerequisites[0]} --destination #{t.name} --relative --theme ~/doc/ref/landslide-themes/kde"
+end
+
+file OUT_HTML => [FULL_MARKDOWN] + IMG_FILES do |t|
+    puts "Running landslide to create a standalone document"
+    system "#{LSCMD} #{t.prerequisites[0]} --destination #{t.name} --theme ~/doc/ref/landslide-themes/kde --embed"
+end
+
+task :dist => [OUT_HTML] + SRC_FILES do |t|
+    puts "Generating tarball"
+    system "tar cjf #{TARBALL} --transform 's,^,developper-avec-qml/,' #{t.prerequisites.join(' ')}"
+end

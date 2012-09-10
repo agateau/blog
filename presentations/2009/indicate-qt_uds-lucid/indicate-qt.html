@@ -1,0 +1,198 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" 
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+<title>Indicators in KDE, using libindicate-qt</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<!-- metadata -->
+<meta name="generator" content="S5" />
+<meta name="version" content="S5 1.1" />
+<meta name="presdate" content="20091117" />
+<meta name="author" content="Aurélien Gâteau" />
+<meta name="company" content="Canonical" />
+<!-- configuration parameters -->
+<meta name="defaultView" content="slideshow" />
+<meta name="controlVis" content="hidden" />
+<!-- style sheet links -->
+<link rel="stylesheet" href="ui/default/slides.css" type="text/css" media="projection" id="slideProj" />
+<link rel="stylesheet" href="ui/default/outline.css" type="text/css" media="screen" id="outlineStyle" />
+<link rel="stylesheet" href="ui/default/print.css" type="text/css" media="print" id="slidePrint" />
+<link rel="stylesheet" href="ui/default/opera.css" type="text/css" media="projection" id="operaFix" />
+<!-- S5 JS -->
+<script src="ui/default/slides.js" type="text/javascript"></script>
+
+<script type="text/javascript" src="chili/jquery.min.js"></script>
+<script type="text/javaScript" src="chili/jquery.chili-2.2.js"></script>
+<script type="text/javascript">ChiliBook.recipeFolder = "chili/";</script>
+</head>
+<body>
+
+<div class="layout">
+<div id="controls"><!-- DO NOT EDIT --></div>
+<div id="currentSlide"><!-- DO NOT EDIT --></div>
+<div id="header"></div>
+<div id="footer">
+<h1>Ubuntu Developer Summit - Lucid</h1>
+<h2>Indicators in KDE, using libindicate-qt</h2>
+</div>
+
+</div>
+
+
+<div class="presentation">
+
+<div class="slide">
+  <h1>Indicators in KDE</h1>
+  <h2>Using libindicate-qt</h2>
+  <h3>Aurélien Gâteau</h3>
+  <h4>Canonical, Desktop Experience Team</h4>
+</div>
+
+
+<div class="slide">
+  <h1>What you need</h1>
+  <ul>
+    <li>libindicate:
+      <a href="http://launchpad.net/libindicate">http://launchpad.net/libindicate</a>,
+      GLib based
+    </li>
+    <li>libindicate-qt:
+      <a href="http://launchpad.net/libindicate-qt">http://launchpad.net/libindicate-qt</a>,
+      Qt bindings for libindicate
+    </li>
+    <li>
+    To install everything on Karmic:
+    <pre>
+      aptitude install libindicate-qt-dev
+    </pre>
+    </li>
+  </ul>
+</div>
+
+<div class="slide">
+  <h1>CMake stuff</h1>
+
+<p>
+Find indicate-qt on the machine:
+<pre class="cplusplus">
+find_package(PkgConfig REQUIRED)
+pkg_check_modules(INDICATEQT REQUIRED indicate-qt)
+</pre>
+</p>
+
+<p>
+Use it:
+<pre class="cplusplus">
+include_directories(${INDICATEQT_INCLUDE_DIRS})
+link_directories(${INDICATEQT_LIBRARY_DIRS})
+
+target_link_libraries(myapp ...
+                      ${INDICATEQT_LIBRARIES})
+</pre>
+</p>
+
+</div>
+
+<div class="slide">
+  <h1>Creating a server</h1>
+<pre class="cplusplus">
+#include &lt;KGlobal&gt;
+#include &lt;qindicateserver.h&gt;
+
+void MyApp::createIndicateServer() {
+    m_indicateServer = QIndicate::Server::defaultInstance();
+    m_indicateServer-&gt;setType("message.irc");
+    QString appName = KGlobal::mainComponent().componentName();
+    KService::Ptr service = KService::serviceByDesktopName(appName);
+    m_indicateServer-&gt;setDesktopFile(service-&gt;entryPath());
+    m_indicateServer-&gt;show();
+}
+</pre>
+</div>
+
+<div class="slide">
+<h1>Handling clicks on the server <small>1/2</small></h1>
+
+<pre class="cplusplus">void MyApp::createIndicateServer() {
+    m_indicateServer = QIndicate::Server::defaultInstance();
+    m_indicateServer-&gt;setType("message.irc");
+    QString appName = KGlobal::mainComponent().componentName();
+    KService::Ptr service = KService::serviceByDesktopName(appName);
+    m_indicateServer-&gt;setDesktopFile(service-&gt;entryPath());
+
+&raquo;    connect(m_indicateServer, SIGNAL(serverDisplay()),
+&raquo;        SLOT(showMainWindow()));
+
+    m_indicateServer-&gt;show();
+}
+</pre>
+</div>
+
+<div class="slide">
+<h1>Handling clicks on the server <small>2/2</small></h1>
+
+<pre class="cplusplus">#include &lt;KWindowSystem&gt;
+
+void MyApp::showMainWindow() {
+    m_mainWindow-&gt;show();
+    KWindowSystem::forceActiveWindow(m_mainWindow-&gt;winId());
+}
+</pre>
+</div>
+
+<div class="slide">
+<h1>Creating an indicator</h1>
+
+<pre class="cplusplus">void MyApp::addIndicator(const QString& text) {
+    QIndicate::Indicator* indicator =
+        new QIndicate::QIndicator(m_indicateServer);
+
+    indicator-&gt;setNameProperty("#kubuntu-devel");
+    indicator-&gt;setTimeProperty(QDateTime::currentDateTime());
+    indicator-&gt;setDrawAttentionProperty(true);
+    indicator-&gt;show();
+    // Insert code to keep track of the indicator here
+}
+</pre>
+</div>
+
+<div class="slide">
+<h1>Handling clicks on the indicator <small>1/2</small></h1>
+
+<pre class="cplusplus">void MyApp::addIndicator(const QString& text) {
+    QIndicate::Indicator* indicator =
+        new QIndicate::QIndicator(m_indicateServer);
+
+    indicator-&gt;setNameProperty("#kubuntu-devel");
+    indicator-&gt;setTimeProperty(QDateTime::currentDateTime());
+    indicator-&gt;setDrawAttentionProperty(true);
+&raquo;    connect(indicator, SIGNAL(display(QIndicate::Indicator*)),
+&raquo;        SLOT(displayIndicator(QIndicate::Indicator*)));
+    indicator-&gt;show();
+    // Insert code to keep track of the indicator here
+}
+</pre>
+</div>
+
+
+<div class="slide">
+<h1>Handling clicks on the indicator <small>2/2</small></h1>
+
+<pre class="cplusplus">void MyApp::displayIndicator(QIndicate::Indicator* indicator) {
+    showMainWindow();
+    // Do relevant action for this indicator
+
+    delete indicator; // Or indicator-&gt;hide();
+}
+</pre>
+</div>
+
+<div class="slide">
+<h1>That's it!</h1>
+<div style="text-align:center">Questions?</div>
+</div>
+
+</body>
+</html>
