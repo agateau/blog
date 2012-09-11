@@ -7,3 +7,5 @@ modules:
     disqus:
         shortname: agateau
         developer: 1
+    blog:
+        feed_url: /feed
