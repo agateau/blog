@@ -1,5 +1,7 @@
 all: build
 
+OUT_GIT_DIR=$$HOME/www/agateau.github.com
+
 clean:
 	rm -rf _build
 
@@ -8,3 +10,9 @@ build:
 
 serve:
 	run-rstblog serve
+
+deploy:
+	rsync -av --delete --max-delete=10 --exclude '.git' _build/ $(OUT_GIT_DIR)
+	cd $(OUT_GIT_DIR) && git add .
+	cd $(OUT_GIT_DIR) && git ci -a -m 'Deploying'
+	cd $(OUT_GIT_DIR) && git push
