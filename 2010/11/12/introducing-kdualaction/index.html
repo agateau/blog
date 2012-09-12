@@ -3,7 +3,7 @@ tags: ["KDE","Tips"]
 title: "Introducing KDualAction: It all started because of a sunken Pause button"
 
 <p>I have a few pet peeves in KDE. One of them was the Play/Pause button in Dragon Player. It looked really weird to me that the Pause button would stay sunken will playing:</p>
-<a href="dragon-pause-before.png" class=" image-reference"><img src="thumb_dragon-pause-before.png" title="Dragon Player before KDualAction" height="39" width="300" alt="" class="aligncenter size-medium wp-image-532"/></a>
+<a href="dragon-pause-before.png"><img src="thumb_dragon-pause-before.png" title="Dragon Player before KDualAction" height="39" width="300" alt="" class="aligncenter size-medium wp-image-532"/></a>
 <p>I could have gone the easy way and fixed this in Dragon Player code, but I went the longer way instead because I thought there was something to do to make the life of KDE developers easier.</p>
 <p>When there is a need for an action which change from one set of icons and texts to another when triggered, developers often end up using <a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKToggleAction.html">KToggleAction</a> to implement it, because the <a href="http://api.kde.org/4.x-api/kdelibs-apidocs/kdeui/html/classKToggleAction.html#a22ba13df6bebeacf041574639161aaaf">setCheckedState()</a> method looks just like what is needed (despite the warning in its doc saying "Note that this does not replace the check box in front of the menu.")</p>
 <p>The first step was to write a page on toggle buttons for KDE HIG, getting it reviewed and accepted on kde-usability mailing list. You can <a href="http://techbase.kde.org/Projects/Usability/HIG/Toggle_Buttons">find it here</a>. This page documents when toggle buttons should be used and when they should not (and one of the examples is a Play/Pause button, how surprising!).</p>
@@ -30,7 +30,7 @@ Note that the icon and text must describe which state the application will be in
 </li>
 </ul></p>
 <p>Dragon Player has now been patched to use KDualAction, its toolbar looks better now (at least according to me):
-<a href="dragon-pause-after.png" class=" image-reference"><img src="thumb_dragon-pause-after.png" title="Dragon Player with KDualAction" height="36" width="300" alt="" class="aligncenter size-medium wp-image-531"/></a></p>
+<a href="dragon-pause-after.png"><img src="thumb_dragon-pause-after.png" title="Dragon Player with KDualAction" height="36" width="300" alt="" class="aligncenter size-medium wp-image-531"/></a></p>
 <p>KDualAction is part of kdelibs 4.6, so any KDE trunk application can use it now.</p>
 <p>Note: I initially thought about porting all the "Show/hide 'ui element'" actions in KDE to use KDualAction, but it proved to be a bad idea: the Settings menus were more difficult to read after the change. If your application uses KToggleAction to toggle a user interface element with "Show Element" as unchecked state and "Hide Element" as checked state, you should not port your action to KDualAction, instead you should just remove the call to "setCheckedState("Hide Element")".</p>
 <a href="http://flattr.com/thing/83567/Introducing-KDualAction" target="_blank">

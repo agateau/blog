@@ -175,7 +175,7 @@ WARNING:root:JsConsole(about:blank:5): result: 1.75
 </code></pre><p/>
 <h2>Not good enough?</h2>
 <p>Getting the output of console.log() is nice, but modern browsers have much more efficient tools: if you open "broken.html" with Rekonq and look at the output in the Web Inspector Console, you can not only see console output, but you can also easily inspect your HTML tree and many other things.</p>
-<a href="rekonq-webinspector.png" class=" image-reference"><img src="thumb_rekonq-webinspector.png" title="Rekonq Web Inspector" height="148" width="300" alt="" class="aligncenter size-medium wp-image-1083"/></a>
+<a href="rekonq-webinspector.png"><img src="thumb_rekonq-webinspector.png" title="Rekonq Web Inspector" height="148" width="300" alt="" class="aligncenter size-medium wp-image-1083"/></a>
 <p>Like us, Rekonq uses QtWebKit, so is there a way to get a similar tool?</p>
 <p>It is actually possible. Rekonq uses a class named QWebInspector. All that is necessary to get a nice inspector tool for our application is to:</p>
 <ol>
@@ -269,7 +269,7 @@ Complex computation:
 <li>log categorization: you can use console.warn() and console.error() to get different type of output. These methods worked with the previous approach, but the categorization was lost.</li>
 </ul>
 <p>Loading "console-webinspector.html" with "loader-webinspector.py" and pressing F12 we get this:</p>
-<a href="loader-webinspector.png" class=" image-reference"><img src="thumb_loader-webinspector.png" title="Loader with Web Inspector" height="146" width="300" alt="" class="aligncenter size-medium wp-image-1082"/></a>
+<a href="loader-webinspector.png"><img src="thumb_loader-webinspector.png" title="Loader with Web Inspector" height="146" width="300" alt="" class="aligncenter size-medium wp-image-1082"/></a>
 <h2>Closing words</h2>
 <p>These two approaches should help you track down the nastiest bugs in your embedded JavaScript code. The Web Inspector approach is probably the most powerful one, but the Python logging approach can also be useful when tracking down bugs where it is more practical to have one single log output for both the PyQt and the JavaScript sides.</p>
 <a href="http://flattr.com/thing/477037/PyQtWebKit-experiments-part-2-debugging" target="_blank">

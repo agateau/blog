@@ -13,7 +13,7 @@ title: "Common user interface mistakes in KDE applications, part 5: Big toolbars
 <p>You probably made such decisions while the application was created.  Nevertheless it's a good idea to revisit those decisions from time to time, based on your increased knowledge of the way your application is used.</p>
 <b>Step #2: Icon-only buttons</b>
 Hide the text of some buttons. Since Qt 4.6, QAction has a <a href="http://qt-project.org/doc/qt-4.8/qaction.html#priority-prop">"priority" property</a> which defaults to QAction::NormalPriority. Set it to QAction::LowPriority to get an icon-only button in your toolbar. Peter Penz did it for Dolphin, I did the same for Gwenview. It obviously saves quite some horizontal space.
-<a href="dolphin.png" class=" image-reference"><img src="thumb_dolphin.png" title="Dolphin Toolbar" height="77" width="300" alt="" class="aligncenter size-medium wp-image-1125"/></a>
+<a href="dolphin.png"><img src="thumb_dolphin.png" title="Dolphin Toolbar" height="77" width="300" alt="" class="aligncenter size-medium wp-image-1125"/></a>
 <i>Dolphin Toolbar</i>
 <p>I couldn't come with strong rules to decide whether a button should show text or not. You have to use your gut feeling here. Nevertheless here are some hints to give you an idea of situations where it may make sense to use icon-only buttons.</p>
 <ul>
@@ -36,7 +36,7 @@ The action for this button is about manipulating the UI rather than an essential
     It brings back value to the tooltip: don't you hate it when you move the mouse hover a button and the tooltip which appears stupidly repeats the button text?
 </li>
 </ul>
-<a href="cptn-obvious.png" class=" image-reference"><img src="cptn-obvious.png" title="Useful tooltips" height="128" width="560" alt="" class="aligncenter size-full wp-image-1124"/></a>
+<a href="cptn-obvious.png"><img src="cptn-obvious.png" title="Useful tooltips" height="128" width="560" alt="" class="aligncenter size-full wp-image-1124"/></a>
 <i>So the "View" button is about... "View"! Thank you Captain Obvious! (This is fixed for 4.9)</i>
 <p>When defining the action text, make use of <a href="http://techbase.kde.org/Development/Tutorials/Localization/i18n_Semantics">KUIT</a>: mark the text using "@action:intoolbar", This should give a hint to the translator that this string should be kept short.</p>
 <p>When defining the action tooltip, remember the HIG says <a href="http://techbase.kde.org/Projects/Usability/HIG/Capitalization">tooltips should be written using sentence capitalization</a>, not title capitalization. QAction is not being very helpful there: when no tooltip is set, it falls back to using the "text" property as a tooltip, and the "text" property uses title capitalization :/.  That is one more good reason to define tooltips yourself.</p>

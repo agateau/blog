@@ -3,11 +3,11 @@ tags: ["Gwenview","KDE","kipi"]
 title: "Easily share images with Gwenview"
 
 <p>A common complaint I hear about Gwenview is that sharing an image on Facebook, Flickr or other services is difficult because the feature is buried too deeply in the menu hierarchy. So, <a href="http://www.elpauer.org/?p=509">hot on the heels of KSnapshot</a>, I made the export plugins easier to reach. There is now a "Share" button in the toolbar:</p>
-<a href="20101119-share-button1.png" class=" image-reference"><img src="20101119-share-button1.png" title="The Share button" height="100" width="466" alt="" class="aligncenter size-full wp-image-555"/></a>
+<a href="20101119-share-button1.png"><img src="20101119-share-button1.png" title="The Share button" height="100" width="466" alt="" class="aligncenter size-full wp-image-555"/></a>
 <p>When you click it for the first time, you get a list of all KIPI export plugins:</p>
-<a href="20101120-share-menu11.png" class=" image-reference"><img src="thumb_20101120-share-menu11.png" title="The share menu" height="116" width="300" alt="" class="aligncenter size-medium wp-image-556"/></a>
+<a href="20101120-share-menu11.png"><img src="thumb_20101120-share-menu11.png" title="The share menu" height="116" width="300" alt="" class="aligncenter size-medium wp-image-556"/></a>
 <p>Gwenview likes to pretend it is smart, so next time you click the Share button, it will remember the last plugin you used:</p>
-<a href="20101120-share-menu21.png" class=" image-reference"><img src="thumb_20101120-share-menu21.png" title="The share menu, remembering the last used plugin" height="123" width="300" alt="" class="aligncenter size-medium wp-image-557"/></a>
+<a href="20101120-share-menu21.png"><img src="thumb_20101120-share-menu21.png" title="The share menu, remembering the last used plugin" height="123" width="300" alt="" class="aligncenter size-medium wp-image-557"/></a>
 <p>I find it quite useful even if it is not perfect yet: The button uses the "document-export" icon for now, for lack of a more adapted one. In these days of social computing, maybe we need a generic "document-share" icon? (Nuno, are you here? :)) I also bumped into some limitations of the KIPI API while implementing this, such as the inability to know the category of a plugin without loading it. Actually the API makes it possible for one plugin to expose actions in multiple categories... This means Gwenview must load all plugins to populate the menu when you click the button. I had an idea in mind a few years ago to address that issue, maybe I'll resurrect it.</p>
 <a href="http://flattr.com/thing/85940/Easily-share-images-with-Gwenview" target="_blank">
 <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

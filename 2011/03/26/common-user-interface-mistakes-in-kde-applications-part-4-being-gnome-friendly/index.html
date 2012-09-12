@@ -8,20 +8,20 @@ title: "Common user interface mistakes in KDE applications, part 4: Being GNOME 
 <h1>Testing</h1>
 <p>You can of course test how your application behaves on GNOME by running it on the GNOME desktop. This is interesting to do, at least to keep an eye on what our fellow competitors are doing, but it takes quite some time. There is a faster way: start your application with these arguments: "-style gtk+".</p>
 <p>KWrite running with the GTK+ style (Clearlooks GTK+ style):</p>
-<a href="kwrite-gtk.png" class=" image-reference"><img src="thumb_kwrite-gtk.png" title="KWrite running with the GTK+ style" height="155" width="300" alt="" class="aligncenter size-medium wp-image-792"/></a>
+<a href="kwrite-gtk.png"><img src="thumb_kwrite-gtk.png" title="KWrite running with the GTK+ style" height="155" width="300" alt="" class="aligncenter size-medium wp-image-792"/></a>
 <h2>"It doesn't work!"</h2>
 What happened? If you get a message like that one:
 <pre>The style 'gtk+' was not found</pre><p>
 Tough luck: your version of Qt was not built with gtk+ support, not much to do here, except rebuilding Qt or using a different one.</p>
 <p>If on the other hand you get something which looks a lot like Oxygen, chances are you are running the Oxygen GTK+ theme! This theme is great to integrate GTK+ and GNOME applications on a KDE desktop, but it's not really helpful here. There are a few ways to change your GTK+ theme from within KDE. The simplest one is probably "kcm-gtk", a GTK+ KConfig Module available from <a href="https://code.launchpad.net/kcm-gtk">https://code.launchpad.net/kcm-gtk</a> (Would be a nice candidate for inclusion in KDE SC!)</p>
-<a href="kcm-gtk.png" class=" image-reference"><img src="thumb_kcm-gtk.png" title="kcm-gtk" height="195" width="300" alt="" class="aligncenter size-medium wp-image-791"/></a>
+<a href="kcm-gtk.png"><img src="thumb_kcm-gtk.png" title="kcm-gtk" height="195" width="300" alt="" class="aligncenter size-medium wp-image-791"/></a>
 <h1>Making your application GNOME friendly</h1>
 <p>Enough testing, let's fix bugs now!</p>
 <h2>Double margins</h2>
 First of all, be on the lookout for my all-time-favorite pet-peeve: "double margins". Oxygen often reduces the impact of double margin problems, but other styles do not. Here is for example a screenshot of Partition Manager with Oxygen:
-<a href="partitionmanager-oxygen.png" class=" image-reference"><img src="thumb_partitionmanager-oxygen.png" title="PartitionManager using Oxygen style" height="197" width="300" alt="" class="aligncenter size-medium wp-image-794"/></a>
+<a href="partitionmanager-oxygen.png"><img src="thumb_partitionmanager-oxygen.png" title="PartitionManager using Oxygen style" height="197" width="300" alt="" class="aligncenter size-medium wp-image-794"/></a>
 <p>Now, the same application, using the GTK+ style:</p>
-<a href="partitionmanager-gtk.png" class=" image-reference"><img src="thumb_partitionmanager-gtk.png" title="PartitionManager using GTK+ style" height="198" width="300" alt="" class="aligncenter size-medium wp-image-793"/></a>
+<a href="partitionmanager-gtk.png"><img src="thumb_partitionmanager-gtk.png" title="PartitionManager using GTK+ style" height="198" width="300" alt="" class="aligncenter size-medium wp-image-793"/></a>
 <p>
 As you can see, there is quite a lot of wasted space. The fix is simple: call setMargin(0) on the layout in the embedded widget and the problem will go away.</p>
 <ul>
@@ -42,9 +42,9 @@ This one is for Qt-only applications: instead of embedding your own copy of the 
 <h2>Others</h2>
 Sometimes you need to be ready to go the extra mile. For example, Gwenview start page used to be ugly and difficult to use with GTK+ themes because the tabs would not be rendered using the correct color. I worked around this bug by setting the style of the tab widgets to Plastique when running on GTK+.
 <p>Before:</p>
-<a href="gwenview-gtk-before.png" class=" image-reference"><img src="thumb_gwenview-gtk-before.png" title="Gwenview start page with GTK+ style, before" height="195" width="300" alt="" class="aligncenter size-medium wp-image-790"/></a>
+<a href="gwenview-gtk-before.png"><img src="thumb_gwenview-gtk-before.png" title="Gwenview start page with GTK+ style, before" height="195" width="300" alt="" class="aligncenter size-medium wp-image-790"/></a>
 <p>After:</p>
-<a href="gwenview-gtk-after.png" class=" image-reference"><img src="thumb_gwenview-gtk-after.png" title="Gwenview start page with GTK+ style, after" height="195" width="300" alt="" class="aligncenter size-medium wp-image-789"/></a>
+<a href="gwenview-gtk-after.png"><img src="thumb_gwenview-gtk-after.png" title="Gwenview start page with GTK+ style, after" height="195" width="300" alt="" class="aligncenter size-medium wp-image-789"/></a>
 <p>If you are interested, here is <a href="https://projects.kde.org/projects/kde/kdegraphics/gwenview/repository/revisions/230aebbd0cd9bc38e37099d180eece7bc8c490c0/diff">the diff</a> implementing this hack.</p>
 <h1>Conclusion</h1>
 That's it for this episode, now lets see if  can make our applications as beautiful on GNOME as they are on the KDE desktop!

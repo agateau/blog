@@ -11,11 +11,11 @@ title: "Common user interface mistakes in KDE applications, part 1: Default size
 <p>I picked two examples to illustrate this problem:</p>
 <h2>KMix</h2>
 By default KMix window looks like that:
-<a href="kmix-before.png" class=" image-reference"><img src="kmix-before.png" title="KMix default window" height="232" width="204" alt="" class="aligncenter size-full wp-image-608"/></a>
+<a href="kmix-before.png"><img src="kmix-before.png" title="KMix default window" height="232" width="204" alt="" class="aligncenter size-full wp-image-608"/></a>
 <p>The window is too small to fit the current tab title. Additionally the sliders have very little room, making them difficult to manipulate.</p>
 <h2>Akregator</h2>
 <p>This is how Akregator looks when started for the first time:</p>
-<a href="akregator.png" class=" image-reference"><img src="thumb_akregator.png" title="Akregator" height="155" width="300" alt="" class="aligncenter size-medium wp-image-609"/></a>
+<a href="akregator.png"><img src="thumb_akregator.png" title="Akregator" height="155" width="300" alt="" class="aligncenter size-medium wp-image-609"/></a>
 <p>Here the main problem is column sizes:</p>
 <p>The sidebar is quite useless until you resize the columns: you can't read more than the first two or three characters of the feed names.</p>
 <p>The article list does not perform much better either: the largest column is the date column, where the most important information is probably always the title (Additionally, articles are sorted by title, while I think it would make more sense to sort by date by default)</p>
@@ -65,7 +65,7 @@ Avoid hardcoding the size: a decent size on your machine may not be decent at al
 <p>So what can be done? Qt is not as helpful as we are used to here. So far the best solution I found is to resize the important columns to fit their content once, right after the list has been filled. If you are using a QTreeView, this can be done easily with <code>QTreeView::resizeColumnsToContent(int)</code>.</p>
 <h2>Practicing what I preach</h2>
 <p>I think this kind of mistakes are better demonstrated with real examples but I realize having pointing out individual applications is not very nice. To make up for that, I worked on improving KMix and I am working on Akregator as well. Here is the new layout I came up with for KMix:</p>
-<a href="kmix-after.png" class=" image-reference"><img src="thumb_kmix-after.png" title="KMix proposed new layout" height="138" width="300" alt="" class="aligncenter size-medium wp-image-607"/></a>
+<a href="kmix-after.png"><img src="thumb_kmix-after.png" title="KMix proposed new layout" height="138" width="300" alt="" class="aligncenter size-medium wp-image-607"/></a>
 <p>Oh, and I fixed the hardcoded size hint in Gwenview...</p>
 <a href="http://flattr.com/thing/97565/Common-user-interface-mistakes-in-KDE-applications-part-1-Default-sizes" target="_blank">
 <img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>
