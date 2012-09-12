@@ -1,0 +1,26 @@
+public: yes
+tags: ["KDE","kidmp"]
+title: "KidMP, a kid-friendly media player"
+
+<p>I have (too) many side projects. Many won't ever be formally released. Today I am releasing one of them: KidMP, a kid-friendly media player.</p>
+<p>This project started with an unusual need: for a long time, my daughter Clara has been watching movies on my laptop while we were traveling. Depending on who was driving, either my wife or I would start the movie on the laptop for her, then pass her the laptop once the movie has started.</p>
+<p>This was not the most practical setup, but it worked reasonably well. A few years ago however, a schedule conflict prevented me from going on vacation with the rest of the family. As my wife would be driving alone, there was no way she could setup the laptop for my daughter. The day before they left, I started a quick hack: a media player which would be usable by someone who can't read, and is not (yet!) computer-fluent. KidMP was born.</p>
+<p>Over time, I worked on and off on this project, improving it after each family trip. Today I think KidMP is in a good-enough state to be released. It has been battle-field tested during several trips, used by the whole family, I believe it works reasonably well.</p>
+<p>Quoting the <a href="http://quickgit.kde.org/index.php?p=scratch%2Fgateau%2Fkidmp.git&amp;a=blob_plain&amp;f=README.md">README</a>, here are the features which makes KidMP a kid-friendly player:</p>
+<ul>
+<li>Large, customizable thumbnails</li>
+<li>No need to be able to read</li>
+<li>Fully usable with only 3 keys: left arrow, right arrow and space (or return)</li>
+<li>Automatically resume playing at last position</li>
+<li>Start in fullscreen by default, difficult to quit by accident</li>
+</ul>
+<p>It is designed to be used on a laptop in situations where using the touchpad is not easy: laptop is not on a table and kids are not precise enough with a touchpad. That is why it is primarily designed to be used with the keyboard.</p>
+<p>Early versions used covers from IMDB, but I realized kids have difficulties recognizing them, so I added a way to grab screenshots from the actual movie and use them as thumbnails. I first thought I would have to do all screenshoting myself, but it turns out kids love this feature: every once in a while, Clara will go through the movie collection and change all the pictures!</p>
+<p>Selecting movies is done through a cover-flow like strip:</p>
+<a href="kidmp-browse.png" class=" image-reference"><img src="thumb_kidmp-browse.png" title="Browsing images" height="168" width="300" alt="" class="aligncenter size-medium wp-image-1174"/></a>
+<p>When a movie is playing, pressing Space pauses playback and brings a toolbar at the bottom of the screen:</p>
+<a href="kidmp-play.png" class=" image-reference"><img src="thumb_kidmp-play.png" title="Playing a movie" height="168" width="300" alt="" class="aligncenter size-medium wp-image-1175"/></a>
+<p>The application is written in PyKDE4, using a mix of QML (for the movie selector) and regular widgets. You can get a tarball from <a href="http://kde-apps.org/content/show.php?content=153787">kde-apps.org</a> or clone the <a href="http://quickgit.kde.org/index.php?p=scratch%2Fgateau%2Fkidmp.git&amp;a=summary">git repository</a>.</p>
+<p>I hope your kids enjoy KidMP!</p>
+<a href="http://flattr.com/thing/870214/KiDMP-a-kid-friendly-media-player" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>
