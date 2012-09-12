@@ -1,6 +1,6 @@
 all: build
 
-OUT_GIT_DIR=$$HOME/www/agateau.github.com
+OUT_GIT_DIR=$$HOME/www/blog-out
 
 clean:
 	rm -rf _build
