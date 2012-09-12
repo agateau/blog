@@ -7,7 +7,7 @@
     <title>{% block title %}Home{% endblock %}</title>
     <link rel="stylesheet" href="/static/style.css" type="text/css">
     <link rel="stylesheet" href="/static/wp-support.css" type="text/css">
-    <link rel="alternate" href="/feed.atom" title="Recent Blog Posts" type="application/atom+xml">
+    <link rel="alternate" href="/feed" title="Recent Blog Posts" type="application/atom+xml">
     {%- for link in links %}
     <link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.media %} media="{{ link.media }}"{% endif %} type="{{ link.type }}">
     {%- endfor -%}
@@ -34,7 +34,7 @@ $(document).ready(onReady);
                 <li><a href="/presentations/">presentations</a>
                 <li><a href="/about-me/">about</a>
                 <li><a href="/tags/">tags</a>
-                <li><a href="/feed.atom">syndication</a>
+                <li><a href="/feed">syndication</a>
             </ul>
         </div>
     </div>
