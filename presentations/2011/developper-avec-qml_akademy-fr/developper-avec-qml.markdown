@@ -26,7 +26,7 @@
 
 # Éléments de base
 
-Les éléments fournient avec QML sont très simples. Les plus communs sont :
+Les éléments fournis avec QML sont très simples. Les plus communs sont :
 
 - Item
 - Rectangle
