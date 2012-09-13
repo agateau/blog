@@ -28,21 +28,23 @@ $(document).ready(onReady);
     <div class="header">
         <div class="navigation">
             <ul>
-                <li><a href="/">blog</a></li>
-                <li><a href="/archive/">archive</a></li>
-                <li><a href="/article-series/">article series</a></li>
-                <li><a href="/about-me/">about</a></li>
-                <li><a href="/tags/">tags</a></li>
-                <li><a href="/feed">syndication</a></li>
+                <li><a href="/">Blog</a></li>
+                <li><a href="/archive/">Archive</a></li>
+                <li><a href="/article-series/">Article Series</a></li>
                 <li><a href="/talks/">Talks</a></li>
+                <li><a href="/tags/">Tags</a></li>
             </ul>
         </div>
+        <p>Aurélien's Room</p>
     </div>
     <div class="body">
         {% block body %}{% endblock %}
     </div>
     <div class="footer">
-        <p>&copy; Aurélien Gâteau</p>
+        <ul>
+            <li><a href="/about-me/">About Me</a></li>
+            <li><a href="/feed">Feed</a></li>
+        </ul>
     </div>
 </div>
 

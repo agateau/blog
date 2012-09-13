@@ -3,36 +3,42 @@
 @import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
 
 /* general style */
-body    { font: 17px/25px 'Open Sans', sans-serif;
+body    { font-family: 'Open Sans', sans-serif;
+          color: #333;
           margin: 0; padding: 0; font-weight: 300; }
-a       { color: black; font-weight: 400; }
-a:hover { color: #CC0033; }
+a       { color: #06c; font-weight: 400; }
 
 /* headlines */
 h1, h2, h3, h4, h5, h6      { font-family: 'Open Sans', sans-serif;
-                              font-weight: 300; color: #222; }
+                              font-weight: 400; color: black; }
 h1 a, h2 a, h3 a, h4 a,
 h5 a, h6 a                  { text-decoration: none; }
 h1 a:hover, h2 a:hover,
 h3 a:hover, h4 a:hover      { text-decoration: underline; }
 h1.title                    { width: 560px; }
 h1, h2                      { margin: 10px 0 25px 0; }
-h1                          { font-size: 42px; line-height: 52px; }
-h2                          { font-size: 32px; line-height: 40px; }
+h1, div.document_title h2   { font-size: 38px; line-height: 52px; }
+h2                          { font-size: 26px; line-height: 40px; }
 
 /* layout elements */
 div.container               { width: 740px; margin: 48px auto; padding: 0; }
-div.header                  { float: left; }
 div.navigation              { float: right; }
-div.header, div.navigation  { height: 25px; margin-bottom: 42px; }
+div.header, div.navigation  { height: 25px; margin-bottom: 42px;
+                              border-bottom: 1px solid #445; padding-bottom: 9px; }
 div.navigation ul           { margin: 0; padding: 0; list-style: none; }
 div.navigation ul li        { display: inline; margin: 0; padding: 0; }
-div.navigation ul li:not(:first-child):before { content: ' ∙ '; color: #ccc; }
+div.navigation ul li:not(:first-child):before { content: ' ∙ '; color: #445; }
 div.body                    { clear: both; }
-div.footer                  { border-top: 1px solid #555; padding-top: 9px;
+div.footer                  { border-top: 1px solid #445; padding-top: 9px;
                               margin-top: 42px; font-size: 16px;
-                              text-align: center; color: #555; }
-div.footer p                { margin: 0; }
+                              text-align: right; color: #555; }
+div.footer ul               { margin: 0; padding: 0; list-style: none; }
+div.footer ul li            { display: inline; margin: 0; padding: 0; }
+div.footer ul li:not(:first-child):before { content: ' ∙ '; color: #445; }
+div.navigation a, div.footer a { text-decoration: none; }
+div.navigation a:hover, div.footer a:hover { text-decoration: underline; }
+
+div#disqus_thread           { border-top: 1px solid #445; padding-top: 9px; }
 
 /* margins and stuff */
 p, div.line-block, ul, ol, pre,
@@ -72,7 +78,7 @@ div.entry-overview div.summary,
 div.entry-overview div.date,
 div.entry-overview div.summary p    { margin: 0; padding: 0; }
 div.entry-overview div.detail       { margin-left: 140px; }
-div.entry-overview div.date         { float: left; width: 120px; color: #CC0033;
+div.entry-overview div.date         { float: left; width: 120px;
                                       text-align: right; font-size: 14px; }
 div.entry-overview h1               { font-weight: normal; }
 
