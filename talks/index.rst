@@ -1,6 +1,9 @@
 title: Talks
 disqus: false
 
+Here is a list of talks I gave. Some of them are in English, others are in
+French, as indicated.
+
 2011
 ----
 
