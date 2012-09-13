@@ -58,7 +58,5 @@ There are many ways you can get involved in this initiative:
 - Reporting new extramile bugs
 - Triaging extramile bugs (checking whether a bug qualifies as extramile or not)
 
-To learn more about how the way the Extra Mile initiative works, go read the
+To learn more about the way the Extra Mile initiative works, go read the
 `Extra Mile wiki page <http://community.kde.org/Getinvolved/Extra_Mile>`_.
-
-
