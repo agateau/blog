@@ -2,9 +2,7 @@
 {% block title %}{{ rst.title }}{% endblock %}
 {% block body %}
   {%- if not config.hide_title %}
-  <div class="document_title">
   {{ rst.html_title }}
-  </div>
   {%- endif %}
   {% if ctx.pub_date %}
   <p class=date>written on {{ format_date(ctx.pub_date, format='full') }}</p>
