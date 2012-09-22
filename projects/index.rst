@@ -38,6 +38,5 @@ KidMP
 
 A kid-friendly media player.
 
-- Homepage: http://techbase.kde.org/User:Agateau/KidMP
-- kde-apps.org entry: http://kde-apps.org/content/show.php/KidMP?content=153787
+- `Homepage </projects/kidmp/>`__
 - Git repository: git://anongit.kde.org/scratch/gateau/kidmp
