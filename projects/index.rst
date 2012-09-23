@@ -15,7 +15,6 @@ Gwenview
 An image viewer for KDE. It is the default image viewer since KDE 4.0.
 
 - Homepage: http://gwenview.sf.net
-- Git repository: git://anongit.kde.org/gwenview.git
 
 Yokadi
 ======
@@ -23,7 +22,6 @@ Yokadi
 A command-line-based, sqlite-powered TODO list.
 
 - Homepage: http://yokadi.github.com
-- Git repository: git://github.com/agateau/yokadi.git
 
 Colibri
 =======
@@ -39,4 +37,10 @@ KidMP
 A kid-friendly media player.
 
 - `Homepage </projects/kidmp/>`__
-- Git repository: git://anongit.kde.org/scratch/gateau/kidmp
+
+QSR
+===
+
+A graphical search and replace utility.
+
+- `Homepage </projects/qsr/>`__
