@@ -9,38 +9,19 @@ other goodies on my `GitHub page <http://github.com/agateau>`_.
 Active Projects
 ---------------
 
-Gwenview
-========
+`Gwenview <http://gwenview.sf.net>`__
+  An image viewer for KDE. It is the default image viewer since KDE 4.0.
 
-An image viewer for KDE. It is the default image viewer since KDE 4.0.
+`Yokadi <http://yokadi.github.com>`__
+  A command-line-based, sqlite-powered TODO list.
 
-- Homepage: http://gwenview.sf.net
+`Colibri <http://kde-apps.org/content/show.php/Colibri?content=117147>`__
+  An alternative to KDE Plasma notifications.
+  Git repository: git://gitorious.org/colibri/colibri.git
 
-Yokadi
-======
+`KidMP </projects/kidmp/>`__
+  A kid-friendly media player.
 
-A command-line-based, sqlite-powered TODO list.
+`QSR </projects/qsr/>`__
+  A graphical search and replace utility.
 
-- Homepage: http://yokadi.github.com
-
-Colibri
-=======
-
-An alternative to KDE Plasma notifications.
-
-- kde-apps.org entry: http://kde-apps.org/content/show.php/Colibri?content=117147
-- Git repository: git://gitorious.org/colibri/colibri.git
-
-KidMP
-=====
-
-A kid-friendly media player.
-
-- `Homepage </projects/kidmp/>`__
-
-QSR
-===
-
-A graphical search and replace utility.
-
-- `Homepage </projects/qsr/>`__
