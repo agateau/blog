@@ -38,4 +38,4 @@ Latest release is `kidmp-0.4.0.tar.bz2 <kidmp-0.4.0.tar.bz2>`__.
 
 Alternatively, you can clone the Git repository: ``git://anongit.kde.org/scratch/gateau/kidmp.git`` or `browse it <http://quickgit.kde.org/index.php?p=scratch%2Fgateau%2Fkidmp.git&a=summary>`__.
 
-`Flattr this <http://flattr.com/thing/901980/KidMP-a-Kid-Friendly-Media-Player>`__.
+.. flattr:: http://flattr.com/thing/901980/KidMP-a-Kid-Friendly-Media-Player
