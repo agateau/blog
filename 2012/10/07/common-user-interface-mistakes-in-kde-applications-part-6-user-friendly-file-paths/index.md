@@ -4,7 +4,7 @@ title: "Common user interface mistakes in KDE applications, part 6: User-friendl
 summary: |
     Quick tip on how to best present file paths in KDE applications
 
-Hey, long time no addition to this [article series](/common-ui-mistakes-in-kde-applications/)...
+Hey, long time no addition to this [article series](/article-series/common-ui-mistakes-in-kde-applications/)...
 
 This one is a quick tip: paths and urls in KDE applications are handled with the
 [KUrl][] class. When one wants to show an URL to the user, it is tempting to use
