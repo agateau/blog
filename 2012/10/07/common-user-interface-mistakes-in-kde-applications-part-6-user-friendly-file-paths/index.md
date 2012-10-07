@@ -1,4 +1,5 @@
-public: false
+pub_date: 2012-10-07 18:12:27 +02:00
+public: true
 tags: [KDE, ui]
 title: "Common user interface mistakes in KDE applications, part 6: User-friendly file paths"
 summary: |
