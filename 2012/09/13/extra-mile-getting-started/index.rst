@@ -2,7 +2,7 @@ pub_date: 2012-09-14 11:17:42 +02:00
 public: true
 tags: [extramile, KDE]
 summary: |
-    Extra Mile, getting started
+    Latest progress on the Extra Mile initiative
 
 Extra Mile, getting started
 ===========================
