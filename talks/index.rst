@@ -10,8 +10,8 @@ French, as indicated.
 -  "Kubuntu, osez un autre environnement" (Ubuntu Party Paris, French):
    `html <2011/kubuntu_ubuntu-party-paris-novembre/kubuntu.html>`__
 -  "Systematic Manual Testing" (Canonical Upstream Sprint, English):
-   `odp <2011/manual-testing_upstream-sprint/manual-testing_upstream-sprint.odp>`__,
-   `pdf <2011/manual-testing_upstream-sprint/manual-testing_upstream-sprint.pdf>`__
+   `odp <2011/manual-testing_upstream-sprint/manual-testing.odp>`__,
+   `pdf <2011/manual-testing_upstream-sprint/manual-testing.pdf>`__
 -  "Tirer le meilleur de Gwenview" (Toulibre, KDE 4.6 party, French):
    `odp <2011/gwenview_toulibre-kde-4.6/gwenview.odp>`__,
    `pdf <2011/gwenview_toulibre-kde-4.6/gwenview.pdf>`__
