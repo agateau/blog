@@ -42,6 +42,8 @@ Of courses, packages for other distributions are welcome.
 
 For more information, check [Homerun homepage](http://userbase.kde.org/Homerun).
 
+*Update:* openSUSE packages are available from [software.opensuse.org](http://software.opensuse.org/package/homerun).
+
 ## What's next?
 
 ### Activities
