@@ -25,3 +25,5 @@ Active Projects
 `QSR </projects/qsr/>`__
   A graphical search and replace utility.
 
+`Doxyqml </projects/doxyqml/>`__
+  A Doxygen input filter to document QML files.
