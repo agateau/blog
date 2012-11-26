@@ -30,7 +30,7 @@ On the merchandising front, we didn't try to sell anything as there was already
 a [Freewear](http://freewear.org) booth selling KDE T-shirts, mugs, cushion and
 other goodies. Having nothing to sell saved us from having to handle cash.
 Instead we gave away KDE stickers and buttons. Thanks to Kévin Kin-Foo and
-PixCyl we also a nicely done KDE leaflet in French and A3-sized KDE Akademy-fr
+[PixCyl](http://pixcyl.free.fr/) we also had a nicely done KDE leaflet in French and A3-sized KDE Akademy-fr
 posters.
 
 .. thumbimg :: leaflet.jpg
