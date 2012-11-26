@@ -55,7 +55,7 @@ and drew the pointing hand)_
 
 At the end of the day we had a nice chat with David Revoy, who gave a great
 presentation about Krita. David is an artist who now creates all his artwork
-with Krita, MyPaint and GIMP and has worked, among other projects, on
+with Krita, MyPaint and GIMP. He worked, among other projects, on
 [Sintel](http://sintel.org) and [Tears of Steel](http://tearsofsteel.org), the
 latest movies from the Blender Foundation. This was really inspiring, you may
 want to visit [his website](http://www.davidrevoy.com).
