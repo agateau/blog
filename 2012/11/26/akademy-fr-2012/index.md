@@ -1,3 +1,4 @@
+pub_date: 2012-11-26 17:40:05 +01:00
 public: true
 tags: [KDE, Akademy, Krita, Plasma, Homerun, Calligra]
 title: Akademy-fr 2012
