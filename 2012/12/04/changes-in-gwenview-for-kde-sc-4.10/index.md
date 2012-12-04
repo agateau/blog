@@ -1,4 +1,4 @@
-public: false
+public: true
 tags: [Gwenview, KDE]
 title: Changes in Gwenview for KDE SC 4.10
 summary: |
