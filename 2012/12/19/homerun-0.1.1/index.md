@@ -22,5 +22,5 @@ You can download the source from [download.kde.org][homerun-src]. Packages
 should get updated soon.
 
 [qt5]: http://blog.qt.digia.com/blog/2012/12/19/qt-5-0/
-[homerun-src]: http://download.kde.org/unstable/homerun/src/homerun-0.1.1.tar.bz2
+[homerun-src]: http://download.kde.org/unstable/homerun/src/homerun-0.1.1.tar.bz2.mirrorlist
 [homerun]: http://userbase.kde.org/Homerun
