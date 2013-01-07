@@ -71,7 +71,7 @@ div.container {
     margin: 0 0.5em;
 }
 
-div.header {
+header {
     background-color: #3d3d3d;
     margin-bottom: 1em;
     line-height: 3em;
@@ -80,42 +80,42 @@ div.header {
     font-size: 80%;
 }
 
-div.header h1 {
+header h1 {
     display: inline;
     font-size: 120%;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
 
-div.header a {
+header a {
     color: whitesmoke;
     text-decoration: none;
 }
 
-div.header p.title {
+header p.title {
     margin: 0;
 }
 
 /*- Navigation -----------------------*/
-div.navigation ul {
+nav ul {
     background-color: #3d3d3d;
     margin: 0;
     padding: 0;
     list-style: none;
 }
 
-div.navigation a, div.footer a {
+nav a, footer a {
     text-decoration: none;
 }
-div.navigation a:hover, div.footer a:hover {
+nav a:hover, footer a:hover {
     text-decoration: underline;
 }
-div.navigation ul li:not(:first-child):before {
+nav ul li:not(:first-child):before {
     content: ' | ';
     color: #666;
 }
 
-div.navigation ul li {
+nav ul li {
     display: inline;
     margin: 0;
     padding: 0;
@@ -127,7 +127,7 @@ div.body {
 }
 
 /*- Footer ---------------------------*/
-div.footer {
+footer {
     padding-top: 9px;
     margin-top: 42px;
     border-top: 1px solid #445;
@@ -135,17 +135,17 @@ div.footer {
     text-align: right;
     color: #555;
 }
-div.footer ul {
+footer ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
-div.footer ul li {
+footer ul li {
     display: inline;
     margin: 0;
     padding: 0;
 }
-div.footer ul li:not(:first-child):before {
+footer ul li:not(:first-child):before {
     content: ' | ';
     color: #445;
 }
@@ -292,20 +292,20 @@ Medium size
 
 --------------------------------------*/
 @media screen and (min-width: 480px) {
-    div.header {
+    header {
         clear: both;
     }
 
-    div.header {
+    header {
         text-align: left;
         font-size: 100%;
     }
 
-    div.header h1 {
+    header h1 {
         font-size: 100%;
     }
 
-    div.navigation {
+    nav {
         float: right;
     }
 }
