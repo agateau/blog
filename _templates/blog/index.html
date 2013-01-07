@@ -2,7 +2,7 @@
 {% block title %}Blog{% endblock %}
 {% block body %}
     {%- for entry in pagination.get_slice() %}
-        <div class="entry-overview">
+        <article class="overview">
             <h1>
                 <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
             </h1>
@@ -10,7 +10,7 @@
             {% if entry.summary %}
                 <div class="summary">{{ entry.render_summary() }}</div>
             {% endif %}
-        </div>
+        </article>
     {%- endfor %}
 
     {% if show_pagination and pagination.pages > 1 %}

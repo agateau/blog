@@ -220,14 +220,14 @@ table.footnote td p + p {
 }
 
 /*- Overview --------------------------*/
-div.entry-overview h1 {
+article.overview h1 {
     margin: 0;
     padding: 0;
     font-size: 20px;
     font-weight: normal;
 }
 
-div.entry-overview p {
+article.overview p {
     margin-top: 0;
 }
 
