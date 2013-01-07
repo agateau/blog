@@ -67,7 +67,7 @@ h3 {
 Layout
 
 -------------------------------------*/
-div.container {
+div.sleeve {
     margin: 0 0.5em;
 }
 
@@ -316,7 +316,7 @@ Full size
 
 --------------------------------------*/
 @media screen and (min-width: 800px) {
-    div.container {
+    div.sleeve {
         max-width: 800px;
         margin: 0 auto;
         padding: 0;
