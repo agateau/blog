@@ -42,10 +42,6 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
     text-decoration: underline;
 }
 
-h1.title {
-    width: 560px;
-}
-
 h1, h2 {
     margin: 15px 0;
 }
