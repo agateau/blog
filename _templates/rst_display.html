@@ -1,5 +1,13 @@
 {% extends "layout.html" %}
 {% block title %}{{ rst.title }}{% endblock %}
+{% block extrameta %}
+  {% if ctx.summary %}
+    <meta name="description" content="{{ ctx.summary }}" />
+  {% endif %}
+  {% if ctx.tags %}
+    <meta name="keywords" content="{{ ctx.tags|join(', ')}}"/>
+  {% endif %}
+{% endblock %}
 {% block body %}
   {%- if not config.hide_title %}
   {{ rst.html_title }}
