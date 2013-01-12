@@ -1,7 +1,8 @@
 public: yes
 tags: []
 disqus: false
-title: Doxyqml
+title: "Doxyqml"
+summary: Doxyqml makes it possible to use Doxygen to document QML files
 
 Doxyqml is an input filter for [Doxygen](http://www.doxygen.org), a
 documentation system for C++ and a few other languages.
