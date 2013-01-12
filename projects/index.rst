@@ -15,9 +15,8 @@ Active Projects
 `Yokadi <http://yokadi.github.com>`__
   A command-line-based, sqlite-powered TODO list.
 
-`Colibri <http://kde-apps.org/content/show.php/Colibri?content=117147>`__
+`Colibri </projects/colibri/>`__
   An alternative to KDE Plasma notifications.
-  Git repository: git://gitorious.org/colibri/colibri.git
 
 `KidMP </projects/kidmp/>`__
   A kid-friendly media player.
