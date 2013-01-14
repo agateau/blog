@@ -22,3 +22,5 @@ Alternatively, you can clone the Git repository:
 
 [README]: http://quickgit.kde.org/index.php?p=scratch%2Fgateau%2Fdoxyqml.git&a=blob_plain&f=README.md
 [browse-url]: http://quickgit.kde.org/index.php?p=scratch%2Fgateau%2Fdoxyqml.git&a=summary
+
+.. flattr:: http://flattr.com/thing/1100293/Doxyqml
