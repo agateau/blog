@@ -80,7 +80,7 @@ later license!
 
 ## Playing Plouf!
 
-To play Plouf! you first need to download [plouf.adf][adf]. Then either you are
+To play Plouf! you first need to download [plouf-1.1.adf][adf]. Then either you are
 the lucky owner of an Amiga and you know how to transfer it on a disk to use on
 your machine, or you don't have an Amiga and you can run it with an Amiga
 emulator.
@@ -97,7 +97,7 @@ not text files.
 
 [a500]: https://en.wikipedia.org/wiki/Amiga_500
 [AMOS]: https://en.wikipedia.org/wiki/AMOS_%28programming_language%29
-[adf]: /projects/plouf/plouf.adf
+[adf]: /projects/plouf/plouf-1.1.adf
 [FS-UAE]: http://fengestad.no/fs-uae/
 [UAE]: http://www.amigaemulator.org/
 [E-UAE]: http://www.rcdrummond.net/uae/

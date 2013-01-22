@@ -32,7 +32,7 @@ Plouf! used to be a shareware but is now licensed under GPL v3 or later.
 
 ## Getting it
 
-Download [plouf.adf][adf] to play Plouf! on your Amiga or with an emulator
+Download [plouf-1.1.adf][adf] to play Plouf! on your Amiga or with an emulator
 like [FS-UAE][].
 
 You can also clone the source code from github:
@@ -40,7 +40,7 @@ You can also clone the source code from github:
 game-friendly Basic.
 
 
-[adf]: /projects/plouf/plouf.adf
+[adf]: /projects/plouf/plouf-1.1.adf
 [FS-UAE]: http://fengestad.no/fs-uae/
 [gh]: https://github.com/agateau/plouf
 [article]: /2013/01/22/plouf/
