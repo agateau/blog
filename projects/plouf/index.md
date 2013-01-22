@@ -36,7 +36,7 @@ Download [plouf-1.1.adf][adf] to play Plouf! on your Amiga or with an emulator
 like [FS-UAE][].
 
 You can also clone the source code from github:
-<https://github.com/agateau/plouf>.  Plouf! has been created using AMOS, a
+<https://github.com/agateau/plouf>.  Plouf! has been written using AMOS, a
 game-friendly Basic.
 
 
