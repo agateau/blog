@@ -1,4 +1,5 @@
-public: false
+pub_date: 2013-01-22 22:49:59 +01:00
+public: true
 tags: [games, Amiga, AMOS]
 title: "And now for something old... Plouf!"
 summary: |
@@ -85,8 +86,8 @@ the lucky owner of an Amiga and you know how to transfer it on a disk to use on
 your machine, or you don't have an Amiga and you can run it with an Amiga
 emulator.
 
-I recommend [FS-UAE][] which is more user friendly and updated than the older
-[UAE][] and [E-UAE][] emulators.
+If you want to give it a try on an emulator, I recommend [FS-UAE][], a user-friendly
+fork of UAE, with a nicely done frontend.
 
 ## Source code
 
@@ -99,5 +100,3 @@ not text files.
 [AMOS]: https://en.wikipedia.org/wiki/AMOS_%28programming_language%29
 [adf]: /projects/plouf/plouf-1.1.adf
 [FS-UAE]: http://fengestad.no/fs-uae/
-[UAE]: http://www.amigaemulator.org/
-[E-UAE]: http://www.rcdrummond.net/uae/
