@@ -23,7 +23,7 @@ You control your float like an RC car: you can accelerate, slow down and rotate
 left or right. The islands on the screen are randomly generated, so each game
 looks different.
 
-It only support 2 or 3 players: I didn't have the skills to code a computer
+It only supports 2 or 3 players: I didn't have the skills to code a computer
 player by then.
 
 You start with a very limited number of sea urchins, so you need to collect them
