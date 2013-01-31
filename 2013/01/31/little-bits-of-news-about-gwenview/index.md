@@ -49,9 +49,9 @@ master.
 
 That's it for now, time to plan 4.11!
 
-_(PS: I am going to [Fosdem][], see you in Brussels!)_
+_(PS: I am going to [FOSDEM][], see you in Brussels!)_
 
 [forum]: /2011/12/14/announcing-gwenview-forum/
-[Fosdem]: http://fosdem.org
+[FOSDEM]: http://fosdem.org
 [gwenview-devel]: https://mail.kde.org/mailman/listinfo/gwenview-devel
 [bus-factor]: https://en.wikipedia.org/wiki/Bus_factor
