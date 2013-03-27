@@ -1,4 +1,4 @@
-pub_date: 2013-03-27 16:36:46 +01:00
+pub_date: 2013-03-27 17:14:44 +01:00
 public: true
 tags: [KDE, Dolphin, debug]
 title: "Fixing a subtle animation bug in Dolphin"
@@ -20,7 +20,6 @@ wrong, and was causing a blink at the end of the hover animation.  It's the kind
 of subtle bugs which you don't see at first, but can't ignore once it has been
 pointed out to you. Here is a short video demonstrating it:
 
-<video src="dolphin-before.webm" controls></video>
 _[dolphin-before.webm](dolphin-before.webm)_
 
 ## Understanding the bug
@@ -308,7 +307,6 @@ hoverOpacity())`. We can paint pixmap1 on the widget:
 
 That's it! This version works as expected:
 
-<video src="dolphin-after.webm" controls></video>
 _[dolphin-after.webm](dolphin-after.webm)_
 
 Dolphin from KDE SC 4.10.2 includes this fix. Hope you enjoy your smooth mouse
