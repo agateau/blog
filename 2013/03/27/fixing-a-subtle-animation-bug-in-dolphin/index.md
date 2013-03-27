@@ -1,4 +1,4 @@
-pub_date: 2013-03-27 17:27:52 +01:00
+pub_date: 2013-03-27 17:54:15 +01:00
 public: true
 tags: [KDE, Dolphin, debug]
 title: "Fixing a subtle animation bug in Dolphin"
@@ -21,7 +21,7 @@ of subtle bugs which you don't see at first, but can't ignore once it has been
 pointed out to you. Here is a short video demonstrating it:
 
 <video controls>
-    <source src="/2013/03/27/fixing-a-subtle-animation-bug-in-dolphin/dolphin-before.webm">
+    <source src="http://agateau.com/2013/03/27/fixing-a-subtle-animation-bug-in-dolphin/dolphin-before.webm">
 </video>
 _[dolphin-before.webm](dolphin-before.webm)_
 
@@ -311,7 +311,7 @@ hoverOpacity())`. We can paint pixmap1 on the widget:
 That's it! This version works as expected:
 
 <video controls>
-    <source src="/2013/03/27/fixing-a-subtle-animation-bug-in-dolphin/dolphin-after.webm">
+    <source src="http://agateau.com/2013/03/27/fixing-a-subtle-animation-bug-in-dolphin/dolphin-after.webm">
 </video>
 _[dolphin-after.webm](dolphin-after.webm)_
 
