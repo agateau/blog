@@ -13,7 +13,7 @@ You can get the new tarball from here: [homerun-0.2.2.tar.bz2][tarball], this ve
 
 - 8 complete translations: da, fi, lt, nl, pt, pt_BR, sv and uk
 - 3 mostly complete ones (> 80%): es, ru, tr
-- a bunch of others less complete ones
+- a bunch of other less complete ones
 
 We plan a 0.2.3 release two weeks from now which should come with more complete translation coverage.
 
