@@ -23,8 +23,10 @@ You need kdelibs >= 4.4.
 
 ## Getting it
 
-- Latest release: [colibri-0.2.2.tar.bz2](colibri-0.2.2.tar.bz2).
+- Latest release: [colibri-0.3.0.tar.bz2][tarball].
 - Git repository: `git://anongit.kde.org/colibri`
+
+[tarball]: http://download.kde.org/stable/colibri/colibri-0.3.0.tar.bz2.mirrorlist
 
 ## Setting up your system to run Colibri
 
