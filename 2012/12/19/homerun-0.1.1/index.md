@@ -1,6 +1,6 @@
 pub_date: 2012-12-19 17:33:21 +01:00
 public: true
-tags: [KDE, homerun]
+tags: [KDE, Homerun]
 title: Homerun 0.1.1
 summary: |
     Homerun 0.1.1 has been released, featuring a few bug fixes.
