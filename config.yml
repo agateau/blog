@@ -11,4 +11,4 @@ modules:
         feed_url: /feed
 feed:
     name: "Aurélien's room"
-    subtitle: "I write about code (usually Qt and KDE stuff) and user interface design, occasionally rant, but usually do not bite"
+    subtitle: "Thoughts from a design-minded software engineer"
