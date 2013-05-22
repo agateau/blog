@@ -57,7 +57,7 @@ to Eike Hein, who you may know as the man behind [Konversation][konvi] and
 As for me, I am going to return to what I enjoy most: working on applications.
 In the next months I plan to get more involved in KDEPIM, starting with what I
 do best: obsessing beyond reason about widgets layouts and margins. Once I feel
-familiar enough with the code base, to know the codebase enough, I'll try
+familiar enough with the code base, I'll try
 to get a bit out of my comfort zone and help fixing underlying bugs.
 
 [Homerun]: http://userbase.kde.org/Homerun
