@@ -31,7 +31,10 @@ I also made some smaller fixes:
 
 - The spell-checker in the compose window is now easier to toggle on and off. If it looked like it couldn't be turned on for you, this should help.
 
-- The "Select folder" dialog (the one which pops up when you press J to jump to a folder or M or C to move or copy messages to a folder) received a few fixes. It no longer leaves the previous folder selected as it used to sometimes do. The code also now makes sure the folder tree always have an item selected when you type letters to filter its content.
+- The "Select folder" dialog (the one which pops up when you press J to jump to a folder or M or C to move or copy messages to a folder) received a few fixes.
+    - The folder tree now always have an item selected when you type letters to filter its content.
+    - <strike>It no longer leaves the previous folder selected as it used to sometimes do.</strike><br>
+    Update: this sentence was ambiguous, the dialog still remembers the last folder you selected with it. The change actually fixes a bug where sometimes after selecting a new folder with the dialog, the previously selected folder in the main window would not be unselected, leaving you with two folders selected (see [review request 111100](https://git.reviewboard.kde.org/r/111100/) for more details)
 
 ## More to come
 
