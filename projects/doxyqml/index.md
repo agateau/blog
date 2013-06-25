@@ -11,16 +11,15 @@ Doxyqml makes it possible to use Doxygen to document QML files.
 
 ## More Information
 
-Have a look at the [README][].
+Have a look at the [GitHub page][gh].
 
 ## Get It
 
 Latest release is [doxyqml-0.1.0.tar.bz2](doxyqml-0.1.0.tar.bz2).
 
 Alternatively, you can clone the Git repository:
-`git://anongit.kde.org/scratch/gateau/doxyqml.git` or [browse it][browse-url].
+`https://github.com/agateau/doxyqml.git`
 
-[README]: http://quickgit.kde.org/index.php?p=scratch%2Fgateau%2Fdoxyqml.git&a=blob_plain&f=README.md
-[browse-url]: http://quickgit.kde.org/index.php?p=scratch%2Fgateau%2Fdoxyqml.git&a=summary
+[gh]: https://github.com/agateau/doxyqml
 
 .. flattr:: http://flattr.com/thing/1100293/Doxyqml
