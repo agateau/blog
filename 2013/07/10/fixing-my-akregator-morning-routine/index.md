@@ -17,9 +17,9 @@ Downloading the RSS feed, it turned out some articles do not have a complete URL
         <description>News Fucker 6000</description>
         ...
 
-Anyway, I made a small patch to add support for that spec deviation. Happy with my fix, I went bug-hunting on Bugzilla, wondering if someone had reported it before. I stumbled on [bug 117478](bug117478), which looked similar, but was actually about an ATOM feed. I thought the fix would be similar and dived into it. Turns out this new fix had nothing to do with the previous one... (by the way, [the feed from the bug](tbray) is quite interesting, I added it to my feed list)
+Anyway, I made a small patch to add support for that spec deviation. Happy with my fix, I went bug-hunting on Bugzilla, wondering if someone had reported it before. I stumbled on [bug 117478][bug117478], which looked similar, but was actually about an ATOM feed. I thought the fix would be similar and dived into it. Turns out this new fix had nothing to do with the previous one... (by the way, [the feed from the bug][tbray] is quite interesting, I added it to my feed list)
 
-Having fixed two Akregator bugs, I decided this would be an Akregator day, and went to look into another one which had been annoying me for too long, [bug 103216](bug103216): "Icons created by embedded browser remain in status bar". This one took me quite some time to figure out. I tried multiple approaches before setting on one which also required a small change in kdelibs. But it's fixed now, Akregator feels a bit nicer to use!
+Having fixed two Akregator bugs, I decided this would be an Akregator day, and went to look into another one which had been annoying me for too long, [bug 103216][bug103216]: "Icons created by embedded browser remain in status bar". This one took me quite some time to figure out. I tried multiple approaches before setting on one which also required a small change in kdelibs. But it's fixed now, Akregator feels a bit nicer to use!
 
 PS:
 
