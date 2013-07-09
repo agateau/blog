@@ -71,7 +71,7 @@ host._
 
 Open Konsole and create the folder which will contain the code to test:
 
-    [VM] mkdir src/ubiquity
+    [VM] mkdir -p src/ubiquity
 
 Setup ssh:
 
