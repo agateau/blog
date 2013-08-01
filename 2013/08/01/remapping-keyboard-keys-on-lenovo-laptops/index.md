@@ -29,3 +29,5 @@ I started by identifying the key symbol for the "Print Screen" and the odd recta
 After logging out and back in, I now have a saner keyboard layout.
 
 There is only one drawback to this tip: when you are using an external keyboard and try to take a screenshot with the "Print Screen" key, don't be surprised if it opens the context menu instead :)
+
+<a href="http://flattr.com/thing/1741706/Remapping-keyboard-keys-on-Lenovo-Laptops" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
