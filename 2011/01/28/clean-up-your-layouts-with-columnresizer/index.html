@@ -9,16 +9,16 @@ title: "Clean up your layouts with ColumnResizer"
 <p>This is not really easy to do with Qt because when you have two QGroupBoxes the layouts inside each QGroupBox do not know each other. GTK+ has a nice class named <a href="http://library.gnome.org/devel/gtk/2.99/GtkSizeGroup.html">GtkSizeGroup</a> to help with this, but Qt has no equivalent.</p>
 <p>I decided to investigate whether it was possible to implement a Qt equivalent of GtkSizeGroup. ColumnResizer, my implementation, is not as powerful as the original but it can synchronize column widths from multiple layouts. In fact, the above screenshots come from ColumnResizer demo application.</p>
 <p>I tried to design the API so that it is easy to integrate with existing code. Basically, using ColumnResizer looks like this:</p>
-<p>[sourcecode lang="cpp"]
+<p><pre>
 MyDialog::MyDialog(QWidget* parent)
 m_ui(new Ui_MyDialog)
 {
   m_ui-&gt;setupUi(this);
-  ColumnResizer* resizer = new ColumnResizer(this);
+  <b>ColumnResizer* resizer = new ColumnResizer(this);
   resizer-&gt;addWidgetsFromLayout(m_ui-&gt;someGroupBox-&gt;layout(), 0);
-  resizer-&gt;addWidgetsFromLayout(m_ui-&gt;anotherGroupBox-&gt;layout(), 0);
+  resizer-&gt;addWidgetsFromLayout(m_ui-&gt;anotherGroupBox-&gt;layout(), 0);</b>
 }
-[/sourcecode]</p>
+</pre></p>
 <p>It boils down to instantiating a ColumnResizer, then calling addWidgetsFromLayout() on all layouts whose column you wish to synchronize. This method accepts two arguments: a layout and a column number. ColumnResizer will then iterate through all widgets of the column in the layout and compute the column minimum width. Later it will ensure all columns of all layouts it handles are at least as wide as this minimum width.</p>
 <p>Note that it works with QGridLayout and QFormLayout. In the case of QFormLayout, the column parameter must be either 0 (labels) or 1 (fields). ColumnResizer will complain if you pass anything else.</p>
 <p>Also note that ColumnResizer takes care of checking the kind of layout you pass to it, so you don't have to include definitions for the different layouts or change the code if you decide to change from a QGridLayout to a QFormLayout for example.</p>
