@@ -9,7 +9,7 @@ I recently got myself a new laptop. It went for a Thinkpad and I am quite happy 
 
 ![What is the "Print Screen" key doing there?!](keyboard.png)
 
-Yes, the "Print Screen" key is placed between "Alt" and Ctrl". While it is handy to take screenshots, it is a lot more annoying when you have clumsy fingers and end up holding-down "Print Screen" instead of "Alt" or "Ctrl", as it ends up spawning a horde of ksnapshots...
+Yes, the "Print Screen" key is placed between "Alt" and Ctrl". While this key is handy to take screenshots, it is a lot more annoying when you have clumsy fingers and end up holding down "Print Screen" instead of "Alt" or "Ctrl", as it ends up spawning a horde of ksnapshots...
 
 It is also sitting in the place where my fingers are used to find the "menu" key, a key I actually use quite often, especially to fix typos while typing: "Ctrl+left" to move to the word underlined with red, "Menu" key, select correct word in the suggestions, done.
 
