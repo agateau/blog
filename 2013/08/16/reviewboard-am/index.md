@@ -32,6 +32,8 @@ A few months after I initially wrote this script, Review Board developers releas
 
 The main difference with `reviewboard-am` is `rbt patch` applies the patch but does not do the commit for you (a feature which I imagine is more difficult to implement in a cross-VCS way). It may be good enough for you though. In any case it certainly beats downloading and applying the diff by hand.
 
+<a href="http://flattr.com/thing/1816979/reviewboard-am-applying-patches-from-ReviewBoard-made-easy" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
+
 [rb]: http://git.reviewboard.kde.org
 [rbam]: http://quickgit.kde.org/?p=kde-dev-scripts.git&a=blob&h=6e6da8af6eb33e759c587f01ec020e2a731ddce2&hb=9c61f8d8f933949e3e255e32de7c4953f0781ca4&f=reviewboard-am
 [kds]: https://projects.kde.org/projects/kde/kdesdk/kde-dev-scripts
