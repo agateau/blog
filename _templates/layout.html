@@ -26,6 +26,12 @@ $(document).ready(onReady);
 </head>
 <body>
 <header>
+    <div class="search-full">
+        <form action="https://duckduckgo.com">
+            <input type="hidden" name="sites" value="agateau.com">
+            <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
+        </form>
+    </div>
     <div class="sleeve">
         <h1><a href="/">Aurélien's Room</a></h1>
         <nav>
@@ -39,6 +45,15 @@ $(document).ready(onReady);
         </nav>
     </div>
 </header>
+
+<div class="search-small">
+    <!--div class="sleeve"-->
+        <!--form action="https://duckduckgo.com"-->
+            <input type="hidden" name="sites" value="agateau.com">
+            <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
+        <!--/form-->
+    <!--/div-->
+</div>
 
 <div class="sleeve">
     <div class="body">

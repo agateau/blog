@@ -13,7 +13,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: whitesmoke;
-    line-height: 1.5;
+    line-height: 1.5em;
 }
 
 a {
@@ -70,8 +70,7 @@ div.sleeve {
 
 header {
     background-color: #3d3d3d;
-    margin-bottom: 1em;
-    line-height: 3em;
+    line-height: 2em;
     text-align: center;
     color: whitesmoke;
     font-size: 80%;
@@ -116,6 +115,39 @@ nav ul li {
     display: inline;
     margin: 0;
     padding: 0;
+}
+
+/*- Search ---------------------------*/
+div.search-small {
+    text-align: center;
+    display: block;
+    background-color: #ddd;
+    line-height: 1em; /* necessary to keep the content vertically-centered */
+    padding: 0.5em 0;
+    margin: 0;
+    margin-bottom: 1em;
+}
+
+div.search-full {
+    display: none;
+}
+
+div.search form {
+    display: inline;
+    padding: 0;
+    margin: 0;
+    height: 16px;
+}
+
+input.search-field {
+    border: none;
+    border-radius: 0.75em;
+    height: 1.5em;
+    padding: 0;
+    margin: 0;
+    padding-left: 0.75em;
+    background-color: whitesmoke;
+    width: 12em;
 }
 
 /*- Body -----------------------------*/
@@ -288,14 +320,12 @@ div#disqus_thread {
 Medium size
 
 --------------------------------------*/
-@media screen and (min-width: 480px) {
+@media screen and (min-width: 600px) {
     header {
         clear: both;
-    }
-
-    header {
+        line-height: 3em;
         text-align: left;
-        font-size: 100%;
+        margin-bottom: 1em;
     }
 
     header h1 {
@@ -305,6 +335,23 @@ Medium size
     nav {
         float: right;
     }
+
+    div.search-small {
+        display: none;
+    }
+
+    div.search-full {
+        float: right;
+        display: block;
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
+
+    div.sleeve {
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 0;
+    }
 }
 
 /*--------------------------------------
@@ -313,9 +360,7 @@ Full size
 
 --------------------------------------*/
 @media screen and (min-width: 800px) {
-    div.sleeve {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 0;
+    header {
+        font-size: 100%;
     }
 }
