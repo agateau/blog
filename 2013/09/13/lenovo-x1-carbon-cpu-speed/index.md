@@ -3,7 +3,7 @@ public: true
 tags: [Lenovo, Tips, Power management]
 title: "Running the Lenovo X1 Carbon at full speed when compiling"
 summary: |
-    Describes some tweaks I had to make to get my laptop to run at full speed when compiling
+    Describes some tweaks I had to make to get my laptop to run at full speed when compiling.
 
 As you may remember, I got myself a shiny new laptop. With every new laptop comes a series of tweaks one has to apply to make the most of it. I already blogged about [the changes I made to the keyboard layout][kb]. But there was actually a more serious issue: that laptop was slow!
 
@@ -82,5 +82,11 @@ One last thing to do was to make the change permanent. To do so, I installed the
 A quick reboot to check and confirm that, yes, the kernel now scales up the cores correctly when building.
 
 That was way too complicated than necessary, but it works now. Hopefully this can save you a bit of time if you are affected by the same issue.
+
+## Reference
+
+This page was quite handy to learn more about this topic: <http://www.pantz.org/software/cpufreq/usingcpufreqonlinux.html>
+
+<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2013%2F09%2F13%2Flenovo-x1-carbon-cpu-speed%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
 
 [kb]: http://agateau.com/2013/08/01/remapping-keyboard-keys-on-lenovo-laptops
