@@ -93,3 +93,5 @@ the kittens on Earth, do not sign the CLA! Think about the kittens!
 
 Finally, remember this is not legal advice: I am not a lawyer, I just sometimes
 play one on IRC.
+
+<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2013%2F10%2F29%2Fmy-stance-on-cla%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
