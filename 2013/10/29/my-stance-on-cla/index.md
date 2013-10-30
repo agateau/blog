@@ -66,6 +66,10 @@ I am personally fine with Canonical CLA, so I signed it. It is actually much
 less demanding than FSF requirements to either assign your copyright to them, or
 place your contribution under the public domain (see [here][fsf1] and [here][fsf2])
 
+_Update: The FSF only asks you to assign copyright to them for projects they own.
+Many GNU projects are not owned by the FSF and thus do not have those
+requirements._
+
 [fsf1]: https://www.gnu.org/licenses/why-assign.en.html
 [fsf2]: http://www.gnu.org/prep/maintain/maintain.html#Legal-Matters
 
