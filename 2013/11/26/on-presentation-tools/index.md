@@ -41,7 +41,7 @@ quote resonated a lot for me:
 >
 > Ah... now we're at the place where stage fright starts to dissolve.
 >
-> Because if the presentation is a user experience, then I am just a UI.
+> Because if the presentation is a user experience, then **I am just a UI.**
 >
 > [...]
 >
