@@ -1,0 +1,319 @@
+digraph Root {
+    node [
+        shape = box
+        fontsize = 12
+    ]
+    subgraph cluster_Others {
+        color = grey85;
+        style = filled;
+        fillcolor = grey95;
+        label = Others;
+        node [
+            color = black
+            style = filled
+            fillcolor = cornsilk
+        ]
+        "KActivities";
+        "LibAttica::attica";
+        "Phonon::phonon4qt5";
+        "Phonon::phonon4qt5experimental";
+    }
+    subgraph cluster_tier1 {
+        color = grey85;
+        style = filled;
+        fillcolor = grey95;
+        label = tier1;
+        node [
+            color = black
+            style = filled
+            fillcolor = azure
+        ]
+        "itemmodels";
+        "itemviews";
+        "karchive";
+        "kcodecs";
+        "kconfig";
+        "kcoreaddons";
+        "kdbusaddons";
+        "kf5umbrella";
+        "kguiaddons";
+        "kidletime";
+        "kimageformats";
+        "kjs";
+        "kplotting";
+        "kwidgetsaddons";
+        "kwindowsystem";
+        "solid";
+        "sonnet";
+        "threadweaver";
+    }
+    subgraph cluster_tier2 {
+        color = grey85;
+        style = filled;
+        fillcolor = grey95;
+        label = tier2;
+        node [
+            color = black
+            style = filled
+            fillcolor = azure
+        ]
+        "dnssd";
+        "kauth";
+        "kauth" -> "kcoreaddons";
+        "kcompletion";
+        "kcompletion" -> "kwidgetsaddons";
+        "kcompletion" -> "kconfig";
+        "kcrash";
+        "kcrash" -> "kwindowsystem";
+        "kcrash" -> "kcoreaddons";
+        "kdoctools";
+        "kdoctools" -> "karchive";
+        "ki18n";
+        "ki18n" -> "kjs";
+        "kjobwidgets";
+        "kjobwidgets" -> "kwidgetsaddons";
+        "kjobwidgets" -> "kcoreaddons";
+        "knotifications";
+        "knotifications" -> "kwindowsystem";
+        "kwallet";
+        "kwallet" -> "kconfig";
+        "kwallet" -> "kwindowsystem";
+    }
+    subgraph cluster_tier3 {
+        color = grey85;
+        style = filled;
+        fillcolor = grey95;
+        label = tier3;
+        node [
+            color = black
+            style = filled
+            fillcolor = azure
+        ]
+        "kconfigwidgets";
+        "kconfigwidgets" -> "kauth";
+        "kconfigwidgets" -> "kwidgetsaddons";
+        "kconfigwidgets" -> "kcodecs";
+        "kconfigwidgets" -> "kguiaddons";
+        "kconfigwidgets" -> "ki18n";
+        "kconfigwidgets" -> "kcoreaddons";
+        "kconfigwidgets" -> "kconfig";
+        "kservice";
+        "kservice" -> "kconfig";
+        "kservice" -> "kdbusaddons";
+        "kservice" -> "kcrash";
+        "kservice" -> "ki18n";
+        "kservice" -> "kcoreaddons";
+        "kbookmarks";
+        "kbookmarks" -> "xmlgui";
+        "kbookmarks" -> "kiconthemes";
+        "kbookmarks" -> "kconfigwidgets";
+        "kcmutils";
+        "kcmutils" -> "kcoreaddons";
+        "kcmutils" -> "xmlgui";
+        "kcmutils" -> "kiconthemes";
+        "kcmutils" -> "kconfigwidgets";
+        "kcmutils" -> "ki18n";
+        "kcmutils" -> "kservice";
+        "kcmutils" -> "itemviews";
+        "kdeclarative";
+        "kdeclarative" -> "ki18n";
+        "kdeclarative" -> "kconfig";
+        "kdeclarative" -> "kiconthemes";
+        "kdeclarative" -> "kio";
+        "kded";
+        "kded" -> "kdbusaddons";
+        "kded" -> "kcoreaddons";
+        "kded" -> "kcrash";
+        "kded" -> "kservice";
+        "kdesu";
+        "kdesu" -> "kcoreaddons";
+        "kdesu" -> "kservice";
+        "kdesu" -> "kpty";
+        "kiconthemes";
+        "kiconthemes" -> "ki18n";
+        "kiconthemes" -> "kwidgetsaddons";
+        "kiconthemes" -> "itemviews";
+        "kiconthemes" -> "kconfigwidgets";
+        "ktextwidgets";
+        "ktextwidgets" -> "kcompletion";
+        "ktextwidgets" -> "kconfigwidgets";
+        "ktextwidgets" -> "kiconthemes";
+        "ktextwidgets" -> "ki18n";
+        "ktextwidgets" -> "kservice";
+        "ktextwidgets" -> "sonnet";
+        "ktextwidgets" -> "kwindowsystem";
+        "xmlgui";
+        "xmlgui" -> "kwindowsystem";
+        "xmlgui" -> "ki18n";
+        "xmlgui" -> "ktextwidgets";
+        "xmlgui" -> "itemviews";
+        "xmlgui" -> "kconfig";
+        "xmlgui" -> "kwidgetsaddons";
+        "xmlgui" -> "kconfigwidgets";
+        "xmlgui" -> "LibAttica::attica";
+        "xmlgui" -> "kiconthemes";
+        "kio";
+        "kio" -> "kwindowsystem";
+        "kio" -> "kjobwidgets";
+        "kio" -> "kservice";
+        "kio" -> "kwidgetsaddons";
+        "kio" -> "ki18n";
+        "kio" -> "solid";
+        "kio" -> "kiconthemes";
+        "kio" -> "kbookmarks";
+        "kio" -> "kconfigwidgets";
+        "kio" -> "knotifications";
+        "kio" -> "kdbusaddons";
+        "kio" -> "kcompletion";
+        "kio" -> "xmlgui";
+        "kio" -> "kcoreaddons";
+        "kio" -> "kdoctools";
+        "kio" -> "karchive";
+        "kio" -> "itemviews";
+        "kparts";
+        "kparts" -> "ktextwidgets";
+        "kparts" -> "knotifications";
+        "kparts" -> "xmlgui";
+        "kparts" -> "kio";
+        "kparts" -> "kiconthemes";
+        "kparts" -> "ki18n";
+        "kparts" -> "kcoreaddons";
+        "kdewebkit";
+        "kdewebkit" -> "kio";
+        "kdewebkit" -> "kwallet";
+        "kdewebkit" -> "kcoreaddons";
+        "kdewebkit" -> "kparts";
+        "kdewidgets";
+        "kdewidgets" -> "kplotting";
+        "kdewidgets" -> "kiconthemes";
+        "kdewidgets" -> "kio";
+        "kdewidgets" -> "kwidgetsaddons";
+        "kdewidgets" -> "kconfig";
+        "kdewidgets" -> "itemviews";
+        "kdewidgets" -> "ktextwidgets";
+        "kdewidgets" -> "kcoreaddons";
+        "kdewidgets" -> "ki18n";
+        "kemoticons";
+        "kemoticons" -> "karchive";
+        "kemoticons" -> "kservice";
+        "kinit";
+        "kinit" -> "ki18n";
+        "kinit" -> "kservice";
+        "kinit" -> "kwindowsystem";
+        "kinit" -> "kcrash";
+        "kinit" -> "kio";
+        "kjsembed";
+        "kjsembed" -> "ki18n";
+        "kjsembed" -> "kjs";
+        "kmediaplayer";
+        "kmediaplayer" -> "xmlgui";
+        "kmediaplayer" -> "ki18n";
+        "kmediaplayer" -> "kparts";
+        "knewstuff";
+        "knewstuff" -> "karchive";
+        "knewstuff" -> "kiconthemes";
+        "knewstuff" -> "kio";
+        "knewstuff" -> "ki18n";
+        "knewstuff" -> "ktextwidgets";
+        "knewstuff" -> "itemviews";
+        "knewstuff" -> "LibAttica::attica";
+        "knewstuff" -> "xmlgui";
+        "knotifyconfig";
+        "knotifyconfig" -> "Phonon::phonon4qt5experimental";
+        "knotifyconfig" -> "kio";
+        "knotifyconfig" -> "Phonon::phonon4qt5";
+        "knotifyconfig" -> "ki18n";
+        "kprintutils";
+        "kprintutils" -> "kparts";
+        "kprintutils" -> "ki18n";
+        "kpty";
+        "kpty" -> "ki18n";
+        "kpty" -> "kcoreaddons";
+        "kross";
+        "kross" -> "kconfig";
+        "kross" -> "kio";
+        "kross" -> "kwidgetsaddons";
+        "kross" -> "kiconthemes";
+        "kross" -> "ki18n";
+        "kross" -> "kparts";
+        "kunitconversion";
+        "kunitconversion" -> "ki18n";
+        "kunitconversion" -> "kconfig";
+        "plasma";
+        "plasma" -> "xmlgui";
+        "plasma" -> "kcoreaddons";
+        "plasma" -> "kdeclarative";
+        "plasma" -> "kdbusaddons";
+        "plasma" -> "ki18n";
+        "plasma" -> "threadweaver";
+        "plasma" -> "kconfigwidgets";
+        "plasma" -> "kguiaddons";
+        "plasma" -> "solid";
+        "plasma" -> "kcrash";
+        "plasma" -> "kio";
+        "plasma" -> "kiconthemes";
+        "plasma" -> "karchive";
+        "plasma" -> "kwindowsystem";
+        "plasma" -> "KActivities";
+        "plasma" -> "kauth";
+        "plasma" -> "kservice";
+    }
+    subgraph cluster_tier4 {
+        color = grey85;
+        style = filled;
+        fillcolor = grey95;
+        label = tier4;
+        node [
+            color = black
+            style = filled
+            fillcolor = azure
+        ]
+        "apidox";
+        "frameworkintegration";
+        "frameworkintegration" -> "knotifications";
+        "frameworkintegration" -> "kwidgetsaddons";
+        "frameworkintegration" -> "kconfig";
+        "frameworkintegration" -> "kiconthemes";
+        "frameworkintegration" -> "kconfigwidgets";
+        "kde4support";
+        "kde4support" -> "kparts";
+        "kde4support" -> "knotifications";
+        "kde4support" -> "ki18n";
+        "kde4support" -> "kunitconversion";
+        "kde4support" -> "kcoreaddons";
+        "kde4support" -> "ktextwidgets";
+        "kde4support" -> "itemviews";
+        "kde4support" -> "kwindowsystem";
+        "kde4support" -> "kauth";
+        "kde4support" -> "kguiaddons";
+        "kde4support" -> "kcrash";
+        "kde4support" -> "kwidgetsaddons";
+        "kde4support" -> "kcompletion";
+        "kde4support" -> "kio";
+        "kde4support" -> "kiconthemes";
+        "kde4support" -> "kconfigwidgets";
+        "kde4support" -> "kconfig";
+        "kfileaudiopreview";
+        "kfileaudiopreview" -> "Phonon::phonon4qt5experimental";
+        "kfileaudiopreview" -> "Phonon::phonon4qt5";
+        "kfileaudiopreview" -> "ki18n";
+        "kfileaudiopreview" -> "kio";
+        "khtml";
+        "khtml" -> "kwindowsystem";
+        "khtml" -> "karchive";
+        "khtml" -> "kbookmarks";
+        "khtml" -> "kiconthemes";
+        "khtml" -> "kio";
+        "khtml" -> "kparts";
+        "khtml" -> "ki18n";
+        "khtml" -> "kwidgetsaddons";
+        "khtml" -> "sonnet";
+        "khtml" -> "Phonon::phonon4qt5experimental";
+        "khtml" -> "kwallet";
+        "khtml" -> "Phonon::phonon4qt5";
+        "khtml" -> "kjs";
+        "khtml" -> "xmlgui";
+        "khtml" -> "ktextwidgets";
+        "khtml" -> "knotifications";
+    }
+}
