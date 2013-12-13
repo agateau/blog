@@ -34,3 +34,5 @@ Thanks to great work from Martin Kyral, Gwenview can now display previews embedd
 > [Raw support] theoretically enables gwenview to support everything dcraw supports (I haven't found a raw file that gwenview doesn't show with this patch). The patch does not perform full demosaicing nor any tweaks (set white balance or so) and I don't think it shall - digikam, darktable or rawtherapee are much more suited for developing the 'digital negatives'.
 
 That's it for this cycle. Hope you are going to enjoy your (slightly) refreshed Gwenview 4.12!
+
+<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2013%2F12%2F12%2Fwhats-new-in-gwenview-4.12%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
