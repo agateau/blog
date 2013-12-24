@@ -58,7 +58,7 @@ quote resonated a lot for me:
 (Emphasis mine)
 
 With this approach in mind, I finally settled on [Remark.js][remark]. It is very
-simple yet efficient. The way it works is surprising: one create the
+simple yet efficient. The way it works is surprising: one creates the
 presentation slides by writing markdown in a text area!
 
 Once you get over this unusual system, you find out it works very well.  Being
