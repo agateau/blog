@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Présentation de Kdenlive</title>
+    <meta type="description" content="Comment ne pas endormir vos invités devant le film de vos dernières vacances..."/>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <link rel="stylesheet" href="media/css/font-awesome.min.css"/>
+    <style type="text/css">
+      /* Slideshow styles */
+* {
+    font-family: Ubuntu, sans-serif;
+    color: #222;
+    line-height: 150%;
+}
+
+body, p, li {
+    font-size: 40px;
+}
+
+p, table {
+    padding: 0;
+    margin: 1em 0;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    color: #282;
+    text-shadow: 0px 2px 4px #aaa;
+    margin-top: 0;
+    padding-top: 0;
+    font-size: 50px;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 45px;
+}
+
+em {
+    color: inherit;
+    text-decoration: underline;
+}
+
+.fa.fa-warning {
+    color: #c00;
+}
+
+.remark-slide .remark-slide-content {
+    padding: 1em 2em;
+}
+
+.remark-slide .remark-slide-number {
+    font-size: 20px;
+    opacity: 0.25;
+}
+
+code.remark-code::before {
+    /*content: '«';*/
+}
+
+code.remark-code::after {
+    /*content: '»';*/
+}
+
+code.remark-code {
+    color: #080;
+}
+
+
+/*- Dialog -------------------------------------*/
+.dialog {
+    margin-top: 2em;
+}
+
+.bubble {
+    clear: both;
+    margin-bottom: 1em;
+}
+
+.bubble span {
+    border: 1px solid black;
+    border-radius: 7px;
+    padding: 5px;
+    background-color: #eee;
+}
+
+.bubble i {
+    display: inline-block;
+    position: relative;
+    top: 40px;
+}
+
+.bubble.user1 i {
+    left: 12px;
+}
+
+.bubble.user2 i {
+    right: 12px;
+}
+
+.bubble.user1 {
+    float: left;
+}
+
+.bubble.user2 {
+    float: right;
+}
+
+.bubble.user1 span {
+    border-bottom-left-radius: 0;
+}
+
+.bubble.user2 span {
+    border-bottom-right-radius: 0;
+}
+
+.bubble.user1 i {
+    color: darkblue;
+}
+
+.bubble.user2 i {
+    color: darkgreen;
+}
+
+/*- Folders ------------------------------------*/
+.folders td {
+    font-size: 30px;
+    white-space: no-wrap;
+    vertical-align: top;
+}
+
+.folders ul {
+    padding: 0;
+    margin: 0;
+}
+
+.folders li {
+    font-size: 30px;
+    white-space: no-wrap;
+    list-style: none;
+}
+
+.folders i.fa-folder {
+    color: darkgreen;
+}
+
+.folders li.kdenlive-folder,
+.folders li.kdenlive-folder i {
+    color: #888;
+}
+
+    </style>
+  </head>
+  <body>
+    <textarea id="source">
+# Kdenlive
+
+## Comment ne pas endormir vos invités devant le film de vos dernières vacances...
+
+---
+
+<div class="dialog">
+<div class="bubble user1"><i class="fa fa-user"></i> <span>On regarde le film du weekend ?</span></div>
+
+<div class="bubble user2"><span>OK, super !</span> <i class="fa fa-user"></i></div>
+
+<div class="bubble user1"><i class="fa fa-user"></i> <span>Ça dure que 3h !</span></div>
+
+<div class="bubble user2"><span>Zzzz...</span> <i class="fa fa-user"></i></div>
+</div>
+---
+
+# Solution : montage
+
+---
+
+# Outils existants
+
+- Propriétaires :
+    - Windows Movie Maker
+    - Adobe Premiere
+    - Apple iMovie
+- Libres :
+    - OpenShot
+    - PiTiVi
+    - Kdenlive
+
+---
+
+# Kdenlive
+
+KDE Non LInear Video Editor.
+
+Basé sur MLT et FFmpeg.
+
+---
+
+# Mise en route
+
+---
+
+# Fenêtre principale
+
+1. Sources
+1. Effets et transitions
+1. Aperçus
+1. Ligne temporelle
+
+---
+
+# Préparation
+
+Créer un dossier par projet :
+
+<table class="folders">
+<tr>
+<td>
+<i class="fa fa-fw fa-folder"></i> kdenlive /
+</td>
+<td>
+<i class="fa fa-fw fa-folder"></i> vacances /
+</td>
+<td>
+
+</ul>
+<li><i class="fa fa-fw fa-file-o"></i> vacances.kdenlive</li>
+<li><i class="fa fa-fw fa-file-o"></i> PICT0034.MOV</li>
+<li><i class="fa fa-fw fa-file-o"></i> PICT0067.MOV</li>
+<li><i class="fa fa-fw fa-file-o"></i> ...</li>
+<li class="kdenlive-folder"><i class="fa fa-fw fa-folder-o"></i> proxy</li>
+<li class="kdenlive-folder"><i class="fa fa-fw fa-folder-o"></i> thumb</li>
+<li class="kdenlive-folder"><i class="fa fa-fw fa-folder-o"></i> titles</li>
+</ul>
+
+</td>
+</tr>
+</table>
+
+---
+
+# Premiers pas
+
+Importer des vidéos.
+
+Utiliser la ligne temporelle.
+
+---
+
+# Coupez !
+
+Couper le début ou la fin d'un clip.
+
+---
+
+# Effets
+
+<i class="fa fa-warning"></i> Effets ≠ Transitions.
+
+Certains effets agissent sur l'image, d'autres sur le son.
+
+- Image : `Fondu depuis le noir`, `Fondu vers le noir`
+- Son : `Fondu à l'ouverture`, `Fondu à la fermeture`
+
+---
+
+# Transitions
+
+Les plus communes :
+
+- `Dissoudre`
+- `Diaporama`
+- `Transition par balayage`
+
+<i class="fa fa-warning"></i> Attention à ne pas en faire trop.
+
+---
+
+# Couper au milieu
+
+Retirer des parties sans intérêt au milieu d'un clip.
+
+---
+
+# Rendu
+
+Créer un fichier utilisable sur un ordinateur, un téléphone, publiable sur Internet...
+
+---
+
+# Choix _des_ formats
+
+Fichier vidéo = conteneur de flux
+
+Chaque flux utilise un codec
+
+---
+
+# Exemple
+
+<table style="border: 1px solid black; width: 100%; background-color: #ddd; border-radius: 15px; border-spacing: 6px">
+    <tr>
+        <td colspan="2" style="border-bottom: 1px solid black; text-align: center"><i class="fa fa-file"></i> vacances.avi</td>
+    </tr>
+    <tr>
+        <td rowspan="2" style="width:25%; text-align: center"><i class="fa fa-dropbox"></i> : AVI</td>
+        <td style="border: 1px solid black; border-radius: 9px; padding-left: 6px; background-color: #ffc"><i class="fa fa-fw fa-video-camera"></i> : DivX</td>
+    </tr>
+    <tr>
+        <td style="border: 1px solid black; border-radius: 9px; padding-left: 6px; background-color: #fcc"><i class="fa fa-fw fa-volume-up"></i> : MP3</td>
+    </tr>
+</table>
+
+Conteneurs : AVI, MKV, MOV, MP4, OGG...
+
+Codecs vidéos : DivX, h264, V8, Theora...
+Codecs audios : MP3, AAC, Vorbis...
+
+---
+
+# Intégrer du texte
+
+Clip titre.
+
+---
+
+# Intégrer des images
+
+Deux solutions :
+
+1. Clip image
+1. Clip diaporama
+
+---
+
+# Tourner et recadrer une vidéo
+
+<p class="center">
+![Oups](rotated.jpeg)
+</p>
+
+- Effet `Rotation`
+- Effet `Panoramique et zoom`
+
+---
+
+# Intégrer de la musique
+
+Clip audio.
+
+Retirer le son d'une piste vidéo :
+
+Menu "Clips" → "Vidéo seulement"
+
+---
+
+# Repères et guides
+
+- Repère : relatif au clip
+- Guide : relatif au projet
+
+Exemple d'utilisation : synchroniser la vidéo et la musique.
+
+---
+
+# Attention aux droits d'auteurs
+
+<i class="fa fa-warning"></i> Utiliser de la musique libre de droit en cas de diffusion publique.
+
+YouTube retire régulièrement des vidéos utilisant de la musique sans autorisation.
+
+---
+
+# Acquisition
+
+- Depuis une caméra DV par Firewire.
+
+- Depuis la webcam.
+
+- Depuis l'écran.
+
+---
+
+# Où trouver Kdenlive ?
+
+Disponible dans la plupart des distributions Linux et sur Mac OS X
+
+www.kdenlive.org
+
+---
+
+# Questions ?
+
+<p class="center"><i class="fa fa-5x fa-question-circle" style="color: darkblue"></i></p>
+
+
+<small class="center">
+Aurélien Gâteau - agateau.com
+
+Musique : Cephalopod - Kevin MacLeod<br>incompetech.com
+</small>
+
+    </textarea>
+    <script src="remark-0.5.9.min.js" type="text/javascript">
+    </script>
+    <script type="text/javascript">
+      var slideshow = remark.create();
+    </script>
+  </body>
+</html>
