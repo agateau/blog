@@ -1,7 +1,7 @@
 pub_date: 2014-01-22 15:58:17 +01:00
 public: true
 tags: [KDE, Gwenview]
-title: "You can't go past the last image"
+title: "Going past the last image (or not)"
 summary: |
     A new approach to Gwenview behavior when trying to go past the last image
 
