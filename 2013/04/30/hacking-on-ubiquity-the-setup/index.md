@@ -190,9 +190,23 @@ I recommend the [bzr-colo][] plugin to switch branches in place._
 The greeter is the screen which appears when you boot the live ISO. It asks you
 your language, and let you pick between trying or installing Kubuntu.
 
-To test this screen, set the `UBIQUITY_GREETER` environment variable:
+To quickly test the greeter mode from within the running Plasma session, run ubiquity with the `--greeter` option:
 
-    [VM] UBIQUITY_GREETER=1 ubiquity -d kde_ui
+    [VM] ubiquity -d --greeter kde_ui
+
+If you want to test the full thing, you must restart Ubiquity. To do so, switch to a console session (using Host-VM-key + F1) then run these commands:
+
+    [VM] sudo -i
+    [VM] stop --no-wait lightdm
+    [VM] stop ubiquity
+    [VM] pkill -9 X
+    [VM] start ubiquity
+
+You probably also want to make sure the greeter does not try to run the GTK+ frontend. _ubiquity-dm_ picks the GTK+ frontend if it is available, and since you now have the source code of Ubiquity installed, the GTK+ frontend is available. For now the hack I use is to rm it:
+
+    [VM] rm ~/src/ubiquity/code/ubiquity/frontend/gtk_ui.py
+
+Note that you need to do so everytime you run _rsync-to-vm_, since it will bring back the `gtk_ui.py` file.
 
 ## Testing OEM config
 
