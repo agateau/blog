@@ -205,15 +205,12 @@ h1 + p.date {
 /* code formatting.  no monospace because of webkit (bug?) */
 pre, code, tt {
     font-family: 'Ubuntu Mono', 'Consolas', 'Deja Vu Sans Mono', 'Bitstream Vera Sans Mono', 'Monaco', 'Courier New';
-    font-size: 0.9em;
 }
 pre {
     line-height: 1.3;
-    background: none;
-    padding: 0;
-}
-code, tt {
-    background: #eee;
+    background: #ddd;
+    padding: 6px;
+    border-left: 6px solid #aaa;
 }
 
 /* tables */
