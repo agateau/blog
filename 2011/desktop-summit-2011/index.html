@@ -1,0 +1,37 @@
+pub_date: 2011-08-20 21:00:00 +01:00
+public: yes
+tags: ["KDE","ui","desktop-summit"]
+title: "Desktop Summit 2011"
+
+<p>I am back from Desktop Summit, and off for holidays (yeah!). As usual, it was energizing and exhausting at the same time.</p>
+<h2>Presentations</h2>
+<p>We were treated with interesting presentations (and a few not so interesting ones :/). I particularly enjoyed these presentations:</p>
+<h3>Compositing after X - KWin on the Road to Wayland, by Martin Gr&#228;&#223;lin</h3>
+<p>Martin presented his plans for Wayland, explaining how he plans to progressively rebase KWin on top of Wayland without "breaking the desktop".</p>
+<h3>Building Bridges: Making KDE accessible, by Frederik Gladhorn</h3>
+<p>Frederik explained quite clearly the challenges with making Qt and KDE programs accessible, how to expose your user interface in an accessible way and why it was critical to make sure applications have good keyboard navigation.</p>
+<h3>Krita: the making of an artist's tool, by Boudewijn Rempt</h3>
+<p>It was enlightening to see how much work has gone into Krita. Their strongest achievement in my opinion reaching out to real artists and managing to get them involved in the project, to the point where the developers created a script so that the artists could easily run the Git version of Krita. The slideshow running in the background of Boudjewin presentation was a nice testament of what the artists were able to create with Krita.</p>
+<h3>Software with the Quality that has no name, by Federico Mena Quintero</h3>
+<p>I am personally not sure we achieve a lot in term of cross-desktop work by merging Akademy and Guadec, but if there ever was one good reason to justify the merge, it would be Federico session, which I would never had the opportunity to attend if Guadec has been held as a separate event. His talk was about the design patterns you find in building architecture but which can also be found in user interface or in software design. It is very hard to summarize so I highly recommend you to check the video if there is one (hopefully it has been recorded). Federico also made <a href="http://www.gnome.org/~federico/news-2011-08.html#16">his slides and notes available on his blog</a>.</p>
+<h3>KDE Platform 5 Roadmap, by Aaron Seigo, David Faure, Kevin Ottens and Steven Kelly</h3>
+<p>In this talk, Aaron, David, Kevin and Steven presented the plan they put together during the KDE Platform 11 sprint. The core idea is to split our current KDE libs (kdecore, kdeui, kio, kfile,...) into smaller libraries, with a much more precisely defined set of dependencies, making it possible for "Qt-only" applications to reuse parts of KDE technologies without dragging in too many dependencies.
+</p><p>If you want to learn more, I recommend checking the <a href="http://files.kde.org/sprints/platform11/kde-frameworks-matrix.pdf">KDE Frameworks Matrix</a> describing the categories they defined and <a href="http://files.kde.org/sprints/platform11/kde-frameworks-dependencies-plan.pdf">KDE Frameworks Dependencies Plan</a> which shows how the existing libraries are planned be refactored and split to fit into these categories.</p>
+<h3>Introducing the Board, by Lucas Rocha</h3>
+<p>Lucas presented <a href="https://live.gnome.org/TheBoardProject">The Board</a>, a project he started when he became a father. It is a fresh approach to the problem of keeping various bits of information together, those bits of information could be pictures, voice memo, notes, videos, urls... The project looks intriguing and the presentation was really nice.</p>
+<h3>We're a family! -- How five years of University Collaboration changed our town landscape, by Kevin Ottens</h3>
+<p>For the last five years, Kevin has been teaching software engineering at Toulouse University. Instead of having its students working on useless student projects, he got them to contribute to KDE projects. This talk was really invigorating, featuring Kevin as well as several students from all the generations. It even included a video from Alexis M&#233;nard, one of the students from the first generation who became a Plasma developer and was able to land a job at Qt Software. Alexis explained he could not attend this year because he is busy training the future generation of KDE hackers, he is now the proud father of a beautiful little girl :)</p>
+<h2>Hacking</h2>
+<p>Desktop Summit is also a time for hacking. My most important challenge this year was holding a <a href="http://agateau.wordpress.com/2011/08/09/kde-ui-clinic-at-desktop-summit/">KDE UI Clinic</a> session, where KDE developers could come and get some usability and design advices to improve their applications.</p>
+<p>I was afraid by two things: being overwhelmed by the number of requests and spending too much time on each application, not being able to look at all requests. Luckily Bj&#246;rn Balazs of <a href="http://www.opensource-usability-labs.com/">OpenSource Usability Labs</a> came in to help, Thanks Bj&#246;rn! Having more practitioners was really nice because even if the number of requests were not as large as I expected, we spent a very long time on each of them. For example I only looked at two applications: <a href="http://www.kde.org/applications/internet/kget/">KGet</a> and <a href="http://kde-apps.org/content/show.php/Videocatcher?content=121556">Video Catcher</a>, and it ended up taking me 3 hours... Luckily there was no other BoF I absolutely wanted to attend after the KDE UI Clinic slot.</p>
+<p>We may also have recruited a new practitioner, more on this later...</p>
+<p>Apart from the KDE UI Clinic session, I also worked on other projects:</p>
+<ul>
+<li>Spent some time with K&#229;re S&#228;rs to rework libksane API so that it does not enforce a single widget layout. This should help to continue the work I started on Skanlite.</li>
+<li>Revived a side-project of mine: <a href="http://github.com/agateau/annot8">Annot8</a>. Who knows, maybe I can get it to release quality? Right now it is reasonably useful, but the UI is horrible and there are a few shortcuts I took that I would be too ashamed to release.</li>
+<li>Reviewed <a href="http://simon-listens.org/index.php?id=122&amp;L=4">Simon UI</a> with Frederic Gladhorn: the project is impressive, but the UI really needs to be simplified.</li>
+<li>Finally, worked a bit with Aleix Pol to improve the first page of the "new project" wizard in KDevelop.</li>
+</ul>
+<p>This post is already long enough, I am heading back to my vacations for now. See you in September!</p>
+<a href="http://flattr.com/thing/378926/Desktop-Summit-2011" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

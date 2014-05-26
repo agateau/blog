@@ -1,0 +1,47 @@
+pub_date: 2012-05-11 21:00:00 +01:00
+public: yes
+tags: ["KDE","toolbars","ui"]
+title: "Common user interface mistakes in KDE applications, part 5: Big toolbars"
+
+<p>It's been a long time since I last wrote about user interface mistakes in KDE applications. Here is a new addition to <a href="/article-series/common-ui-mistakes-in-kde-applications/">this series</a>.</p>
+<p>Starting with KDE 4.0, KDE applications ship with toolbars containing both icons and texts.</p>
+<p>This setup makes it easier to understand the action associated with a toolbar button. Additionally, buttons with icon and text provide bigger mouse targets.</p>
+<p>The price to pay for this is toolbars can become quite wide, to the point where they barely fit on 1024 x something screens (think netbooks or video projectors). To make matters worse, translations often increase text widths: French and German translations for example are known for being quite verbose.</p>
+<p>If you maintain a KDE (or Qt) application, here are some simple steps you can follow to reduce the width of your toolbars without compromising too much.</p>
+<p>
+<b>Step #1: Do you really need that button?</b></p>
+<p>This first step is quite obvious: go through your toolbars and check if some of the buttons present in the default configuration can be removed. If they are seldom used, maybe it is OK if their action is only reachable from the menubar?</p>
+<p>You probably made such decisions while the application was created.  Nevertheless it's a good idea to revisit those decisions from time to time, based on your increased knowledge of the way your application is used.</p>
+<b>Step #2: Icon-only buttons</b>
+Hide the text of some buttons. Since Qt 4.6, QAction has a <a href="http://qt-project.org/doc/qt-4.8/qaction.html#priority-prop">"priority" property</a> which defaults to QAction::NormalPriority. Set it to QAction::LowPriority to get an icon-only button in your toolbar. Peter Penz did it for Dolphin, I did the same for Gwenview. It obviously saves quite some horizontal space.
+<a href="dolphin.png"><img src="thumb_dolphin.png" title="Dolphin Toolbar" height="77" width="300" alt="" class="aligncenter size-medium wp-image-1125"/></a>
+<i>Dolphin Toolbar</i>
+<p>I couldn't come with strong rules to decide whether a button should show text or not. You have to use your gut feeling here. Nevertheless here are some hints to give you an idea of situations where it may make sense to use icon-only buttons.</p>
+<ul>
+<li>The icon is common enough that it does not need text to be understood. Media icons (play, pause, next, previous), print, zoom or trash buttons come to mind. There are probably others.</li>
+<li>The button is part of a button group and works as a radio button, for example the view modes in Dolphin (icon, compact and detailed), the format or alignment buttons in a word processor.</li>
+<li>
+The action for this button is about manipulating the UI rather than an essential part of the task the user wants to accomplish. For example an action to toggle a sidebar.
+</li>
+<li>The action is part of a group of two opposed actions. In this case one of the two actions can often come without text, its meaning being defined by the other action. For example: Undo / Redo, Back / Forward.
+</li>
+</ul>
+<p>Remember those are just hints: they may not make sense for your application. Additionally, make sure not to overdo it to the point of having only icon-only buttons!</p>
+<b>Step #3: Shorten those texts!</b>
+<p>For the remaining buttons which kept their texts, try to shorten the text to one or two words only, put a longer text in the tooltip. This serves two purposes:</p>
+<ul>
+<li>
+    It reduces the button width
+</li>
+<li>
+    It brings back value to the tooltip: don't you hate it when you move the mouse hover a button and the tooltip which appears stupidly repeats the button text?
+</li>
+</ul>
+<a href="cptn-obvious.png"><img src="cptn-obvious.png" title="Useful tooltips" height="128" width="560" alt="" class="aligncenter size-full wp-image-1124"/></a>
+<i>So the "View" button is about... "View"! Thank you Captain Obvious! (This is fixed for 4.9)</i>
+<p>When defining the action text, make use of <a href="http://techbase.kde.org/Development/Tutorials/Localization/i18n_Semantics">KUIT</a>: mark the text using "@action:intoolbar", This should give a hint to the translator that this string should be kept short.</p>
+<p>When defining the action tooltip, remember the HIG says <a href="http://techbase.kde.org/Projects/Usability/HIG/Capitalization">tooltips should be written using sentence capitalization</a>, not title capitalization. QAction is not being very helpful there: when no tooltip is set, it falls back to using the "text" property as a tooltip, and the "text" property uses title capitalization :/.  That is one more good reason to define tooltips yourself.</p>
+<b>Conclusion</b>
+<p>String freeze for KDE SC 4.9 starts on May 19th, so if your application is in KDE SC, you still have a few days left to check if your application toolbar could be improved!</p>
+<a href="http://flattr.com/thing/674738/Common-user-interface-mistakes-in-KDE-applications-part-5-Big-toolbars" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

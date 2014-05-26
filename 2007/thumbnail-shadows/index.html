@@ -1,0 +1,10 @@
+pub_date: 2007-11-11 21:00:00 +01:00
+public: yes
+tags: ["Gwenview","KDE"]
+title: "Thumbnail shadows"
+
+<p>I have been working on improving the thumbnail view appearance lately. I recently added shadows behind thumbnails. It currently looks like this:</p>
+<p style="text-align:left;"> <a href="20071111-thumbnailviewshadows.png" title="Thumbnail shadows">
+</a></p><p style="text-align:center;"><img src="20071111-thumbnailviewshadows.thumbnail.png" alt="Thumbnail shadows"/></p>
+
+<p>I am not totally happy with the shadow generation code. It uses Qt radial and linear gradients, but they do not align exactly (have a look at the corners with KMag to see what I mean). Any idea for a smarter way to  generate shadows?</p>

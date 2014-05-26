@@ -1,0 +1,21 @@
+pub_date: 2010-03-10 21:00:00 +01:00
+public: yes
+tags: ["Tips","search","replace","tool","msrp","command line"]
+title: "msrp, a useful addition to your toolbox"
+
+<p>Have you ever faced the need to rename a file and do a search and replace to adjust all places where it is referenced? For example if you are a C++ developer you may want to rename foo.h and foo.cpp to bar.h and bar.cpp, but you must also replace all lines which says <code>#include "foo.h"</code> with <code>#include "bar.h"</code> in other source files... and don't forget updating the build system files as well!</p>
+<p>This is not really difficult, but it's tedious and error-prone.</p>
+<p>Enter msrp, Meta Search and Replace Program, a handy command-line utility designed to do search and replaces in both file contents and file names. In my example, renaming foo.h and foo.cpp to bar.h and bar.cpp can be done with this single command:</p>
+<p/><pre>
+msrp 'foo\.' bar. src/dir/
+</pre><p/>
+<p>Note that I escaped the '.' in "foo.", because msrp supports Perl 5 regular expressions.</p>
+<p>What makes msrp even more useful is that it is VCS aware: If I replace the previous command with:</p>
+<p/><pre>
+msrp --svn 'foo\.' bar. src/dir/
+</pre><p/>
+<p>Then msrp will rename my files using "svn move" instead of doing a plain rename!</p>
+<p>Unfortunately, it is unmaintained right now: his developer does not have time anymore to work on it. You can however install it via apt-get on Debian and Ubuntu, or download the source tarball on the page of the <a href="http://packages.debian.org/fr/sid/msrp">Debian package</a> (the developer was also a Debian packager (Hint: if you are a Debian packager, there is an <a href="http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=572186">orphaned package</a> waiting for you!))</p>
+<p>Msrp comes with support for Mercurial and Subversion by default, but I wrote <a href="http://people.canonical.com/~agateau/msrp/">patches to add support for Git and Bazaar</a>. Note that these patches are not in the 0.9.4 version which is shipped by Debian and Ubuntu.</p>
+<p>Give it a try!</p>
+<p>Update: added missing quotes around foo\. to prevent the shell from interpreting the backslash itself.</p>

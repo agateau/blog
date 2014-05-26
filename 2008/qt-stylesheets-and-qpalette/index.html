@@ -1,0 +1,20 @@
+pub_date: 2008-01-15 21:00:00 +01:00
+public: yes
+tags: ["KDE","Tips","Qt","CSS"]
+title: "Qt stylesheets and QPalette"
+
+<p>Whenever I wanted to use standard colors from QPalette within my Qt stylesheet definitions, I used to write code like this:</p>
+<code>
+QColor color = palette().highlight().color();
+QString css = QString("QLabel { color: %1; }").arg(color.name());
+setStyleSheet(css);
+</code>
+<p>Today I discovered an hidden feature of Qt stylesheets (either that, or I missed it in the doc): you can reference QPalette colors from within Qt stylesheet definitions! The above code can be rewritten like this:</p>
+<code>
+QString css = "QLabel { color: palette(highlight); }";
+setStyleSheet(css);
+</code>
+<p>Isn't it great?</p>
+<p>Update: Just found <a href="http://doc.trolltech.com/4.3/stylesheet-reference.html#paletterole">the documentation</a> for this feature.</p>
+<a href="http://flattr.com/thing/81697/Qt-stylesheets-and-QPalette" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

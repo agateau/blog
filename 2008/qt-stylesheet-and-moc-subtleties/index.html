@@ -1,0 +1,46 @@
+pub_date: 2008-10-06 21:00:00 +01:00
+public: yes
+tags: ["KDE","Tips","moc","Qt","CSS"]
+title: "Qt stylesheet and moc subtleties"
+
+<p>You may know I am a big fan of Qt sylesheets. While playing around with them I stumbled across a subtle behavior which had me puzzled for a while.</p>
+<p>Often when I need to slightly override the behavior of a widget, I do not create separate .h/.cpp files for them. Instead, I write the code directly in the .cpp file where this widget will be used.</p>
+<p>Here is an example, assuming SomeWidget is a widget used elsewhere in the application, and it contains an instance of a custom widget of class InternalWidget.</p>
+<p>This is SomeWidget.h:
+</p><pre>class SomeWidgetPrivate;
+class SomeWidget : public QWidget {
+public:
+  SomeWidget(QWidget* parent = 0);
+  /* Rest of SomeWidget declaration */
+private:
+  SomeWidgetPrivate* const d;
+};</pre><p>
+And this is SomeWidget.cpp:
+</p><pre>class InternalWidget : public QWidget {
+protected:
+  virtual void mousePressEvent(QMouseEvent*) {
+    /* Custom code here */
+  }
+};
+
+struct SomeWidgetPrivate {
+  InternalWidget* mInternalWidget;
+};
+
+SomeWidget::SomeWidget(QWidget* parent)
+: QWidget(parent)
+, d(new SomeWidgetPrivate) {
+  d-&gt;mInternalWidget = new InternalWidget(this);
+}</pre><p>
+So far so good, I create InternalWidget inside SomeWidget and it works well. Now let's say I want to apply a stylesheet to SomeWidget by calling setStylesheet() on it. Qt allows me to define styles for classes, so if I want to paint the background of InnerWidget instances in blue, I can write a stylesheet like this:
+</p><pre>InternalWidget {
+  background-color: blue;
+}</pre><p>
+Alas, it doesn't work. After scratching my head for a while, I realized that Qt stylesheet system probably uses the metaobject information to know the exact class of a widget instance. By defining my internal widget the way I did, moc didn't have a chance to run on it, so mInternalWidget appeared like an instance of QWidget, not InternalWidget.</p>
+<p>To get the stylesheet to apply, one must get moc to run on the widget classes, so it's important to:
+<ol>
+<li>Declare the widget in a header file</li>
+<li>Add the Q_OBJECT macro (otherwise moc while happily ignore it)</li>
+</ol>
+I hope this saves you some scratch-your-head time :)</p>
+<em>Update: See&#160;Tom M, Girish and Matthias Kretz comments for other ways to avoid this bug without moving the class to a separate header file.</em>

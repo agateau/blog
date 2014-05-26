@@ -1,0 +1,27 @@
+pub_date: 2012-04-21 21:00:00 +01:00
+public: yes
+tags: ["KDE","greeter","LightDM","QML"]
+title: "LightDM KDE 0.1.0 released"
+
+<p>During this Ubuntu cycle I have been working on-and-off on <a href="https://launchpad.net/lightdm">LightDM</a>, mainly helping out <a href="http://www.sharpley.org.uk/">David Edmundson</a> on liblightdm-qt (the Qt wrapper for LightDM library), and the <a href="https://projects.kde.org/projects/playground/base/lightdm">LightDM KDE greeter</a>. The initial, quite ambitious, plan was to try to ship Kubuntu 12.04 with it by default. We quickly realized that would not happen, but we wanted to at least ensure LightDM KDE would be in a usable-enough state to be included in Ubuntu 12.04 archive.</p>
+<p>So here it is, release 0.1.0 of this new greeter, featuring:
+<ul>
+<li>3 QML-based themes</li>
+<li>Guest support</li>
+<li>A System Settings module</li>
+<li>A few bugs (maybe) and design quirks (definitely!)</li>
+</ul></p>
+<p>You can get the tarball from <a href="http://download.kde.org/unstable/lightdm-kde/src/lightdm-kde-0.1.0.tar.bz2.mirrorlist">KDE download server</a> or clone <a href="https://projects.kde.org/projects/playground/base/lightdm">the GIT repository</a>. (Note that you need LightDM itself for the KDE greeter to work. The LightDM daemon and Qt libraries can be downloaded from <a href="https://launchpad.net/lightdm">the LightDM project page</a>). Kubuntu 12.04 users can get it with "apt-get install lightdm-kde-greeter".</p>
+<p>It still has some rough edges (it's a 0.1.0 release after all!), but I have been using it for a few months now without trouble.</p>
+<p>Enough talk already, here comes some screenshots:</p>
+<p>"Classic" theme:</p>
+<a href="classic.png"><img src="thumb_classic.png" title="Classic" height="168" width="300" alt="" class="aligncenter size-medium wp-image-1110"/></a>
+<p>"User Bar" theme:</p>
+<a href="userbar.png"><img src="thumb_userbar.png" title="User Bar" height="168" width="300" alt="" class="aligncenter size-medium wp-image-1113"/></a>
+<p>"User List" theme:</p>
+<a href="userlist.png"><img src="thumb_userlist.png" title="User List" height="168" width="300" alt="" class="aligncenter size-medium wp-image-1114"/></a>
+<p>System Settings module:</p>
+<a href="systemsettings2.png"><img src="thumb_systemsettings2.png" title="System Settings - General page" height="268" width="300" alt="" class="aligncenter size-medium wp-image-1112"/></a>
+<a href="systemsettings1.png"><img src="thumb_systemsettings1.png" title="System Settings - Theme page" height="268" width="300" alt="" class="aligncenter size-medium wp-image-1111"/></a>
+<p>We hope you like it!</p>
+<p>Update: 0.1.1 is out, fixing an issue with user pictures not appearing in "User Bar" and "User List" themes. You can get it from <a href="http://download.kde.org/unstable/lightdm-kde/src/lightdm-kde-0.1.1.tar.bz2.mirrorlist">download.kde.org</a>.</p>

@@ -1,0 +1,86 @@
+pub_date: 2012-03-30 21:00:00 +01:00
+public: yes
+tags: ["Gwenview","KDE","pcx","tga","debug","png","Qt"]
+title: "Qt Image Decoders Stepping on Each Others"
+
+<div class="entry-content"><h2>A weird bug</h2>
+<p>In December last year, Falk Kr&#246;nert filled a strange bug: <a href="https://bugs.kde.org/show_bug.cgi?id=289819">Gwenview failed to load some PNG images, which other applications were able to display flawlessly</a>. I couldn't reproduce it back then with Gwenview 2.7.3, so couldn't dig any further.</p>
+<p>Falk did not give up so easily though. After further investigations, he discovered the bug only happened with images whose width would be 2560 or 2808. Since I still couldn't reproduce it, he provided me with a QEmu image of his openSUSE installation so that I could investigate (now that is one dedicated bug reporter!)</p>
+<h2>Investigating</h2>
+<p>Running the QEmu image, I was finally able to reproduce the bug. I started investigating, installing the necessary packages to build Gwenview and my beloved <a href="http://cgdb.sourceforge.net/">cgdb</a>, learning how to use Zypper in the process.</p>
+<h3>Step one, an image format from the past...</h3>
+<p>I quickly discovered Qt was not able to discover the image format of the PNG. The code looked like this:</p>
+<div class="highlight"><pre><span class="n">QBuffer</span> <span class="n">buffer</span><span class="p">;</span>
+<span class="n">buffer</span><span class="p">.</span><span class="n">setBuffer</span><span class="p">(</span><span class="o">&amp;</span><span class="n">mData</span><span class="p">);</span> <span class="c1">// mData contains the first 256 bytes of the image</span>
+<span class="n">buffer</span><span class="p">.</span><span class="n">open</span><span class="p">(</span><span class="n">QIODevice</span><span class="o">::</span><span class="n">ReadOnly</span><span class="p">);</span>
+
+<span class="n">QImageReader</span> <span class="n">reader</span><span class="p">(</span><span class="o">&amp;</span><span class="n">buffer</span><span class="p">);</span>
+
+<span class="n">mFormat</span> <span class="o">=</span> <span class="n">reader</span><span class="p">.</span><span class="n">format</span><span class="p">();</span>
+<span class="k">if</span> <span class="p">(</span><span class="n">mFormat</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p/>
+<p>In the case of this image, "mFormat" was supposed to contain "png", but it was empty instead.</p>
+<p>In case you are not familiar with Qt image plugin code, it works like this: Qt provides a base class, QImageIOHandler, which image decoders must inherit from. so there is a QJpegHandler, a QPngHandler and so on. Some of these handlers are provided by Qt directly in QtGui.so, others are provided by Qt and kdelibs (and possibly others) as plugins installed in "plugins/imageformats".</p>
+<p>Here is QImageReader::format() code:</p>
+<div class="highlight"><pre><span class="n">QByteArray</span> <span class="n">QImageReader</span><span class="o">::</span><span class="n">format</span><span class="p">()</span> <span class="k">const</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">format</span><span class="p">.</span><span class="n">isEmpty</span><span class="p">())</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">d</span><span class="o">-&gt;</span><span class="n">initHandler</span><span class="p">())</span>
+            <span class="k">return</span> <span class="n">QByteArray</span><span class="p">();</span>
+        <span class="k">return</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">handler</span><span class="o">-&gt;</span><span class="n">canRead</span><span class="p">()</span> <span class="o">?</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">handler</span><span class="o">-&gt;</span><span class="n">format</span><span class="p">()</span> <span class="o">:</span> <span class="n">QByteArray</span><span class="p">();</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">d</span><span class="o">-&gt;</span><span class="n">format</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+<p/>
+<p>Debugger was telling me d-&gt;handler was correctly created by initHandler(), but QPngHandler::canRead() was never called!</p>
+<p>Quite puzzled by this, I finally resorted to place a breakpoint in QImageIOHandler constructor. Once I hit the breakpoints, I printed the backtrace, and was astonished to find myself inside the PCX handler provided by kdelibs! This explained why QPngHandler::canRead() was not called, QImageReader was calling PCXHandler::canRead(), which unsurprisedly returned false.</p>
+<p>This does not explain how Qt decided the image was a PCX in the first place. To decide which handler to use, initHandler() calls all implementations of QImageIOHandler::canRead(), the first one to answer true wins. PCXHandler::canRead() implementation is not very selective: it returns true if the first byte of the image is 10 (According to <a href="https://en.wikipedia.org/wiki/Pcx#Header">Wikipedia</a> it should be possible to check at least the first two bytes, need to look into this).</p>
+<p>Here is an hex-dump of the first bytes of the PNG image:</p>
+<p/><pre>89 50 4e 47 0d 0a 1a 0a  00 00 00 0d 49 48 44 52  |.PNG........IHDR|
+00 00 0a 00 00 00 00 02  08 02 00 00 00 1b 8e 12  |................|
+</pre><p/>
+<p>There are a few 10 (0a in the dump) values but the first byte is definitely not 10.</p>
+<p>Maybe the PCX loader is looking at the wrong position? I decided to place a breakpoint in PCXHandler::canRead() and print device-&gt;pos(). Sure enough, it sayd the position was 18, instead of the expected 0... If you look at position 18 (starting from 0) in the dump there is indeed a 0a value.</p>
+<p>It is interesting to look at what this 0a stands for: The <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Structure.html">PNG specification</a> tells us a PNG starts with an 8 byte signature, followed by a series of chunks. The first chunk must be an <a href="http://www.libpng.org/pub/png/spec/1.2/PNG-Chunks.html#C.IHDR">IHDR chunk</a>. This chunk starts with "IHDR", followed by four bytes representing the image width, in most significant byte order. This means the first four bytes in the second line of the dump (00 00 0a 00) are the image width, and indeed, 0a00 is the hexadecimal for 2560... Do you remember the bug was only happening for some image sizes? If the width had been 2559, the IHDR chunk would have started with 00 00 09 ff, and thus the PCX handler would not have identified this image as a PCX.</p>
+<h3>Another format gets in...</h3>
+<p>While the PCX handler could be improved to use more than one byte as a signature, it is not the real problem: had device-&gt;pos() been correctly set to 0, it wouldn't have identified the image as PCX. <a href="http://qt-project.org/doc/qt-4.8/qimageiohandler.html#canRead">QImageIOHandler::canRead() documentation</a> explicitly says:</p>
+<blockquote>
+When reimplementing canRead(), make sure that the I/O device (device()) is left in its original state (e.g., by using peek() rather than read()).
+</blockquote>
+<p>
+</p><p>Someone was not playing by the rules and was altering the device position before PCXHandler::canRead() was reached.</p>
+<p>I was starting to suspect one of the other image handlers was doing something nasty. To try to isolate the culprit, I first removed all KDE image plugins but the PCX handler. No luck, still buggy. I then removed all Qt image plugins (PNG was still there as it is one of those built into QtGui.so) Bingo! The image was now being correctly identified. Using a quick dichotomy, I found out the TGA plugin was the nasty boy.</p>
+<p>QTgaHandler::canRead() looks like this:</p>
+<div class="highlight"><pre><span class="kt">bool</span> <span class="n">QTgaHandler</span><span class="o">::</span><span class="n">canRead</span><span class="p">(</span><span class="n">QIODevice</span> <span class="o">*</span><span class="n">device</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="o">!</span><span class="n">device</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">qWarning</span><span class="p">(</span><span class="s">"QTgaHandler::canRead() called with no device"</span><span class="p">);</span>
+        <span class="k">return</span> <span class="kc">false</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">QTgaFile</span> <span class="n">tga</span><span class="p">(</span><span class="n">device</span><span class="p">);</span>
+    <span class="k">return</span> <span class="n">tga</span><span class="p">.</span><span class="n">isValid</span><span class="p">();</span>
+<span class="p">}</span>
+</pre></div>
+<p/>
+<p>Looking at the code you can probably guess it: QTgaFile constructor does not take care of not altering QIODevice state. Looking at the Git history for this handler shows it was copied from QtQuick3D to Qt before the 4.8.0 release, which explains why there was no problem when running Gwenview on top of Qt 4.7.</p>
+<p>It is a bit sad however that this code was brought in instead of using KDE TGA handler, which has been around for a while, does not suffer from this bug and have (limited) write supports whereas the Qt handler is read-only.</p>
+<h2>Fixing time</h2>
+<p>I worked around this bug in Gwenview by taking advantage of the fact that QImageReader accept an optional "format" parameter, which can be used as a hint: QImageReader will first try to use an image handler which supports this format.</p>
+<p>I was not using this feature until now because I thought passing a format would make QImageReader fail if the image was not of the specified format. It turns out I was wrong: the format parameter is just a hint, if the image cannot be loaded with a handler implementing this format, QImageReader will try the others. I should probably propose a patch for the documentation to reflect that.</p>
+<p>The real fix however is to teach QTgaHandler proper manners. I just posted <a href="http://codereview.qt-project.org/#change,22006">a fix on qt-project.org</a>, hopefully it will get in.</p>
+<p>Gwenview 2.8.2 (from upcoming KDE SC 4.8.2), has the work-around in but if you haven't upgraded yet, you can fix the bug by simply removing the TGA handler plugin. Look for a file named libqtga.so. It should be in:</p>
+<ul>
+<li>openSUSE (64 bits): /usr/lib64/qt4/plugins/imageformats/</li>
+<li>Ubuntu|Debian (64 bits): /usr/lib/x86_64-linux-gnu/qt4/plugins/imageformats/</li>
+</ul>
+<p>
+</p><p>(I don't know the location for 32 bits systems)</p>
+<p>So to summarize, a rogue TGA handler was tricking a sloppy PCX handler into identifying a PNG file into a PCX file, what a mess!</p>
+</div>
+<a href="http://flattr.com/thing/605354/Qt-Image-Decoders-Stepping-on-Each-Others" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

@@ -1,0 +1,19 @@
+pub_date: 2009-01-31 21:00:00 +01:00
+public: yes
+tags: ["Gwenview","KDE"]
+title: "Thoughts on Gwenview folder view"
+
+<p>So, KDE 4.2 is finally out, it's time to switch from bug fix mode to feature implementation mode (even if I am still working at wiping out a few nasty bugs in Gwenview for 4.2.1).</p>
+<p>One of the most wanted features I plan to add to the next version of Gwenview is an optional folder sidebar. Since I am going to work on this, I would like to use the opportunity to also rework the way the sidebar is implemented. Right now the sidebar has a few shortcomings:
+<ul>
+<li>It is too crowded and does not scale well. Sure there are +/- buttons to expand/collapse sidebar groups, but nobody use them (I know that, because otherwise people would complain the expanded/collapsed state is not remembered across sessions!).</li>
+<li>It's too focused on operations, rather than information: users often tell me they do not need 3 places to rotate an image (toolbar, thumbnailbar, sidebar).</li>
+</ul>
+There are a few possible options:
+<ol>
+<li>In browse mode, show a folder sidebar only. In view mode, show a tabbed sidebar containing information and shortcuts to image manipulation tools (&#224; la Picasa: <a href="http://screenshots.en.softonic.com/en/scrn/23000/23941/3_picasa_main.jpg">browse mode</a>, <a href="http://screenshots.en.softonic.com/en/scrn/23000/23941/3_picasa_indiv.jpg">view mode</a>).</li>
+<li>Always show the same sidebar, split in two: the upper part contains the folder view, the lower part contains information. Tools are only available from the menu (<a href="http://missig.org/julian/images/iphoto-flickr.png">&#224; la iPhoto</a>).</li>
+<li>Only one sidebar, with a set of buttons at the bottom to switch its content (<a href="http://projects.gnome.org/evolution/images/screenshots/2.4/contact-list.png">&#224; la Evolution</a>)</li>
+<li>Do not integrate the folder view in the current sidebar: Keep the sidebar as is and add a folder sidebar on the left.</li>
+</ol>
+What are your opinions/ideas on these options?</p>

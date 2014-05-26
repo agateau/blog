@@ -1,0 +1,19 @@
+pub_date: 2010-05-10 21:00:00 +01:00
+public: yes
+tags: ["KDE","menubar","Plasma","DBusMenu"]
+title: "Getting menubars out of application windows..."
+
+<p>Today at the <a href="http://summit.ubuntu.com/uds-m">Maverick Ubuntu Developer Summit (UDS)</a> I gave a quick demonstration of a project I have been working on for the next Kubuntu version. It is a DBusMenu-based implementation of a global application menu. This is a feature which was in KDE 3.x but has not yet been ported to 4.x.</p>
+<p>Here is a screenshot of Dolphin running with its menu embedded in a Plasma panel.</p>
+<a href="appmenu-dolphin.png"><img src="thumb_appmenu-dolphin.png" title="Dolphin menu displayed in the Plasma panel" height="239" width="300" alt="" class="aligncenter size-medium wp-image-371"/></a>
+<p>The nice thing about this implementation is that it takes advantage of DBusMenu: GTK+-based applications running on a KDE desktop will be able to get their menubars displayed in the Plasma panel. Same thing for KDE applications running on the GNOME desktop. My colleagues are busy finishing the GTK+ implementation right now.</p>
+<p>The Plasma Menubar widget also features a "Button form factor". Enabling it turns the menubar into a "Menu" button, saving a lot of space in the panel. This makes it possible to pack both the Menubar and the Taskbar widgets in the same panel like this:</p>
+<a href="appmenu-dolphin-button1.png"><img src="thumb_appmenu-dolphin-button1.png" title="Dolphin menu displayed as a button in the Plasma panel" height="228" width="300" alt="" class="aligncenter size-medium wp-image-373"/></a>
+<p>This is quite handy for Netbooks. I have been using my laptop with this setup recently and I find it nice to work with. The cost of the extra-click to get to the menu items does not bother me for now.</p>
+<p>Finally, here is a short screencast of the menubar in action:</p>
+<p><iframe src="http://blip.tv/play/AYHdlQUC.html?p=1" width="880" height="590" frameborder="0" allowfullscreen></iframe><embed type="application/x-shockwave-flash" src="http://a.blip.tv/api.swf#AYHdlQUC" style="display:none"></embed>
+</p><p style="text-align:center;"><a href="http://blip.tv/file/get/Agateau-KDEApplicationMenubarsEmbeddedInAPlasmaPanel395.ogv">ogv version</a></p>
+<p>This is implemented as a patch for Qt. Right now the code is quite experimental, misses a few features and crashes when it feels like it. It should thus be considered a proof-of-concept implementation. If you feel adventurous, you can install the patched Qt version as well as the Menubar widget from <strike>my PPA</strike> <a href="https://launchpad.net/~canonical-dx-team/+archive/une">the Unity PPA</a>.</p>
+<p>The Menubar widget is <a href="https://launchpad.net/plasma-widget-menubar">hosted on Launchpad</a>. I haven't uploaded the Qt patch yet but it can be found in the source Qt package in the PPA. I have to warn you it's quite ugly, though: it currently embeds a hacked-up version of dbusmenu-qt inside Qt itself. Luckily Qt developers joined us at UDS, so we should get this solved in a cleaner way.</p>
+<a href="http://flattr.com/thing/80323/Getting-menus-out-of-application-windows" target="_blank">
+<img src="http://api.flattr.com/button/button-compact-static-100x17.png" alt="Flattr this" border="0" title="Flattr this"/></a>

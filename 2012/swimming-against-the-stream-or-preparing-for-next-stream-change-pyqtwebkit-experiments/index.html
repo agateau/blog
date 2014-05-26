@@ -1,0 +1,142 @@
+pub_date: 2012-01-20 21:00:00 +01:00
+public: yes
+tags: ["Yokadi","WebKit","PyQt"]
+title: "Swimming against the stream or preparing for next stream change? PyQt+WebKit experiments"
+
+<h1>Introduction</h1>
+<p>(This is part 1 of the <a href="/article-series/pyqtwebkit-experiments/">PyQt+WebKit experiments series</a>)</p>
+<p>It is an interesting time to be a Qt developer: new ways to develop applications are emerging, one can either ignore them or experiment... I like experimentations.</p>
+<p>In one corner we have traditional, QWidget-based Qt development.</p>
+<p>In another corner we have QML, a declarative language coupled with JavaScript, which brings a whole new way to think about application development. Qt developers are betting a lot on QML, planning for it to be the preferred way to develop new applications with Qt 5.</p>
+<p>In yet another corner is the Web, a perfect demonstration of technology hijacking: what was once designed to present structured documents has become one of the most powerful way to create applications.</p>
+<p>Of those three technologies, I believe QML is the most innovative and powerful one, and I had high hopes it could secure a significant market share when Nokia and Intel were still planning to deliver it on their upcoming smart-phones and tablets. Now that Nokia switched to WP7 and Intel switched to EFL, I am a lot less confident QML will succeed. Experience shows that when two technologies are in competition, the best one does not automatically wins, parameters like market share and learning curve are as important as, if not more important than, technical excellence.</p>
+<p>Not willing to ignore the behemoth that is the Web, I started an experiment: how would it feel to develop an application which would mix Qt and HTML rendering? Thanks to QtWebKit, this kind of integration is easy to achieve. My experimentation subject is based on <a href="http://yokadi.github.com">Yokadi</a>, a command-line based TODO list I work on. I decided to create a graphical frontend for it. The result is this:</p>
+<p>
+<img src="qyok1.png" title="QYok due page" height="471" width="630" alt="" class="aligncenter size-full wp-image-1053"/>
+<img src="qyok2.png" title="QYok projects page" height="471" width="630" alt="" class="aligncenter size-full wp-image-1054"/>
+</p>
+<p>This application, named <a href="http://github.com/agateau/qyok">QYok</a> (yes, I suck at naming applications, suggestions for better names are welcome!), is an interesting mix of technologies. It uses:</p>
+<ul>
+<li><a href="http://www.riverbankcomputing.com/software/pyqt/">PyQt</a>, for the main window and most of the widgets</li>
+<li><a href="http://trac.webkit.org/wiki/QtWebKit">QtWebKit</a>, to display the task lists</li>
+<li><a href="http://jquery.com">jQuery</a>, to make it easier to manipulate the HTML and provide nice animations</li>
+<li><a href="http://jinja.pocoo.org/">Jinja2</a>, a Python-based template system, using a syntax similar to Django (and thus Grantlee)</li>
+<li>and of course, <a href="http://yokadi.github.com">Yokadi</a> itself, to provide access to the TODO database</li>
+</ul>
+<p>In this series of articles, I am going to describe how one can mix PyQt and WebKit together, based on my learnings from the QYok project. In particular I want to show ways to generate native-looking HTML code, to ensure your application does not look alien on your desktop.</p>
+<h1>Getting a Qt application to show HTML code</h1>
+<p>This is the first, very easy, step. Here is a complete example:</p>
+<div class="highlight"><pre><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="kn">from</span> <span class="nn">PyQt4.QtCore</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtGui</span> <span class="kn">import</span> <span class="o">*</span>
+<span class="kn">from</span> <span class="nn">PyQt4.QtWebKit</span> <span class="kn">import</span> <span class="o">*</span>
+
+<span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Window</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="n">view</span> <span class="o">=</span> <span class="n">QWebView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+
+        <span class="n">html</span> <span class="o">=</span> <span class="s">"""</span>
+<span class="s">            &lt;html&gt;&lt;body&gt;</span>
+<span class="s">            Hello World!</span>
+<span class="s">            &lt;/body&gt;&lt;/html&gt;</span>
+<span class="s">            """</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">setHtml</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">app</span> <span class="o">=</span> <span class="n">QApplication</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">)</span>
+    <span class="n">window</span> <span class="o">=</span> <span class="n">Window</span><span class="p">()</span>
+    <span class="n">window</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+    <span class="n">app</span><span class="o">.</span><span class="n">exec_</span><span class="p">()</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+    <span class="n">main</span><span class="p">()</span>
+</pre></div>
+<p>
+</p><p>(<a href="https://github.com/agateau/pyqt-webkit-tutorial/blob/master/tut1/hello-world.py">Source code</a>)</p>
+<p>What all this does is create a window, create a webview in it and set some HTML. Nothing fancy.</p>
+<img src="hello-world.png" title="hello-world" height="223" width="343" alt="" class="aligncenter size-full wp-image-1051"/>
+<h1>HTML is nicer with images</h1>
+<p>One of the main point of using HTML is that it makes it reasonably easy to create complex documents which include images. So let's add a folder named "static" to our code folder, with an image in it. Since we are feeding QWebView with HTML, it has no way to know where to look for our images. Luckily, setHtml() accepts a second parameter: the base url of the document. Any relative url contained in our HTML will be resolved using this url as a base.</p>
+<p>Here is the modified call to setHtml():</p>
+<div class="highlight"><pre><span class="n">pyDir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">))</span>
+<span class="n">baseUrl</span> <span class="o">=</span> <span class="n">QUrl</span><span class="o">.</span><span class="n">fromLocalFile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">pyDir</span><span class="p">,</span> <span class="s">"static/"</span><span class="p">))</span>
+<span class="n">html</span> <span class="o">=</span> <span class="s">"""</span>
+<span class="s">    &lt;html&gt;&lt;body&gt;</span>
+<span class="s">    &lt;div&gt;Hello World!&lt;/div&gt;</span>
+<span class="s">    &lt;img src="test.png"/&gt;</span>
+<span class="s">    &lt;/body&gt;&lt;/html&gt;</span>
+<span class="s">    """</span>
+<span class="n">view</span><span class="o">.</span><span class="n">setHtml</span><span class="p">(</span><span class="n">html</span><span class="p">,</span> <span class="n">baseUrl</span><span class="p">)</span>
+</pre></div>
+<p>
+</p><p>(<a href="https://github.com/agateau/pyqt-webkit-tutorial/blob/master/tut1/hello-world-img.py">Source code</a>)</p>
+<img src="hello-world-img.png" title="hello-world-img" height="308" width="338" alt="" class="aligncenter size-full wp-image-1052"/>
+<p>Be careful: always ensure baseUrl ends up with a trailing slash! If there is no trailing slash, QWebView will resolve "test.png" as "/path/to/tut1/statictest.png" instead of "/path/to/tut1/static/test.png". I learnt that the hard way...</p>
+<h1>Calling Qt code from JavaScript</h1>
+<p>QWebView.setHtml() makes it easy for Qt code to provide HTML content to WebKit, but it is a one-way only setup: it doesn't provide a way for JavaScript code to call Qt code. The way to do this is by exposing objects created on the Qt side to QWebView (or more precisely, to the main frame of the QWebPage inside QWebView).</p>
+<p>QtWebKit takes advantage of Qt introspection features to access object methods and properties. To be exposed to JavaScript, an object must thus inherit from QObject and expose itself through Qt properties, Qt signals and Qt slots. Here is an example. First lets define a class named Foo which implements a compute() slot, performing complicated computations and a quit() slot:</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">Foo</span><span class="p">(</span><span class="n">QObject</span><span class="p">):</span>
+    <span class="nd">@pyqtSlot</span><span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="n">result</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+    <span class="k">def</span> <span class="nf">compute</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">value</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">value</span> <span class="o">*</span> <span class="mi">2</span>
+
+    <span class="nd">@pyqtSlot</span><span class="p">()</span>
+    <span class="k">def</span> <span class="nf">quit</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="n">QApplication</span><span class="o">.</span><span class="n">quit</span><span class="p">()</span>
+</pre></div>
+<p>
+</p><p>The important part here are the "@pyqtSlot()" decorators, which take care of turning our methods into slots. As you may have guessed, the decorator expects you to describe the type of the parameters accepted by your method, as well as the type of the returned value, if any.</p>
+<p>Now that this done, lets create a Window class which will instantiate our Foo class and pass it to JavaScript:</p>
+<div class="highlight"><pre><span class="k">class</span> <span class="nc">Window</span><span class="p">(</span><span class="n">QWidget</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="nb">super</span><span class="p">(</span><span class="n">Window</span><span class="p">,</span> <span class="bp">self</span><span class="p">)</span><span class="o">.</span><span class="n">__init__</span><span class="p">()</span>
+        <span class="n">view</span> <span class="o">=</span> <span class="n">QWebView</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span> <span class="o">=</span> <span class="n">QVBoxLayout</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">layout</span><span class="o">.</span><span class="n">addWidget</span><span class="p">(</span><span class="n">view</span><span class="p">)</span>
+
+        <span class="bp">self</span><span class="o">.</span><span class="n">foo</span> <span class="o">=</span> <span class="n">Foo</span><span class="p">(</span><span class="bp">self</span><span class="p">)</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">page</span><span class="p">()</span><span class="o">.</span><span class="n">mainFrame</span><span class="p">()</span><span class="o">.</span><span class="n">addToJavaScriptWindowObject</span><span class="p">(</span><span class="s">"foo"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">foo</span><span class="p">)</span>
+
+        <span class="n">html</span> <span class="o">=</span> <span class="s">"""</span>
+<span class="s">            &lt;html&gt;</span>
+<span class="s">            &lt;head&gt;</span>
+<span class="s">            &lt;script&gt;</span>
+<span class="s">            function updateEntry() {</span>
+<span class="s">                var element = document.getElementById("entry");</span>
+<span class="s">                var result = foo.compute(element.value);</span>
+<span class="s">                element.value = result;</span>
+<span class="s">            }</span>
+<span class="s">            &lt;/script&gt;</span>
+<span class="s">            &lt;/head&gt;</span>
+
+<span class="s">            &lt;body&gt;</span>
+<span class="s">            &lt;div&gt;</span>
+<span class="s">                &lt;input type="text" id="entry" value="1"/&gt;</span>
+<span class="s">                &lt;input type="button" value="Compute" onclick="updateEntry()"/&gt;</span>
+<span class="s">            &lt;/div&gt;</span>
+<span class="s">            &lt;div&gt;</span>
+<span class="s">                &lt;input type="button" value="Quit" onclick="foo.quit()"/&gt;</span>
+<span class="s">            &lt;/div&gt;</span>
+<span class="s">            &lt;/body&gt;</span>
+<span class="s">            &lt;/html&gt;</span>
+<span class="s">            """</span>
+        <span class="n">view</span><span class="o">.</span><span class="n">setHtml</span><span class="p">(</span><span class="n">html</span><span class="p">)</span>
+</pre></div>
+<p>
+</p><p>(<a href="https://github.com/agateau/pyqt-webkit-tutorial/blob/master/tut1/expose-qtobject.py">Source code</a>)</p>
+<img src="expose-qtobject.png" title="expose-qtobject" height="276" width="440" alt="" class="aligncenter size-full wp-image-1050"/>
+<p>Clicking the "Compute" button doubles the value in the input widget, clicking the "Quit" button, quits the application.</p>
+<p>In this example, we create self.foo, an instance of the Foo class, then expose it to our QWebView with the line:</p>
+<div class="highlight"><pre><span class="n">view</span><span class="o">.</span><span class="n">page</span><span class="p">()</span><span class="o">.</span><span class="n">mainFrame</span><span class="p">()</span><span class="o">.</span><span class="n">addToJavaScriptWindowObject</span><span class="p">(</span><span class="s">"foo"</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">foo</span><span class="p">)</span>
+</pre></div>
+<p>
+</p><p>We then feed our QWebView with some HTML code with view.setHtml(). Note how JavaScript code can now refer to our foo object as if it was a native JavaScript object.</p>
+<h1>Conclusion</h1>
+<p>That's it for now. Stay tuned for the next article. </p>
+<p>PS: All examples are available from <a href="http://github.com/agateau/pyqt-webkit-tutorial">github</a>: <code>git clone git://github.com/agateau/pyqt-webkit-tutorial.git</code> to get it.</p>
+<a href="http://flattr.com/thing/468545/Swimming-against-the-stream-or-preparing-for-next-stream-change-PyQtWebKit-experiments" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

@@ -1,0 +1,17 @@
+pub_date: 2011-09-23 21:00:00 +01:00
+public: yes
+tags: ["Tips","GDB","StatusNotifierItem","Qt","Skype"]
+title: "Make Skype a bit less shy"
+
+<p>I already wrote some time ago <a href="http://agateau.wordpress.com/2011/07/19/statusnotifieritem-for-qt-applications/">about sni-qt</a>, a Qt plugin which turns old-school systemtray icons from Qt applications into shiny StatusNotifierItem | AppIndicators.</p>
+<p>Last week I was busy debugging a problem with Skype and sni-qt. To do so I added a runtime config option to enable debugging in sni-qt. It is quite efficient at flooding stderr with debug messages for all applications I have tried it on, except for Skype:</p>
+<p><img src="skype-silent.png" alt="" height="286" width="434" title="Silent Skype"/></p>
+<p>Disappointing! Come on Skype, talk to me!</p>
+<p>I don't give up that easily, so I decided to fiddle around with gdb.</p>
+<p>I first tried to start Skype from within gdb with the "start" function. This function causes gdb to set a temporary breakpoint on main() and start the program. This is quite handy because when your program reachs the breakpoint the application has not started yet, but most libraries (except dlopen-ed ones) are already loaded, making it easier to set breakpoints. No such luck with Skype: for some reason gdb didn't find the main() function and did not stop Skype at startup. Bummer.</p>
+<p>Then I remembered I recently had a discussion about "qt_startup_hook()", a function which is called at the end of the QCoreApplication constructor. This is close enough from startup to me. I set up a breakpoint on "qt_startup_hook" and said gdb to run Skype. That worked! Cool.</p>
+<p>Now, I am stopped inside Skype, what to do next? A not so well-known feature of Qt logging system lets you install your own message handler for logging functions with the <a href="http://doc.qt.nokia.com/4.7/qtglobal.html#qInstallMsgHandler">qInstallMsgHandler(yourHandler)</a> function. Your message handler then receives all the output from qDebug(), qWarn() and friends. To go back to the default message handler, just call "qInstallMsgHandler(0)". Not really confident in it, I tried to call qInstallMsgHandler(0) from within gdb. It turns out that did the trick: after calling resetting the message handler and asking gdb to continue, I got my error messages (plus Skype own debug messages, probably not a major achievement in reverse-engineering, but that was fun :))</p>
+<a href="skype-verbose.png"><img src="thumb_skype-verbose.png" title="Verbose Skype" height="151" width="300" alt="" class="aligncenter size-medium wp-image-975"/></a>
+<p>Oh and by the way, if you run&#160;{,K}Ubuntu Oneiric on a 64bit machine and&#160;want to get your Skype icon turned into a StatusNotifierItem, be sure to install the i386 version of sni-qt (you can do so with "sudo apt-get install sni-qt:i386"). Skype still does not provide 64bit binaries :(</p>
+<a href="http://flattr.com/thing/402173/Make-Skype-a-bit-less-shy" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

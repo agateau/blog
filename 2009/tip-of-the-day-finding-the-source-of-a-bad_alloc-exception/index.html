@@ -1,0 +1,11 @@
+pub_date: 2009-12-22 21:00:00 +01:00
+public: yes
+tags: ["Tips","bad_alloc","gdb"]
+title: "Tip of the day: Finding the source of a bad_alloc exception"
+
+<p>Quick tip of the day.</p>
+<p>Today I was debugging a bad_alloc exception, but the backtrace was useless because the exception was being rethrown by Qt event loop.</p>
+<p>After some head scratching, I figured this simple trick which you may find useful:
+</p><pre>b 'std::bad_alloc::bad_alloc()'</pre><p>
+This sets a breakpoint on bad_alloc constructor. After restarting the program, I was able to get a much more useful backtrace.</p>
+<p>Hope this helps!</p>

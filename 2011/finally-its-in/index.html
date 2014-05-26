@@ -1,0 +1,26 @@
+pub_date: 2011-06-23 21:00:00 +01:00
+public: yes
+tags: ["KDE","appmenu","Qt","menubar"]
+title: "Finally, it's in..."
+
+<p>On Monday this week, something I have been working to make happen for quite some time finally happened: the appmenu Qt patch <a href="https://qt.gitorious.org/qt/qt/merge_requests/1254">got merged in the qt/4.8 branch</a>.</p>
+<p>Appmenu-qt is both a patch for Qt (now merged in) introducing a plugin system for menubars, as well as a plugin using said plugin system to expose menubars on DBus. This plugin makes it possible to move menubars from the application windows to a top-level panel. It has been part of Ubuntu for the last two releases where it is used to implement the top-level menubar in Unity and to provide the "Menu" button in the panel of Kubuntu Plasma Netbook.</p>
+<p>If you want to learn more about appmenu-qt, I invite you to read these two posts I wrote when it was developed:
+<ul>
+<li><a href="http://agateau.wordpress.com/2010/05/10/getting-menus-out-of-application-windows/">Getting menus out of application windows</a></li>
+<li><a href="http://agateau.wordpress.com/2010/07/05/getting-menus-out-of-application-windows-2/">Getting menus out of application windows 2</a></li>
+</ul></p>
+<p>If you are interested, here is what is necessary to get appmenu-qt working for KDE Plasma:</p>
+<ul>
+<li>Qt 4.8 (which has not been released yet),</li>
+<li>the <a href="https://launchpad.net/appmenu-qt">appmenu-qt plugin</a>, version 0.2.0 (older versions won't work with Qt 4.8),</li>
+<li>the <a href="https://launchpad.net/plasma-widget-menubar">Plasma Menubar widget</a>.</li>
+</ul>
+<p>The nice thing about appmenu is that its implementation is toolkit-agnostic:
+<ul>
+<li><a href="https://launchpad.net/appmenu-gtk">appmenu-gtk</a> provides similar functionality for GTK,</li>
+<li>the <a href="https://launchpad.net/globalmenu-extension">global menubar extension</a> does the same for Firefox and Thunderbird,</li>
+<li>the <a href="https://launchpad.net/lo-menubar">LibreOffice menubar plugin</a> does the same for LibreOffice.</li>
+</ul></p>
+<a href="http://flattr.com/thing/320360/Finally-its-in-" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

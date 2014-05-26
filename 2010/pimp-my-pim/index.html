@@ -1,0 +1,35 @@
+pub_date: 2010-12-18 21:00:00 +01:00
+public: yes
+tags: ["KDE","korganizer","kdepim","akregator","ui"]
+title: "Pimp My PIM!"
+
+<p>I worked a bit on some user-interface improvements for kdepim applications. So far I worked on KOrganizer and Akregator.</p>
+<h2>KOrganizer</h2>
+<p>Here is a screenshot of KOrganizer when I started:</p>
+<a href="korganizer-before.png"><img src="thumb_korganizer-before.png" title="KOrganizer - before" height="176" width="300" alt="" class="aligncenter size-medium wp-image-643"/></a>
+<p>My first change was to remove all double-margins from the main window:</p>
+<a href="korganizer-event-indicator-over-agenda-before1.png"><img src="thumb_korganizer-event-indicator-over-agenda-before1.png" title="KOrganizer - no more double margins" height="175" width="300" alt="" class="aligncenter size-medium wp-image-646"/></a>
+<p>This gives more room for actual content, but the event indicators (the green up and down arrows indicating some events are outside the view) was wasting some vertical space. I replaced them with overlayed indicators:</p>
+<a href="korganizer-event-indicator-over-agenda-after1.png"><img src="thumb_korganizer-event-indicator-over-agenda-after1.png" title="KOrganizer - overlayed event indicators" height="175" width="300" alt="" class="aligncenter size-medium wp-image-644"/></a>
+<p>You might notice I got a bit creative here: I didn't use an icon for the indicators. Instead I used unicode characters representing arrows, namely "UPWARDS DASHED ARROW" or U+21E1: &#8673; and "DOWNWARDS DASHED ARROW" or U+21E3: &#8675; (Thanks to KCharSelect for making it easy to search for arrow characters)</p>
+<p>I felt using characters like this would result in less invasive indicators. As can be seen in the following screenshot, if the indicator overlaps an event it does not prevent you from reading the event text.</p>
+<a href="korganizer-event-indicator-over-agenda-after2.png"><img src="thumb_korganizer-event-indicator-over-agenda-after2.png" title="KOrganizer - overlayed indicators over event" height="175" width="300" alt="" class="aligncenter size-medium wp-image-645"/></a>
+<p>Finally, I changed the appearance and alignment of the time labels (the column on the left of the agenda) so that they are aligned with the agenda, making the two look a bit more like they work together.</p>
+<a href="korganizer-right-aligned-time-labels.png"><img src="thumb_korganizer-right-aligned-time-labels.png" title="KOrganizer - right-aligned time labels" height="169" width="300" alt="" class="aligncenter size-medium wp-image-648"/></a>
+<p>I also did some message boxes clean up: I went through all of them and fixed those which used "yes/no" buttons instead of more descriptive verbs, as recommended by <a href="http://techbase.kde.org/Projects/Usability/HIG/Messages">KDE HIG</a>.</p>
+<h2>Akregator</h2>
+<p>I picked up Akregator as an example of bad list view columns in <a href="/2010/12/10/common-user-interface-mistakes-in-kde-applications-part-1-default-sizes/">my last article</a>.</p>
+<a href="akregator.png"><img src="thumb_akregator.png" title="Akregator" height="155" width="300" alt="" class="aligncenter size-medium wp-image-609"/></a>
+<p>I improved the feed tree on the left: by default it now only shows the feed names followed by the unread count. If you add back the "Unread" column, the unread count disappear from the "Name" column.</p>
+<p>I then reworked the article list in a few ways:
+<ul>
+<li>The list now starts with more usable column widths,</li>
+<li>When a feed is selected in the feed tree the "Feed" column is hidden,</li>
+<li>The title column expands to show as much as possible, using a <del>nasty hack</del> beautiful workaround to ensure it is can still be resized by the user.</li>
+</ul>
+Finally I changed the size hint for the article view to start a bit taller by default.</p>
+<p>Here is how it looks now:</p>
+<a href="akregator-after.png"><img src="thumb_akregator-after.png" title="Akregator - after" height="196" width="300" alt="" class="aligncenter size-medium wp-image-649"/></a>
+<p>Hopefully this makes the application more pleasant to use.</p>
+<a href="http://flattr.com/thing/103036/Pimp-My-PIM" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

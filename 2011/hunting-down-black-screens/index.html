@@ -1,0 +1,10 @@
+pub_date: 2011-06-03 21:00:00 +01:00
+public: yes
+tags: ["Gwenview"]
+title: "Hunting down black screens"
+
+<p>Today I spent some time on Gwenview, trying to get rid of an annoying bug: when you browse images in fullscreen or when you zoom into large images, sometimes the screen goes black for a few milliseconds (<a href="https://bugs.kde.org/show_bug.cgi?id=227155">bug 227155</a>)</p>
+<p>The changes ended up being a bit more involved than I expected, but I got rid of most black screens. You may still get some when you go to a document of a "different kind" (going from a photo to an SVG for example) but you should not see black screens anymore when going through photos or zooming them in.</p>
+<p>I fixed a few regressions and I am quite confident it is now stable, but Gwenview could use more testers for this change. If you use KDE master (the fixes are not in Beta 2), just go through your images, manipulate them and if you find some weirdness, file a bug, help all of us enjoy a black-screen-less photo browsing world!</p>
+<a href="http://flattr.com/thing/298335/Hunting-down-black-screens" target="_blank">
+<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

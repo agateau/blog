@@ -1,0 +1,63 @@
+pub_date: 2009-08-09 21:00:00 +01:00
+public: yes
+tags: ["Tips","make","CMake","make dist"]
+title: "CMake and \"make dist\""
+
+<b>Update:</b> Here is a <a href="http://agateau.wordpress.com/2009/08/09/cmake-and-make-dist-the-simple-version/">simpler way to create a "make dist" target</a>.
+<p>
+<h1>Creating a source archive</h1>
+The other day at work I needed to create a release for some packages I have been working on (more on that later). Since I am using <a href="http://www.cmake.org">CMake</a> for these projects, I looked around at how it could help me generate my source archives.  CMake has a tool called <a href="http://www.vtk.org/Wiki/CMake:Packaging_With_CPack">CPack</a>, which can generate cross-platform binary packages (.msi for Windows, .dmg for Mac OS, .rpm, .deb or binary tarballs for Unix) as well as source archives.</p>
+<p>I found little documentation on how to tweak the way CPack generate source archives, so I am going to describe how I solved my problem. Maybe it can help others, or you can point me to smarter ways.</p>
+<p>Here is a short extract of what I ended up with:
+</p><pre><code>set(CPACK_PACKAGE_VERSION_MAJOR "0")
+set(CPACK_PACKAGE_VERSION_MINOR "2")
+set(CPACK_PACKAGE_VERSION_PATCH "3")
+set(CPACK_SOURCE_GENERATOR "TBZ2")
+set(CPACK_SOURCE_PACKAGE_FILE_NAME
+  "${CMAKE_PROJECT_NAME}-${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}")
+set(CPACK_SOURCE_IGNORE_FILES
+  "/build/;/.bzr/;~$;${CPACK_SOURCE_IGNORE_FILES}")
+include(CPack)
+</code></pre><p>
+Once you add this to your project, running <code>make package_source</code> will create an archive named "foo-0.2.3.tar.bz2" (assuming your CMakeLists.txt file contains a <code>project(foo)</code> line).</p>
+<p>Let's detail these lines:
+</p><pre><code>set(CPACK_PACKAGE_VERSION_MAJOR "0")
+set(CPACK_PACKAGE_VERSION_MINOR "2")
+set(CPACK_PACKAGE_VERSION_PATCH "3")
+</code></pre><p>
+Nothing fancy here, we just define the version number of our package.
+</p><pre><code>set(CPACK_SOURCE_GENERATOR "TBZ2")
+</code></pre><p>
+By default CPack generates .tar.Z, .tar.gz and .tar.bz2 archives. Set this variable to only generate .tar.bz2 archives.
+</p><pre><code>set(CPACK_SOURCE_PACKAGE_FILE_NAME
+  "${CMAKE_PROJECT_NAME}-${CPACK_PACKAGE_VERSION_MAJOR}.${CPACK_PACKAGE_VERSION_MINOR}.${CPACK_PACKAGE_VERSION_PATCH}")
+</code></pre><p>
+By default CPack creates an archive named "foo-0.2.3-Source.tar.bz2". The only way I found to get rid of the "-Source" suffix was to redefine the <code>CPACK_SOURCE_PACKAGE_FILE_NAME</code> variable.
+</p><pre><code>set(CPACK_SOURCE_IGNORE_FILES
+  "/build/;/.bzr/;~$;${CPACK_SOURCE_IGNORE_FILES}")
+</code></pre><p>
+If you create your build dir inside the source dir, CPack will do stupid things such as including the content of the build dir in the archive. Fortunately you can tell it to ignore files with <code>CPACK_SOURCE_IGNORE_FILES</code>. I added my build and .bzr dirs (my work projects are managed with Bazaar).
+</p><pre><code>include(CPack)
+</code></pre><p>
+This is where the magic happen. Including "CPack" creates the <code>package</code> and <code>package_source</code> targets. It is important to add this line <em>after</em> the various "set(CPACK..." lines, otherwise they will be ignored.
+<h1>Creating a "dist" target</h1>
+This setup is nice, but it has two problems:
+<ol>
+<li>Running <code>make package_source</code> do not update CMake cache, which is painful when you are adjusting the various <code>CPACK_</code> vars</li>
+<li><code>make dist</code> is more natural than <code>make package_source</code></li>
+</ol>
+To fix both of those, I created a <code>dist</code> target like this:
+</p><pre><code>add_custom_target(dist COMMAND ${CMAKE_MAKE_PROGRAM} package_source)
+</code></pre><p>
+This line creates a <code>dist</code> target, and ensures the CMake cache is updated if you run <code>make dist</code> after changing the CMakeLists.txt (not sure why... Can somebody explain?)
+<h1>Be careful...</h1>
+CPack puts everything from the source tree inside the archive, including any file lying around. This is probably not what you want... To ensure you create clean archives, always run <code>make dist</code> from a clean source tree. A nice way to do this with git or bzr is to create a local clone of your working tree. The procedure is thus the following:
+</p><pre><code>{bzr,git} clone &lt;path/to/source/tree&gt; tmp
+cd tmp
+mkdir build
+cd build
+cmake ..
+make dist
+</code></pre><p>
+You just have to make sure the "build", ".bzr" or ".git" dirs are ignored in <code>CPACK_SOURCE_IGNORE_FILES</code>.</p>
+<p>Hope this helps! Maybe I'll come back later with a recipe for <code>make distcheck</code>, if I find the time to setup such a target.</p>

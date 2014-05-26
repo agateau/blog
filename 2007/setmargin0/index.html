@@ -1,0 +1,21 @@
+pub_date: 2007-11-29 21:00:00 +01:00
+public: yes
+tags: ["KDE"]
+title: "Say no to double margins"
+
+<p>Maybe it's just me, but I highly dislike it when the content of a dialog is not aligned with the line of buttons at the bottom. I mean, when it looks like that:</p><p align="center"><img src="doublemargin.png" alt="doublemargin.png"/></p><p align="left">Instead of looking like this:</p><p align="center"><img src="singlemargin.png" alt="singlemargin.png"/></p><p align="left">I think it really looks unpolished.</p><p align="left">Unfortunately, it's easy to fall in this trap with KDialog, because when you create your dialog in Designer you don't work with the full dialog, but only with its content. In Designer your dialog looks like this:</p><p align="center"><img src="designermargin9.png" alt="designermargin9.png"/></p><p align="left">It looks ok, but it's not, because KDialog adds its own margin, resulting in double margins for the content, but not for the KDialog buttons.</p><p align="left">One way to fix it is to set your the margin of the content layout to 0, like this:</p><p align="center"><img src="designermargin0.png" alt="designermargin0.png"/></p><p align="left">It doesn't look good in Designer, but will look correct in real, which is what really matters.</p><p align="left">This solution has a drawback though: Say you set the margin to 0, it now looks ok. A week later, you realize you need to rework the content of the dialog in a way which requires you to break the content layout. After you have recreated it, you need to set the margin back to 0 again. It is not only tedious, but you are bound to forget this at least once.</p><p align="left">A better solution is to do it in the code. Assuming your dialog creation code is similar to this:</p><pre>
+KDialog *dialog = new KDialog(this);
+QWidget *widget = new QWidget(dialog);
+Ui_Content *ui = new Ui_Content;
+ui-&gt;setupUi(widget);
+dialog-&gt;setMainWidget(widget);
+dialog-&gt;show();
+</pre><p align="left">Just change it to this:</p><pre>
+KDialog *dialog = new KDialog(this);
+QWidget *widget = new QWidget(dialog);
+Ui_Content *ui = new Ui_Content;
+ui-&gt;setupUi(widget);
+widget-&gt;layout()-&gt;setMargin(0); /* &lt;- Add this line */
+dialog-&gt;setMainWidget(widget);
+dialog-&gt;show();
+</pre><p align="left">Now, you never have to think about setting the margin to 0 in Designer. As a bonus, the dialog will now look better in Designer too, since you can leave the default margin value.</p>
