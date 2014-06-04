@@ -213,6 +213,14 @@ pre {
     border-left: 6px solid #aaa;
 }
 
+code {
+    font-weight: bold;
+}
+
+pre code {
+    font-weight: normal;
+}
+
 /* tables */
 table {
     border: 1px solid #ddd;
