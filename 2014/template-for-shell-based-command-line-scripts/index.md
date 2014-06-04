@@ -154,4 +154,6 @@ Compared to `getopt`, this template has a few advantages but also limitations on
     
 That's it for this template, hope it is useful to you.
 
+<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2014%2Ftemplate-for-shell-based-command-line-scripts%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+
 [getopt]: http://man7.org/linux/man-pages/man1/getopt.1.html
