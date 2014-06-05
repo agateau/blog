@@ -127,7 +127,7 @@ If you want to support arguments which contain spaces, that's another story. The
 2. Replace the code in the `*)` case with something like this:
 
         *)
-            args=(${args[@]} "$1")
+            args=("${args[@]}" "$1")
             ;;
 
 3. Same as before: remove the check for the last argument or alter it to check if `args` is empty.
