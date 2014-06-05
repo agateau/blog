@@ -134,7 +134,7 @@ If you want to support arguments which contain spaces, that's another story. The
 
 4. Iterate over the arguments with:
 
-        for arg in ${args[@]} ; do
+        for arg in "${args[@]}" ; do
             # Do work here
         done
 
