@@ -253,6 +253,27 @@ table.footnote td p + p {
     margin-top: 15px;
 }
 
+/* quotes */
+blockquote {
+    margin: 0 2em;
+    padding: 6px;
+    font-family: serif;
+    color: #555;
+    background-color: #eee;
+    position: relative;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 300%;
+    position: absolute;
+    top: 0.4em;
+}
+
+blockquote p {
+    margin-left: 1.4em;
+}
+
 /*- Overview --------------------------*/
 article.overview h1 {
     margin: 0;
