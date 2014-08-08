@@ -7,6 +7,10 @@ summary: |
 
 > Be careful what you wish for because you just might get it.
 
+Or rather:
+
+> Be careful what you wish for because it might not be what you actually want.
+
 Sometimes history repeats itself. When I joined Canonical in 2009, I was excited about finally being able to "make a difference" by getting paid to contribute to free software I care about. It turns out that was not really the plan. I worked on many projects there, created components like libindicate-qt, dbusmenu-qt, appmenu-qt or sni-qt, but what I was working on was definitely not my call. And that actually made sense as I was hired by a company no work on *their* projects, not mine. I realized that a year later and decided to reduce my work time to [4 days a week](/2010/inflexion), leaving me with one day during which I would have the freedom to work on what mattered to me.
 
 Fast forward to 2012: I join Blue Systems. This time it can't go wrong, I am going to work there as a KDE developer, I am finally going to be able to work on what really matters to me...
