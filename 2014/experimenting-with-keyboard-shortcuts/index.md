@@ -63,4 +63,6 @@ Another good point of this approach is that, almost no shortcuts use function ke
 
 What about you, do you have unusual shortcut setups?
 
+<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2014%2Fexperimenting-with-keyboard-shortcuts%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+
 [quasimode]: https://en.wikipedia.org/wiki/Mode_%28computer_interface%29#Quasimodes
