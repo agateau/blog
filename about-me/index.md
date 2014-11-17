@@ -27,4 +27,4 @@ You can contact me via [email](mailto:mail@agateau.com). I am also on
 [GitHub](http://github.com/agateau).
 
 On week days you can find me on Freenode IRC server, my nickname is
-agateau. When I am connected I am usually present on #kde-devel.
+agateau.
