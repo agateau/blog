@@ -37,7 +37,7 @@ If you need help follow the [setup guide](setup).
 
 - [README](https://projects.kde.org/projects/playground/base/colibri/repository/revisions/master/entry/README)
 - [NEWS](https://projects.kde.org/projects/playground/base/colibri/repository/revisions/master/entry/NEWS)
-- [kde-apps.org page](http://kde-apps.org/content/show.php/Colibri?content=117147 kde-apps.org page)
+- [kde-apps.org page](http://kde-apps.org/content/show.php/Colibri?content=117147)
 
 ## A bit of history
 
