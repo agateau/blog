@@ -1,5 +1,5 @@
-pub_date: 2014-12-31 16:19:49 +01:00
-﻿pub_date: 2014-12-31 10:11:23 +01:00
+﻿pub_date: 2014-12-31 16:19:49 +01:00
+pub_date: 2014-12-31 10:11:23 +01:00
 public: true
 tags: [MUP, Markup, Qt, Python, Markdown]
 title: "MUP, a Markup Previewer"
@@ -48,3 +48,5 @@ You may have heard about this project as "mdview". It used to be named like this
 ## Want It?
 
 MUP is on GitHub: <https://github.com/agateau/mup>. `git clone` it and follow the instructions from the Install section of the README.
+
+<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2014%2Fmup-a-markup-previewer%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
