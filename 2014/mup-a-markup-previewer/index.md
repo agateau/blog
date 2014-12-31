@@ -1,13 +1,18 @@
+pub_date: 2014-12-31 16:19:49 +01:00
 ﻿pub_date: 2014-12-31 10:11:23 +01:00
-public: false
+public: true
 tags: [MUP, Markup, Qt, Python, Markdown]
 title: "MUP, a Markup Previewer"
 summary: |
     Introducing another side-project of mine: MUP
 
-Following up on my decision to promote more side-projects, here is a new one: MUP.
+Following up on [my decision to promote more side-projects][lpmp], here is a new one: MUP.
 
 MUP is a markup previewer. It supports multiple markup formats. You can use it to read markup text, but it is also useful when writing markup text to check how your work looks, thanks to its refresh-as-you-save feature.
+
+[lpmp]: /2014/lightweight-project-management/
+
+![MUP in action](/hotlink/mup.png)
 
 ## Features
 
