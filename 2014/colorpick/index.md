@@ -44,4 +44,6 @@ Interested? The project is on GitHub at <https://github.com/agateau/colorpick>. 
 [lpmp]:  http://agateau.com/2014/lightweight-project-management
 [INSTALL.md]: https://github.com/agateau/colorpick/blob/master/INSTALL.md
 
-<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2014%2Fcolorpick%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
+<a href="https://flattr.com/submit/auto?url=http%3A%2F%2Fagateau.com%2F2014%2Fcolorpick&user_id=agateau&description=Introducing+one+of+my+many-side+projects%3A+Colorpick&title=Colorpick">
+<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0">
+</a>
