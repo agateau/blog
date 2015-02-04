@@ -28,4 +28,8 @@ It's worth noting that cross-platform for Facebook currently only means 3 platfo
 
 Time will tell if React is going to change the way web and mobile apps are built in the future or if it's just going to be blown away by the next JavaScript framework of the day given the frightening speed at which the JavaScript ecosystem mutates.
 
+<a href="https://flattr.com/submit/auto?user_id=agateau&description=React%2C+a+JavaScript+web+library%2C+comes+to+%22native%22&url=http%3A%2F%2Fagateau.com%2F2015%2Flearn-once-write-anywhere&title=Learn+Once%2C+Write+Anywhere" target="_blank">
+<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0">
+</a>
+
 [React]: http://facebook.github.io/react/
