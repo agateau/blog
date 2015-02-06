@@ -14,6 +14,8 @@ I started to follow a bit more closely what was going on in the React world and 
 <iframe width="853" height="480" src="https://www.youtube.com/embed/KVZ-P-ZI6W4?rel=0" frameborder="0" allowfullscreen>
 </iframe>
 
+([Direct link to the video](https://www.youtube.com/watch?v=KVZ-P-ZI6W4))
+
 In short, Facebook has decoupled React from the DOM and is now using it to build mobile apps. This is not well known mobile-app-embeds-webview approach PhoneGap or Titanium uses: React Native instantiates real, native UI elements, they do not try to emulate them using DOM and CSS.
 
 As Tom Occhino says at [28m30](https://www.youtube.com/watch?v=KVZ-P-ZI6W4&feature=youtu.be&t=28m30s) in the video: their philosophy is not "Write once, run anywhere", but rather "Learn once, write anywhere": they are going to build React bindings for all the platforms they want to support instead of providing cross-platform UI elements which look and behave as close as possible to their native equivalents on the platform your application is running on (the Qt approach). This lets you share all the core, non-visual parts of your application across platforms while providing a native user experience. Others are following a similar "Learn once, write anywhere" approach to mobile app development: Ars Technica reports that Google for example is doing [something similar for their Inbox app][inbox], using Java as the common language.
