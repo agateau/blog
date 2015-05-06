@@ -32,6 +32,14 @@ A graphical search and replace utility.
 
 A Doxygen input filter to document QML files.
 
+### [MUP](http://github.com/agateau/mup)
+
+An extensible markup previewer, capable of showing texts written in multiple markup languages.
+
+### [Burger Party](http://greenyetilab.com/burgerparty)
+
+An Android game where you must prepare burgers fast enough to keep your customers happy.
+
 ## Old Projects
 
 ### [Plouf!](/projects/plouf/)
