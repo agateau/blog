@@ -73,8 +73,8 @@ Here is what's wrong: when QML gets a MyObject instance through the objectAt() m
 
 [qtdoc]: http://doc.qt.io/qt-5/qqmlengine.html#ObjectOwnership-enum
 
-We fixed it by making the MyObject instances children of the model. Since the objects now have a parent, QML does not take ownership of them anymore. We assumed it was not necessary because we were taking care of deleting all instances with the qDeleteAll() in the destructor, but in this case, that turned out to be an error. Another possible approach (which we did not try) would have been to explicitly set the ownership using [QQmlEngine::setOwnerShip()][setownership].
+We fixed it by making the MyObject instances children of the model. Since the objects now have a parent, QML does not take ownership of them anymore. We assumed it was not necessary because we were taking care of deleting all instances with the qDeleteAll() in the destructor, but in this case, that turned out to be an error. Another possible approach (which we did not try) would have been to explicitly set the ownership using [QQmlEngine::setOwnership()][setownership].
 
-[setownership]: http://doc.qt.io/qt-5/qqmlengine.html#setObjectOwnerShip
+[setownership]: http://doc.qt.io/qt-5/qqmlengine.html#setObjectOwnership
 
 So remember, do not leave any QObject <strike>unattended</strike> without a parent, otherwise the QML engine will destroy it!
