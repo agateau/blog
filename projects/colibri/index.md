@@ -6,7 +6,7 @@ summary: Colibri provides an alternative to KDE4 Plasma notifications.
 
 ## What is it?
 
-Colibri provides an alternative to KDE4 Plasma notifications.
+Colibri provides an alternative to KDE Plasma 4 notifications.
 
 Colibri notifications look lighter and are completely passive: they do not
 provide any buttons. You may or may not like this.
@@ -16,6 +16,8 @@ them, allowing you to interact with any window behind them.
 
 They also do not stack on top of each others: if multiple notifications happen,
 they will be shown one at a time.
+
+Note: I have no plan for now to port Colibri to KDE Plasma 5.
 
 ## Dependencies
 
