@@ -53,5 +53,5 @@ An Android game where you must prepare burgers fast enough to keep your customer
 ### [Plouf!](/projects/plouf/)
 
 A top-down Amiga game I wrote when I was a teenager. It features 2 or 3 players
-sittings on floats, in the sea, trying to sink each others by throwing sea
+sittings on floats in the sea, trying to sink each others by throwing sea
 urchins.
