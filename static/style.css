@@ -1,19 +1,17 @@
 /* fonts */
-@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic);
-@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,400italic,700,700italic);
-
 /*-------------------------------------
 
 General style
 
 -------------------------------------*/
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: sans-serif;
     color: black;
     margin: 0;
     padding: 0;
     background-color: whitesmoke;
     line-height: 1.5em;
+    font-size: 12pt;
 }
 
 a {
@@ -29,7 +27,7 @@ Headlines
 h1, h2, h3, h4, h5, h6 {
     font-family: serif;
     font-weight: 400;
-    color: #335;
+    color: #333;
     line-height: 1.1;
 }
 
@@ -47,16 +45,16 @@ h1, h2 {
 }
 
 h1 {
-    font-size: 160%;
+    font-size: 200%;
 }
 
 h2 {
-    font-size: 140%;
+    font-size: 160%;
     font-style: italic;
 }
 
 h3 {
-    font-size: 120%;
+    font-size: 140%;
 }
 
 /*-------------------------------------
