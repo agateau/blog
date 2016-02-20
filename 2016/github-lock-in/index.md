@@ -82,3 +82,5 @@ I believe GitHub is not the problem: there are plenty of alternatives to host yo
 [SourceForge]: http://sourceforge.net
 [gg]: https://cloud.google.com/source-repositories/
 [Gitolite]: http://gitolite.com/gitolite/
+
+<a href="https://flattr.com/submit/auto?fid=4j3ek3&url=http%3A%2F%2Fagateau.com%2F2016%2Fgithub-lock-in" target="_blank"><img src="//button.flattr.com/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
