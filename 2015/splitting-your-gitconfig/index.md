@@ -3,7 +3,7 @@ public: true
 tags: [Git, Tips]
 title: "Includes in your git config"
 summary: |
-    Using includes to split your git configuration
+    Using includes to split your git configuration.
 
 So, let's assume you work on several machines. You have set up a system to centralize all your dot files so that you have a familiar environment everywhere you log in.
 
