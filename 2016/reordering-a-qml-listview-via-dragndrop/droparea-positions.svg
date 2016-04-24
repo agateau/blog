@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   viewBox="0 0 744.09448819 1052.3622047"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.91 r13725"
+   sodipodi:docname="droparea-positions.svg"
+   inkscape:export-filename="/home/perso/www/blog/2016/reordering-a-qml-listview-via-dragndrop/droparea-positions.png"
+   inkscape:export-xdpi="180"
+   inkscape:export-ydpi="180">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="244.60105"
+     inkscape:cy="951.15137"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer2"
+     showgrid="false"
+     inkscape:snap-bbox="true"
+     inkscape:snap-nodes="true"
+     inkscape:object-paths="true"
+     inkscape:bbox-nodes="true"
+     inkscape:snap-bbox-edge-midpoints="true"
+     inkscape:snap-bbox-midpoints="true"
+     inkscape:bbox-paths="true"
+     inkscape:snap-intersection-paths="true"
+     inkscape:object-nodes="true"
+     inkscape:snap-smooth-nodes="true"
+     inkscape:snap-midpoints="true"
+     inkscape:window-width="1867"
+     inkscape:window-height="1043"
+     inkscape:window-x="47"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1">
+    <inkscape:grid
+       type="axonomgrid"
+       id="grid4136"
+       units="mm"
+       empspacing="6" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Calque 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     style="display:inline">
+    <g
+       id="g4330"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180">
+      <g
+         style="stroke:#009100"
+         transform="translate(5.3583429,3.8377936)"
+         id="g4152">
+        <path
+           style="fill:#cccccc;fill-rule:evenodd;stroke:#009100;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 289.22668,91.831498 -147.29251,0 -18.41157,-31.889764 147.29251,0 z"
+           id="path4142"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#009100;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="102.74313"
+           y="83.806709"
+           id="text4148"
+           sodipodi:linespacing="125%"
+           transform="matrix(1,0,0.52994532,1,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan4150"
+             x="102.74313"
+             y="83.806709">Item 0</tspan></text>
+      </g>
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#009100;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 276.17346,21.259843 0,42.519685"
+         id="path4234"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g4210"
+         transform="translate(-3.8474422,-54.626774)">
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path4212"
+           d="m 289.22668,91.831498 -147.29251,0 -18.41156,-31.889764 147.29251,0 z"
+           style="opacity:1;fill:#ccff42;fill-opacity:0.54779412;fill-rule:evenodd;stroke:#009100;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <text
+           transform="matrix(1,0,0.54754699,1,0,0)"
+           sodipodi:linespacing="125%"
+           id="text4214"
+           y="80.806709"
+           x="155.89442"
+           style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#009100;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="80.806709"
+             x="155.89442"
+             id="tspan4216"
+             sodipodi:role="line">DropArea</tspan></text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path4232"
+         d="m 294.58502,53.149606 0,42.519685"
+         style="fill:none;fill-rule:evenodd;stroke:#009100;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" />
+      <use
+         height="100%"
+         width="100%"
+         transform="translate(18.41156,31.889764)"
+         id="use4226"
+         xlink:href="#g4210"
+         y="0"
+         x="0" />
+      <path
+         inkscape:connector-curvature="0"
+         id="path4228"
+         d="m 128.88095,21.259843 0,42.519685"
+         style="fill:none;fill-rule:evenodd;stroke:#009100;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:none;fill-rule:evenodd;stroke:#009100;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 147.29251,53.149606 0,42.519685"
+         id="path4230"
+         inkscape:connector-curvature="0" />
+      <g
+         id="g4236"
+         transform="translate(23.769906,35.727557)">
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path4238"
+           d="m 289.22668,91.831498 -147.29251,0 -18.41157,-31.889764 147.29251,0 z"
+           style="fill:#cccccc;fill-rule:evenodd;stroke:#005c94;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <text
+           transform="matrix(1,0,0.52994532,1,0,0)"
+           sodipodi:linespacing="125%"
+           id="text4240"
+           y="83.806709"
+           x="102.74313"
+           style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#005c94;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="83.806709"
+             x="102.74313"
+             id="tspan4242"
+             sodipodi:role="line">Item 1</tspan></text>
+      </g>
+      <path
+         style="fill:#005c94;fill-rule:evenodd;stroke:#005c94;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 312.99658,85.039359 0,42.519701"
+         id="path4284"
+         inkscape:connector-curvature="0" />
+      <g
+         transform="translate(32.975681,9.152754)"
+         id="use4244">
+        <path
+           style="opacity:1;fill:#19aeff;fill-opacity:0.54779412;fill-rule:evenodd;stroke:#005c94;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           d="m 289.22668,91.831498 -147.29251,0 -18.41156,-31.889764 147.29251,0 z"
+           id="path4248"
+           inkscape:connector-curvature="0"
+           sodipodi:nodetypes="ccccc" />
+        <text
+           xml:space="preserve"
+           style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#005c94;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           x="153.34688"
+           y="81.806709"
+           id="text4250"
+           sodipodi:linespacing="125%"
+           transform="matrix(1,0,0.54754699,1,0,0)"><tspan
+             sodipodi:role="line"
+             id="tspan4252"
+             x="153.34688"
+             y="81.806709">DropArea</tspan></text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path4286"
+         d="m 331.40815,116.92913 0,42.51969"
+         style="fill:#005c94;fill-rule:evenodd;stroke:#b50000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:#cccccc;fill-rule:evenodd;stroke:#b50000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         d="m 289.22668,91.831498 -147.29251,0 -18.41157,-31.889764 147.29251,0 z"
+         id="path4266"
+         inkscape:connector-curvature="0"
+         sodipodi:nodetypes="ccccc"
+         transform="translate(42.181473,67.617321)" />
+      <text
+         xml:space="preserve"
+         style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#b50000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         x="102.74313"
+         y="83.806709"
+         id="text4268"
+         sodipodi:linespacing="125%"
+         transform="matrix(1,0,0.52994532,1,42.181473,67.617321)"><tspan
+           sodipodi:role="line"
+           id="tspan4270"
+           x="102.74313"
+           y="83.806709">Item 2</tspan></text>
+      <g
+         id="g4272"
+         transform="translate(51.387248,41.042518)">
+        <path
+           sodipodi:nodetypes="ccccc"
+           inkscape:connector-curvature="0"
+           id="path4274"
+           d="m 289.22668,91.831498 -147.29251,0 -18.41156,-31.889764 147.29251,0 z"
+           style="opacity:1;fill:#ff4141;fill-opacity:0.54779412;fill-rule:evenodd;stroke:#b50000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+        <text
+           transform="matrix(1,0,0.54754699,1,0,0)"
+           sodipodi:linespacing="125%"
+           id="text4276"
+           y="81.806709"
+           x="153.34688"
+           style="font-style:normal;font-weight:normal;font-size:16.25px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#b50000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+           xml:space="preserve"><tspan
+             y="81.806709"
+             x="153.34688"
+             id="tspan4278"
+             sodipodi:role="line">DropArea</tspan></text>
+      </g>
+      <path
+         inkscape:connector-curvature="0"
+         id="path4280"
+         d="m 165.70407,85.03937 0,42.51969"
+         style="fill:#005c94;fill-rule:evenodd;stroke:#005c94;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1" />
+      <path
+         style="fill:#005c94;fill-rule:evenodd;stroke:#b50000;stroke-width:1;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:2, 2;stroke-dashoffset:0;stroke-opacity:1"
+         d="m 184.11564,116.92913 0,42.51969"
+         id="path4282"
+         inkscape:connector-curvature="0" />
+    </g>
+  </g>
+  <g
+     inkscape:groupmode="layer"
+     id="layer2"
+     inkscape:label="Calque 2"
+     style="display:none">
+    <path
+       style="color:#000000;clip-rule:nonzero;display:inline;overflow:visible;visibility:visible;opacity:1;isolation:auto;mix-blend-mode:normal;color-interpolation:sRGB;color-interpolation-filters:linearRGB;solid-color:#000000;solid-opacity:1;fill:#d7d7d7;fill-opacity:0.57352941;fill-rule:nonzero;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1;color-rendering:auto;image-rendering:auto;shape-rendering:auto;text-rendering:auto;enable-background:accumulate"
+       d="m 116.60657,3.5433071 c 75.69198,0 151.38397,0 227.07596,0 0,53.1496069 0,106.2992129 0,159.4488229 -75.69199,0 -151.38398,0 -227.07596,0 0,-53.14961 0,-106.299216 0,-159.4488229 z"
+       id="rect4185"
+       inkscape:connector-curvature="0"
+       inkscape:export-xdpi="180"
+       inkscape:export-ydpi="180" />
+  </g>
+</svg>
