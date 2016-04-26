@@ -5,7 +5,7 @@ title: Reordering a Qt Quick ListView via drag'n'drop
 summary: |
     How to setup a Qt Quick ListView so that the user can reorder its elements by dragging them around.
 
-It is common in user interfaces to provide the user with a list of elements which can be reordered by dragging them around. Displaying a list of elements with Qt Quick is easy, thanks to the ListView component. Giving the user the ability to reorder them is less straightforward. This 3 article series presents one approach to implementing this.
+It is common in user interfaces to provide the user with a list of elements which can be reordered by dragging them around. Displaying a list of elements with Qt Quick is easy, thanks to the ListView component. Giving the user the ability to reorder them is less straightforward. This 3 article series presents one way to implement this.
 
 The goal of this first article is to create a list which can be used like this:
 
@@ -13,7 +13,7 @@ The goal of this first article is to create a list which can be used like this:
 
 ## Architecture
 
-The way I implemented this is by creating a DraggableItem, which is used as the delegate of the ListView, and wraps the real QML item responsible for showing the details of the list element.
+The approach I used was to do all the work in a DraggableItem, leaving the ListView untouched. DraggableItem is used as the delegate of the ListView, and wraps the real QML item responsible for showing the details of the list element.
 
 Lets start with `main.qml`. Nothing fancy at the beginning, we create a Window and a ListModel defining our elements:
 
