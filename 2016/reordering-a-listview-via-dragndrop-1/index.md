@@ -283,7 +283,7 @@ That's it for DraggableItem.
 
 ## DraggableItemDropArea
 
-Not much complexity here, we will actually remove this component later in the serie. Here is the code:
+Not much complexity here, we will actually remove this component later in the series. Here is the code:
 
 .. sourcecode:: qml
 
@@ -309,4 +309,4 @@ Not much complexity here, we will actually remove this component later in the se
 
 DraggableItemDropArea adds a `dropIndex` property and a Rectangle to draw the 2 pixel red line indicating where the item is going to be dropped, with a small hack to position the Rectangle correctly for the special case of the top DropArea of the first DraggableItem.
 
-That's it for this first article in the serie. You can find the [complete source code here](listviewdragitem-1.tar.bz2). Stay tuned for the next one!
+That's it for this first article in the series. You can find the [complete source code here](listviewdragitem-1.tar.bz2). Stay tuned for the next one!
