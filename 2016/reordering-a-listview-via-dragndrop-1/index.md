@@ -1,7 +1,7 @@
 pub_date: 2016-04-24 17:28:45 +01:00
 public: true
 tags: [Qt, QML, Drag'n'drop]
-title: Reordering a Qt Quick ListView via drag'n'drop
+title: Reordering a Qt Quick ListView via drag'n'drop - part 1
 summary: |
     How to setup a Qt Quick ListView so that the user can reorder its elements by dragging them around.
 
@@ -309,4 +309,7 @@ Not much complexity here, we will actually remove this component later in the se
 
 DraggableItemDropArea adds a `dropIndex` property and a Rectangle to draw the 2 pixel red line indicating where the item is going to be dropped, with a small hack to position the Rectangle correctly for the special case of the top DropArea of the first DraggableItem.
 
-That's it for this first article in the series. You can find the [complete source code here](listviewdragitem-1.tar.bz2). Stay tuned for the next one!
+That's it for this first article in the series. You can find the source code in the [associated GitHub repository, under the "1-base" tag][gh]. You can now continue to the [next article of the series][next].
+
+[gh]: https://github.com/agateau/listviewdragitem/tree/1-base
+[next]: ../reordering-a-listview-via-dragndrop-2
