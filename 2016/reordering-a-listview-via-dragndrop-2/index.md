@@ -100,6 +100,7 @@ And this is our Timer:
 
 An interval of 0 means the timer will be triggered as soon as we are back to the event loop. Note that this only works because in our example the code connected to the `DraggableItem.moveItemRequested` signal is synchronous: it does not delay the move of the dropped item. If the code were asynchronous, you would have to find a way to call `ListView.positionViewAtIndex` after the move is done, which most likely would require calling it outside of DraggableItem.
 
-We are done with drag-scrolling, the user can now scroll long lists to find the place to drop the dragged item. The source code for this article is available in the [associated GitHub repository, under the "2-drag-scroll" tag][gh].
+We are done with drag-scrolling, the user can now scroll long lists to find the place to drop the dragged item. The source code for this article is available in the [associated GitHub repository, under the "2-drag-scroll" tag][gh]. You can now continue to the [next article of the series][next].
 
 [gh]: https://github.com/agateau/listviewdragitem/tree/2-drag-scroll
+[next]: ../reordering-a-listview-via-dragndrop-3
