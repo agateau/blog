@@ -23,7 +23,7 @@ The new structure of a DraggableItem looks like this:
 
 When a dragged item enters the DropArea, the DraggableItem changes to this:
 
-![When a item enters the DropArea](items-hovered.png)
+![When an item enters the DropArea](items-hovered.png)
 
 This time I am providing an abbreviated version of the whole source instead of describing the changes because the changes in this article are not easy to describe progressively. Hopefully the structure diagrams gives you a higher-level view of how placeholders work.
 
