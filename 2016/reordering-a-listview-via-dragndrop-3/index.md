@@ -102,7 +102,7 @@ This time I am providing an abbreviated version of the whole source instead of d
                 right: parent.right
                 top: wrapperParent.verticalCenter
             }
-            property bool isLast: model.index === _listView.model.count - 1
+            property bool isLast: model.index === _listView.count - 1
             height: isLast ? _listView.contentHeight - y : contentItem.height
 
             property int dropIndex: model.index + 1
@@ -168,9 +168,9 @@ You may wonder why we are not using a Column or a ColumnLayout to hold the `topP
 
 Since we no longer need a drop indicator, or rather, since it is now implemented differently, I removed the DraggableItemDropArea component. The code now uses plain DropAreas with a custom `dropIndex` property.
 
-There is one extra hack I added for completeness: when the list contains few elements, the gap between the last item and the bottom of the view can be taller than `contentItem.height / 2`, but the user expects the whole gap to work as a drop target. To implement this I added some special code to the `bottomDropArea` so that if it is the last item of the list, it sets its height to cover the whole gap. Unfortunately, there is no generic way to know if an item is the last one, so the hack relies on the model exposing a `count` property.
+There is one extra hack I added for completeness: when the list contains few elements, the gap between the last item and the bottom of the view can be taller than `contentItem.height / 2`, but the user expects the whole gap to work as a drop target. To implement this I added some special code to the `bottomDropArea` so that if it is the last item of the list, it sets its height to cover the whole gap. <strike>Unfortunately, there is no generic way to know if an item is the last one, so the hack relies on the model exposing a `count` property. This works out of the box for QML ListModel models, but you will have to add this property to your model if your model is based on a C++ QAbstractItemModel. Implementation boils down to returning the value of `QAbstractItemModel::rowCount()` so it's not that much work.</strike>
 
-This works out of the box for QML ListModel models, but you will have to add this property to your model if your model is based on a C++ QAbstractItemModel. Implementation boils down to returning the value of `QAbstractItemModel::rowCount()` so it's not that much work.
+(Update: As Kai pointed out on G+, ListView actually has a `count` property which can be used for this)
 
 The source code for this article is available in the [associated GitHub repository, under the "3-placeholders" tag][gh]. You can view the changes between the version in this article and the previous one as [a diff][ghdiff].
 
