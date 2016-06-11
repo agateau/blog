@@ -23,8 +23,9 @@ more on my other site: [greenyetilab.com](http://greenyetilab.com).
 
 ## Contacting me
 You can contact me via [email](mailto:mail@agateau.com). I am also on
-[LinkedIn](http://www.linkedin.com/pub/4/585/4b) and
-[GitHub](http://github.com/agateau).
+[Twitter](https://twitter.com/aureliengateau),
+[GitHub](https://github.com/agateau) and
+[LinkedIn](https://www.linkedin.com/pub/4/585/4b).
 
 On week days you can find me on Freenode IRC server, my nickname is
 agateau.
