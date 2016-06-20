@@ -19,7 +19,8 @@ The simplest way to install Doxyqml is with [pip][]:
 
     pip install doxyqml
 
-But you can also download the tarball. Latest release is [doxyqml-0.2.0.tar.bz2](doxyqml-0.2.0.tar.bz2).
+You can also download the tarball and follow the instructions from the
+README.md. Latest release is [doxyqml-0.3.0.tar.bz2](doxyqml-0.3.0.tar.bz2).
 
 Alternatively, you can clone the Git repository with:
 
