@@ -1,6 +1,6 @@
 pub_date: 2016-01-31 07:54:20 +01:00
 public: true
-tags: [git, tips]
+tags: [Git, Tips]
 title: An intro to git gui
 summary: |
     A presentation of git gui, and why you should use it
