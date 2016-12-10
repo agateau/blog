@@ -158,7 +158,6 @@ footer {
     padding-top: 9px;
     margin-top: 42px;
     border-top: 1px solid #445;
-    font-size: 16px;
     text-align: right;
     color: #555;
 }
@@ -173,7 +172,7 @@ footer ul li {
     padding: 0;
 }
 footer ul li:not(:first-child):before {
-    content: ' | ';
+    content: ' – ';
     color: #445;
 }
 
@@ -283,7 +282,7 @@ blockquote p {
 article.overview h1 {
     margin: 0;
     padding: 0;
-    font-size: 20px;
+    font-size: 20pt;
     font-weight: normal;
 }
 
@@ -343,7 +342,7 @@ div#disqus_thread {
 
 .date {
     color: #555;
-    font-size: 60%;
+    font-size: 80%;
 }
 
 /*--------------------------------------
@@ -379,7 +378,7 @@ Medium size
     }
 
     div.sleeve {
-        max-width: 800px;
+        max-width: 1000px;
         margin: 0 auto;
         padding: 0;
     }
@@ -391,6 +390,12 @@ Full size
 
 --------------------------------------*/
 @media screen and (min-width: 800px) {
+    body {
+        font-size: 16pt;
+    }
+    input.search-field {
+        font-size: 16pt;
+    }
     header {
         font-size: 100%;
     }
