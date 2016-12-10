@@ -3,7 +3,7 @@ public: true
 tags: [Android, Cat, Avatar, Pepper&Carrot]
 title: Cat Avatar Generator, the Android app!
 summary: |
-    I built an Android version of Davd Revoy cat avator generator.
+    I built an Android version of David Revoy cat avator generator.
 
 David Revoy, the author of the amazing [Pepper & Carrot][pac] free webcomic recently published an online [cat avatar generator][cag]. My kids loved it, so last Sunday I took this as a pretext to do a bit of Android development by building an Android app for it.
 
