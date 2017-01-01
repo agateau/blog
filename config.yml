@@ -9,6 +9,8 @@ modules:
         developer: 1
     blog:
         feed_url: /feed
+    tags:
+        tag_feed_url: /tags/<tag>/feed
 feed:
     name: "Aurélien's room"
     subtitle: "Thoughts from a design-minded software engineer"
