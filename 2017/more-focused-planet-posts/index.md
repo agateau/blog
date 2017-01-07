@@ -1,16 +1,17 @@
-public: false
-tags: [pko, puc]
-title: More focused Planet posts
+pub_date: 2017-01-07 11:47:15 +01:00
+public: true
+tags: [pko]
+title: More focused Planet KDE posts
 summary: |
-    Changing the way this blog posts are aggregated on Planet KDE and Planet Ubuntu.
+    Changing the way this blog posts are aggregated on Planet KDE.
 
-My blog has been syndicated on [Planet KDE][pko] and [Planet Ubuntu][puc] for a long time, but sometimes topics I want to write about are not really relevant for these aggregators, so either I write them anyway and end up feeling a bit guilty for spamming, or I refrain from writing at all.
+My blog has been syndicated on [Planet KDE][pko] and [Planet Ubuntu][puc] for a long time, but sometimes topics I want to write about are not really relevant to these aggregators, so I either refrain from writing, or write anyway and end up feeling a bit guilty for spamming.
 
 [pko]: http://planet.kde.org
 [puc]: http://planet.ubuntu.com
 
-Today I decided to change the feeds used to syndicate this blog on both aggregators. Planet Ubuntu will receive mainly free software related posts and Planet KDE mainly Qt or KDE related posts.
+I decided to make some changes to fix that. I got my blog removed from Planet Ubuntu since I am no longer an Ubuntu member. I then pointed Planet KDE aggregator to a specific feed so that I can decide which posts end up on there. This will ensure Planet KDE receives mostly Qt or KDE related posts from me, even if I still sneak in a random post from time to time.
 
-I plan to write on more diverse topics now that I know I won't be pushing off-topic content to the Planets anymore. If you want to get all my posts, subscribe to the [full feed](/feed) or follow me on [Twitter][].
+I plan to write on more diverse topics now that I know I won't be pushing off-topic content to Planet KDE anymore. If you want to get all my posts, subscribe to the [full feed](/feed) or follow me on [Twitter][].
 
 [Twitter]: https://twitter.com/aureliengateau
