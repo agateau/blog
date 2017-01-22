@@ -306,24 +306,38 @@ div.pagination strong {
 
 /*--------------------------------------
 
-Tags
+article meta
 
 --------------------------------------*/
-p.tags {
-    text-align: right;
+div.meta {
+    height: 3em;
 }
+
+div.share {
+    float: left;
+}
+
+div.tags {
+    float: right;
+}
+
+/*--------------------------------------
+
+tag cloud
+
+--------------------------------------*/
 ul.tagcloud {
     font-size: 16px;
     margin: 36px 0;
     padding: 0;
     list-style: none;
 }
+
 ul.tagcloud li {
     margin: 0;
     padding: 0 10px;
     display: inline;
 }
-
 
 /*--------------------------------------
 
@@ -336,11 +350,12 @@ img.align-center {
 }
 
 div#disqus_thread {
+    clear: both;
     border-top: 1px solid #445;
     padding-top: 9px;
 }
 
-.date {
+.date, .meta {
     color: #555;
     font-size: 80%;
 }

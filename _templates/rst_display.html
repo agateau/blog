@@ -13,20 +13,30 @@
   {{ rst.html_title }}
   {%- endif %}
   {% if ctx.pub_date %}
-  <p class=date>written on {{ format_date(ctx.pub_date, format='full') }}</p>
+  <p class="date">written on {{ format_date(ctx.pub_date, format='full') }}</p>
   {% endif %}
 
-  {{ rst.fragment }}
+  <article>
+    {{ rst.fragment }}
 
-  {% if ctx.tags %}
-  <p class=tags>This entry was tagged
-    {% for tag in ctx.tags|sort(case_sensitive=true) %}
-      {%- if not loop.first and not loop.last %}, {% endif -%}
-      {%- if loop.last and not loop.first %} and {% endif %}
-      <a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a>
-    {%- endfor %}
-  </p>
-  {% endif %}
+    <div class="meta">
+      {% if ctx.tags %}
+      <div class="tags">This post was tagged
+        {% for tag in ctx.tags|sort(case_sensitive=true) %}
+          {%- if not loop.first and not loop.last %}, {% endif -%}
+          {%- if loop.last and not loop.first %} and {% endif %}
+          <a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a>
+        {%- endfor %}
+      </div>
+      {% endif %}
+
+      <div class="share">
+        Share on <a href="https://twitter.com/share?url={{ ctx.url|urlencode }}&amp;text={{ rst.title|urlencode }}&amp;via=aureliengateau" rel="external">Twitter</a>,
+        <a href="https://www.facebook.com/sharer/sharer.php?u={{ ctx.url|urlencode }}&amp;t={{ rst.title|urlencode }}" rel="external">Facebook</a> or
+        <a href="https://plus.google.com/share?url={{ctx.url|urlencode }}" rel="external">Google+</a>
+      </div>
+    </div>
+  </article>
 
   {% if 'disqus' in config.active_modules %}
     <a name="comments"></a>
