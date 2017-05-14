@@ -12,3 +12,11 @@ Here is a screenshot after I filled my SD Card with random pictures of my daught
 ![Gwenview Importer](gwenview-importer.png)
 
 I missed the KDE Applications 16.12 deadline, but the code is in Gwenview master now, so Gwenview Importer should be in the next KDE Applications release.
+
+---
+
+*Update, 2017-05-14:*
+
+Looks like I messed up while porting, see [bug 379615][bug]. Users of 17.04.0 and 17.04.1 should refrain from using the importer. Thanks to Henrik (don't know your last name, sorry), the bug has been fixed in 17.04.2.
+
+[bug]: https://bugs.kde.org/show_bug.cgi?id=379615
