@@ -1,4 +1,4 @@
-public: yes
+public: no
 tags: []
 title: "Video Games"
 disqus: false

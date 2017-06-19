@@ -1,4 +1,4 @@
-public: yes
+public: no
 pub_date: 2017-03-04 12:22:00 +01:00
 tags: [nginx, WSGI, Flask, Howto]
 title: "nginx + WSGI + Flask"

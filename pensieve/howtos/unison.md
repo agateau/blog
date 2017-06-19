@@ -1,4 +1,4 @@
-public: yes
+public: no
 pub_date: 2017-05-19 16:55:26 +01:00
 tags: [Howto, unison]
 title: "Unison"
