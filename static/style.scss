@@ -1,4 +1,17 @@
-/* fonts */
+/*-------------------------------------
+
+Constants
+
+-------------------------------------*/
+$darkColor: #3d3d3d;
+$lightColor: whitesmoke;
+$linkColor: #06c;
+
+$headingColor: $darkColor;
+
+$headerBgColor: $darkColor;
+$headerTextColor: $linkColor;
+
 /*-------------------------------------
 
 General style
@@ -9,13 +22,13 @@ body {
     color: black;
     margin: 0;
     padding: 0;
-    background-color: whitesmoke;
+    background-color: $lightColor;
     line-height: 1.5em;
     font-size: 12pt;
 }
 
 a {
-    color: #06c;
+    color: $linkColor;
     font-weight: 400;
 }
 
@@ -27,7 +40,7 @@ Headlines
 h1, h2, h3, h4, h5, h6 {
     font-family: serif;
     font-weight: 400;
-    color: #333;
+    color: $headingColor;
     line-height: 1.1;
 }
 
@@ -67,10 +80,10 @@ div.sleeve {
 }
 
 header {
-    background-color: #3d3d3d;
+    background-color: $headerBgColor;
     line-height: 2em;
     text-align: center;
-    color: whitesmoke;
+    color: $headerTextColor;
     font-size: 80%;
 }
 
@@ -92,7 +105,7 @@ header p.title {
 
 /*- Navigation -----------------------*/
 nav ul {
-    background-color: #3d3d3d;
+    background-color: $headerBgColor;
     margin: 0;
     padding: 0;
     list-style: none;
@@ -341,6 +354,116 @@ ul.tagcloud li {
 
 /*--------------------------------------
 
+Gallery
+
+--------------------------------------*/
+$gallerySelectedThumbnailColor: $linkColor;
+$galleryIconBgColor: $linkColor;
+$galleryIconTextColor: $lightColor;
+
+$galleryWidth: 460px;
+$galleryHeight: $galleryWidth * 480px / 800px; /* w * origh / origw; */
+$galleryNavIconSize: 32px;
+
+ul.thumbnails {
+    padding: 0;
+}
+
+ul.thumbnails li {
+    display: inline-block;
+    padding: 0;
+    margin: 0;
+}
+
+ul.thumbnails a img {
+    padding-top: 5px;
+}
+
+ul.thumbnails a.current img {
+    padding-top: 0;
+    border-bottom: 5px solid $gallerySelectedThumbnailColor;
+}
+
+.gallery-main-view-container {
+    position: relative;
+    max-width: $galleryWidth;
+    height: $galleryHeight;
+    margin: 0 auto;
+}
+
+#gallery-main-view {
+    width: $galleryWidth;
+    display: block;
+}
+
+.gallery-nav-left {
+    left: 0;
+    text-align: left;
+}
+
+.gallery-nav-right {
+    right: 0;
+    text-align: right;
+}
+
+a.gallery-nav {
+    position: absolute;
+    display: block;
+    width: $galleryWidth / 3;
+    height: $galleryHeight;
+    opacity: 0;
+}
+
+a.gallery-nav:hover {
+    opacity: 1;
+    text-decoration: none;
+}
+
+.gallery-nav-icon {
+    position: relative;
+    font-size: $galleryNavIconSize;
+    background-color: $galleryIconBgColor;
+    color: $galleryIconTextColor;
+    border-radius: 50%;
+    padding: 8px;
+    top: ($galleryHeight - $galleryNavIconSize) / 2;
+    height: $galleryNavIconSize;
+    line-height: 100%;
+}
+
+.gallery-prev .gallery-nav-icon:before {
+    content: "←"
+}
+
+.gallery-next .gallery-nav-icon:before {
+    content: "→"
+}
+
+.gallery-nav-left .gallery-nav-icon {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.gallery-nav-right .gallery-nav-icon {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+
+.gallery-main .disabled {
+    cursor: default;
+}
+
+.gallery-main .disabled span {
+    opacity: 0.6;
+}
+
+#gallery-main-caption {
+    height: 2em;
+    text-align: center;
+}
+
+/*--------------------------------------
+
 Misc
 
 --------------------------------------*/
@@ -358,6 +481,10 @@ div#disqus_thread {
 .date, .meta {
     color: #555;
     font-size: 80%;
+}
+
+.center {
+    text-align: center;
 }
 
 /*--------------------------------------

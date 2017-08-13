@@ -1,4 +1,4 @@
-active_modules: [pygments, blog, tags, thumbimg, disqus, flattr]
+active_modules: [pygments, blog, tags, thumbimg, disqus, flattr, gallery]
 author: Aurélien Gâteau
 canonical_url: http://agateau.com/
 modules:
