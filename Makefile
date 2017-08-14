@@ -19,7 +19,7 @@ build:
 serve: build
 	run-rstblog serve
 
-deploy: check-tree update-out-dir commit-out-dir push-out-dir
+deploy: check-tree clean build update-out-dir commit-out-dir push-out-dir
 
 deploy-all: deploy deploy-storage
 
