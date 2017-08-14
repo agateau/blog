@@ -1,0 +1,21 @@
+output: minigames-landscape.png
+
+shadow:
+    blurRadius: 10
+    color: "#222"
+    xOffset: 0
+    yOffset: 2
+
+images:
+    - name: air-burger.png
+      scaleBy: 0.5
+      x: 0
+      y: 240
+    - name: burger-vaders.png
+      scaleBy: 0.5
+      x: 390
+      y: 250
+    - name: burger-crush.png
+      scaleBy: 0.5
+      x: 200
+      y: 470
