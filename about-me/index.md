@@ -18,11 +18,16 @@ nowadays. I guess the combination of these two passions is what got me
 interested in user experience, design and imaging.
 
 I mostly work on Qt and KDE software these days, but another part of me is
-currently getting back to what got me into development: games. You can learn
-more on my other site: [greenyetilab.com](http://greenyetilab.com).
+getting back to game development. I created a simple Android game: [Burger
+Party][bp], and I am working on another: [Tiny Wheels][tw].
+
+[bp]: /projects/burgerparty/
+[tw]: /projects/tinywheels/
 
 ## Contacting me
+
 You can contact me via [email](mailto:mail@agateau.com). I am also on
+[Mastodon](https://mastodon.xyz/@agateau),
 [Twitter](https://twitter.com/aureliengateau),
 [GitHub](https://github.com/agateau) and
 [LinkedIn](https://www.linkedin.com/pub/4/585/4b).
