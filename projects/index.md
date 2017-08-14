@@ -46,9 +46,13 @@ A Doxygen input filter to document QML files.
 
 ## Games
 
-### [Burger Party](http://greenyetilab.com/burgerparty)
+### [Burger Party](/projects/burgerparty/)
 
 An Android game where you must prepare burgers fast enough to keep your customers happy.
+
+### [Tiny Wheels](/projects/tinywheels/)
+
+A PC and Android game. Race with tiny pixel-art vehicles on various maps.
 
 ### [Plouf!](/projects/plouf/)
 
