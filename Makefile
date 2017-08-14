@@ -44,7 +44,7 @@ commit-out-dir:
 	cd $(OUT_GIT_DIR) && git commit -a -m 'Deploying'
 
 push-out-dir:
-	@echo "== Pushing changes in out dir =="
+	@echo "== Pushing out dir changes =="
 	cd $(OUT_GIT_DIR) && git push
 
 check-tree: check-clean-tree check-need-push
