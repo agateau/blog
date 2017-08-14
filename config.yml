@@ -1,6 +1,14 @@
 active_modules: [pygments, blog, tags, thumbimg, disqus, flattr, gallery]
 author: Aurélien Gâteau
 canonical_url: http://agateau.com/
+ignore_files:
+    - .*
+    - _*
+    - config.yml
+    - Makefile
+    - README
+    - storage
+    - "config*.mk"
 modules:
     pygments:
         style: tango

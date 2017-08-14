@@ -1,3 +1,5 @@
 .*.sw?
 _build
 __pycache__
+storage
+config.mk

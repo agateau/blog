@@ -13,7 +13,7 @@ gallery:
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
-Tiny Wheels is a top-down racing game for Android.
+Tiny Wheels is a top-down racing game for PC (Linux, Mac, Windows) and Android.
 
 ## Gallery
 
@@ -25,17 +25,21 @@ Tiny Wheels is a top-down racing game for Android.
     - full: 0.2/hud.png
       alt: The new virtual buttons, and the turbo in action
 
-## Becoming a Tester
+## Get it
 
-Want to help out by kicking the tires of upcoming versions? Become a tester!
+The game is far from finished, but you can already play with it.
 
-You can download the latest version for your Android device or for PCs from here:
+### Download Tiny Wheels for Android
 
-<p>
-<% version = @item[:latest_version] %>
-<a href="/static/tinywheels/tinywheels-<%= version %>.apk" class="gyl-button">tinywheels-<%= version %>.apk</a>
-<a href="/static/tinywheels/tinywheels-<%= version %>.tar.bz2" class="gyl-button">tinywheels-<%= version %>.tar.bz2</a>
-</p>
+<a href="/storage/tinywheels/tinywheels-0.2.apk" class="dl-button">tinywheels-0.2.apk</a>
+
+### Download Tiny Wheels for PC
+
+<a href="/storage/tinywheels/tinywheels-0.2.tar.bz2" class="dl-button">tinywheels-0.2.tar.bz2</a>
+
+(Requires a Java runtime)
+
+## Bug reports
 
 Found a bug? Report it on [Tiny Wheels bug tracker](http://github.com/agateau/tinywheels/issues).
 
