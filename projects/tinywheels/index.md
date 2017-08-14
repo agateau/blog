@@ -2,14 +2,6 @@ public: yes
 tags: []
 title: Tiny Wheels
 disqus: false
-latest_version: 0.2
-gallery:
-  - full: 0.1/snow.png
-    alt: Spreading havoc in the snow
-  - full: 0.1/city.png
-    alt: Going after an heavily armored roadster in the city
-  - full: 0.2/hud.png
-    alt: The new virtual buttons, and the turbo in action
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
