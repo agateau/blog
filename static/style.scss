@@ -89,11 +89,12 @@ header {
     text-align: center;
     color: $headerTextColor;
     font-size: 80%;
+    font-variant: all-small-caps;
 }
 
 header h1 {
     display: inline;
-    font-size: 120%;
+    font-size: 140%;
     margin: 0;
     font-family: 'Open Sans', sans-serif;
 }
@@ -161,7 +162,7 @@ input.search-field {
     padding: 0;
     margin: 0;
     padding-left: 0.75em;
-    background-color: whitesmoke;
+    background-color: $lightColor;
     width: 12em;
 }
 
