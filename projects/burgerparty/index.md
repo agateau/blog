@@ -47,16 +47,6 @@ Burger Party is available on Google Play and Amazon Appstore for Android.
     - full: 0.12/achievements.png
       alt: Burger Party also comes with achievements. Unlock them all!
 
-<!--
+## Latest News
 
-<h2>Latest Burger Party News</h2>
-
-<% items_with_tag('burgerparty').sort{ |a,b| b[:created_at] <=> a[:created_at] }[0, 10].each do |item| %>
-<ul class='latest-articles'>
-    <li><%= link_to item[:title], item.path %>
-        <span class="post-meta"><%= item[:created_at].strftime('%B %d, %Y') %></span>
-    </li>
-</ul>
-<% end %>
-
--->
+All blog posts tagged [burgerparty](/tags/burgerparty).

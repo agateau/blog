@@ -35,13 +35,6 @@ The game is far from finished, but you can already play with it.
 
 Found a bug? Report it on [Tiny Wheels bug tracker](http://github.com/agateau/tinywheels/issues).
 
-<!--
-<h2>Latest Tiny Wheels News</h2>
+## Latest News
 
-<% items_with_tag('tinywheels').sort{ |a,b| b[:created_at] <=> a[:created_at] }[0, 10].each do |item| %>
-<h3><%= link_to item[:title], item.path %>
-<span class="post-meta"><%= item[:created_at].strftime('%B %d, %Y') %></span>
-</h3>
-<% end %>
-</section>
--->
+All blog posts tagged [tinywheels](/tags/tinywheels).
