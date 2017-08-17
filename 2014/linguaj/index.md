@@ -1,7 +1,7 @@
 title: "Introducing Linguaj"
 public: true
 pub_date: 2014-03-26 18:53:00 +01:00
-tags: [Greeenyetilab, burgerparty, dev, translations]
+tags: [Greenyetilab, burgerparty, dev, translations]
 
 
 As I mentioned in my post about [Burger Party 0.12][bp-0.12], I put together a gettext-based system to handle translations. This post explains how it works and how you can use it in your own projects.

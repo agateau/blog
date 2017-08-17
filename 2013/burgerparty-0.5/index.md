@@ -1,7 +1,7 @@
 title: Burger Party 0.5
 public: true
 pub_date: 2013-10-27 23:22:00 +01:00
-tags: [Greeenyetilab, burgerparty]
+tags: [Greenyetilab, burgerparty]
 
 
 [![Select world, or create your own burgers](/projects/burgerparty/0.5/thumb-world-selector.png)](/projects/burgerparty/0.5/world-selector.png)

@@ -1,7 +1,7 @@
 title: "Tiny Wheels 0.1!"
 public: true
 pub_date: 2015-07-19 22:29:35 +01:00
-tags: [Greeenyetilab, tinywheels]
+tags: [Greenyetilab, tinywheels]
 summary: Finally a release of Tiny Wheels! It's still a very early alpha but I hope you enjoy it nevertheless.
 
 

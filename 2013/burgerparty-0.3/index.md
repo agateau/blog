@@ -1,7 +1,7 @@
 title: Burger Party 0.3 released
 public: true
 pub_date: 2013-09-14 09:02:00 +01:00
-tags: [Greeenyetilab, burgerparty]
+tags: [Greenyetilab, burgerparty]
 
 
 [![Flatter World 1](thumb-flat-level-1.png)](flat-level-1.png)

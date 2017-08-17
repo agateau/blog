@@ -1,7 +1,7 @@
 title: "Mines are back!"
 public: true
 pub_date: 2015-04-26 19:53:18 +01:00
-tags: [Greeenyetilab, Race]
+tags: [Greenyetilab, Race]
 summary: New release brings back mines and comes with a desktop version!
 
 

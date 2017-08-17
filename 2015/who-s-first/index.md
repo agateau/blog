@@ -1,7 +1,7 @@
 title: "Who's first?"
 public: true
 pub_date: 2015-03-12 09:09:06 +01:00
-tags: [Greeenyetilab, race]
+tags: [Greenyetilab, race]
 summary: Determining who is currently leading the race is trickier than it sounds. Here is how I implemented it.
 
 

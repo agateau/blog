@@ -1,7 +1,7 @@
 title: Japan world background
 public: true
 pub_date: 2013-11-16 11:33:00 +01:00
-tags: [Greeenyetilab, burgerparty]
+tags: [Greenyetilab, burgerparty]
 
 
 I started working on a third world for Burger Party: Japan. I don't have much

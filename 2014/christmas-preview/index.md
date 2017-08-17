@@ -1,7 +1,7 @@
 title: "Christmas Preview"
 public: true
 pub_date: 2014-12-26 19:58:48 +01:00
-tags: [Greeenyetilab, Race, Christmas, preview, Santa Claus]
+tags: [Greenyetilab, Race, Christmas, preview, Santa Claus]
 summary: Here is the very first preview of the next game I am working on, it is a top-down car game, and since it's Christmas you get to drive Santa Claus car in this exclusive version!
 
 

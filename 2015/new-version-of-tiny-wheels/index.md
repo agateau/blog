@@ -1,7 +1,7 @@
 title: "New version of Tiny Wheels"
 public: true
 pub_date: 2015-07-17 08:39:16 +01:00
-tags: [Greeenyetilab, tinywheels]
+tags: [Greenyetilab, tinywheels]
 og_image:
 summary:
 

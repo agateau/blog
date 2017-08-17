@@ -1,7 +1,7 @@
 title: "Christmas Preview, the Video"
 public: true
 pub_date: 2014-12-27 22:18:06 +01:00
-tags: [Greeenyetilab, Race, preview, video]
+tags: [Greenyetilab, Race, preview, video]
 og_image:
 summary: A short video showing of the game play of the yet-unnamed race game I am working on.
 
