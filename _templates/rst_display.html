@@ -5,7 +5,7 @@
     <meta name="description" content="{{ ctx.summary }}" />
   {% endif %}
   {% if ctx.tags %}
-    <meta name="keywords" content="{{ ctx.tags|join(', ')}}"/>
+    <meta name="keywords" content="{{ ctx.tags|sort|join(', ')}}"/>
   {% endif %}
 {% endblock %}
 {% block body %}
