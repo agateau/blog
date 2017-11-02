@@ -30,6 +30,8 @@ Burger Party is available on Google Play and Amazon Appstore for Android.
 ## Gallery
 
 .. gallery::
+    :thumbsize: 300
+
     - full: 1.1.1/world-selector.png
       alt: Select world, or create your own burgers
     - full: 1.0rc1/us-world.png

@@ -10,6 +10,8 @@ Tiny Wheels is a top-down racing game for PC (Linux, Mac, Windows) and Android.
 ## Gallery
 
 .. gallery::
+    :thumbsize: 300
+
     - full: 0.1/snow.png
       alt: Spreading havoc in the snow
     - full: 0.1/city.png
