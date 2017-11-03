@@ -48,7 +48,7 @@ Here are all the drawings I did:
     - full: 16.jpg
       alt: Fat
     - full: 17.jpg
-      alt: Gracious
+      alt: Graceful
     - full: 18.jpg
       alt: Filthy
     - full: 19.jpg
