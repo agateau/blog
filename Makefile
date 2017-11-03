@@ -12,7 +12,13 @@ include config.mk
 clean:
 	rm -rf $(BUILD_DIR)
 
-build:
+checkdeps:
+	which sassc > /dev/null
+	which convert > /dev/null
+	which run-rstblog > /dev/null
+	which rsync > /dev/null
+
+build: checkdeps
 	run-rstblog build
 	ln -sf $$PWD/$(STORAGE_DIR) _build/$(STORAGE_DIR)
 
