@@ -25,7 +25,7 @@ build: checkdeps
 serve: build
 	run-rstblog serve
 
-deploy: check-tree clean build update-out-dir commit-out-dir push-out-dir
+deploy: check-tree clean build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir
 
 deploy-all: deploy deploy-storage
 
@@ -39,8 +39,12 @@ deploy-storage:
 	rsync -avzP $(STORAGE_DIR)/ $(DEPLOY_ROOT_URL)/$(STORAGE_DIR)
 
 # internal targets
-update-out-dir:
-	@echo "== Updating out dir =="
+pull-out-dir:
+	@echo "== Checking out dir is up to date =="
+	git -C $(OUT_GIT_DIR) pull
+
+rsync-to-out-dir:
+	@echo "== Rsyncing changes to out dir =="
 	rsync -av --delete --max-delete=10 --exclude '.git' --exclude $(STORAGE_DIR) \
 		$(BUILD_DIR)/ $(OUT_GIT_DIR)
 
