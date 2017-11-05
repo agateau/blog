@@ -11,7 +11,7 @@ This tool makes it possible to perform search or search-and-replace operations
 on all files or a subset of files of a directory.
 
 .. thumbimg:: qsr.png
-        :thumbsize: 600
+    :thumbsize: 600
 
 Most interesting features
 =========================

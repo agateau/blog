@@ -171,6 +171,11 @@ div.body {
     clear: both;
 }
 
+img, video {
+    display: block;
+    margin: 0 auto;
+}
+
 /*- Footer ---------------------------*/
 footer {
     padding-top: 9px;

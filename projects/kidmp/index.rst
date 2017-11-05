@@ -5,8 +5,13 @@ disqus: false
 KidMP
 -----
 
-.. thumbimg:: kidmp-browse.png
-.. thumbimg:: kidmp-play.png
+.. gallery::
+    :thumbsize: 300
+
+    - full: kidmp-browse.png
+      alt: Browsing videos
+    - full: kidmp-play.png
+      alt: Playback
 
 KidMP is a kid-friendly media player.
 
