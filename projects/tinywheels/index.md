@@ -35,7 +35,7 @@ The game is far from finished, but you can already play with it.
 
 ### Download Tiny Wheels for PC
 
-<a href="/storage/tinywheels/tinywheels-0.3.0.tar.bz2" class="dl-button">tinywheels-0.3.0.tar.bz2</a>
+<a href="/storage/tinywheels/tinywheels-0.3.0.zip" class="dl-button">tinywheels-0.3.0.zip</a>
 
 (Requires a Java runtime)
 
