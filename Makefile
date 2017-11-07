@@ -14,7 +14,6 @@ clean:
 
 checkdeps:
 	which sassc > /dev/null
-	which convert > /dev/null
 	which run-rstblog > /dev/null
 	which rsync > /dev/null
 
