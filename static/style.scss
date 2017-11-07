@@ -46,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
     color: $headingColor;
     line-height: 1.1;
+    clear: both;
 }
 
 h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
@@ -375,10 +376,6 @@ ul.thumbnails li {
     display: inline-block;
     padding: 0;
     margin: 0;
-}
-
-ul.thumbnails a img {
-    padding-top: 5px;
 }
 
 /*--------------------------------------
