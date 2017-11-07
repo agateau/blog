@@ -14,6 +14,7 @@ Since I am about to release a new version of [Tiny Wheels](/projects/tinywheels)
 Here are all the drawings I did:
 
 .. gallery::
+    :square:
 
     - full: 01.jpg
       alt: Swift
