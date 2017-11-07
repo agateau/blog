@@ -15,11 +15,8 @@ Burger Party is available on Google Play and Amazon Appstore for Android.
 
 <a name="get-it"></a>
 
-[![Available on Google Play](/static/images/badge/google-play.png)][gplay]
-[![Available at Amazon](/static/images/badge/amazon.png)][amazon]
-
-[gplay]: https://play.google.com/store/apps/details?id=com.agateau.burgerparty
-[amazon]: http://www.amazon.com/gp/product/B00O0ABQRW/ref=mas_pm_burger_party
+<a href="https://play.google.com/store/apps/details?id=com.agateau.burgerparty" alt="Available on Google Play"><img style="display: inline" src="/static/images/badge/google-play.png"></a>
+<a href="http://www.amazon.com/gp/product/B00O0ABQRW/ref=mas_pm_burger_party" alt="Available on Amazon"><img style="display: inline" src="/static/images/badge/amazon.png"></a>
 
 ## Launch Trailer
 
