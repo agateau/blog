@@ -61,15 +61,27 @@ check-tree: check-clean-tree check-need-push
 check-clean-tree:
 	@echo "== Checking tree is clean =="
 	@if [ -n "$$(git status -s)" ] ; then \
-		echo "Tree is not clean. Commit your changes." ; \
+		echo "Tree is not clean:" ; \
 		git status -s ; \
-		exit 1 ; \
+		echo -n "Commit all changes? [yN] " ; \
+		read answer ; \
+		if [ $$answer = "y" ] ; then \
+			git add . && git commit && $(MAKE) check-clean-tree ; \
+		else \
+			exit 1 ; \
+		fi \
 	fi
 
 check-need-push:
 	@echo "== Checking no commits need to be pushed =="
 	@nb=$$(git rev-list origin/master..master | wc -l) ; \
 	if [ "$$nb" -ne 0 ] ; then \
-		echo "master has $$nb commit(s) to push. Push them." ; \
-		exit 1 ; \
+		echo "master has $$nb commit(s) to push." \
+		echo -n "Push them? [yN] " ; \
+		read answer ; \
+		if [ $$answer = "y" ] ; then \
+			git push && $(MAKE) check-need-push ; \
+		else \
+			exit 1 ; \
+		fi \
 	fi
