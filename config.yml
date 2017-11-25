@@ -20,5 +20,5 @@ modules:
     tags:
         tag_feed_url: /tags/<tag>/feed
 feed:
-    name: "Aurélien's room"
-    subtitle: "Thoughts from a design-minded software engineer"
+    name: "Aurélien Gâteau website"
+    subtitle: "Code, pixels, user interfaces and occasional developer tips"
