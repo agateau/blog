@@ -7,6 +7,8 @@ disqus: false
 
 Tiny Wheels is a top-down racing game for PC (Linux, Mac, Windows) and Android.
 
+Race for the first place on various tracks. Pick up bonuses to boost your position or slow down competitors!
+
 ## Gallery
 
 .. gallery::
@@ -29,15 +31,17 @@ Tiny Wheels is a top-down racing game for PC (Linux, Mac, Windows) and Android.
 
 The game is far from finished, but you can already play with it.
 
-### Download Tiny Wheels for Android
-
-<a href="/storage/tinywheels/tinywheels-0.3.0.apk" class="dl-button">tinywheels-0.3.0.apk</a>
-
-### Download Tiny Wheels for PC
+### Tiny Wheels for PC
 
 <a href="/storage/tinywheels/tinywheels-0.3.0.zip" class="dl-button">tinywheels-0.3.0.zip</a>
 
 (Requires a Java runtime)
+
+### Tiny Wheels for Android
+
+You can install Tiny Wheels from <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
+
+If you do not have access to Google Play, get the APK: <a href="/storage/tinywheels/tinywheels-0.3.0.apk" class="dl-button">tinywheels-0.3.0.apk</a>
 
 ### Source Code
 
