@@ -29,6 +29,7 @@ I also reworked the tiles of the snow track: they are now real pixel-art (they u
 
 You can find the complete list of changes in the [changelog][].
 
-Get this release from [Tiny Wheels page](/projects/tinywheels/)!
+Get this release from [Tiny Wheels page](/projects/tinywheels/) or, for Android users, on [Google Play][gp]!
 
 [changelog]: https://github.com/agateau/tinywheels/blob/master/CHANGELOG.md
+[gp]: https://play.google.com/apps/testing/com.agateau.tinywheels.android
