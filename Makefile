@@ -19,7 +19,7 @@ checkdeps:
 
 build: checkdeps
 	run-rstblog build
-	ln -sf $$PWD/$(STORAGE_DIR) _build/$(STORAGE_DIR)
+	[ -e _build/$(STORAGE_DIR) ] || ln -s $$PWD/$(STORAGE_DIR) _build/$(STORAGE_DIR)
 
 serve: build
 	run-rstblog serve
