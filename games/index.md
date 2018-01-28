@@ -5,10 +5,10 @@ disqus: false
 
 ## Work in Progress
 
-### [Tiny Wheels](/projects/tinywheels/)
+### [Pixel Wheels](/projects/pixelwheels/)
 
-A PC and Android game. Race with tiny pixel-art vehicles on various tracks.
-Pick up bonuses to boost your position or slow down competitors!
+A PC and Android top-down pixel-art game. Race on various tracks, pick up
+bonuses to boost your position or slow down competitors!
 
 ## Finished Games
 
