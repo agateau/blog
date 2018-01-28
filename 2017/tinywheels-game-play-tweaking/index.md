@@ -1,6 +1,6 @@
 pub_date: 2017-11-19 18:34:01 +01:00
 public: true
-tags: [tinywheels]
+tags: [pixelwheels]
 title: Tiny Wheels Game Play Tweaking
 summary: |
     Trying to make Tiny Wheels more fun to play.

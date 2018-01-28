@@ -1,6 +1,6 @@
 pub_date: 2017-12-03 21:56:09 +01:00
 public: true
-tags: [tinywheels]
+tags: [pixelwheels]
 title: Tiny Wheels 0.4.0, Christmas Edition!
 summary: |
     A new version of Tiny Wheels is out, with a Christmas surprise...

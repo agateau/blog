@@ -1,6 +1,6 @@
 pub_date: 2017-10-06 19:42:21 +01:00
 public: true
-tags: [tinywheels]
+tags: [pixelwheels]
 title: Getting ready for Tiny Wheels 0.3!
 summary: |
     A new release of Tiny Wheels will be out soon.

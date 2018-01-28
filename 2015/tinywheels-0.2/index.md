@@ -1,7 +1,7 @@
 title: "Tiny Wheels 0.2"
 public: true
 pub_date: 2015-08-11 08:07:06 +01:00
-tags: [Greenyetilab, tinywheels]
+tags: [Greenyetilab, pixelwheels]
 summary: "A new release of Tiny Wheels, featuring a new bonus: the turbo and several gameplay and user interface improvements!"
 
 

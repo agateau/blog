@@ -1,6 +1,6 @@
 pub_date: 2018-01-05 19:14:01 +01:00
 public: true
-tags: [tinywheels]
+tags: [pixelwheels]
 title: Tiny Wheels 0.5.0, the last Tiny Wheels?
 summary: |
     A new Tiny Wheels version is out, but is it the last one?

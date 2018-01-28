@@ -1,6 +1,6 @@
 pub_date: 2017-11-05 18:47:44 +01:00
 public: true
-tags: [tinywheels]
+tags: [pixelwheels]
 title: Tiny Wheels 0.3.0!
 summary: |
     I finally released version 0.3.0 of Tiny Wheels.

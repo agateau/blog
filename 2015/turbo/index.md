@@ -1,7 +1,7 @@
 title: "Turbo!"
 public: true
 pub_date: 2015-07-25 19:05:22 +01:00
-tags: [Greenyetilab, tinywheels]
+tags: [Greenyetilab, pixelwheels]
 summary: "Working on a new bonus for Tiny Wheels: the turbo."
 
 

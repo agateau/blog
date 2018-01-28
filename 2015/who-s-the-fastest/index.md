@@ -1,7 +1,7 @@
 title: "Who's the Fastest?"
 public: true
 pub_date: 2015-05-27 19:10:49 +01:00
-tags: [Greenyetilab, tinywheels]
+tags: [Greenyetilab, pixelwheels]
 summary: Which racer drove the fastest?
 
 

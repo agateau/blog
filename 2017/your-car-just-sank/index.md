@@ -1,6 +1,6 @@
 pub_date: 2017-08-26 22:42:21 +01:00
 public: true
-tags: [tinywheels]
+tags: [pixelwheels]
 title: Your car just sank
 summary: |
     Implementing water "ground" in Tiny Wheels.

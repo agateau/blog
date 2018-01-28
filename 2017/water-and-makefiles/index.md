@@ -1,6 +1,6 @@
 pub_date: 2017-09-01 19:23:08 +01:00
 public: true
-tags: [tinywheels, makefiles]
+tags: [pixelwheels, makefiles]
 title: Water and Makefiles
 summary: |
     Improving water tiles, having fun with Makefiles.
