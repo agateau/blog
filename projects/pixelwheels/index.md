@@ -39,7 +39,7 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 
 The game is far from finished, but you can already play with it.
 
-### Pixel Wheels for PC
+### Pixel Wheels for PC (Linux, Mac, Windows)
 
 <a href="/storage/pixelwheels/pixelwheels-0.6.0.zip" class="dl-button">pixelwheels-0.6.0.zip</a>
 
