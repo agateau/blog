@@ -14,7 +14,7 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 .. gallery::
     :thumbsize: 300
 
-    - full: 0.5.0/title.png
+    - full: 0.6.0/title.png
       alt: Title screen
     - full: 0.5.0/select-vehicle.png
       alt: Select your vehicle
@@ -41,15 +41,15 @@ The game is far from finished, but you can already play with it.
 
 ### Pixel Wheels for PC
 
-<a href="/storage/tinywheels/tinywheels-0.5.0.zip" class="dl-button">tinywheels-0.5.0.zip</a>
+<a href="/storage/pixelwheels/pixelwheels-0.6.0.zip" class="dl-button">pixelwheels-0.6.0.zip</a>
 
 (Requires a Java runtime)
 
 ### Pixel Wheels for Android
 
-You can install Pixel Wheels from <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
+You can install Pixel Wheels from <a href="https://play.google.com/apps/testing/com.agateau.pixelwheels.android" class="dl-button">Google Play</a>
 
-If you do not have access to Google Play, get the APK: <a href="/storage/tinywheels/tinywheels-0.5.0.apk" class="dl-button">tinywheels-0.5.0.apk</a>
+If you do not have access to Google Play, get the APK: <a href="/storage/pixelwheels/pixelwheels-0.6.0.apk" class="dl-button">pixelwheels-0.6.0.apk</a>
 
 ### Source Code
 
