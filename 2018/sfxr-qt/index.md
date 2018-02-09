@@ -31,7 +31,7 @@ You can ear some of the sound effects produced in this video of Pixel Wheels. Al
 
 <iframe width="800" height="480" src="https://www.youtube.com/embed/c6YtA3l5Ej8" frameborder="0" allowfullscreen>
 </iframe>
-(_[View on Youtube](https://www.youtube.com/embed/c6YtA3l5Ej8)_)
+(_[View on Youtube](https://www.youtube.com/watch?v=c6YtA3l5Ej8)_)
 
 ## Where is the code?
 
