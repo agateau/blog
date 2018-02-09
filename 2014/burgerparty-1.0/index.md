@@ -11,7 +11,8 @@ Burger Party 1.0 is finally out and available on Google Play! I spent a lot of t
 Since this is a real public release, Burger Party comes with a real launch trailer:
 
 <p class="center">
-<iframe width="480" height="320" src="//www.youtube.com/embed/u2ebyoaBFJg?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="480" height="320" src="//www.youtube.com/embed/u2ebyoaBFJg?rel=0" frameborder="0" allowfullscreen>
+</iframe>
 </p>
 
 It also comes with a nice and sweet Google Play button...

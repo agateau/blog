@@ -21,7 +21,8 @@ Burger Party is available on Google Play and Amazon Appstore for Android.
 ## Launch Trailer
 
 <p class="center">
-<iframe width="480" height="320" src="//www.youtube.com/embed/u2ebyoaBFJg?rel=0" frameborder="0" allowfullscreen>-</iframe>
+<iframe width="480" height="320" src="//www.youtube.com/embed/u2ebyoaBFJg?rel=0" frameborder="0" allowfullscreen>
+</iframe>
 </p>
 
 ## Gallery

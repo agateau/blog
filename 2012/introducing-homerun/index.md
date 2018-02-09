@@ -25,7 +25,8 @@ Or used as a containment:
 
 I also created a screencast explaining how it works:
 
-<iframe width="420" height="315" src="http://www.youtube.com/embed/6WcllgzepRY" frameborder="0" allowfullscreen></iframe>
+<iframe width="420" height="315" src="http://www.youtube.com/embed/6WcllgzepRY" frameborder="0" allowfullscreen>
+</iframe>
 
 _can't see the video? [click here](https://www.youtube.com/watch?v=6WcllgzepRY)_
 

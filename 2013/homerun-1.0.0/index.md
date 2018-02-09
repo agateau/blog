@@ -17,7 +17,8 @@ dragging items around.
 
 This short video demonstrates how it works:
 
-<iframe width="560" height="315" src="http://www.youtube.com/embed/iE1sSaVw9pg?rel=0" frameborder="0" allowfullscreen></iframe>
+<iframe width="560" height="315" src="http://www.youtube.com/embed/iE1sSaVw9pg?rel=0" frameborder="0" allowfullscreen>
+</iframe>
 
 This was surprisingly difficult to get right with QtQuick 1, so I am glad it's now
 done.
