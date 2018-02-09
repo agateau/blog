@@ -29,8 +29,9 @@ I think so! I am happy with the way it sounds and it was fun to dive in an area 
 
 You can ear some of the sound effects produced in this video of Pixel Wheels. All sounds have been generated with SFXR Qt, except for the engine and skidding sounds.
 
-<iframe width="800" height="480" src="http://www.youtube.com/embed/c6YtA3l5Ej8" frameborder="0" allowfullscreen>
+<iframe width="800" height="480" src="https://www.youtube.com/embed/c6YtA3l5Ej8" frameborder="0" allowfullscreen>
 </iframe>
+(_[View on Youtube](https://www.youtube.com/embed/c6YtA3l5Ej8)_)
 
 ## Where is the code?
 
