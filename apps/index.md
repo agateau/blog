@@ -20,7 +20,7 @@ An Android application to generate cute cat avatars from your name. Based on [Pe
 
 An Android application to track your protein consumption. Primarily designed to help people affected by Phenylketonuria.
 
-### [Gwenview](http://user.kde.org/Gwenview)
+### [Gwenview](https://www.kde.org/applications/graphics/gwenview/)
 
 An image viewer for KDE. It is the default image viewer since KDE 4.0. After
 maintaining it for 14 years, I passed maintainership To Lukas Tinkl.
