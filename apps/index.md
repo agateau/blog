@@ -7,16 +7,16 @@ Here are some of the apps and tools I created. You can find others on my [GitHub
 
 ## Graphical apps
 
-### [MUP](http://github.com/agateau/mup)
+### [MUP](https://github.com/agateau/mup)
 
 An extensible markup previewer, capable of showing texts written in Markdown, reStructuredText, Asciidoc and other markup languages.
 
-### [Cat Avatar Generator](http://github.com/agateau/cat-avatar-generator-app)
+### [Cat Avatar Generator](https://github.com/agateau/cat-avatar-generator-app)
 
 An Android application to generate cute cat avatars from your name. Based on [Pepper & Carrot][ppac] artwork by David Revoy.
 [ppac]: https://peppercarrot.com
 
-### [Equiv](http://github.com/agateau/equiv)
+### [Equiv](https://github.com/agateau/equiv)
 
 An Android application to track your protein consumption. Primarily designed to help people affected by Phenylketonuria.
 
@@ -31,7 +31,7 @@ A kid-friendly media player.
 
 ## Command line tools
 
-### [Yokadi](http://yokadi.github.com)
+### [Yokadi](https://yokadi.github.io)
 
 A command-line-based, sqlite-powered TODO list.
 
