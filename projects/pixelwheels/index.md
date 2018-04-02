@@ -18,10 +18,12 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
       alt: Title screen
     - full: 0.5.0/select-vehicle.png
       alt: Select your vehicle
-    - full: 0.5.0/snow1.png
-      alt: Drifting while carrying a mine
-    - full: 0.5.0/snow2.png
-      alt: Turbo!
+    - full: 0.7.0/select-map.png
+      alt: Select map
+    - full: 0.7.0/snow1.png
+      alt: A bot shooting another one at close range
+    - full: 0.7.0/snow2.png
+      alt: This is going to slide...
     - full: 0.5.0/be1.png
       alt: Santa Claus drove on a mine
     - full: 0.5.0/be2.png
@@ -41,7 +43,7 @@ The game is far from finished, but you can already play with it.
 
 ### Pixel Wheels for PC (Linux, Mac, Windows)
 
-<a href="/storage/pixelwheels/pixelwheels-0.6.0.zip" class="dl-button">pixelwheels-0.6.0.zip</a>
+<a href="/storage/pixelwheels/pixelwheels-0.7.0.zip" class="dl-button">pixelwheels-0.7.0.zip</a>
 
 (Requires a Java runtime)
 
@@ -49,7 +51,7 @@ The game is far from finished, but you can already play with it.
 
 You can install Pixel Wheels from <a href="https://play.google.com/apps/testing/com.agateau.pixelwheels.android" class="dl-button">Google Play</a>
 
-If you do not have access to Google Play, get the APK: <a href="/storage/pixelwheels/pixelwheels-0.6.0.apk" class="dl-button">pixelwheels-0.6.0.apk</a>
+If you do not have access to Google Play, get the APK: <a href="/storage/pixelwheels/pixelwheels-0.7.0.apk" class="dl-button">pixelwheels-0.7.0.apk</a>
 
 ### Source Code
 
