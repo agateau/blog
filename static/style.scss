@@ -17,6 +17,8 @@ $buttonBgColor: lighten($linkColor, 50%);
 $buttonBevelColor: $linkColor;
 $buttonTextColor: $darkColor;
 
+$h1VerticalMargin: 24pt;
+
 /*-------------------------------------
 
 General style
@@ -61,7 +63,7 @@ h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover {
 
 h1 {
     font-size: 200%;
-    margin: 1em 0;
+    margin: $h1VerticalMargin 0;
 }
 
 h2 {
@@ -306,15 +308,18 @@ blockquote p {
 }
 
 /*- Overview --------------------------*/
-article.overview h1 {
-    margin: 0;
-    padding: 0;
-    font-size: 20pt;
-    font-weight: normal;
+article.overview {
+    margin-top: $h1VerticalMargin;
+    border-top: 1px solid $darkColor;
 }
 
-article.overview p {
+article.overview:first-child {
     margin-top: 0;
+    border-top: none;
+}
+
+div.read-more {
+    font-size: 80%;
 }
 
 /*--------------------------------------

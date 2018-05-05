@@ -1,22 +1,19 @@
 {% extends "layout.html" %}
 {% block title %}{{ rst.title }}{% endblock %}
 {% block extrameta %}
-  {% if ctx.summary %}
-    <meta name="description" content="{{ ctx.summary }}" />
-  {% endif %}
   {% if ctx.tags %}
     <meta name="keywords" content="{{ ctx.tags|sort|join(', ')}}"/>
   {% endif %}
 {% endblock %}
 {% block body %}
-  {%- if not config.hide_title %}
-  {{ rst.html_title }}
-  {%- endif %}
-  {% if ctx.pub_date %}
-  <p class="date">written on {{ format_date(ctx.pub_date, format='full') }}</p>
-  {% endif %}
-
   <article>
+    {%- if not config.hide_title %}
+    {{ rst.html_title }}
+    {%- endif %}
+    {% if ctx.pub_date %}
+    <p class="date">written on {{ format_date(ctx.pub_date, format='full') }}</p>
+    {% endif %}
+
     {{ rst.fragment }}
 
     <div class="meta">
