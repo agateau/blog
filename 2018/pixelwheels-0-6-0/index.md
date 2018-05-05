@@ -2,8 +2,6 @@ pub_date: 2018-02-03 23:54:36 +01:00
 public: true
 tags: [pixelwheels]
 title: "Pixel Wheels 0.6.0!"
-summary: |
-    Here comes a new release of Tiny, err, Pixel Wheels!
 
 Here comes a new release of Tiny, err, Pixel Wheels!
 
@@ -14,6 +12,8 @@ The first main topic of this release is of course, the renaming of the game to P
 The second main topic is sound effects. It was high time to work on sound effects because adding sound to your game tend to be very invasive for the code base, so the earlier the sound architecture is in, the better. I probably should have done it earlier, but luckily it was not too much of a pain to get it in.
 
 Implementing sound in the code base is actually only half of the work. The other half is producing or finding good sounds. If you are not careful you can easily spent ours browsing [OpenGameArt.org](https://opengameart.org) sound sections or [Freesound](https://freesound.org). I actually took another approach, more compatible with the fact that I do most of my work offline, in the train: I used [sfxr][], a wonderful and fun tool by DrPetter to generate game sound effects. The user interface was a bit tedious to use, though, so I spent some time porting sfxr to QtQuick. You can find the end result in the [SFXR Qt repository][sfxr-qt]... Yay, another side project!
+
+<!-- break -->
 
 A few sounds are still missing, but the ones that are here already makes the game experience significantly better, if I may say so. I like the fact that since most of them come from SFXR, they sound a bit like 16-bit games. Generating sounds with SFXR is a lot of fun, it reminds me a bit of tweaking sounds on my Amstrad CPC with the SOUND, ENV and ENT Basic commands (oh the memories!)
 

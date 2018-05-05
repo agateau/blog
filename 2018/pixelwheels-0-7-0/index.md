@@ -2,8 +2,6 @@ pub_date: 2018-04-02 22:18:42 +01:00
 public: true
 tags: [pixelwheels]
 title: Pixel Wheels 0.7.0 is out!
-summary: |
-    After a two month hiatus, here comes Pixel Wheels 0.7.0.
 
 Due to holidays and not having much ready to publish, I did not make a release of Pixel Wheels for February, but here is 0.7.0, March release!
 
@@ -38,6 +36,8 @@ There were also a few internal changes:
 - The update to libgdx 1.7.2 required an update of my fork of MapPacker, but instead I decided to use the maps directly instead of pre-processing them to load them through AtlasTmxMapLoader. This means there is no more MapPacker fork in the code and no need to run it before testing a map, just save from Tiled and run the game.
 
 One of the reasons this release took so long is I struggled a lot with drawing the icy patches, but even more with the pine trees, which I did not like, so I started to redo them, but could not achieve something pleasing, it was starting to be depressing.
+
+<!-- break -->
 
 At one point I almost gave up on the true top-down view and tried an RPG-like perspective. But it looked very odd when the screen rotated, and this is one of the aspects of the game which takes a while to get used to but which I really like, so I did not want to fall back to the classic fixed view by default.
 

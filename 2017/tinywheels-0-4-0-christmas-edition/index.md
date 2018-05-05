@@ -2,8 +2,6 @@ pub_date: 2017-12-03 21:56:09 +01:00
 public: true
 tags: [pixelwheels]
 title: Tiny Wheels 0.4.0, Christmas Edition!
-summary: |
-    A new version of Tiny Wheels is out, with a Christmas surprise...
 
 We are getting close to Christmas, so I just released a new version of Tiny Wheels with a special vehicle, just for the occasion. Introducing... Santa truck!
 
@@ -26,6 +24,8 @@ The main focus of this release was to try to make the game easier. To achieve th
 I also reworked the tiles of the snow track: they are now real pixel-art (they used to come from an SVG document because they were created before I decided to go pixel-art) and the pine-trees are now covered with snow:
 
 ![Snowy pine trees](snowy-pine-trees.png)
+
+<!-- break -->
 
 You can find the complete list of changes in the [changelog][].
 

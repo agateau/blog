@@ -2,8 +2,6 @@ pub_date: 2017-11-19 18:34:01 +01:00
 public: true
 tags: [pixelwheels]
 title: Tiny Wheels Game Play Tweaking
-summary: |
-    Trying to make Tiny Wheels more fun to play.
 
 [Tiny Wheels 0.3.0][tw030] has been released for 3 weeks now. So far the feedback I received can be sum up like this:
 
@@ -20,6 +18,8 @@ There is an option for you in the settings to disable screen rotation.
 > Dude, it's (too) hard!
 
 It is, indeed.
+
+<!-- break -->
 
 I made a few changes to make the game easier. First I added road markings for the curves, making it easier to prepare to turn. They look like this:
 

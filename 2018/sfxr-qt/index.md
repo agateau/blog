@@ -2,8 +2,6 @@ pub_date: 2018-02-09 19:59:10 +01:00
 public: true
 tags: [pixelwheels, sfxr-qt, pko]
 title: SFXR Qt
-summary: |
-    I ported the venerable SFXR to QtQuick.
 
 As I mentioned in my previous article about [adding sounds to Pixel Wheels][pw], I started yet-another side project: SFXR Qt. This is a QtQuick port of [SFXR][sfxr], a retro sound-effect generator by DrPetter.
 
@@ -22,6 +20,8 @@ First, the current UI is hard to use: something is wrong with the sliders, they 
 Second, the other ports are all Flash-based, which I am not comfortable relying on.
 
 But more important: I wanted to dive into sound generation a bit, and it was a fun way to get into this!
+
+<!-- break -->
 
 ## Was it worth the pain?
 

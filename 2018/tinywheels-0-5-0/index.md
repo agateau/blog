@@ -2,8 +2,6 @@ pub_date: 2018-01-05 19:14:01 +01:00
 public: true
 tags: [pixelwheels]
 title: Tiny Wheels 0.5.0, the last Tiny Wheels?
-summary: |
-    A new Tiny Wheels version is out, but is it the last one?
 
 Welcome to 2018! To celebrate this new year, here is a new release of Tiny Wheels!
 
@@ -24,6 +22,8 @@ The Android side is where I made the most changes. On this screenshot you can se
 ![Touch buttons](/projects/tinywheels/0.5.0/touch-controls.png)
 
 I like this layout, but I haven't seen it in any other games, so I am interested in your feedback on them: are they convenient to use? Do you understand their function at the first sight? The left and right button icons are pretty straightforward I think, but I had a hard time coming up with icons for the "brake" and "action" buttons of the lower-right corner. Again, if you have suggestions they are more than welcome.
+
+<!-- break -->
 
 I also fixed an embarrassing bug which prevented multi-touch to work: it was not possible for example to trigger a bonus while the left or right button was pressed. Embarrassing I told you.
 
