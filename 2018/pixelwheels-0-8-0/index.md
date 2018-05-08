@@ -1,4 +1,5 @@
-public: false
+pub_date: 2018-05-08 11:48:02 +01:00
+public: true
 tags: [pixelwheels]
 title: Pixel Wheels 0.8.0, featuring championships!
 
@@ -11,6 +12,8 @@ In the not-so-distant future, I plan to require completing a championship with a
 Also, I added a 3 second countdown at the start of each race, so you can prepare for the race.
 
 ![3... 2...](countdown.png)
+
+<!-- break -->
 
 The internals of the game have been updated to libgdx 1.8.0, which seems to have stabilized its screen API, so it felt like a good time to finally implement a fullscreen mode. Together with the fact that the mouse cursor is now hidden, Pixel Wheels feels more like a real game now.
 
