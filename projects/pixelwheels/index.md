@@ -49,7 +49,7 @@ The game is far from finished, but you can already play with it.
 
 ### Pixel Wheels for Android
 
-You can install Pixel Wheels from <a href="https://play.google.com/apps/testing/com.agateau.pixelwheels.android" class="dl-button">Google Play</a>
+You can install Pixel Wheels from <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
 
 If you do not have access to Google Play, get the APK: <a href="/storage/pixelwheels/pixelwheels-0.7.0.apk" class="dl-button">pixelwheels-0.7.0.apk</a>
 
