@@ -18,7 +18,7 @@ Since this is a real public release, Burger Party comes with a real launch trail
 It also comes with a nice and sweet Google Play button...
 
 <p class="center">
-<a href="https://play.google.com/store/apps/details?id=com.agateau.burgerparty"><img alt="Get it on Google Play" src="/images/google-play-badge.png"></a>
+<a href="https://play.google.com/store/apps/details?id=com.agateau.burgerparty"><img alt="Get it on Google Play" src="/static/images/badge/google-play.png"></a>
 </p>
 
 What's next? Promotion! I am going to put my marketing cap on and start annoying... Err, I mean asking game-related sites for (preferably nice) reviews of the game.
