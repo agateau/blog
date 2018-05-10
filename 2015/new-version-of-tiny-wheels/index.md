@@ -23,5 +23,5 @@ It's high time to get a new version out. It's been so long since the last one I 
 
 Give it a try!
 
-<a href="/tinywheels/0.1/tinywheels-0.1.apk" class="dl-button">Tiny Wheels 0.1 (Android)</a>
-<a href="/tinywheels/0.1/tinywheels-0.1.zip" class="dl-button">Tiny Wheels 0.1 (Desktop)</a>
+<a href="/storage/tinywheels/tinywheels-0.1.apk" class="dl-button">Tiny Wheels 0.1 (Android)</a>
+<a href="/storage/tinywheels/tinywheels-0.1.tar.bz2" class="dl-button">Tiny Wheels 0.1 (Desktop)</a>
