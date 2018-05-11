@@ -9,6 +9,7 @@ $linkColor: #457aA8;
 $bodyColor: black;
 
 $headingColor: $darkColor;
+$hlineColor: transparentize($headingColor, 0.8);
 
 $headerBgColor: $darkColor;
 $headerTextColor: $linkColor;
@@ -73,7 +74,7 @@ h2 {
     margin-top: 1.5em;
     padding-bottom: 0.1em;
     margin-bottom: 1em;
-    border-bottom: 1px solid transparentize($headingColor, 0.8);
+    border-bottom: 1px solid $hlineColor;
 }
 
 h3 {
@@ -184,25 +185,13 @@ img, video {
 
 /*- Footer ---------------------------*/
 footer {
-    padding-top: 9px;
-    margin-top: 42px;
-    border-top: 1px solid #445;
-    text-align: right;
-    color: #555;
-}
-footer ul {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-footer ul li {
-    display: inline;
-    margin: 0;
-    padding: 0;
-}
-footer ul li:not(:first-child):before {
-    content: ' – ';
-    color: #445;
+    padding-top: 42px;
+    margin: 42px 0;
+    border-top: 1px solid $hlineColor;
+    color: #777;
+    font-size: 120%;
+    font-family: serif;
+    text-align: center;
 }
 
 /* margins and stuff */
@@ -310,7 +299,7 @@ blockquote p {
 /*- Overview --------------------------*/
 article.overview {
     margin-top: $h1VerticalMargin;
-    border-top: 1px solid $darkColor;
+    border-top: 2px dashed $hlineColor;
 }
 
 article.overview:first-child {
@@ -398,7 +387,7 @@ img.align-center {
 
 div#disqus_thread {
     clear: both;
-    border-top: 1px solid #445;
+    border-top: 1px solid $hlineColor;
     padding-top: 9px;
 }
 
