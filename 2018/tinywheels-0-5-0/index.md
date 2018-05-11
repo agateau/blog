@@ -13,13 +13,13 @@ The game UI has been revamped, with big buttons and a checkerboard background. T
 
 I am not entirely sold on the purple for the buttons, so this might change again.
 
-![Title screen](/projects/tinywheels/0.5.0/title.png)
+![Title screen](/projects/pixelwheels/0.5.0/title.png)
 
 The HUD received some love too: the rank text is bigger, making it easy to check your position at a glance.
 
 The Android side is where I made the most changes. On this screenshot you can see I replaced the touch buttons with pie buttons:
 
-![Touch buttons](/projects/tinywheels/0.5.0/touch-controls.png)
+![Touch buttons](/projects/pixelwheels/0.5.0/touch-controls.png)
 
 I like this layout, but I haven't seen it in any other games, so I am interested in your feedback on them: are they convenient to use? Do you understand their function at the first sight? The left and right button icons are pretty straightforward I think, but I had a hard time coming up with icons for the "brake" and "action" buttons of the lower-right corner. Again, if you have suggestions they are more than welcome.
 
@@ -52,4 +52,4 @@ As usual, you can get this release from the [game page][tw], I hope you enjoy it
 [libgdx]: http://libgdx.badlogicgames.com
 [semver]: http://semver.org
 [other-tw]: http://store.steampowered.com/app/577850/Tiny_Wheels/
-[tw]: /projects/tinywheels/
+[tw]: /projects/pixelwheels/

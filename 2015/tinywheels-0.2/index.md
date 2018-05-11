@@ -27,4 +27,4 @@ The game was still too hard, so I made it a bit slower. Once again, your feedbac
 
 Finally, AI racers changed their behavior with regard to mines: the AI used to drop the mine as soon as it picked it, now they wait for a few seconds before dropping it (they still don't care if someone is behind or not). This new behavior makes it less frustrating when you are close to an AI racer and it picks up a bonus mine: you now have a short time to move away from its back before the mine is dropped.
 
-That's it for this release, hope you like it. As usual, it's available for [PCs and Android devices](/projects/tinywheels).
+That's it for this release, hope you like it. As usual, it's available for [PCs and Android devices](/projects/pixelwheels).

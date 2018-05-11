@@ -21,11 +21,11 @@ The desktop version also has a special feature: a split-screen two player mode.
 
 _Spreading havoc in the snow:_
 
-![Screenshot](/projects/tinywheels/0.1/snow.png)
+![Screenshot](/projects/pixelwheels/0.1/snow.png)
 
 
 _Going after an heavily armored roadster in the city:_
 
-![Screenshot](/projects/tinywheels/0.1/city.png)
+![Screenshot](/projects/pixelwheels/0.1/city.png)
 
-[Give it a try!](/projects/tinywheels)
+[Give it a try!](/projects/pixelwheels)

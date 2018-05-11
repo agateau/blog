@@ -19,7 +19,7 @@ It's high time to get a new version out. It's been so long since the last one I 
 - Adjusted vehicle physics
 - Slightly less dumb AI (where less dumb actually means better waypoints so they get stuck less often)
 
-![Screenshot](/projects/tinywheels/0.1/city.png)
+![Screenshot](/projects/pixelwheels/0.1/city.png)
 
 Give it a try!
 

@@ -19,10 +19,10 @@ interested in user experience, design and imaging.
 
 I mostly work on Qt and KDE software these days, but another part of me is
 getting back to game development. I created a simple Android game: [Burger
-Party][bp], and I am working on another: [Tiny Wheels][tw].
+Party][bp], and I am working on another: [Pixel Wheels][pw].
 
 [bp]: /projects/burgerparty/
-[tw]: /projects/tinywheels/
+[pw]: /projects/pixelwheels/
 
 ## Contacting me
 

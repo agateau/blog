@@ -17,4 +17,4 @@ Finally I am considering setting up Patreon and/or Tipeee accounts to support my
 
 That's it for today. If all goes well, next article should announce the release of Tiny Wheels 0.3!
 
-[tw]: /projects/tinywheels
+[tw]: /projects/pixelwheels

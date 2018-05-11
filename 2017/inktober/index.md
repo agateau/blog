@@ -9,7 +9,7 @@ Last month I participated to [Inktober](http://inktober.com).
 
 In case you don't know what it is, Inktober is a yearly challenge where you have to create an ink drawing every day of the October month and post it online. To help you find inspiration, the Inktober web site provides a word list: one word for each day.
 
-Since I am about to release a new version of [Tiny Wheels](/projects/tinywheels), I decided that in addition to the Inktober word list, all my drawings would feature vehicles. Some days were more difficult than others but I ended up with some interesting combinations, and some drawings relate to each others, for example 1 (Swift), 28 (Fall), 4 (Underwater) and 30 (Found) form a mini story. 2 (Divided) and 29 (United) are related as well.
+Since I am about to release a new version of [Tiny Wheels](/projects/pixelwheels), I decided that in addition to the Inktober word list, all my drawings would feature vehicles. Some days were more difficult than others but I ended up with some interesting combinations, and some drawings relate to each others, for example 1 (Swift), 28 (Fall), 4 (Underwater) and 30 (Found) form a mini story. 2 (Divided) and 29 (United) are related as well.
 
 Here are all the drawings I did:
 

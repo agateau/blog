@@ -13,4 +13,4 @@ It also made me realize using 64x64 tiles was not a good decision. I picked this
 
 After the next release I plan to recreate the tileset in 32x32, or as a  mix of 64x64 (for roads) and 32x32 (for decors) if I can make it work.
 
-[tw]: /projects/tinywheels
+[tw]: /projects/pixelwheels

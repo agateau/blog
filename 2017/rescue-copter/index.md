@@ -19,5 +19,5 @@ The helicopter comes from a nice line drawing of the Super Puma I found on [Wiki
 
 At first I didn't like the yellowish color of it, but it's growing on me. What do you think?
 
-[tw]: /projects/tinywheels
+[tw]: /projects/pixelwheels
 [sp]: https://en.wikipedia.org/wiki/Eurocopter_AS332_Super_Puma

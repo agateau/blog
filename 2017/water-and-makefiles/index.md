@@ -10,7 +10,7 @@ This week I improved the water and beach tiles of [Tiny Wheels][tw]. Water looks
 .. thumbimg:: water.png
     :alt: Crusing between islands
 
-[tw]: /projects/tinywheels/
+[tw]: /projects/pixelwheels/
 
 I ended up with 16 tiles to represent sand, water and deep water. Here they are, straight from Aseprite:
 

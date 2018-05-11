@@ -19,7 +19,7 @@ The project pages for [Burger Party][bp] and [Tiny Wheels][tw] have been importe
 Now that this is done, I can go back to work on Tiny Wheels!
 
 [bp]: /projects/burgerparty/
-[tw]: /projects/tinywheels/
+[tw]: /projects/pixelwheels/
 [Genymobile]: https://genymobile.com
 [Yokadi]: https://yokadi.github.io
 [gyl-posts]: /tags/Greenyetilab/

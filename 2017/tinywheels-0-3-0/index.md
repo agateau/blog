@@ -7,7 +7,7 @@ summary: |
 
 Here it is: [Tiny Wheels 0.3.0][tw]!
 
-![Screenshot](/projects/tinywheels/0.3.0/tsm-start.png)
+![Screenshot](/projects/pixelwheels/0.3.0/tsm-start.png)
 
 Beware, the game is hard, unfair and unfinished, with the occasional bug here and there. The "Work in progress" pane on the title screen is here for a reason... Having said that, if you are willing to bare with its rough state, you can already have fun playing the game and tweaking it!
 
@@ -24,4 +24,4 @@ Oh and Tiny Wheels is now free software! You can get the source code from [GitHu
 PS: If you have been following me on Mastodon or Twitter, this release of Tiny Wheels is the reason I decided to feature cars or other vehicles in all the drawing I did for [Inktober](../inktober).
 
 [gh]: https://github.com/agateau/tinywheels
-[tw]: /projects/tinywheels
+[tw]: /projects/pixelwheels
