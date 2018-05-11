@@ -19,56 +19,56 @@
 <script src="/static/jquery.colorbox-min.js"></script>
 <script>
 function onReady() {
-    $('a.image-reference').colorbox({rel:'gal', maxWidth:'100%', maxHeight:'100%'});
+  $('a.image-reference').colorbox({rel:'gal', maxWidth:'100%', maxHeight:'100%'});
 }
 $(document).ready(onReady);
 </script>
 </head>
 <body>
 <header>
-    <div class="search-full">
-        <form action="https://duckduckgo.com">
-            <input type="hidden" name="sites" value="agateau.com">
-            <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
-        </form>
-    </div>
-    <div class="sleeve">
-        <h1><a href="/">Aurélien Gâteau</a></h1>
-        <nav>
-            <ul>
-                <li><a href="/apps/">Apps</a></li>
-                <li><a href="/games/">Games</a></li>
-                <li><a href="/archive/">Archive</a></li>
-                <!--
-                <li><a href="/article-series/">Article Series</a></li>
-                <li><a href="/talks/">Talks</a></li>
-                -->
-                <li><a href="/tags/">Tags</a></li>
-                <li><a href="/about-me/">About</a></li>
-            </ul>
-        </nav>
-    </div>
+  <div class="search-full">
+    <form action="https://duckduckgo.com">
+      <input type="hidden" name="sites" value="agateau.com">
+      <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
+    </form>
+  </div>
+  <div class="sleeve">
+    <h1><a href="/">Aurélien Gâteau</a></h1>
+    <nav>
+      <ul>
+        <li><a href="/apps/">Apps</a></li>
+        <li><a href="/games/">Games</a></li>
+        <li><a href="/archive/">Archive</a></li>
+        <!--
+        <li><a href="/article-series/">Article Series</a></li>
+        <li><a href="/talks/">Talks</a></li>
+        -->
+        <li><a href="/tags/">Tags</a></li>
+        <li><a href="/about-me/">About</a></li>
+      </ul>
+    </nav>
+  </div>
 </header>
 
 <div class="search-small">
-    <div class="sleeve">
-        <form action="https://duckduckgo.com">
-            <input type="hidden" name="sites" value="agateau.com">
-            <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
-        </form>
-    </div>
+  <div class="sleeve">
+    <form action="https://duckduckgo.com">
+      <input type="hidden" name="sites" value="agateau.com">
+      <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
+    </form>
+  </div>
 </div>
 
 <div class="sleeve">
-    <div class="body">
-        {% block body %}{% endblock %}
-    </div>
-    <footer>
-        <ul>
-            <li>Follow me on <a href="https://mastodon.xyz/@agateau">Mastodon</a> or <a href="https://twitter.com/aureliengateau">Twitter</a></li>
-            <li><a href="/feed">Feed</a></li>
-        </ul>
-    </footer>
+  <div class="body">
+    {% block body %}{% endblock %}
+  </div>
+  <footer>
+    <ul>
+      <li>Follow me on <a href="https://mastodon.xyz/@agateau">Mastodon</a> or <a href="https://twitter.com/aureliengateau">Twitter</a></li>
+      <li><a href="/feed">Feed</a></li>
+    </ul>
+  </footer>
 </div>
 
 </body>
