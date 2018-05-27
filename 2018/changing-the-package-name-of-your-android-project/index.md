@@ -13,4 +13,4 @@ It turns out Google Play does not check the Java package name, but the Android a
 
 [rename]: /2018/tinywheels-0-5-0
 [android-suffix]: https://github.com/libgdx/libgdx/commit/816cc0cda01ff5260fcec39e166dcc6cf79dcc3a
-[pw-applicationId]: https://github.com/agateau/pixelwheels/blob/master/android/build.gradle#L5
+[pw-applicationId]: https://github.com/agateau/pixelwheels/blob/8e00148cdd99fa14b8d5104f55fb4f8a0a065f51/android/build.gradle#L5
