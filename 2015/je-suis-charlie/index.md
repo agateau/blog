@@ -1,6 +1,6 @@
 pub_date: 2015-01-07 23:49:31 +01:00
 public: true
-tags: [Charlie]
+tags: [charlie]
 title: "Je suis Charlie"
 summary: |
     I usually do not write about politics, but this evening I am going to make an exception.

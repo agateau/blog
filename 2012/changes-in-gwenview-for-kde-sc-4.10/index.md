@@ -1,6 +1,6 @@
 pub_date: 2012-12-04 23:50:12 +01:00
 public: true
-tags: [Gwenview, KDE]
+tags: [gwenview, kde]
 title: Changes in Gwenview for KDE SC 4.10
 summary: |
     Quite a few changes has been done to Gwenview in KDE SC 4.10. Find out about them.

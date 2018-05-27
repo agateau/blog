@@ -1,6 +1,6 @@
 pub_date: 2017-05-07 09:35:41 +01:00
 public: true
-tags: [DIY, Coffee, Krups]
+tags: [diy, coffee, krups]
 title: Fixing my coffee machine
 summary: |
     Fixing a coffee machine can be harder than it should be.

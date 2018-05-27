@@ -1,6 +1,6 @@
 pub_date: 2012-11-26 17:40:05 +01:00
 public: true
-tags: [KDE, Akademy, Krita, Plasma, Homerun, Calligra]
+tags: [kde, akademy, krita, plasma, homerun, calligra]
 title: Akademy-fr 2012
 summary: |
     Wrap-up of the 2012 edition of Akademy-fr, a french KDE event

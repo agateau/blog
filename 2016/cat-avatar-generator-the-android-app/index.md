@@ -1,6 +1,6 @@
 pub_date: 2016-12-10 19:02:26 +01:00
 public: true
-tags: [Android, Cat, Avatar, Pepper&Carrot, puc, pko]
+tags: [android, cat, avatar, pepper&carrot, puc, pko]
 title: Cat Avatar Generator, the Android app!
 summary: |
     I built an Android version of David Revoy cat avator generator.

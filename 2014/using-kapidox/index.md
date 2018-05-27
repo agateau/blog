@@ -1,6 +1,6 @@
 pub_date: 2014-05-26 18:07:02 +02:00
 public: true
-tags: [KDE, KF5, Doxygen, KApidox]
+tags: [kde, kf5, doxygen, kapidox]
 title: "Using KApidox"
 summary: |
     How to use KApidox to generate documentation for the KDE Frameworks

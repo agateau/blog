@@ -1,6 +1,6 @@
 pub_date: 2013-05-25 16:28:57 +02:00
 public: true
-tags: [KDE, Solutions Linux]
+tags: [kde, solutions linux]
 title: "Solutions Linux and KDE Paris Dinner"
 summary: |
     Next week is Solutions Linux, a yearly Linux exhibition in Paris. As usual,

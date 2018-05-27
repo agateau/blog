@@ -1,6 +1,6 @@
 pub_date: 2015-12-05 11:19:36 +01:00
 public: true
-tags: [Git, Tips]
+tags: [git, tips]
 title: "Includes in your git config"
 summary: |
     Using includes to split your git configuration.

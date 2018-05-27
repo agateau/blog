@@ -1,6 +1,6 @@
 public: no
 pub_date: 2017-03-04 12:22:00 +01:00
-tags: [nginx, WSGI, Flask, Howto]
+tags: [nginx, wsgi, flask, howto]
 title: "nginx + WSGI + Flask"
 disqus: false
 

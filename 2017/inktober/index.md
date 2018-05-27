@@ -1,6 +1,6 @@
 pub_date: 2017-11-02 21:35:41 +01:00
 public: yes
-tags: [Drawing, Inktober]
+tags: [drawing, inktober]
 title: Inktober 2017
 summary: |
     Last month I participated to Inktober.

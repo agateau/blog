@@ -1,6 +1,6 @@
 pub_date: 2013-11-26 22:46:59 +01:00
 public: true
-tags: [Akademy-fr, presentation, tools]
+tags: [akademy-fr, presentation, tools]
 title: "On presentation tools"
 summary: |
     The challenges of choosing a geek-friendly presentation tool...

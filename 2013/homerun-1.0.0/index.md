@@ -1,6 +1,6 @@
 pub_date: 2013-05-22 16:20:03 +02:00
 public: true
-tags: [KDE, Homerun]
+tags: [kde, homerun]
 title: "Homerun 1.0.0!"
 summary: |
     Releasing Homerun 1.0.0, and passing maintainance over

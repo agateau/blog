@@ -1,6 +1,6 @@
 pub_date: 2017-06-19 19:27:26 +01:00
 public: true
-tags: [KDE, pko, KRuler]
+tags: [kde, pko, kruler]
 title: Pimping KRuler
 summary: |
     I spent some time improving KRuler, making it look a bit nicer.

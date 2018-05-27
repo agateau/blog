@@ -1,7 +1,7 @@
 title: "More Racing Experiments"
 public: true
 pub_date: 2015-02-12 23:29:21 +01:00
-tags: [Greenyetilab, race]
+tags: [greenyetilab, race]
 summary: Turning my endless-runner car game prototype into a proper racing game.
 
 I have been doing more experiments these days with my car game project. I decided to try out how it would feel to turn it into a "real" racing game with laps and positions rather than an endless runner.

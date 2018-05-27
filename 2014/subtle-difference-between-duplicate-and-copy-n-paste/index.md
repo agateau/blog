@@ -1,7 +1,7 @@
 title: "Subtle difference between Duplicate and Copy'n'Paste"
 public: true
 pub_date: 2014-12-19 21:57:05 +01:00
-tags: [Greenyetilab, Inkscape]
+tags: [greenyetilab, inkscape]
 summary: Things to know when duplicating Inkscape clones
 
 

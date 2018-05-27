@@ -1,6 +1,6 @@
 pub_date: 2018-05-27 20:08:26 +01:00
 public: true
-tags: [pixelwheels, Android, dev]
+tags: [pixelwheels, android, dev]
 title: Changing the package name of your Android project
 
 So you want to change the Java package name of your Android project, but you've heard that you won't be able to push updates to Google Play if you do so? That's almost true.

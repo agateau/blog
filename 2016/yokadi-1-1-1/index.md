@@ -1,6 +1,6 @@
 pub_date: 2016-11-14 08:01:17 +01:00
 public: true
-tags: [Yokadi]
+tags: [yokadi]
 title: Yokadi 1.1.1
 summary: |
     Here is the first bug fix release of Yokadi 1.1

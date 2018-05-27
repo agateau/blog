@@ -1,5 +1,5 @@
 public: false
-tags: [games, Amiga, AMOS]
+tags: [games, amiga, amos]
 title: "Plouf!"
 disqus: false
 

@@ -1,7 +1,7 @@
 title: Burger Party 0.4 is out
 public: true
 pub_date: 2013-10-04 22:30:00 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 [![Create your own burger](thumb-create-own-burger.png)](create-own-burger.png)

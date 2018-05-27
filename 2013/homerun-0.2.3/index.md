@@ -1,6 +1,6 @@
 pub_date: 2013-05-07 14:32:09 +02:00
 public: true
-tags: [Homerun, KDE]
+tags: [homerun, kde]
 title: "Homerun 0.2.3"
 summary: |
     Another bug fix release of Homerun, with a few fixes and more translations

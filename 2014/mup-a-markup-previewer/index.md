@@ -1,6 +1,6 @@
 pub_date: 2014-12-31 16:19:49 +01:00
 public: true
-tags: [MUP, Markup, Qt, Python, Markdown]
+tags: [mup, markup, qt, python, markdown]
 title: "MUP, a Markup Previewer"
 summary: |
     Introducing another side-project of mine: MUP

@@ -1,6 +1,6 @@
 pub_date: 2016-09-16 23:17:51 +01:00
 public: true
-tags: [Tig, Git, Tips]
+tags: [tig, git, tips]
 title: "Starting an interactive rebase from Tig"
 summary: |
     A handy configuration tip to be able to start an interactive git rebase from Tig.

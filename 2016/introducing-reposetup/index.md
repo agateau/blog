@@ -1,6 +1,6 @@
 pub_date: 2016-04-11 22:03:58 +01:00
 public: true
-tags: [Git, Hosting, Apache, Reposetup]
+tags: [git, hosting, apache, reposetup]
 title: Introducing Reposetup
 summary: |
     A minimalist tool to manage hosted Git repositories

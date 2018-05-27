@@ -1,6 +1,6 @@
 pub_date: 2013-08-16 23:59:47 +02:00
 public: true
-tags: [KDE, Git, tips, "Review Board"]
+tags: [kde, git, tips, "review board"]
 title: "reviewboard-am, applying patches from ReviewBoard made easy"
 summary: |
     Presentation of a little tool I wrote to simplify the task of applying a patch posted on KDE ReviewBoard.

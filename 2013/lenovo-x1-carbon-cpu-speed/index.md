@@ -1,6 +1,6 @@
 pub_date: 2013-09-13 18:28:56 +02:00
 public: true
-tags: [Lenovo, Tips, Power management]
+tags: [lenovo, tips, power management]
 title: "Running the Lenovo X1 Carbon at full speed when compiling"
 summary: |
     Describes some tweaks I had to make to get my laptop to run at full speed when compiling.

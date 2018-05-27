@@ -1,6 +1,6 @@
 pub_date: 2016-03-19 00:00:00 +01:00
 public: true
-tags: [Kubuntu, HP]
+tags: [kubuntu, hp]
 title: Installing Kubuntu 15.10 on a HP Pavilion X360
 summary: |
     Overcoming the bumps one face when installing Kubuntu 15.10 on some semi-recent piece of hardware.

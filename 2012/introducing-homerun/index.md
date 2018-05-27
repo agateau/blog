@@ -1,6 +1,6 @@
 pub_date: 2012-11-14 17:37:30 +01:00
 public: true
-tags: [KDE, Plasma, Homerun, launcher, QML]
+tags: [kde, plasma, homerun, launcher, qml]
 title: Introducing Homerun
 summary: |
     Introducing Homerun, a fullscreen launcher for the KDE Plasma Desktop.

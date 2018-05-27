@@ -1,6 +1,6 @@
 pub_date: 2016-06-05 12:46:06 +01:00
 public: true
-tags: [Qt, MUP]
+tags: [qt, mup]
 title: Refreshing MUP
 summary: |
     Updating what's under the hood of MUP.

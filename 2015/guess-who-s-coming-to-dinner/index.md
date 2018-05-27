@@ -1,7 +1,7 @@
 title: "Guess who's coming to dinner"
 public: true
 pub_date: 2015-01-05 10:22:25 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 summary: A new customer for the Japan world of Burger Party.
 
 

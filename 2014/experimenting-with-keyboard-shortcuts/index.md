@@ -1,6 +1,6 @@
 pub_date: 2014-09-28 20:09:04 +02:00
 public: true
-tags: [KDE, shortcuts, UI]
+tags: [kde, shortcuts, ui]
 title: "Experimenting with keyboard shortcuts"
 summary: |
     My new keyboard shortcut setup is a bit unusual, here is what it looks like.

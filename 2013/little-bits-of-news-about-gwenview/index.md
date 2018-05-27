@@ -1,6 +1,6 @@
 pub_date: 2013-01-31 23:07:59 +01:00
 public: true
-tags: [Gwenview, KDE]
+tags: [gwenview, kde]
 title: "Little bits of news about Gwenview"
 summary: |
     A short update on latest changes happening in Gwenview project

@@ -1,6 +1,6 @@
 pub_date: 2014-04-30 10:26:20 +02:00
 public: true
-tags: [KDE, KF5, KApidox]
+tags: [kde, kf5, kapidox]
 title: "Back from the KDE Frameworks Sprint"
 summary: |
     Moving around sticky notes in Barcelona...

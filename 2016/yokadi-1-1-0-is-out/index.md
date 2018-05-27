@@ -1,6 +1,6 @@
 pub_date: 2016-09-04 11:27:09 +01:00
 public: true
-tags: [Yokadi]
+tags: [yokadi]
 title: Yokadi 1.1.0 is out
 summary: |
     A new version of Yokadi has been released.

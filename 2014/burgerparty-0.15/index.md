@@ -1,7 +1,7 @@
 title: "Burger Party 0.15, small tweaks here and there"
 public: true
 pub_date: 2014-05-10 23:56:16 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 Another new version of Burger Party. Version 0.15 brings a few small tweaks, nothing major. Here is what's new:

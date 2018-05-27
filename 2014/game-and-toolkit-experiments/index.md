@@ -1,7 +1,7 @@
 title: "Game and Toolkit Experiments"
 public: true
 pub_date: 2014-11-27 09:30:35 +01:00
-tags: [Greenyetilab, ]
+tags: [greenyetilab, ]
 summary: Taking a break from Burger Party marketing, I decided to do some experiments to decide what my next game will be and what tools I will use to build it.
 
 

@@ -1,6 +1,6 @@
 pub_date: 2014-08-07 08:52:14 +02:00
 public: false
-tags: [Life, KDE]
+tags: [life, kde]
 title: "Be careful what you wish for"
 summary: |
     On the perils of getting what you think is your dream job

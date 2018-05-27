@@ -1,6 +1,6 @@
 pub_date: 2016-08-26 20:07:28 +01:00
 public: true
-tags: [Qt, Colorpick]
+tags: [qt, colorpick]
 title: Qt 5 based Colorpick
 summary: |
     Colorpick has been ported to Qt 5.

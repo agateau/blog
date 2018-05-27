@@ -1,6 +1,6 @@
 pub_date: 2015-03-24 23:00:09 +01:00
 public: true
-tags: [Docutils, Sphinx, rst, Python]
+tags: [docutils, sphinx, rst, python]
 title: "Docutils Snippets"
 summary: |
     Some notes and examples of Docutils API usage.

@@ -1,6 +1,6 @@
 pub_date: 2015-12-20 21:31:01 +01:00
 public: true
-tags: [Qt, Tips]
+tags: [qt, tips]
 title: QDir::Separator considered harmful
 summary: |
     Why you should not use QDir::Separator, even for cross-platform code

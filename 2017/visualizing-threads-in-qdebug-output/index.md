@@ -1,6 +1,6 @@
 pub_date: 2017-03-05 23:41:57 +01:00
 public: true
-tags: [Qt, threads, tip, Synesthesia, debug, pko]
+tags: [qt, threads, tip, synesthesia, debug, pko]
 title: Visualizing threads in QDebug output
 summary: |
     How to combine a terminal colorizer and QDebug to visualize thread activity in your Qt application.

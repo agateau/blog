@@ -1,7 +1,7 @@
 title: "Site Redesign"
 public: true
 pub_date: 2015-06-23 08:21:24 +01:00
-tags: [Greenyetilab, ]
+tags: [greenyetilab, ]
 og_image:
 summary: Green Yeti Lab site has been redesigned.
 

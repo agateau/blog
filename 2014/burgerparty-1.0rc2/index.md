@@ -1,7 +1,7 @@
 title: "Burger Party 1.0rc2!"
 public: true
 pub_date: 2014-09-11 22:40:22 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 Shortly after [1.0rc1](/2014/burgerparty-1.0rc1), here is Burger Party 1.0rc2. This version comes with the following changes:

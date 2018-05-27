@@ -1,7 +1,7 @@
 pub_date: 2015-09-15 19:02:23 +02:00
 ﻿pub_date: 2015-05-28 22:18:25 +02:00
 public: true
-tags: [Qt, QML]
+tags: [qt, qml]
 title: "Any Object Left Without a Parent Will Be Destroyed"
 summary: |
     Story of a tricky bug with QML I encountered at work.

@@ -1,6 +1,6 @@
 pub_date: 2014-11-02 12:30:49 +01:00
 public: true
-tags: [Gwenview, KDE]
+tags: [gwenview, kde]
 title: "Habemus Maintainer!"
 summary: |
     I am passing over maintainership of Gwenview.

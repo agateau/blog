@@ -1,6 +1,6 @@
 pub_date: 2013-02-27 17:47:41 +01:00
 public: true
-tags: [KDE, Homerun]
+tags: [kde, homerun]
 title: "Homerun 0.2.1 released"
 summary: |
     Homerun 0.2.1 brings a few new features, like "Single runner query mode" KRunner support and support for multiple actions per result item

@@ -1,6 +1,6 @@
 pub_date: 2015-02-04 23:22:17 +01:00
 public: true
-tags: [React, QML, JavaScript]
+tags: [react, qml, javascript]
 title: "Learn Once, Write Anywhere"
 summary: |
     React, a JavaScript web library, comes to "native"

@@ -1,6 +1,6 @@
 pub_date: 2013-04-11 18:02:02 +02:00
 public: true
-tags: [KDE, Kubuntu, Ubiquity]
+tags: [kde, kubuntu, ubiquity]
 title: "Hacking on Ubiquity"
 summary: |
     I worked a bit on Ubiquity, the Kubuntu Installer. This article presents some of the changes I made.

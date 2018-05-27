@@ -1,6 +1,6 @@
 pub_date: 2017-01-22 17:42:24 +01:00
 public: true
-tags: [Yokadi, Tips]
+tags: [yokadi, tips]
 title: Due task reminder in your prompt
 summary: |
     Showing the number of tasks due in your prompt.

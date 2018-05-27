@@ -1,6 +1,6 @@
 pub_date: 2016-05-02 18:52:39 +01:00
 public: true
-tags: [Qt, QML, Drag'n'drop]
+tags: [qt, qml, drag'n'drop]
 title: Reordering a Qt Quick ListView via drag'n'drop - part 2
 summary: |
     Let users scroll our ListView by dragging items.

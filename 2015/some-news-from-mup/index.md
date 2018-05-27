@@ -1,6 +1,6 @@
 pub_date: 2015-05-06 22:30:51 +02:00
 public: true
-tags: [MUP]
+tags: [mup]
 title: "Some News From MUP"
 summary: |
     A quick update of the changes which have been made in MUP since the last time I wrote about it.

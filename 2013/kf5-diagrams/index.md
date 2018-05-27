@@ -1,6 +1,6 @@
 pub_date: 2013-12-05 14:46:35 +01:00
 public: true
-tags: [KDE, Python, CMake, Graphviz]
+tags: [kde, python, cmake, graphviz]
 title: "Dependency diagrams for KDE Frameworks 5"
 summary: |
     Generating fancy diagrams for KDE Frameworks using CMake, Graphviz and Python.

@@ -1,6 +1,6 @@
 pub_date: 2016-02-19 22:58:01 +01:00
 public: true
-tags: [GitHub, Opinion, Git, Hosting]
+tags: [github, opinion, git, hosting]
 title: GitHub lock-in?
 summary: |
     Some thoughts on the recent buzz around GitHub and why I think GitHub may not be as evil as some like to say.

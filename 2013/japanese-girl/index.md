@@ -1,7 +1,7 @@
 title: Japanese Girl
 public: true
 pub_date: 2013-12-16 21:24:00 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 This weekend I drew a new customer for the Japan world of Burger Party: a Japanese girl in traditional costume.

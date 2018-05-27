@@ -1,6 +1,6 @@
 pub_date: 2013-12-12 18:00:25 +01:00
 public: true
-tags: [KDE, Gwenview]
+tags: [kde, gwenview]
 title: "What's new in Gwenview 4.12?"
 summary: |
     A (short) summary of the changes in Gwenview 4.12

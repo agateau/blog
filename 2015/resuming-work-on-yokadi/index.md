@@ -1,6 +1,6 @@
 pub_date: 2015-11-27 22:36:15 +01:00
 public: true
-tags: [Yokadi]
+tags: [yokadi]
 title: "Resuming work on Yokadi"
 summary: |
     After a long period of inactivity, we are back working on Yokadi.

@@ -1,7 +1,7 @@
 title: "Burger Party 0.14"
 public: true
 pub_date: 2014-04-19 11:03:18 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 Here is Burger Party 0.14. No ground-breaking changes in this new version, except for the fact worlds now contain 12 levels again. I made this change because I want to add more items, but I don't want every level to unlock a new item: one should not spoil players :).

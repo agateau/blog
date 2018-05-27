@@ -1,6 +1,6 @@
 pub_date: 2018-03-30 21:43:30 +01:00
 public: true
-tags: [CMake, pko]
+tags: [cmake, pko]
 title: CMakeDoc
 
 CMake reference documentation is built inside the `cmake` binary itself, accessible through `--help-*` options. This is useful, but not really practical: you have to remember the exact command name, and pipe the output to a pager. I wanted something more user (or developer) friendly.

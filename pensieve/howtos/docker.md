@@ -1,6 +1,6 @@
 public: no
 pub_date: 2017-11-02 21:35:41 +01:00
-tags: [Howto, Docker]
+tags: [howto, docker]
 title: "Docker howto"
 disqus: false
 

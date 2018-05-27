@@ -1,7 +1,7 @@
 title: "Burger Party 1.0rc1, We Are Getting There!"
 public: true
 pub_date: 2014-09-01 23:36:28 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 This new release of Burger Party is special: as you guessed from the title of this article, its version number is not 0.17 but 1.0rc1.

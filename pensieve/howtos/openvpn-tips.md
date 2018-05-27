@@ -1,6 +1,6 @@
 public: no
 pub_date: 2014-12-10 17:44:00 +01:00
-tags: [OpenVPN, Howto]
+tags: [openvpn, howto]
 title: "OpenVPN tips"
 disqus: false
 

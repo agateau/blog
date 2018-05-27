@@ -1,6 +1,6 @@
 pub_date: 2016-05-08 22:00:09 +01:00
 public: true
-tags: [Qt, QML, Drag'n'drop]
+tags: [qt, qml, drag'n'drop]
 title: Reordering a Qt Quick ListView via drag'n'drop - part 3
 summary: |
     Make it easier for users to see where a dragged item is going to land.

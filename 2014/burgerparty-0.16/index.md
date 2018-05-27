@@ -1,7 +1,7 @@
 title: "Burger Party 0.16!"
 public: true
 pub_date: 2014-07-13 17:41:17 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 Finally, a new release! This one comes packed with some substantial changes:

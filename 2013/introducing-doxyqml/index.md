@@ -1,6 +1,6 @@
 pub_date: 2013-01-14 22:15:54 +01:00
 public: true
-tags: [QML, Doxygen, Python, Doxyqml]
+tags: [qml, doxygen, python, doxyqml]
 title: Introducing Doxyqml
 summary: This article presents Doxyqml, a tool which makes it possible to document QML classes with Doxygen.
 

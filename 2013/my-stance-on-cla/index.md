@@ -1,6 +1,6 @@
 pub_date: 2013-10-29 16:54:12 +01:00
 public: true
-tags: [Canonical, Qt, Digia, CLA]
+tags: [canonical, qt, digia, cla]
 title: "My stance on Canonical CLA"
 summary: |
     My position regarding Contributor License Agreements in general, and

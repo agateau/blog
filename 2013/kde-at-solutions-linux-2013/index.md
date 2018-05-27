@@ -1,6 +1,6 @@
 pub_date: 2013-06-05 11:48:31 +02:00
 public: true
-tags: [KDE, Solutions Linux]
+tags: [kde, solutions linux]
 title: "KDE at Solutions Linux 2013"
 summary: Spreading KDE awesomeness at Solutions Linux 2013.
 

@@ -1,6 +1,6 @@
 pub_date: 2014-02-11 15:12:01 +01:00
 public: true
-tags: [Doxyqml, QML, Qt, Doxygen]
+tags: [doxyqml, qml, qt, doxygen]
 title: "Doxyqml 0.2.0"
 summary: |
     New release of Doxyqml, a tool to use Doxygen with QML code

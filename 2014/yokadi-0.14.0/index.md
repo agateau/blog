@@ -1,6 +1,6 @@
 pub_date: 2014-05-11 20:22:42 +02:00
 public: true
-tags: [Yokadi]
+tags: [yokadi]
 title: "Yokadi 0.14.0"
 summary: |
     After way too long, last week we released a new version of Yokadi.

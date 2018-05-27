@@ -1,6 +1,6 @@
 pub_date: 2013-03-27 18:03:02 +01:00
 public: true
-tags: [KDE, Dolphin, debug]
+tags: [kde, dolphin, debug]
 title: "Fixing a subtle animation bug in Dolphin"
 summary: |
     Describes the process and debugging techniques I used to track down and fix a bug in the animation played when the user moves the mouse over file icons in Dolphin

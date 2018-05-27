@@ -1,6 +1,6 @@
 pub_date: 2013-08-01 23:53:54 +02:00
 public: true
-tags: [Lenovo, Tips, Xmodmap]
+tags: [lenovo, tips, xmodmap]
 title: "Remapping keyboard keys on Lenovo Laptops"
 summary: |
     Latest Lenovo laptops are great, but their keyboard layout suffer from a very annoying flaw.

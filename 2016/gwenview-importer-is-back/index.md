@@ -1,6 +1,6 @@
 pub_date: 2016-11-24 07:50:27 +01:00
 public: true
-tags: [Gwenview, KDE, KF5]
+tags: [gwenview, kde, kf5]
 title: Gwenview Importer is back
 summary: |
     Ported Gwenview Importer to KDE Frameworks 5.

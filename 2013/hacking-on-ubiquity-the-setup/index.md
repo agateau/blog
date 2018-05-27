@@ -1,6 +1,6 @@
 pub_date: 2013-04-30 11:25:21 +02:00
 public: true
-tags: [KDE, Kubuntu, Ubiquity]
+tags: [kde, kubuntu, ubiquity]
 title: "Hacking on Ubiquity, the setup"
 summary: |
     How I setup my system to work on Ubiquity, the Kubuntu installer

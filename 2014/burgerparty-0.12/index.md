@@ -1,7 +1,7 @@
 title: "Burger Party 0.12: Good Bye Mini-Games, Hello Achievements!"
 public: true
 pub_date: 2014-03-16 21:13:00 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 Time for a new release of Burger Party. In this version I made the difficult decision to remove the mini-games. The reason behind this is I was worried it would take way too long to get them to a level of quality I consider good enough for a public release.

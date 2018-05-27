@@ -1,6 +1,6 @@
 pub_date: 2013-03-18 23:57:45 +01:00
 public: true
-tags: [KDE, Mir, BurgerParty]
+tags: [kde, mir, burgerparty]
 title: "Holidays, Mir and... burgers"
 summary: Finding a coding distraction when free software news are depressing
     

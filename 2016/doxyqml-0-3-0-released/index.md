@@ -1,6 +1,6 @@
 pub_date: 2016-06-20 18:59:54 +01:00
 public: true
-tags: [Doxyqml, Qt, QML, Doxygen]
+tags: [doxyqml, qt, qml, doxygen]
 title: Doxyqml 0.3.0 released
 summary: |
     A new version of Doxyqml is out.

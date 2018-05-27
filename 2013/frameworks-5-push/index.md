@@ -1,6 +1,6 @@
 pub_date: 2013-08-12 21:45:47 +02:00
 public: true
-tags: [KDE, KF5, Blue Systems]
+tags: [kde, kf5, blue systems]
 title: "Frameworks 5 Push"
 summary: |
     Blue Systems is running a three month push on KDE Frameworks 5.

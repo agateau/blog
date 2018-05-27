@@ -1,6 +1,6 @@
 pub_date: 2015-12-12 01:37:21 +01:00
 public: true
-tags: [Python, Yokadi]
+tags: [python, yokadi]
 title: "Yokadi 1.0.1, Python packaging woes"
 summary: |
     Ranting about Python packaging.

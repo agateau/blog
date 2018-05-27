@@ -1,6 +1,6 @@
 pub_date: 2013-05-15 15:05:44 +02:00
 public: true
-tags: [KDE, Plasma, Colibri, notifications]
+tags: [kde, plasma, colibri, notifications]
 title: "Return of the bird, Colibri 0.3.0"
 summary: |
     Announcing a new release of Colibri, an alternative to KDE Plasma notifications

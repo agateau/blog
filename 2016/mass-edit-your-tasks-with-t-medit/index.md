@@ -1,6 +1,6 @@
 pub_date: 2016-05-28 00:02:40 +01:00
 public: true
-tags: [Yokadi]
+tags: [yokadi]
 title: Mass edit your tasks with t_medit
 summary: |
     t_medit, a new command for Yokadi to quickly edit multiple tasks.

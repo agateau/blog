@@ -1,7 +1,7 @@
 title: Wrestler v2
 public: true
 pub_date: 2013-11-07 16:20:00 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 Burger Party needed a "boss" for the last level of the US world. After some

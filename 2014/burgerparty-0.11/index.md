@@ -1,7 +1,7 @@
 title: Burger Party 0.11
 public: true
 pub_date: 2014-02-13 23:13:00 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 ## Meh, ads

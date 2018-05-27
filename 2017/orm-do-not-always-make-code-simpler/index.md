@@ -1,5 +1,5 @@
 public: false
-tags: [Yokadi, ORM, SQL, SQLAlchemy]
+tags: [yokadi, orm, sql, sqlalchemy]
 title: ORM do not always make code simpler
 summary: |
     How Yokadi ORM got in the way and made code more complicated than expected.

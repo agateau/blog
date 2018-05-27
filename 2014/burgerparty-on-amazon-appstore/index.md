@@ -1,7 +1,7 @@
 title: "Burger Party on Amazon Appstore"
 public: true
 pub_date: 2014-10-01 22:31:30 +01:00
-tags: [Greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty]
 
 
 Do you own an Amazon tablet or phone? Then I am happy to let you know Burger Party is now available on Amazon Appstore!

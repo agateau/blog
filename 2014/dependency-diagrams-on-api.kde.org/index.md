@@ -1,6 +1,6 @@
 pub_date: 2014-03-01 22:40:13 +01:00
 public: true
-tags: [KDE, KF5, Graphviz, CMake]
+tags: [kde, kf5, graphviz, cmake]
 title: "Dependency diagrams on api.kde.org!"
 summary: |
     Dependency diagrams are now automatically generated on api.kde.org.

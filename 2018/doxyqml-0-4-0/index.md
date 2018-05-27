@@ -1,6 +1,6 @@
 pub_date: 2018-05-19 19:48:36 +01:00
 public: true
-tags: [Doxyqml, Qt, QML, Doxygen, pko]
+tags: [doxyqml, qt, qml, doxygen, pko]
 title: Doxyqml 0.4.0
 
 After almost two years, here comes a new version of [Doxyqml](/projects/doxyqml), the QML filter for Doxygen. This new version adds a new command-line option: `--namespace` to wrap the generated C++ in a namespace, and makes the parser more robust. Nothing ground-breaking, but some nice changes nevertheless.

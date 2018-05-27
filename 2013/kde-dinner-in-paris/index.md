@@ -1,6 +1,6 @@
 pub_date: 2013-02-10 01:00:31 +01:00
 public: true
-tags: [KDE, Paris, Dinner]
+tags: [kde, paris, dinner]
 title: "KDE Dinner in Paris"
 summary: |
     Setting up the first KDE Dinner in Paris to celebrate the release of KDE SC 4.10

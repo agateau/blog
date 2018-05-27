@@ -1,6 +1,6 @@
 pub_date: 2016-03-28 16:59:35 +01:00
 public: true
-tags: [Yokadi]
+tags: [yokadi]
 title: Yokadi 1.0.2
 summary: |
     Released a new bug fix version of Yokadi.

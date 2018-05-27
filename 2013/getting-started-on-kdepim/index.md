@@ -1,6 +1,6 @@
 pub_date: 2013-06-20 17:31:14 +02:00
 public: true
-tags: [KDE, KDEPIM]
+tags: [kde, kdepim]
 title: "Getting started on KDEPIM"
 summary: |
     A short summary of the work I have been doing so far on KDEPIM

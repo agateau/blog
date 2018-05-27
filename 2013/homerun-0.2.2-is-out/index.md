@@ -1,6 +1,6 @@
 pub_date: 2013-04-23 00:20:11 +02:00
 public: true
-tags: [Homerun, KDE]
+tags: [homerun, kde]
 title: "Homerun 0.2.2 is out"
 summary: |
     A new version of Homerun has been released, featuring one fix and translations

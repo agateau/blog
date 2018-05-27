@@ -1,7 +1,7 @@
 title: "Welcoming Tiny Wheels!"
 public: true
 pub_date: 2015-05-12 22:46:42 +01:00
-tags: [Greenyetilab, pixelwheels]
+tags: [greenyetilab, pixelwheels]
 og_image:
 summary: Finally found a name for this racing game!
 

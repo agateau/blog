@@ -1,6 +1,6 @@
 pub_date: 2013-11-15 10:48:01 +01:00
 public: true
-tags: [fr.kde.org, KDE, Akademy-fr]
+tags: [fr.kde.org, kde, akademy-fr]
 title: "fr.kde.org, Akademy-fr at Capitole du Libre"
 summary: |
     fr.kde.org is back, just in time for Akademy-fr

@@ -1,6 +1,6 @@
 pub_date: 2014-06-04 18:54:24 +02:00
 public: true
-tags: [Shell, Tips]
+tags: [shell, tips]
 title: "A template for shell-based command-line scripts"
 summary: |
     A handy template to make your command-line shell scripts more comfortable

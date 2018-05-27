@@ -1,6 +1,6 @@
 pub_date: 2014-11-26 18:36:38 +01:00
 public: true
-tags: [KDE, side-projects, Colorpick]
+tags: [kde, side-projects, colorpick]
 title: "Colorpick"
 summary: |
     Introducing one of my many-side projects: Colorpick

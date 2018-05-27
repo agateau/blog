@@ -1,6 +1,6 @@
 pub_date: 2013-07-10 00:04:53 +02:00
 public: true
-tags: [KDE, Akregator, KDEPIM]
+tags: [kde, akregator, kdepim]
 title: "Fixing my Akregator morning routine"
 summary: |
     How my morning routine brought me to do a few Akregator fixes.
