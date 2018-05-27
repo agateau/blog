@@ -7,6 +7,8 @@ OUT_GIT_DIR=$$HOME/www/blog-out
 
 STORAGE_DIR=storage
 
+MAX_DELETE=10
+
 include config.mk
 
 clean:
@@ -44,7 +46,7 @@ pull-out-dir:
 
 rsync-to-out-dir:
 	@echo "== Rsyncing changes to out dir =="
-	rsync -av --delete --max-delete=10 --exclude '.git' --exclude $(STORAGE_DIR) \
+	rsync -av --delete --max-delete=$(MAX_DELETE) --exclude '.git' --exclude $(STORAGE_DIR) \
 		$(BUILD_DIR)/ $(OUT_GIT_DIR)
 
 commit-out-dir:
