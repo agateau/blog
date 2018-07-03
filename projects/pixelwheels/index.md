@@ -47,7 +47,7 @@ The game is far from finished, but you can already play with it.
 
 ### Pixel Wheels for PC (Linux, Mac, Windows)
 
-<a href="/storage/pixelwheels/pixelwheels-0.8.0.zip" class="dl-button">pixelwheels-0.8.0.zip</a>
+<a href="/storage/pixelwheels/pixelwheels-0.9.0.zip" class="dl-button">pixelwheels-0.9.0.zip</a>
 
 (Requires a Java runtime)
 
@@ -55,7 +55,7 @@ The game is far from finished, but you can already play with it.
 
 You can install Pixel Wheels from <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
 
-If you do not have access to Google Play, get the APK: <a href="/storage/pixelwheels/pixelwheels-0.8.0.apk" class="dl-button">pixelwheels-0.8.0.apk</a>
+If you do not have access to Google Play, get the APK: <a href="/storage/pixelwheels/pixelwheels-0.9.0.apk" class="dl-button">pixelwheels-0.9.0.apk</a>
 
 ### Source Code
 
