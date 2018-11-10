@@ -62,3 +62,21 @@ Deleting a container:
     docker image ls
 
     docker image rm
+
+## Cleanup
+
+Delete all stopped containers:
+
+    docker rm $(docker ps -a -q)
+
+Delete all untagged/dangling images:
+
+    docker image rm $(docker image ls -q -f dangling=true)
+
+Clean all orphaned volumes:
+
+    docker volume prune
+
+More violent:
+
+    docker system prune
