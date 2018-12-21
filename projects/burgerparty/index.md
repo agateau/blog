@@ -25,6 +25,10 @@ Burger Party is available on Google Play and Amazon Appstore for Android.
 </iframe>
 </p>
 
+## Source Code
+
+Burger Party source code is available on [GitHub](https://github.com/agateau/burgerparty).
+
 ## Gallery
 
 .. gallery::
