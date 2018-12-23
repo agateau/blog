@@ -66,7 +66,7 @@ To celebrate this release I created two T-shirts based on the game visuals:
 
 <div>
 <a href="https://www.redbubble.com/people/agateau/works/35854931-burger?p=triblend-tee"><img style="width: 30%; display: inline" src="/projects/burgerparty/tshirt-1.jpg"></a>
-<a href="https://www.redbubble.com/people/agateau/works/35854515-huge-burger?p=triblend-tee"><img style="max-width: 30%; display: inline" src="/projects/burgerparty/tshirt-2.jpg"></a>
+<a href="https://www.redbubble.com/people/agateau/works/35854515-huge-burger?p=triblend-tee"><img style="width: 30%; display: inline" src="/projects/burgerparty/tshirt-2.jpg"></a>
 </div>
 
 Who knows, maybe this can be more profitable than ads? It should not be too
