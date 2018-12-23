@@ -24,9 +24,9 @@ ad-based and proprietary. I kept telling myself I should remove the ads and
 release a new version of Burger Party as free software, but I never got around
 to do it...
 
-<!-- break -->
-
 ![Screenshot](/projects/burgerparty/1.0rc1/us-world.png)
+
+<!-- break -->
 
 Last week when I uploaded Pixel Wheels 0.11.0 to Google Play, I found out that
 Burger Party had been pulled out because it did not have a privacy policy and
