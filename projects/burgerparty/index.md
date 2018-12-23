@@ -9,21 +9,24 @@ Burger Party is an addictive burger game for Android.
 
 You just opened a burger restaurant, let's see if you can put together burgers fast enough to satisfy your ever growing number of customers! As you progress through the levels, unlock new items and visit new places!
 
-## Get it
-
-Burger Party is available on Google Play and Amazon Appstore for Android.
-
-<a name="get-it"></a>
-
-<a href="https://play.google.com/store/apps/details?id=com.agateau.burgerparty" alt="Available on Google Play"><img style="display: inline" src="/static/images/badge/google-play.png"></a>
-<a href="http://www.amazon.com/gp/product/B00O0ABQRW/ref=mas_pm_burger_party" alt="Available on Amazon"><img style="display: inline" src="/static/images/badge/amazon.png"></a>
-
 ## Launch Trailer
 
 <p class="center">
 <iframe width="480" height="320" src="//www.youtube.com/embed/u2ebyoaBFJg?rel=0" frameborder="0" allowfullscreen>
 </iframe>
 </p>
+
+## Get it
+
+Burger Party is available on Google Play for Android.
+
+<a name="get-it"></a>
+
+<a href="https://play.google.com/store/apps/details?id=com.agateau.burgerparty" alt="Available on Google Play"><img class="badge" src="/static/images/badge/google-play.png"></a>
+
+or as a direct apk download:
+
+<a href="/storage/burgerparty/burgerparty-1.3.0-gp.apk" class="dl-button">burgerparty-1.3.0-gp.apk</a>
 
 ## Source Code
 

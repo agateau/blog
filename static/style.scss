@@ -184,6 +184,12 @@ img, video {
     width: 100%;
 }
 
+img.badge {
+    width: auto;
+    display: inline;
+    margin: 0;
+}
+
 /*- Footer ---------------------------*/
 footer {
     padding-top: 42px;
