@@ -53,7 +53,7 @@ which I like a lot:
 </audio>
 
 The music was composed by one of my brothers. It was not that easy for him to
-produce, his normal style is [slightly][thomas1] [more][thomas2]
+produce, his band music is [slightly][thomas1] [more][thomas2]
 [aggressive][thomas3] :)
 
 [thomas1]: https://www.youtube.com/watch?v=ybRCS5xMQl8
