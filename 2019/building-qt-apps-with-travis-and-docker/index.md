@@ -87,7 +87,7 @@ install [qpropgen][] dependencies. This `requirements.txt` is in
 inside the `ci` directory), so I created a simple `ci/build-docker` script to
 build the Docker image:
 
-[qpropgen]: https://github.com/agateau/qpropgen.
+[qpropgen]: https://github.com/agateau/qpropgen
 
     #!/bin/sh
     set -ev
