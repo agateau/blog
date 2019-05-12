@@ -67,7 +67,7 @@ check-clean-tree:
 		git status -s ; \
 		echo -n "Commit all changes? [yN] " ; \
 		read answer ; \
-		if [ $$answer = "y" ] ; then \
+		if [ "$$answer" = "y" ] ; then \
 			git add . && git commit && $(MAKE) check-clean-tree ; \
 		else \
 			exit 1 ; \
@@ -81,7 +81,7 @@ check-need-push:
 		echo "master has $$nb commit(s) to push." \
 		echo -n "Push them? [yN] " ; \
 		read answer ; \
-		if [ $$answer = "y" ] ; then \
+		if [ "$$answer" = "y" ] ; then \
 			git push && $(MAKE) check-need-push ; \
 		else \
 			exit 1 ; \
