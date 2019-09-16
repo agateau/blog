@@ -1,6 +1,6 @@
 pub_date: 2018-12-16 20:30:24 +01:00
 public: true
-tags: [pixelwheels, release-month, pko]
+tags: [pixelwheels, release-month, pko, gamedev]
 title: Release month, Pixel Wheels 0.11.0
 
 Here is another release for the release month! This time it's a new release of

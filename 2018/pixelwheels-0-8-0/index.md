@@ -1,6 +1,6 @@
 pub_date: 2018-05-08 11:48:02 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Pixel Wheels 0.8.0, featuring championships!
 
 Time for a new release of Pixel Wheels!

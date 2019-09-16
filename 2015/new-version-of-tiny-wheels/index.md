@@ -1,7 +1,7 @@
 title: "New version of Tiny Wheels"
 public: true
 pub_date: 2015-07-17 08:39:16 +01:00
-tags: [greenyetilab, pixelwheels]
+tags: [greenyetilab, pixelwheels, gamedev]
 og_image:
 summary:
 

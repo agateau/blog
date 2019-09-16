@@ -1,7 +1,7 @@
 title: Burger Party 0.7
 public: true
 pub_date: 2013-12-09 10:14:00 +01:00
-tags: [greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty, gamedev]
 
 
 Here comes a new version of Burger Party! This new version comes with a few significant changes.

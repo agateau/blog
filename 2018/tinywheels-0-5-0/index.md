@@ -1,6 +1,6 @@
 pub_date: 2018-01-05 19:14:01 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Tiny Wheels 0.5.0, the last Tiny Wheels?
 
 Welcome to 2018! To celebrate this new year, here is a new release of Tiny Wheels!

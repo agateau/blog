@@ -1,6 +1,6 @@
 pub_date: 2019-08-12 23:31:41 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Pixel Wheels 0.13.0
 
 ## Fixes, fixes, fixes

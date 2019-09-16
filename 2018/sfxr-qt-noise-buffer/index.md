@@ -1,6 +1,6 @@
 pub_date: 2018-02-16 23:11:52 +01:00
 public: true
-tags: [sfxr-qt, sound, pko]
+tags: [sfxr-qt, sound, pko, gamedev]
 title: SFXR Qt noise buffer
 
 I was working on adding sounds to [Pixel Wheels][] rescue helicopter, so I started [SFXR Qt][] and after a few experiments I came up with a decent sound. Unfortunately it did not sound that good in the game. It was much more dull than in the app. Listening again to the sound in SFXR Qt I realized there were subtle variations between each plays, which made the sound more interesting.

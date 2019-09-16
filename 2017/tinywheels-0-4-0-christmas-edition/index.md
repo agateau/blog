@@ -1,6 +1,6 @@
 pub_date: 2017-12-03 21:56:09 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Tiny Wheels 0.4.0, Christmas Edition!
 
 We are getting close to Christmas, so I just released a new version of Tiny Wheels with a special vehicle, just for the occasion. Introducing... Santa truck!

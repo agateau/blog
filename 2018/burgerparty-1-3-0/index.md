@@ -1,6 +1,6 @@
 pub_date: 2018-12-23 11:29:33 +01:00
 public: true
-tags: [burgerparty, release-month, pko]
+tags: [burgerparty, release-month, pko, gamedev]
 title: Release month, Burger Party 1.3.0!
 
 Another weekend, another release! This one is special. You may remember a few

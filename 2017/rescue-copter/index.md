@@ -1,6 +1,6 @@
 pub_date: 2017-09-08 19:42:21 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Rescue copter
 summary: |
     Drawing the rescue helicopter in Tiny Wheels.

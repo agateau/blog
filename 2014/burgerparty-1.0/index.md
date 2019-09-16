@@ -1,7 +1,7 @@
 title: "Burger Party 1.0!"
 public: true
 pub_date: 2014-09-26 16:54:29 +01:00
-tags: [greenyetilab, ]
+tags: [greenyetilab, gamedev]
 
 
 It's release time!

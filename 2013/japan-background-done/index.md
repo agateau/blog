@@ -1,7 +1,7 @@
 title: Japan world background done
 public: true
 pub_date: 2013-11-18 22:31:00 +01:00
-tags: [greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty, gamedev]
 
 
 This weekend I redrew the background for the Japan world, based on my [previous

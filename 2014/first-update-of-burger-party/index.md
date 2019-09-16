@@ -1,7 +1,7 @@
 title: "First Update of Burger Party"
 public: true
 pub_date: 2014-11-01 22:13:39 +01:00
-tags: [greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty, gamedev]
 
 
 A little more than one month after the public release of Burger Party, here comes the first update. The main change of this version is the introduction of three difficulty modes:

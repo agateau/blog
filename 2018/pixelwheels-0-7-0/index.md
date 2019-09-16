@@ -1,6 +1,6 @@
 pub_date: 2018-04-02 22:18:42 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Pixel Wheels 0.7.0 is out!
 
 Due to holidays and not having much ready to publish, I did not make a release of Pixel Wheels for February, but here is 0.7.0, March release!

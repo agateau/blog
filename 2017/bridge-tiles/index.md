@@ -1,6 +1,6 @@
 pub_date: 2017-09-25 08:33:21 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Bridge tiles
 summary: |
     Drawing bridge tiles for Tiny Wheels.

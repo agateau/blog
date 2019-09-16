@@ -1,7 +1,7 @@
 title: "Going Retro"
 public: true
 pub_date: 2015-05-21 09:41:49 +01:00
-tags: [greenyetilab, pixelwheels]
+tags: [greenyetilab, pixelwheels, gamedev]
 summary: Deciding for a pixel art look for Tiny Wheels.
 
 I have been experimenting lately with a different art style for Tiny Wheels. Since the gameplay itself is quite old school, I decided to try pixel art graphics.

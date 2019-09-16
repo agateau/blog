@@ -1,6 +1,6 @@
 pub_date: 2013-01-22 22:49:59 +01:00
 public: true
-tags: [games, amiga, amos]
+tags: [games, amiga, amos, gamedev]
 title: "And now for something old... Plouf!"
 summary: |
     Bringing Plouf!, an Amiga game I wrote a long time ago, on the Internet

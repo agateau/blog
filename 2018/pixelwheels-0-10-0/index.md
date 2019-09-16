@@ -1,6 +1,6 @@
 pub_date: 2018-09-12 21:39:43 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Pixel Wheels 0.10.0!
 
 

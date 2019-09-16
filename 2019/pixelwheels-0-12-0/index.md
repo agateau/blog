@@ -1,6 +1,6 @@
 pub_date: 2019-06-20 18:54:40 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Pixel Wheels 0.12.0
 
 I knew it had been a long time since the last Pixel Wheels release but I was surprised when I opened the changelog and realized version 0.11.0 was released in 2018... It's high time to get 0.12.0 out!

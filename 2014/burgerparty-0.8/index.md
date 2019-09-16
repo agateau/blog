@@ -1,7 +1,7 @@
 title: Burger Party 0.8
 public: true
 pub_date: 2014-01-12 18:17:00 +01:00
-tags: [greenyetilab, burgerparty]
+tags: [greenyetilab, burgerparty, gamedev]
 
 
 Happy new year!

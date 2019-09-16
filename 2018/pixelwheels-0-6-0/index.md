@@ -1,6 +1,6 @@
 pub_date: 2018-02-03 23:54:36 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: "Pixel Wheels 0.6.0!"
 
 Here comes a new release of Tiny, err, Pixel Wheels!

@@ -1,6 +1,6 @@
 pub_date: 2018-07-04 23:09:09 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: PixelWheels 0.9.0, the one with gamepad support
 
 This took way too long, but I finally found the time to release PixelWheels 0.9.0. I spent most of my time on improving input handling code to add gamepad support, especially the UI part. Gamepad support while racing pretty much worked out of the box after that.

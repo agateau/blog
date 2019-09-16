@@ -1,6 +1,6 @@
 pub_date: 2017-11-19 18:34:01 +01:00
 public: true
-tags: [pixelwheels]
+tags: [pixelwheels, gamedev]
 title: Tiny Wheels Game Play Tweaking
 
 [Tiny Wheels 0.3.0][tw030] has been released for 3 weeks now. So far the feedback I received can be sum up like this:

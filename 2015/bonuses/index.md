@@ -1,7 +1,7 @@
 title: "Bonuses!"
 public: true
 pub_date: 2015-04-06 22:53:30 +01:00
-tags: [greenyetilab, race, bonus]
+tags: [greenyetilab, race, bonus, gamedev]
 summary:
 
 
