@@ -14,7 +14,7 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 .. gallery::
     :thumbsize: 300
 
-    - full: 0.6.0/title.png
+    - full: 0.14.0/title.png
       alt: Title screen
     - full: 0.12.0/select-vehicle.png
       alt: Select your vehicle
@@ -51,19 +51,21 @@ The game is far from finished, but you can already play with it.
 
 ### Pixel Wheels for PC (Linux, Mac, Windows)
 
-<a href="/storage/pixelwheels/pixelwheels-0.13.0.zip" class="dl-button">pixelwheels-0.13.0.zip</a>
+<a href="/storage/pixelwheels/pixelwheels-0.14.1.zip" class="dl-button">pixelwheels-0.14.1.zip</a>
 
 (Requires a Java runtime)
 
 ### Pixel Wheels for Android
 
-Pixel Wheels is available on <a href="https://f-droid.org/fr/packages/com.agateau.tinywheels.android/" class="dl-button">F-Droid</a> and <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
+Get Pixel Wheels on your Android device via:
 
-*Note: it may take a day or two for the latest version to appear on F-Droid*
+<a href="https://f-droid.org/fr/packages/com.agateau.tinywheels.android/" class="dl-button">F-Droid</a>
+<a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
+<a href="/storage/pixelwheels/pixelwheels-0.14.1.apk" class="dl-button">Direct download</a>
 
-If you do not have access to any of these, you can download the APK: <a href="/storage/pixelwheels/pixelwheels-0.13.0.apk" class="dl-button">pixelwheels-0.13.0.apk</a>
+Getting the game through F-Droid or Google Play is recommended to ensure you receive updates when new versions are released.
 
-I recommend using F-Droid or Google Play nevertheless to ensure you receive updates when new versions are released.
+*Note: it may take a day or two for the latest version to appear on F-Droid.*
 
 ### Source Code
 
