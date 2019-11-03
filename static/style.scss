@@ -181,7 +181,8 @@ div.body {
 img, video {
     display: block;
     margin: 0 auto;
-    width: 100%;
+    max-width: 100%;
+    max-height: auto;
 }
 
 img.badge {
@@ -468,10 +469,6 @@ Medium size
         max-width: 1000px;
         margin: 0 auto;
         padding: 0;
-    }
-
-    img {
-        width: auto;
     }
 }
 
