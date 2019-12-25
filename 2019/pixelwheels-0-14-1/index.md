@@ -39,7 +39,7 @@ Here are the most important changes:
 
 The complete list of changes is available in the [changelog][].
 
-Interestingly, this release is 0.14.1 and not 0.14.0 because when I uploaded the apk for 0.14.0 to Google Play, its automated touch monkey detected a crash in the menu system, so I fixed it and uploaded 0.14.1. I am not happy that bug slipped in, but I am glad Google Play caught it before it hit players!
+Interestingly, this release is 0.14.1 and not 0.14.0 because when I uploaded the apk for 0.14.0 to Google Play, its automated touch monkey detected a crash in the menu system. I fixed it and uploaded 0.14.1. I am not happy that bug slipped in, but I am glad Google Play caught it before it hit players!
 
 As usual, this release is available from [Pixel Wheels project page](/projects/pixelwheels).
 
