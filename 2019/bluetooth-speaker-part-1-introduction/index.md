@@ -1,9 +1,14 @@
 pub_date: 2019-12-25 11:55:18 +01:00
 public: true
-tags: [diy, bluetooth, speaker, pko]
+tags: [diy, bluetooth, speaker]
 title: Bluetooth speaker - Part 1 - Introduction
 
-This article is the first of a series on creating a Bluetooth speaker from an old vacuum tube radio and spare parts I had lying around in the house. At the time I am writing this, the speaker is not done yet, so there is still a chance that I never finish it... As you will see, the journey so far as not been straight, I hit a few roadblocks and changed my mind while working on this project.
+This article is the first of a series on creating a Bluetooth speaker from an old vacuum tube radio and spare parts I had lying around in the house.
+
+- Part 1: Introduction
+- [Part 2: Attempting to update the audio hardware][part2]
+
+At the time I am writing this, the speaker is not done yet, so there is still a chance that I never finish it... As you will see, the journey so far as not been straight, I hit a few roadblocks and changed my mind while working on this project.
 
 Let's start with the reason I started this project. When we moved in our house, more than a decade ago, I found this old vacuum tube radio left around by the previous owner:
 
@@ -71,4 +76,6 @@ After these two coats it looked like this:
 
 Looks good enough for now. I might apply a third coat, to make it shiner. We'll see.
 
-That's it for this first article, I'll add the link to the next part when it's written.
+That's it for this first article, continue to [part 2][part2].
+
+[part2]: /2019/bluetooth-speaker-part-2-audio-hardware/
