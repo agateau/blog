@@ -3,7 +3,7 @@ public: true
 tags: [diy, bluetooth, speaker]
 title: Bluetooth Speaker - Part 2 - Attempting to update the audio hardware
 
-This article is the first of a series on creating a Bluetooth speaker from an old vacuum tube radio and spare parts I had lying around in the house.
+This article is part of a series on creating a Bluetooth speaker from an old vacuum tube radio and spare parts I had lying around in the house.
 
 - [Part 1: Introduction][part1]
 - Part 2: Attempting to update the audio hardware
