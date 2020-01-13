@@ -7,8 +7,10 @@ This article is part of a series on creating a Bluetooth speaker from an old vac
 
 - [Part 1: Introduction][part1]
 - Part 2: Attempting to update the audio hardware
+- [Part 3: Using an existing Bluetooth speaker][part3]
 
 [part1]: /2019/bluetooth-speaker-part-1-introduction
+[part3]: /2020/bluetooth-speaker-part-3-using-an-existing-bluetooth-speaker/
 
 As I explained in part 1, the electronics looked too old so I decided to replace it with a small Bluetooth audio amplifier board and two loud speakers.
 
