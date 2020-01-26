@@ -8,9 +8,11 @@ This article is part of a series on creating a Bluetooth speaker from an old vac
 - [Part 1: Introduction][part1]
 - Part 2: Attempting to update the audio hardware
 - [Part 3: Using an existing Bluetooth speaker][part3]
+- [Part 4: Frontend work][part4]
 
 [part1]: /2019/bluetooth-speaker-part-1-introduction
-[part3]: /2020/bluetooth-speaker-part-3-using-an-existing-bluetooth-speaker/
+[part3]: /2020/bluetooth-speaker-part-3-using-an-existing-bluetooth-speaker
+[part4]: /2020/bluetooth-speaker-part-4-frontend-work
 
 As I explained in part 1, the electronics looked too old so I decided to replace it with a small Bluetooth audio amplifier board and two loud speakers.
 
@@ -48,4 +50,4 @@ Third: audio playback would cut randomly from time to time. That really made the
 
 Because of all of that, I decided to return the parts I ordered and try a different approach. Some people on Youtube had success buying a cheap Bluetooth speaker, tearing it down and fitting it in an existing case. Since I am not really that good at electronics, this sounded like a safer solution.
 
-Next article will be about this new approach.
+[Next article][part3] will be about this new approach.

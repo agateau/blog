@@ -8,9 +8,11 @@ This article is part of a series on creating a Bluetooth speaker from an old vac
 - [Part 1: Introduction][part1]
 - [Part 2: Attempting to update the audio hardware][part2]
 - Part 3: Using an existing Bluetooth speaker
+- [Part 4: Frontend work][part4]
 
 [part1]: /2019/bluetooth-speaker-part-1-introduction
 [part2]: /2019/bluetooth-speaker-part-2-audio-hardware
+[part4]: /2020/bluetooth-speaker-part-4-frontend-work
 
 So after the failure of [part 2][part2], I decided to try a seemingly safer approach: buy a small Bluetooth speaker, tear it down and use its guts to power my radio.
 
@@ -76,7 +78,7 @@ This meant I am almost back to square 1: the chassis and the speaker I can keep,
 
 After some more research I found this website: [the Radio Workshop][workshop]. Ray, the workshop owner, is clearly a passionate. He prefers bringing back the original electronics to life, but he actually supports [adding Bluetooth to beyond repair radios][workshop-bluetooth], and even produced an [eBook explaining how he does so][ebook]. I bought the eBook, ordered the components, and now I am waiting for them to all arrive.
 
-Next part will be about some work I did on the front-side, waiting for the required components to arrive.
+[Next article][part4] will be about some work I did on the front-side, waiting for the required components to arrive.
 
 [workshop]: https://www.radio-workshop.co.uk/
 [workshop-bluetooth]: https://www.radio-workshop.co.uk/bluetooth-technology/
