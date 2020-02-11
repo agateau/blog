@@ -1,6 +1,6 @@
 active_modules: [pygments, blog, tags, thumbimg, disqus, flattr, gallery]
 author: Aurélien Gâteau
-canonical_url: http://agateau.com/
+canonical_url: https://agateau.com/
 ignore_files:
     - .*
     - _*
