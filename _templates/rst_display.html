@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% block title %}{{ rst.title }}{% endblock %}
 {% block extrameta %}
+  <meta property="og:type" content="website"/>
   <meta property="og:url" content="{{ ctx.url }}"/>
   <meta property="og:title" content="{{ ctx.title }}"/>
   {% if ctx.description %}
@@ -8,6 +9,9 @@
   {% endif %}
   {% if ctx.image %}
     <meta property="og:image" content="{{ ctx.image }}"/>
+  {% endif %}
+  {% if ctx.image_alt %}
+    <meta property="og:image:alt" content="{{ ctx.image_alt }}"/>
   {% endif %}
   {% if ctx.tags %}
     <meta name="keywords" content="{{ ctx.tags|sort|join(', ')}}"/>
