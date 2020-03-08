@@ -9,10 +9,12 @@ This article is part of a series on creating a Bluetooth speaker from an old vac
 - [Part 2: Attempting to update the audio hardware][part2]
 - [Part 3: Using an existing Bluetooth speaker][part3]
 - Part 4: Frontend work
+- [Part 5: Electronics, take 3][part5]
 
 [part1]: /2019/bluetooth-speaker-part-1-introduction
 [part2]: /2019/bluetooth-speaker-part-2-audio-hardware
 [part3]: /2020/bluetooth-speaker-part-3-using-an-existing-bluetooth-speaker
+[part5]: /2020/bluetooth-speaker-part-5-electronics-take-3
 
 So, while I was waiting for the components I ordered at the end of [part 3][part3] to arrive, I spent some time working on the "frontend": the front panel of the radio.
 
@@ -103,4 +105,4 @@ Overall this went well, and I am happy with the result. Now I need to fill the h
 
 Ideally I would like to paint them using the same gray paint I used for the grille, but I have no idea if this is doable, we'll see.
 
-The next article will tell another attempt at getting the electronics work as expected, stay tuned :)
+[Next article][part5] will tell another attempt at getting the electronics work as expected, stay tuned :)

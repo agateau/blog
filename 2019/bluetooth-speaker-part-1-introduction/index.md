@@ -9,10 +9,12 @@ This article is the first of a series on creating a Bluetooth speaker from an ol
 - [Part 2: Attempting to update the audio hardware][part2]
 - [Part 3: Using an existing Bluetooth speaker][part3]
 - [Part 4: Frontend work][part4]
+- [Part 5: Electronics, take 3][part5]
 
 [part2]: /2019/bluetooth-speaker-part-2-audio-hardware
 [part3]: /2020/bluetooth-speaker-part-3-using-an-existing-bluetooth-speaker
 [part4]: /2020/bluetooth-speaker-part-4-frontend-work
+[part5]: /2020/bluetooth-speaker-part-5-electronics-take-3
 
 At the time I am writing this, the speaker is not done yet, so there is still a chance that I never finish it... As you will see, the journey so far as not been straight, I hit a few roadblocks and changed my mind while working on this project.
 
