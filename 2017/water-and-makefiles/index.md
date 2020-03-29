@@ -23,31 +23,27 @@ I also did some cleanup in my assets by automating a few things. For now I am us
 
 [make]: https://www.gnu.org/software/make/manual/make.html
 
-.. sourcecode:: makefile
-
-    # Look for all *.ase files, put them in the VEHICLE_IMAGES variable
-    VEHICLE_IMAGES := $(wildcard sprites/vehicles/*.ase)
-    # Declare a matching OUT_VEHICLE_IMAGES variable to store the list of .png to produce
-    OUT_VEHICLE_IMAGES := $(VEHICLE_IMAGES:%.ase=$(OUT_DIR)/%.png)
-
-    # Declare a `vehicles` target to rebuild all the vehicle images
-    vehicles: $(OUT_VEHICLE_IMAGES)
-
-    # Declare a target-specific variable: TMP_PNG, which is the name of the output png file
-    # with a -tmp suffix
-    $(OUT_DIR)/sprites/vehicles/%.png: TMP_PNG = $(@:%.png=%-tmp.png)
-
-    # For each $name.ase inside sprites/vehicles, export it to a $name-tmp.png file
-    # rotate $name-tmp.png 90° clockwise, store the result in $name.png
-    # delete $name-tmp.png
-    $(OUT_DIR)/sprites/vehicles/%.png: sprites/vehicles/%.ase
-        mkdir -p $(OUT_DIR)/sprites/vehicles
-        aseprite --batch $< --save-as $(TMP_PNG)
-        convert -rotate 90 $(TMP_PNG) $@
-        rm $(TMP_PNG)
-
-    clean-vehicles:
-        rm -f $(OUT_VEHICLE_IMAGES)
+```makefile
+# Look for all *.ase files, put them in the VEHICLE_IMAGES variable
+VEHICLE_IMAGES := $(wildcard sprites/vehicles/*.ase)
+# Declare a matching OUT_VEHICLE_IMAGES variable to store the list of .png to produce
+OUT_VEHICLE_IMAGES := $(VEHICLE_IMAGES:%.ase=$(OUT_DIR)/%.png)
+# Declare a `vehicles` target to rebuild all the vehicle images
+vehicles: $(OUT_VEHICLE_IMAGES)
+# Declare a target-specific variable: TMP_PNG, which is the name of the output png file
+# with a -tmp suffix
+$(OUT_DIR)/sprites/vehicles/%.png: TMP_PNG = $(@:%.png=%-tmp.png)
+# For each $name.ase inside sprites/vehicles, export it to a $name-tmp.png file
+# rotate $name-tmp.png 90° clockwise, store the result in $name.png
+# delete $name-tmp.png
+$(OUT_DIR)/sprites/vehicles/%.png: sprites/vehicles/%.ase
+    mkdir -p $(OUT_DIR)/sprites/vehicles
+    aseprite --batch $< --save-as $(TMP_PNG)
+    convert -rotate 90 $(TMP_PNG) $@
+    rm $(TMP_PNG)
+clean-vehicles:
+    rm -f $(OUT_VEHICLE_IMAGES)
+```
 
 A bit scary, but it works!
 

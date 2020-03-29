@@ -11,40 +11,46 @@ As I mentioned in my post about [Burger Party 0.12][bp-0.12], I put together a g
 
 In case you are not familiar with it, here is how gettext works. You start by wrapping all strings you want to make translatable in a `gettext()` function call, like this:
 
-    printf(gettext("Hello, %s\n"), name);
+```
+printf(gettext("Hello, %s\n"), name);
+```
 
 Since this is quite verbose, it is very common in C to create a macro to replace the `gettext()` calls:
 
-    #define _(x) gettext(x)
+```
+#define _(x) gettext(x)
+```
 
 Which allows to shorten the code to:
 
-    printf(_("Hello, %s\n"), name);
+```
+printf(_("Hello, %s\n"), name);
+```
 
 Then you run a tool called `xgettext` on your code. This tool looks through your source for calls to the functions used to mark translatable code and lists all the collected strings in a file named a PO Template (usually with the ".pot" extension). This is a text file with a bit of meta data at the beginning and then a series of lines, one for the original text and another for the translation. It looks like this:
 
-    msgid ""
-    msgstr ""
-    "Project-Id-Version: PACKAGE VERSION\n"
-    "Report-Msgid-Bugs-To: \n"
-    "POT-Creation-Date: 2014-03-27 22:46+0100\n"
-    "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-    "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-    "Language-Team: LANGUAGE <LL@li.org>\n"
-    "Language: \n"
-    "MIME-Version: 1.0\n"
-    "Content-Type: text/plain; charset=CHARSET\n"
-    "Content-Transfer-Encoding: 8bit\n"
-    "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
-
-    #: src/hello.c:12
-    msgid "Hello, %s\n"
-    msgstr ""
-
-    #: src/utils.c:24
-    msgid "Setting up engine\n"
-    msgstr ""
-    ...
+```
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2014-03-27 22:46+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=CHARSET\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
+#: src/hello.c:12
+msgid "Hello, %s\n"
+msgstr ""
+#: src/utils.c:24
+msgid "Setting up engine\n"
+msgstr ""
+...
+```
 
 You can turn this template into a PO for your language (either by copying it and filling the blanks, but preferably with the `msginit` tool). For example to translate our helloworld program to French we would create "helloworld-fr.po" from "helloworld.pot" and translate its content. Translation can be done by hand or using specialized tools like [Poedit][].
 
@@ -62,34 +68,44 @@ The second and more important reason is that the ResourceBundle system does not 
 
 Again, an example is probably the best way to explain this. Let's borrow it from gettext documentation. Imagine you want to show a number of files. A crude implementation would be something like this:
 
-    printf(_("%d file(s)\n"), nb);
+```
+printf(_("%d file(s)\n"), nb);
+```
 
 Not very nice, we can change it like this:
 
-    if (nb == 1) {
-        printf(_("1 file\n"))
-    } else {
-        printf(_("%d files\n"), nb);
-    }
+```
+if (nb == 1) {
+    printf(_("1 file\n"))
+} else {
+    printf(_("%d files\n"), nb);
+}
+```
 
 Works fine in English, but won't work for Polish as I explained. It won't work for  French either, because French does not use an 's' if `nb` is 0. Instead we can do this:
 
-    printf(ngettext("%d file\n", "%d files\n", nb), nb);
+```
+printf(ngettext("%d file\n", "%d files\n", nb), nb);
+```
 
 The `ngettext()` function takes `nb` into account to return the correct string. Then `printf()` can format the string, replacing the %d with the value of `nb`. If we generate a .pot file from such code, we get this:
 
-    msgid "%d file\n"
-    msgid_plural "%d files\n"
-    msgstr[0] ""
-    msgstr[1] ""
+```
+msgid "%d file\n"
+msgid_plural "%d files\n"
+msgstr[0] ""
+msgstr[1] ""
+```
 
 And if we create a Polish .po file for it, we get this:
 
-    msgid "%d file\n"
-    msgid_plural "%d files\n"
-    msgstr[0] ""
-    msgstr[1] ""
-    msgstr[2] ""
+```
+msgid "%d file\n"
+msgid_plural "%d files\n"
+msgstr[0] ""
+msgstr[1] ""
+msgstr[2] ""
+```
 
 One just have to provide the proper plural forms. Tools like Poedit are aware of these and adapt their user interface for plural forms, depending on the language.
 
@@ -123,23 +139,29 @@ I already had a wrapper around gettext to provide a nicer API, so I decided to e
 
 The API is similar to gettext, yet a bit more convenient. Using it looks like this:
 
-    import static com.greenyetilab.linguaj.Translator.tr;
-    ...
-    System.out.println(tr("Hello %s", name));
+```
+import static com.greenyetilab.linguaj.Translator.tr;
+...
+System.out.println(tr("Hello %s", name));
+```
 
 As you can see, it provides a static `tr()` method and supports message formatting so you don't have to wrap the resulting string in a call to `String.format()`.
 
 It also supports plural as well:
 
-    import static com.greenyetilab.linguaj.Translator.trn;
-    ...
-    System.out.println(trn("%# file", "%# files", nb));
+```
+import static com.greenyetilab.linguaj.Translator.trn;
+...
+System.out.println(trn("%# file", "%# files", nb));
+```
 
 Here we use `trn()` instead of `tr()` to get plural support. The third argument is the number we need to take into account to decide which plural form to return, and the special `%#` placeholder gets replaced with the value of this number. This is more convenient than `ngettext()` which requires you to pass the number twice: one time to `ngettext()`, another time to the string formatting code (as can be seen in the `ngettext()` example above).
 
 You can use the `xgettext` tool to extract the strings. The invocation I use is:
 
-    xgettext --from-code=utf-8 --keyword=tr --keyword=trn:1,2 -o po/messages.pot *.java
+```
+xgettext --from-code=utf-8 --keyword=tr --keyword=trn:1,2 -o po/messages.pot *.java
+```
 
 What's important here is the use of `--keyword=tr` and `--keyword=trn:1,2` to tell `xgettext` which method names to look for.
 

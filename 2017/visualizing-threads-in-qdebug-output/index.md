@@ -9,9 +9,11 @@ Here is a handy tip I figured out recently to track in which thread things happe
 
 Here is an example. Let's create a file with the following content:
 
-    Hello world
-    Some other line
-    Goodbye world
+```
+Hello world
+Some other line
+Goodbye world
+```
 
 If we pipe this through `synesthesia '.*world'` we get this:
 
@@ -26,42 +28,38 @@ As you can see, it picked different colors for the "hello world" and "goodbye wo
 
 How can we use this to inspect thread activity in our program? Here is a simple Qt multithreaded program. It prints numbers from 0 to 9 in two threads, with a random wait between each number.
 
-.. sourcecode:: c++
-
-    #include <QCoreApplication>
-    #include <QDebug>
-    #include <QThread>
-
-    class CounterThread : public QThread
-    {
-    protected:
-        void run() {
-            // Hackish way to set a different random seed per thread
-            qsrand(reinterpret_cast<qint64>(this));
-
-            for (int x = 0; x < 10; ++x) {
-                qDebug() << x;
-                int delay = qrand() % 500;
-                QThread::msleep(delay);
-            }
-            qDebug() << "done";
+```c++
+#include <QCoreApplication>
+#include <QDebug>
+#include <QThread>
+class CounterThread : public QThread
+{
+protected:
+    void run() {
+        // Hackish way to set a different random seed per thread
+        qsrand(reinterpret_cast<qint64>(this));
+        for (int x = 0; x < 10; ++x) {
+            qDebug() << x;
+            int delay = qrand() % 500;
+            QThread::msleep(delay);
         }
-    };
-
-    int main(int, char**)
-    {
-        CounterThread thread1;
-        CounterThread thread2;
-
-        thread1.start();
-        thread2.start();
-        qDebug() << "wait";
-        thread1.wait();
-        qDebug() << "thread1 finished";
-        thread2.wait();
-        qDebug() << "thread2 finished";
-        return 0;
+        qDebug() << "done";
     }
+};
+int main(int, char**)
+{
+    CounterThread thread1;
+    CounterThread thread2;
+    thread1.start();
+    thread2.start();
+    qDebug() << "wait";
+    thread1.wait();
+    qDebug() << "thread1 finished";
+    thread2.wait();
+    qDebug() << "thread2 finished";
+    return 0;
+}
+```
 
 Let's run this example:
 

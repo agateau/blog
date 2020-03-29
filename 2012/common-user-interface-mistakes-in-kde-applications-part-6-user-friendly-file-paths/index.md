@@ -16,23 +16,18 @@ calls prettyUrl() for remote urls and toLocalFile() for local ones.
 
 This short code snippet shows the different behaviors:
 
-.. sourcecode:: c++
-
-    KUrl local("/home/user/Documents/foo.odt");
-
-    kDebug() << local.prettyUrl();
-    // prints "file:///home/user/Documents/foo.odt"
-
-    kDebug() << local.pathOrUrl();
-    // prints "/home/user/Documents/foo.odt"
-
-    KUrl remote("http://www.kde.org");
-
-    kDebug() << remote.prettyUrl();
-    // prints "http://www.kde.org"
-
-    kDebug() << remote.pathOrUrl();
-    // prints "http://www.kde.org"
+```c++
+KUrl local("/home/user/Documents/foo.odt");
+kDebug() << local.prettyUrl();
+// prints "file:///home/user/Documents/foo.odt"
+kDebug() << local.pathOrUrl();
+// prints "/home/user/Documents/foo.odt"
+KUrl remote("http://www.kde.org");
+kDebug() << remote.prettyUrl();
+// prints "http://www.kde.org"
+kDebug() << remote.pathOrUrl();
+// prints "http://www.kde.org"
+```
 
 I recently fixed this in Kate code base, it is rather easy to grep your code for calls to
 prettyUrl() and check if you would be better off with pathOrUrl(). There are actually very

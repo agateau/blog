@@ -21,10 +21,12 @@ My goal was to remap the "Print Screen" key to the "Menu" key, and the odd recta
 
 I started by identifying the key symbol for the "Print Screen" and the odd rectangular keys with `xev`, then created a file named `.Xmodmap` in my home folder, with the following content:
 
-    ! Print Screen => Menu
-    keycode 107 = Menu
-    ! Button on the right of mute => Print
-    keycode 156 = Print
+```
+! Print Screen => Menu
+keycode 107 = Menu
+! Button on the right of mute => Print
+keycode 156 = Print
+```
 
 After logging out and back in, I now have a saner keyboard layout.
 

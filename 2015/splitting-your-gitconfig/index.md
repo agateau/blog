@@ -13,22 +13,30 @@ So far so good. Now, what if you want your Git configuration to be subtly differ
 
 Git supports includes, so you can modify your `~/.gitconfig` like this:
 
-    [include]
-    path = ~/.gitconfig.local
+```
+[include]
+path = ~/.gitconfig.local
+```
 
 Then you can create a `~/.gitconfig.local` with account-specific configuration, for example:
 
-    [user]
-    name = Aurélien Gâteau
-    email = me@example.com
+```
+[user]
+name = Aurélien Gâteau
+email = me@example.com
+```
 
 Simple enough, but I actually lost a lot of time because I was testing the configuration like this:
 
-    $ git config --global user.email
+```
+$ git config --global user.email
+```
 
 The `--global` option tells Git to ignore the repository configuration and only look at the `~/.gitconfig`. Turns out that when you specify a configuration file, using `--global` or `-f <somefile>`, then `git config` does not expand includes! Reading documentation a bit more, I found out that the correct command is:
 
-    $ git config --global --includes user.email
-    me@example.com
+```
+$ git config --global --includes user.email
+me@example.com
+```
 
 That's it, hope it saves you some time!

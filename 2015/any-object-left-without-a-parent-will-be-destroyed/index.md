@@ -16,56 +16,58 @@ Here is a rough summary of the code.
 
 The object used for the rows of the model:
 
-    class MyObject: public QObject {
-        Q_OBJECT
-    public:
-        MyObject(int value, QObject* parent = 0);
-        Q_INVOKABLE doSomething();
-    };
+```
+class MyObject: public QObject {
+    Q_OBJECT
+public:
+    MyObject(int value, QObject* parent = 0);
+    Q_INVOKABLE doSomething();
+};
+```
 
 The model looks like this:
 
-    class MyModel : public QAbstractListModel {
-        Q_OBJECT
-    public:
-        MyModel(QObject* parent = 0)
-        : QAbstractListModel(parent) {
-            mObjects
-                << new MyObject(12)
-                << new MyObject(34);
-        }
-
-        ~MyModel() {
-            qDeleteAll(mObjects);
-        }
-
-        Q_INVOKABLE MyObject* objectAt(int row) const {
-            return mObjects[row];
-        }
-
-    private:
-        QList<MyObject*> mObjects;
-    };
+```
+class MyModel : public QAbstractListModel {
+    Q_OBJECT
+public:
+    MyModel(QObject* parent = 0)
+    : QAbstractListModel(parent) {
+        mObjects
+            << new MyObject(12)
+            << new MyObject(34);
+    }
+    ~MyModel() {
+        qDeleteAll(mObjects);
+    }
+    Q_INVOKABLE MyObject* objectAt(int row) const {
+        return mObjects[row];
+    }
+private:
+    QList<MyObject*> mObjects;
+};
+```
 
 The QML code uses the model like this:
 
-    ListView {
-        model: MyModel {
-            id: myModel
+```
+ListView {
+    model: MyModel {
+        id: myModel
+    }
+    delegate: Row {
+        Text {
+            text: model.value
         }
-
-        delegate: Row {
-            Text {
-                text: model.value
-            }
-            Button {
-                text: "Do something"
-                onClicked: {
-                    var myObject = myModel.objectAt(model.index);
-                    myObject.doSomething();
-                }
+        Button {
+            text: "Do something"
+            onClicked: {
+                var myObject = myModel.objectAt(model.index);
+                myObject.doSomething();
             }
         }
+    }
+```
 
 Can you spot the bug?
 

@@ -8,21 +8,24 @@ disqus: false
 
 ~/.unison/common
 
-    copythreshold = 5000
-    perms = 0
-    dontchmod = true
-
-    # Ignore some backup files
-    ignore = Name .*.lock
-    ignore = Name .*.sw?
-    ignore = Name .*~
-    ignore = Name *~
+```
+copythreshold = 5000
+perms = 0
+dontchmod = true
+# Ignore some backup files
+ignore = Name .*.lock
+ignore = Name .*.sw?
+ignore = Name .*~
+ignore = Name *~
+```
 
 ~/.unison/foo.prf
 
-    root = /home/bob/doc
-    root = ssh://example.com//home/bob/doc
-    include common
+```
+root = /home/bob/doc
+root = ssh://example.com//home/bob/doc
+include common
+```
 
 ## Manual
 

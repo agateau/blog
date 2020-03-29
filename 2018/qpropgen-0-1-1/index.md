@@ -21,128 +21,99 @@ Yes, that's a bit of Yak shaving :)
 
 It works this way: first you define your class and its properties in a yaml file:
 
-.. sourcecode:: yaml
-
-    class: Person
-    properties:
-        - name: firstName
-          type: QString
-        - name: lastName
-          type: QString
-        - name: birthDate
-          type: QDateTime
+```yaml
+class: Person
+properties:
+    - name: firstName
+      type: QString
+    - name: lastName
+      type: QString
+    - name: birthDate
+      type: QDateTime
+```
 
 Then you run `qpropgen person.yaml`. It produces two files: `person.h` and `person.cpp`.
 
 This is `person.h`:
 
-.. sourcecode:: c++
-
-    // This file has been generated with qpropgen, any changes made to it will be lost!
-
-    #ifndef PERSON_H
-    #define PERSON_H
-
-    #include <QObject>
-
-    class Person : public QObject {
-        Q_OBJECT
-
-        Q_PROPERTY(QString firstName READ firstName
-                WRITE setFirstName
-                NOTIFY firstNameChanged
-        )
-
-        Q_PROPERTY(QString lastName READ lastName
-                WRITE setLastName
-                NOTIFY lastNameChanged
-        )
-
-        Q_PROPERTY(QDateTime birthDate READ birthDate
-                WRITE setBirthDate
-                NOTIFY birthDateChanged
-        )
-
-    public:
-        explicit Person(QObject* parent = nullptr);
-
-
-         QString firstName() const;
-         void setFirstName(const QString& value);
-
-         QString lastName() const;
-         void setLastName(const QString& value);
-
-         QDateTime birthDate() const;
-         void setBirthDate(const QDateTime& value);
-
-
-    signals:
-
-        void firstNameChanged(const QString& firstName);
-
-        void lastNameChanged(const QString& lastName);
-
-        void birthDateChanged(const QDateTime& birthDate);
-
-    private:
-        QString mFirstName;
-        QString mLastName;
-        QDateTime mBirthDate;
-    };
-
-    #endif // PERSON_H
+```c++
+// This file has been generated with qpropgen, any changes made to it will be lost!
+#ifndef PERSON_H
+#define PERSON_H
+#include <QObject>
+class Person : public QObject {
+    Q_OBJECT
+    Q_PROPERTY(QString firstName READ firstName
+            WRITE setFirstName
+            NOTIFY firstNameChanged
+    )
+    Q_PROPERTY(QString lastName READ lastName
+            WRITE setLastName
+            NOTIFY lastNameChanged
+    )
+    Q_PROPERTY(QDateTime birthDate READ birthDate
+            WRITE setBirthDate
+            NOTIFY birthDateChanged
+    )
+public:
+    explicit Person(QObject* parent = nullptr);
+     QString firstName() const;
+     void setFirstName(const QString& value);
+     QString lastName() const;
+     void setLastName(const QString& value);
+     QDateTime birthDate() const;
+     void setBirthDate(const QDateTime& value);
+signals:
+    void firstNameChanged(const QString& firstName);
+    void lastNameChanged(const QString& lastName);
+    void birthDateChanged(const QDateTime& birthDate);
+private:
+    QString mFirstName;
+    QString mLastName;
+    QDateTime mBirthDate;
+};
+#endif // PERSON_H
+```
 
 And this is `person.cpp`:
 
-.. sourcecode:: c++
-
-    // This file has been generated with qpropgen, any changes made to it will be lost!
-    #include <person.h>
-
-    Person::Person(QObject* parent)
-        : QObject(parent) {
+```c++
+// This file has been generated with qpropgen, any changes made to it will be lost!
+#include <person.h>
+Person::Person(QObject* parent)
+    : QObject(parent) {
+}
+QString Person::firstName() const {
+    return mFirstName;
+}
+void Person::setFirstName(const QString& value) {
+    if (mFirstName == value) {
+        return;
     }
-
-
-    QString Person::firstName() const {
-        return mFirstName;
+    mFirstName = value;
+    firstNameChanged(value);
+}
+QString Person::lastName() const {
+    return mLastName;
+}
+void Person::setLastName(const QString& value) {
+    if (mLastName == value) {
+        return;
     }
-    void Person::setFirstName(const QString& value) {
-
-        if (mFirstName == value) {
-
-            return;
-        }
-        mFirstName = value;
-        firstNameChanged(value);
+    mLastName = value;
+    lastNameChanged(value);
+}
+QDateTime Person::birthDate() const {
+    return mBirthDate;
+}
+void Person::setBirthDate(const QDateTime& value) {
+    if (mBirthDate == value) {
+        return;
     }
-
-    QString Person::lastName() const {
-        return mLastName;
-    }
-    void Person::setLastName(const QString& value) {
-
-        if (mLastName == value) {
-
-            return;
-        }
-        mLastName = value;
-        lastNameChanged(value);
-    }
-
-    QDateTime Person::birthDate() const {
-        return mBirthDate;
-    }
-    void Person::setBirthDate(const QDateTime& value) {
-
-        if (mBirthDate == value) {
-
-            return;
-        }
-        mBirthDate = value;
-        birthDateChanged(value);
-    }
+    mBirthDate = value;
+    birthDateChanged(value);
+}
+```
 
 qpropgen comes with a CMake file to include in your project. Contributions adding support for other build systems are greatly appreciated :)
 

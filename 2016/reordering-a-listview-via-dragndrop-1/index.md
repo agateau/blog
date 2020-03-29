@@ -17,103 +17,94 @@ The approach I used was to do all the work in a DraggableItem, leaving the ListV
 
 Lets start with `main.qml`. Nothing fancy at the beginning, we create a Window and a ListModel defining our elements:
 
-.. sourcecode:: qml
-
-    import QtQuick 2.6
-    import QtQuick.Window 2.2
-    import QtQuick.Controls 1.4
-    import QtQuick.Layouts 1.1
-
-    Window {
-        visible: true
-        width: 500
-        height: 400
-
-        ListModel {
-            id: myModel
-            ListElement {
-                text: "The Phantom Menace"
-            }
-            ListElement {
-                text: "Attack of the Clones"
-            }
-            ListElement {
-                text: "Revenge of the Siths"
-            }
-            ListElement {
-                text: "A New Hope"
-            }
-            ListElement {
-                text: "The Empire Strikes Back"
-            }
-            ListElement {
-                text: "Return of the Jedi"
-            }
-            ListElement {
-                text: "The Force Awakens"
-            }
+```qml
+import QtQuick 2.6
+import QtQuick.Window 2.2
+import QtQuick.Controls 1.4
+import QtQuick.Layouts 1.1
+Window {
+    visible: true
+    width: 500
+    height: 400
+    ListModel {
+        id: myModel
+        ListElement {
+            text: "The Phantom Menace"
         }
+        ListElement {
+            text: "Attack of the Clones"
+        }
+        ListElement {
+            text: "Revenge of the Siths"
+        }
+        ListElement {
+            text: "A New Hope"
+        }
+        ListElement {
+            text: "The Empire Strikes Back"
+        }
+        ListElement {
+            text: "Return of the Jedi"
+        }
+        ListElement {
+            text: "The Force Awakens"
+        }
+    }
+```
 
 Now comes the main Item. It contains a ColumnLayout which holds a Rectangle faking a toolbar and our ListView, wrapped in a ScrollView:
 
-.. sourcecode:: qml
-
-    Item {
-        id: mainContent
+```qml
+Item {
+    id: mainContent
+    anchors.fill: parent
+    ColumnLayout {
         anchors.fill: parent
-        ColumnLayout {
-            anchors.fill: parent
-            spacing: 0
-
-            Rectangle {
-                color: "lightblue"
-                height: 50
-                Layout.fillWidth: true
-
-                Text {
-                    anchors.centerIn: parent
-                    text: "A fake toolbar"
-                }
+        spacing: 0
+        Rectangle {
+            color: "lightblue"
+            height: 50
+            Layout.fillWidth: true
+            Text {
+                anchors.centerIn: parent
+                text: "A fake toolbar"
             }
-
-            ScrollView {
-                Layout.fillWidth: true
-                Layout.fillHeight: true
-                ListView {
-                    id: listView
-                    model: myModel
-                    delegate: DraggableItem {
+        }
+        ScrollView {
+            Layout.fillWidth: true
+            Layout.fillHeight: true
+            ListView {
+                id: listView
+                model: myModel
+                delegate: DraggableItem {
+                    Rectangle {
+                        height: textLabel.height * 2
+                        width: listView.width
+                        color: "white"
+                        Text {
+                            id: textLabel
+                            anchors.centerIn: parent
+                            text: model.text
+                        }
+                        // Bottom line border
                         Rectangle {
-                            height: textLabel.height * 2
-                            width: listView.width
-                            color: "white"
-
-                            Text {
-                                id: textLabel
-                                anchors.centerIn: parent
-                                text: model.text
+                            anchors {
+                                left: parent.left
+                                right: parent.right
+                                bottom: parent.bottom
                             }
-
-                            // Bottom line border
-                            Rectangle {
-                                anchors {
-                                    left: parent.left
-                                    right: parent.right
-                                    bottom: parent.bottom
-                                }
-                                height: 1
-                                color: "lightgrey"
-                            }
+                            height: 1
+                            color: "lightgrey"
                         }
-
-                        draggedItemParent: mainContent
-
-                        onMoveItemRequested: {
-                            myModel.move(from, to, 1);
-                        }
+                    }
+                    draggedItemParent: mainContent
+                    onMoveItemRequested: {
+                        myModel.move(from, to, 1);
                     }
                 }
             }
+        }
+```
 
 We can see DraggableItem used as a delegate of the ListView. Its API is simple: it wraps another item which shows the content (here it is a rectangle with a text and a one-pixel border at the bottom).
 
@@ -127,83 +118,72 @@ DraggableItem contains a `contentItemWrapper` item, which is the parent of the D
 
 This is the beginning of DraggableItem.qml, it shows how `contentItem` is wrapped inside `contentItemWrapper`:
 
-.. sourcecode:: qml
-
-    import QtQuick 2.0
-
-    Item {
-        id: root
-
-        default property Item contentItem
-
-        // This item will become the parent of the dragged item during the drag operation
-        property Item draggedItemParent
-
-        signal moveItemRequested(int from, int to)
-
-        width: contentItem.width
-        height: contentItem.height
-
-        // Make contentItem a child of contentItemWrapper
-        onContentItemChanged: {
-            contentItem.parent = contentItemWrapper;
-        }
-
-        Rectangle {
-            id: contentItemWrapper
-            anchors.fill: parent
+```qml
+import QtQuick 2.0
+Item {
+    id: root
+    default property Item contentItem
+    // This item will become the parent of the dragged item during the drag operation
+    property Item draggedItemParent
+    signal moveItemRequested(int from, int to)
+    width: contentItem.width
+    height: contentItem.height
+    // Make contentItem a child of contentItemWrapper
+    onContentItemChanged: {
+        contentItem.parent = contentItemWrapper;
+    }
+    Rectangle {
+        id: contentItemWrapper
+        anchors.fill: parent
+```
 
 Lets finish the definition of `contentItemWrapper` and continue with the code necessary to start the drag:
 
-.. sourcecode:: qml
-
-    //
-            Drag.active: dragArea.drag.active
-            Drag.hotSpot {
-                x: contentItem.width / 2
-                y: contentItem.height / 2
-            }
-
-            MouseArea {
-                id: dragArea
-                anchors.fill: parent
-                drag.target: parent
-                // Keep the dragged item at the same X position. Nice for lists, but not mandatory
-                drag.axis: Drag.YAxis
-                // Disable smoothed so that the Item pixel from where we started the drag remains
-                // under the mouse cursor
-                drag.smoothed: false
-
-                onReleased: {
-                    if (drag.active) {
-                        emitMoveItemRequested();
-                    }
+```qml
+//
+        Drag.active: dragArea.drag.active
+        Drag.hotSpot {
+            x: contentItem.width / 2
+            y: contentItem.height / 2
+        }
+        MouseArea {
+            id: dragArea
+            anchors.fill: parent
+            drag.target: parent
+            // Keep the dragged item at the same X position. Nice for lists, but not mandatory
+            drag.axis: Drag.YAxis
+            // Disable smoothed so that the Item pixel from where we started the drag remains
+            // under the mouse cursor
+            drag.smoothed: false
+            onReleased: {
+                if (drag.active) {
+                    emitMoveItemRequested();
                 }
             }
         }
-
-        states: [
-            State {
-                when: dragArea.drag.active
-                name: "dragging"
-
-                ParentChange {
-                    target: contentItemWrapper
-                    parent: draggedItemParent
-                }
-                PropertyChanges {
-                    target: contentItemWrapper
-                    opacity: 0.9
-                    anchors.fill: undefined
-                    width: contentItem.width
-                    height: contentItem.height
-                }
-                PropertyChanges {
-                    target: root
-                    height: 0
-                }
+    }
+    states: [
+        State {
+            when: dragArea.drag.active
+            name: "dragging"
+            ParentChange {
+                target: contentItemWrapper
+                parent: draggedItemParent
             }
-        ]
+            PropertyChanges {
+                target: contentItemWrapper
+                opacity: 0.9
+                anchors.fill: undefined
+                width: contentItem.width
+                height: contentItem.height
+            }
+            PropertyChanges {
+                target: root
+                height: 0
+            }
+        }
+    ]
+```
 
 A few things are worth noting here:
 
@@ -229,55 +209,53 @@ This diagram should make it clearer:
 
 As you can see, "Item 0" has two DropArea, whereas the other items only have one. Here is the code which adds the DropAreas:
 
-.. sourcecode:: qml
-
-    Loader {
-        id: topDropAreaLoader
-        active: model.index === 0
-        anchors {
-            left: parent.left
-            right: parent.right
-            bottom: root.verticalCenter
-        }
-        height: contentItem.height
-        sourceComponent: Component {
-            DraggableItemDropArea {
-                dropIndex: 0
-            }
+```qml
+Loader {
+    id: topDropAreaLoader
+    active: model.index === 0
+    anchors {
+        left: parent.left
+        right: parent.right
+        bottom: root.verticalCenter
+    }
+    height: contentItem.height
+    sourceComponent: Component {
+        DraggableItemDropArea {
+            dropIndex: 0
         }
     }
-
-    DraggableItemDropArea {
-        anchors {
-            left: parent.left
-            right: parent.right
-            top: root.verticalCenter
-        }
-        height: contentItem.height
-        dropIndex: model.index + 1
+}
+DraggableItemDropArea {
+    anchors {
+        left: parent.left
+        right: parent.right
+        top: root.verticalCenter
     }
+    height: contentItem.height
+    dropIndex: model.index + 1
+}
+```
 
 We use a Loader to create the special DropArea for the first item of the list. DraggableItemDropArea is just a DropArea with a `dropIndex` property and a Rectangle to show a drop indicator. Before showing its code, lets finish the code of DraggableItem. The only remaining part is the function responsible for emitting the `moveItemRequested` signal:
 
-.. sourcecode:: qml
-
-    function emitMoveItemRequested() {
-        var dropArea = contentItemWrapper.Drag.target;
-        if (!dropArea) {
-            return;
-        }
-        var dropIndex = dropArea.dropIndex;
-
-        // If the target item is below us, then decrement dropIndex because the target item is
-        // going to move up when our item leaves its place
-        if (model.index < dropIndex) {
-            dropIndex--;
-        }
-        if (model.index === dropIndex) {
-            return;
-        }
-        root.moveItemRequested(model.index, dropIndex);
+```qml
+function emitMoveItemRequested() {
+    var dropArea = contentItemWrapper.Drag.target;
+    if (!dropArea) {
+        return;
     }
+    var dropIndex = dropArea.dropIndex;
+    // If the target item is below us, then decrement dropIndex because the target item is
+    // going to move up when our item leaves its place
+    if (model.index < dropIndex) {
+        dropIndex--;
+    }
+    if (model.index === dropIndex) {
+        return;
+    }
+    root.moveItemRequested(model.index, dropIndex);
+}
+```
 
 That's it for DraggableItem.
 
@@ -285,27 +263,25 @@ That's it for DraggableItem.
 
 Not much complexity here, we will actually remove this component later in the series. Here is the code:
 
-.. sourcecode:: qml
-
-    import QtQuick 2.0
-
-    DropArea {
-        id: root
-        property int dropIndex
-
-        Rectangle {
-            id: dropIndicator
-            anchors {
-                left: parent.left
-                right: parent.right
-                top: dropIndex === 0 ? parent.verticalCenter : undefined
-                bottom: dropIndex === 0 ? undefined : parent.verticalCenter
-            }
-            height: 2
-            opacity: root.containsDrag ? 0.8 : 0.0
-            color: "red"
+```qml
+import QtQuick 2.0
+DropArea {
+    id: root
+    property int dropIndex
+    Rectangle {
+        id: dropIndicator
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: dropIndex === 0 ? parent.verticalCenter : undefined
+            bottom: dropIndex === 0 ? undefined : parent.verticalCenter
         }
+        height: 2
+        opacity: root.containsDrag ? 0.8 : 0.0
+        color: "red"
     }
+}
+```
 
 DraggableItemDropArea adds a `dropIndex` property and a Rectangle to draw the 2 pixel red line indicating where the item is going to be dropped, with a small hack to position the Rectangle correctly for the special case of the top DropArea of the first DraggableItem.
 

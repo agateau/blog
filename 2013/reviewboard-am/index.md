@@ -15,12 +15,14 @@ A year ago, I got bored and spent some time to put together a simple command-lin
 
 Here it is in action, applying a commit on Gwenview:
 
-    $ reviewboard-am 112061
-    Fetching request info
-    Downloading diff
-    Creating rb-112061.patch
-    Running 'git am rb-112061.patch'
-    Applying: Move code to check next image is selected after removal to ContextManager
+```
+$ reviewboard-am 112061
+Fetching request info
+Downloading diff
+Creating rb-112061.patch
+Running 'git am rb-112061.patch'
+Applying: Move code to check next image is selected after removal to ContextManager
+```
 
 I shared it with a few friends, but it stayed relatively unknown, hosted in a Gist on GitHub.
 

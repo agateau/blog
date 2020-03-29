@@ -27,142 +27,128 @@ When a dragged item enters the DropArea, the DraggableItem changes to this:
 
 This time I am providing an abbreviated version of the whole source instead of describing the changes because the changes in this article are not easy to describe progressively. Hopefully the structure diagrams gives you a higher-level view of how placeholders work.
 
-.. sourcecode:: qml
-
-    Item {
-        id: root
-
-        // (...)
-
-        width: contentItem.width
-        height: topPlaceholder.height + wrapperParent.height + bottomPlaceholder.height
-
-        // (...)
-
-        Rectangle {
-            id: topPlaceholder
-            anchors {
-                left: parent.left
-                right: parent.right
-                top: parent.top
-            }
-            height: 0
-            color: "lightgrey"
+```qml
+Item {
+    id: root
+    // (...)
+    width: contentItem.width
+    height: topPlaceholder.height + wrapperParent.height + bottomPlaceholder.height
+    // (...)
+    Rectangle {
+        id: topPlaceholder
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: parent.top
         }
-
-        Item {
-            id: wrapperParent
-            anchors {
-                left: parent.left
-                right: parent.right
-                top: topPlaceholder.bottom
-            }
-            height: contentItem.height
-
-            Rectangle {
-                id: contentItemWrapper
-                anchors.fill: parent
-                // (...)
-            }
-        }
-
-        Rectangle {
-            id: bottomPlaceholder
-            anchors {
-                left: parent.left
-                right: parent.right
-                top: wrapperParent.bottom
-            }
-            height: 0
-            color: "lightgrey"
-        }
-
-        // (...)
-
-        Loader {
-            id: topDropAreaLoader
-            active: model.index === 0
-            anchors {
-                left: parent.left
-                right: parent.right
-                bottom: wrapperParent.verticalCenter
-            }
-            height: contentItem.height
-            sourceComponent: Component {
-                DropArea {
-                    property int dropIndex: 0
-                }
-            }
-        }
-
-        DropArea {
-            id: bottomDropArea
-            anchors {
-                left: parent.left
-                right: parent.right
-                top: wrapperParent.verticalCenter
-            }
-            property bool isLast: model.index === _listView.count - 1
-            height: isLast ? _listView.contentHeight - y : contentItem.height
-
-            property int dropIndex: model.index + 1
-        }
-
-        states: [
-            State {
-                when: dragArea.drag.active
-                name: "dragging"
-
-                ParentChange {
-                    target: contentItemWrapper
-                    parent: draggedItemParent
-                }
-                PropertyChanges {
-                    target: contentItemWrapper
-                    opacity: 0.9
-                    anchors.fill: undefined
-                    width: contentItem.width
-                    height: contentItem.height
-                }
-                PropertyChanges {
-                    target: wrapperParent
-                    height: 0
-                }
-                PropertyChanges {
-                    target: root
-                    _scrollingDirection: {
-                        // (...)
-                    }
-                }
-            },
-            State {
-                when: bottomDropArea.containsDrag
-                name: "droppingBelow"
-                PropertyChanges {
-                    target: bottomPlaceholder
-                    height: contentItem.height
-                }
-                PropertyChanges {
-                    target: bottomDropArea
-                    height: contentItem.height * 2
-                }
-            },
-            State {
-                when: topDropAreaLoader.item.containsDrag
-                name: "droppingAbove"
-                PropertyChanges {
-                    target: topPlaceholder
-                    height: contentItem.height
-                }
-                PropertyChanges {
-                    target: topDropAreaLoader
-                    height: contentItem.height * 2
-                }
-            }
-        ]
-
-        // (...)
+        height: 0
+        color: "lightgrey"
     }
+    Item {
+        id: wrapperParent
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: topPlaceholder.bottom
+        }
+        height: contentItem.height
+        Rectangle {
+            id: contentItemWrapper
+            anchors.fill: parent
+            // (...)
+        }
+    }
+    Rectangle {
+        id: bottomPlaceholder
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: wrapperParent.bottom
+        }
+        height: 0
+        color: "lightgrey"
+    }
+    // (...)
+    Loader {
+        id: topDropAreaLoader
+        active: model.index === 0
+        anchors {
+            left: parent.left
+            right: parent.right
+            bottom: wrapperParent.verticalCenter
+        }
+        height: contentItem.height
+        sourceComponent: Component {
+            DropArea {
+                property int dropIndex: 0
+            }
+        }
+    }
+    DropArea {
+        id: bottomDropArea
+        anchors {
+            left: parent.left
+            right: parent.right
+            top: wrapperParent.verticalCenter
+        }
+        property bool isLast: model.index === _listView.count - 1
+        height: isLast ? _listView.contentHeight - y : contentItem.height
+        property int dropIndex: model.index + 1
+    }
+    states: [
+        State {
+            when: dragArea.drag.active
+            name: "dragging"
+            ParentChange {
+                target: contentItemWrapper
+                parent: draggedItemParent
+            }
+            PropertyChanges {
+                target: contentItemWrapper
+                opacity: 0.9
+                anchors.fill: undefined
+                width: contentItem.width
+                height: contentItem.height
+            }
+            PropertyChanges {
+                target: wrapperParent
+                height: 0
+            }
+            PropertyChanges {
+                target: root
+                _scrollingDirection: {
+                    // (...)
+                }
+            }
+        },
+        State {
+            when: bottomDropArea.containsDrag
+            name: "droppingBelow"
+            PropertyChanges {
+                target: bottomPlaceholder
+                height: contentItem.height
+            }
+            PropertyChanges {
+                target: bottomDropArea
+                height: contentItem.height * 2
+            }
+        },
+        State {
+            when: topDropAreaLoader.item.containsDrag
+            name: "droppingAbove"
+            PropertyChanges {
+                target: topPlaceholder
+                height: contentItem.height
+            }
+            PropertyChanges {
+                target: topDropAreaLoader
+                height: contentItem.height * 2
+            }
+        }
+    ]
+    // (...)
+}
+```
 
 You may wonder why we are not using a Column or a ColumnLayout to hold the `topPlaceholder`, `wrapperParent` and `bottomPlaceholder` items together. The reason for this is that it makes it impossible to anchor DropAreas: an Item can only be anchored to a sibling or to a parent so if `bottomPlaceholder` were in a Column, `bottomDropArea` could not anchor to it.
 

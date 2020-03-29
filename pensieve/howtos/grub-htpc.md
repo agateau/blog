@@ -10,7 +10,9 @@ disqus: false
 
 Generate a large font:
 
-    sudo grub-mkfont -s 36 -o /boot/grub/fonts/dejavusans-mono-36.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+```
+sudo grub-mkfont -s 36 -o /boot/grub/fonts/dejavusans-mono-36.pf2 /usr/share/fonts/truetype/dejavu/DejaVuSansMono.ttf
+```
 
 (Do not use Ubuntu Mono or the outer rectangle of the screen will look broken)
 
@@ -20,46 +22,60 @@ Edit /etc/default/grub.
 
 Enable high res:
 
-    GRUB_GFXMODE=1920x1080,1024,768,auto
+```
+GRUB_GFXMODE=1920x1080,1024,768,auto
+```
 
 and keep it while booting:
 
-    GRUB_GFXPAYLOAD_LINUX=keep
+```
+GRUB_GFXPAYLOAD_LINUX=keep
+```
 
 Use the large font:
 
-    GRUB_FONT=/boot/grub/fonts/dejavusans-mono-36.pf2
+```
+GRUB_FONT=/boot/grub/fonts/dejavusans-mono-36.pf2
+```
 
 ## Define boot entries
 
 Set labels on your root partitions, it's much more convenient than uuids:
 
-    sudo e2label /dev/sdaN myroot
+```
+sudo e2label /dev/sdaN myroot
+```
 
 Define your boot entries in `/etc/grub.d/40_custom`. Here is my template:
 
-    menuentry 'Kodi' --id 'kodi' {
-        recordfail
-        load_video
-        gfxmode keep
-        insmod gzio
-        insmod part_msdos
-        insmod ext2
-        search --no-floppy --label --set=root kodiroot
-        linux /vmlinuz root=LABEL=kodiroot ro splash quiet vt.handoff=1
-        initrd /initrd.img
-    }
+```
+menuentry 'Kodi' --id 'kodi' {
+    recordfail
+    load_video
+    gfxmode keep
+    insmod gzio
+    insmod part_msdos
+    insmod ext2
+    search --no-floppy --label --set=root kodiroot
+    linux /vmlinuz root=LABEL=kodiroot ro splash quiet vt.handoff=1
+    initrd /initrd.img
+}
+```
 
 Note the use of labels instead of uuids and of /vmlinuz and /initrd.img instead
 of real paths, since the real paths change when the kernel is updated.
 
 Set the default entry by editing /etc/default/grub:
 
-    GRUB_DEFAULT=kodi
+```
+GRUB_DEFAULT=kodi
+```
 
 ## Generate your new grub
 
-    sudo update-grub
+```
+sudo update-grub
+```
 
 Reboot and try it out.
 
@@ -72,9 +88,11 @@ lower than the `10_linux`, which adds the entry for your current OS.
 Another nice touch is to insert a separator between your entries and the
 default entries. This can be done by adding the following to `08_custom`:
 
-    menuentry '' {
-        true
-    }
+```
+menuentry '' {
+    true
+}
+```
 
 ## References
 

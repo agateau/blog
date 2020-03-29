@@ -34,9 +34,9 @@ Debugging random noise buffers is hard, or at least, I am not used to working on
 
 I could hear the difference but I was getting nowhere, why did my noise buffer sound differently than the original implementation? And then I had a revelation: the original buffer contains 32 items, and the code using it looks like this:
 
-.. sourcecode:: c++
-
-    sample = noise_buffer[phase * 32 / period];
+```c++
+sample = noise_buffer[phase * 32 / period];
+```
 
 Where `period` is the duration of the current segment, and `phase` is the sample index in the segment.
 
@@ -60,45 +60,40 @@ Using a list of buffers worked, but it felt over-complicated. My first simplific
 
 I eventually came up with a simpler approach: what I needed was a random value generator which returned the same value for `period / 32` calls, and which could be reset to produce the same pseudo-random sequence each time the sound restarts. This can be implemented by keeping the last value returned and changing it at the right time. Reproducibility can be achieved by resetting the random seed each time the sound restarts. I implemented this in a NoiseGenerator class:
 
-.. sourcecode:: c++
-
-    // Header
-    class NoiseGenerator {
-    public:
-        explicit NoiseGenerator(int sampleCount);
-        void reset();
-        float get(float alpha);
-    private:
-        const int mSampleCount;
-        unsigned int mRandomSeed = 0;
-        int mLastIndex = -1;
-        float mLastValue = 0;
-
-        float randomRange(float range);
-    };
-
-    // Implementation
-    NoiseGenerator::NoiseGenerator(int sampleCount)
-        : mSampleCount(sampleCount) {
+```c++
+// Header
+class NoiseGenerator {
+public:
+    explicit NoiseGenerator(int sampleCount);
+    void reset();
+    float get(float alpha);
+private:
+    const int mSampleCount;
+    unsigned int mRandomSeed = 0;
+    int mLastIndex = -1;
+    float mLastValue = 0;
+    float randomRange(float range);
+};
+// Implementation
+NoiseGenerator::NoiseGenerator(int sampleCount)
+    : mSampleCount(sampleCount) {
+}
+void NoiseGenerator::reset() {
+    mRandomSeed = 0;
+    mLastIndex = -1;
+}
+float NoiseGenerator::get(float alpha) {
+    int index = mSampleCount * alpha;
+    if (index != mLastIndex) {
+        mLastIndex = index;
+        mLastValue = randomRange(2.0f) - 1.0f;
     }
-
-    void NoiseGenerator::reset() {
-        mRandomSeed = 0;
-        mLastIndex = -1;
-    }
-
-    float NoiseGenerator::get(float alpha) {
-        int index = mSampleCount * alpha;
-        if (index != mLastIndex) {
-            mLastIndex = index;
-            mLastValue = randomRange(2.0f) - 1.0f;
-        }
-        return mLastValue;
-    }
-
-    float NoiseGenerator::randomRange(float range) {
-        return rand_r(&mRandomSeed) / float(RAND_MAX) * range;
-    }
+    return mLastValue;
+}
+float NoiseGenerator::randomRange(float range) {
+    return rand_r(&mRandomSeed) / float(RAND_MAX) * range;
+}
+```
 
 ## Back to this helicopter sound
 

@@ -15,26 +15,34 @@ I was thus quite disappointed when I realized the X1 was 3 (three!) times slower
 
 After a bit of research and poking of friends who are much more knowledgeable than me when it comes to Linux plumbing, we found out the X1 was keeping its cores running at 800MHz while building, instead of scaling them to 1800MHz. This is easily verifiable by running this line on a terminal, which prints the CPU frequency of all cores in a loop:
 
-    watch 'grep "cpu MHz" /proc/cpuinfo'
+```
+watch 'grep "cpu MHz" /proc/cpuinfo'
+```
 
 It printed a constant output:
 
-    cpu MHz         : 800.000
-    cpu MHz         : 800.000
-    cpu MHz         : 800.000
-    cpu MHz         : 800.000
+```
+cpu MHz         : 800.000
+cpu MHz         : 800.000
+cpu MHz         : 800.000
+cpu MHz         : 800.000
+```
 
 There are multiple "power management governors" for the Linux kernel. Those governors are responsible for scaling the CPU frequencies based on various criteria.
 
 You can list available governors with a command like this:
 
-    $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
-    conservative ondemand userspace powersave performance
+```
+$ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_governors
+conservative ondemand userspace powersave performance
+```
 
 And available frequencies with:
 
-    $ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies 
-    1801000 1800000 1700000 1600000 1500000 1400000 1300000 1200000 1100000 1000000 900000 800000
+```
+$ cat /sys/devices/system/cpu/cpu0/cpufreq/scaling_available_frequencies
+1801000 1800000 1700000 1600000 1500000 1400000 1300000 1200000 1100000 1000000 900000 800000
+```
 
 Ubuntu Raring defaults to the "ondemand" governor, which is supposed to scale the frequency dynamically based on the load.
 
@@ -42,19 +50,23 @@ Ubuntu Raring defaults to the "ondemand" governor, which is supposed to scale th
 
 One can change governors by echoing the desired governor in the right files. This simple script does it:
 
-    #!/bin/sh
-    governor=$1
-    cd /sys/devices/system/cpu
-    for x in cpu[0-9]* ; do
-        echo $governor > $x/cpufreq/scaling_governor
-    done
+```bash
+#!/bin/sh
+governor=$1
+cd /sys/devices/system/cpu
+for x in cpu[0-9]* ; do
+    echo $governor > $x/cpufreq/scaling_governor
+done
+```
 
 Following the advice of my knowledgeable friends, I tried to switch to the "conservative" governor. This fixed my issue, or so I thought.
 
 It was time to make this permanent. The package `cpufrequtils` provides a simple way to do so by creating a file named `/etc/default/cpufrequtils` with the following content:
 
-    ENABLE=true
-    GOVERNOR=conservative
+```bash
+ENABLE=true
+GOVERNOR=conservative
+```
 
 All done, reboot and be happy!
 
@@ -77,7 +89,9 @@ So I was back with "ondemand". More investigation revealed the governor was neve
 
 One last thing to do was to make the change permanent. To do so, I installed the `sysfsutils` package and edited `/etc/sysfs.conf` to add the following line:
 
-    devices/system/cpu/cpufreq/ondemand/up_threshold = 70
+```
+devices/system/cpu/cpufreq/ondemand/up_threshold = 70
+```
 
 A quick reboot to check and confirm that, yes, the kernel now scales up the cores correctly when building.
 

@@ -6,28 +6,35 @@ disqus: false
 
 ## Example Dockerfile
 
-    FROM mhart/alpine-node:8
-    RUN some-command-at-build-time
-    COPY some-file to-this-dir
-
-    # Expose a port
-    EXPOSE 3030
-    # Run this command when starting the image
-    CMD ["some-command", "with", "args"]
+```
+FROM mhart/alpine-node:8
+RUN some-command-at-build-time
+COPY some-file to-this-dir
+# Expose a port
+EXPOSE 3030
+# Run this command when starting the image
+CMD ["some-command", "with", "args"]
+```
 
 ## Building an image
 
 Builds an image named "me/product:1.0" from the Dockerfile in $PWD.
 
-    docker build -t me/product:1.0 .
+```
+docker build -t me/product:1.0 .
+```
 
 ## Starting an image
 
-    docker run me/product:1.0
+```
+docker run me/product:1.0
+```
 
 To map a port:
 
-    docker run -p <outside_port>:<inside_port> me/product:1.0
+```
+docker run -p <outside_port>:<inside_port> me/product:1.0
+```
 
 To run in the background: `-d`
 
@@ -35,26 +42,37 @@ To run in the background: `-d`
 
 List running containers:
 
-    docker ps
+```
+docker ps
+```
 
 List all:
 
-    docker ps -a
+```
+docker ps -a
+```
 
 Stopping a container:
 
-    docker stop <container_id>
+```
+docker stop <container_id>
+```
 
 More violent:
 
-    docker kill <container_id>
+```
+docker kill <container_id>
+```
 
 Deleting a container:
 
-    docker rm <container_id>
+```
+docker rm <container_id>
+```
 
 ## Image management
 
-    docker images
-
-    docker rmi
+```
+docker images
+docker rmi
+```

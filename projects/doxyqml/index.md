@@ -17,14 +17,18 @@ Have a look at the [GitHub page][gh].
 
 The simplest way to install Doxyqml is with [pip][]:
 
-    pip install doxyqml
+```
+pip install doxyqml
+```
 
 You can also download the tarball and follow the instructions from the
 README.md. Latest release is [doxyqml-0.5.0.tar.bz2][dl].
 
 Alternatively, you can clone the Git repository with:
 
-    git clone https://github.com/agateau/doxyqml.git
+```
+git clone https://github.com/agateau/doxyqml.git
+```
 
 [dl]: https://github.com/agateau/doxyqml/releases/download/0.5.0/doxyqml-0.5.0.tar.bz2
 [gh]: https://github.com/agateau/doxyqml

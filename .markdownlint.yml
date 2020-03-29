@@ -1,8 +1,14 @@
 default: true
 ul-indent:
     indent: 4
-code-block-style:
-    style: indented
+
+# Enforcing fenced code-block-style is disabled for now because it reports the
+# yaml content of the gallery:: plugin as indented code-blocks
+code-block-style: false
+#code-block-style:
+#    style: fenced
+fenced-code-language: false
+
 line_length: false
 first-line-h1: false
 no-trailing-punctuation: false

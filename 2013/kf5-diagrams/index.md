@@ -19,10 +19,12 @@ My initial goal was to generate one diagram showing all the frameworks, but this
 
 I also used `tred`, another tool from Graphviz, to remove unnecessary links. For example if you have this graph definition:
 
-    digraph G {
-        A -> B -> C # A depends on B, which depends on C
-        A -> C # A depends on C
-    }
+```
+digraph G {
+    A -> B -> C # A depends on B, which depends on C
+    A -> C # A depends on C
+}
+```
 
 You get this output:
 

@@ -11,25 +11,29 @@ If you are a Yokadi user or if you have used other todo list systems, you might 
 
 Suppose you have a "birthday" project like this:
 
-    yokadi> t_list birthday
-                                 birthday
-    ID|Title               |U  |S|Age     |Due date
-    -----------------------------------------------------------------
-    1 |Buy food (grocery)  |0  |N|2m      |
-    2 |Buy drinks (grocery)|0  |N|2m      |
-    3 |Invite Bob (phone)  |0  |N|2m      |
-    4 |Invite Wendy (phone)|0  |N|2m      |
-    5 |Bake a yummy cake   |0  |N|2m      |
-    6 |Decorate living-room|0  |N|2m      |
+```
+yokadi> t_list birthday
+                             birthday
+ID|Title               |U  |S|Age     |Due date
+-----------------------------------------------------------------
+1 |Buy food (grocery)  |0  |N|2m      |
+2 |Buy drinks (grocery)|0  |N|2m      |
+3 |Invite Bob (phone)  |0  |N|2m      |
+4 |Invite Wendy (phone)|0  |N|2m      |
+5 |Bake a yummy cake   |0  |N|2m      |
+6 |Decorate living-room|0  |N|2m      |
+```
 
 Running `t_medit birthday` will start your editor with this content:
 
-    1 N @grocery Buy food
-    2 N @grocery Buy drinks
-    3 N @phone Invite Bob
-    4 N @phone Invite Wendy
-    5 N Bake a yummy cake
-    6 N Decorate living-room
+```
+1 N @grocery Buy food
+2 N @grocery Buy drinks
+3 N @phone Invite Bob
+4 N @phone Invite Wendy
+5 N Bake a yummy cake
+6 N Decorate living-room
+```
 
 By editing this file you can do a lot of things:
 
@@ -41,14 +45,16 @@ By editing this file you can do a lot of things:
 
 Let's say you modify the text like this:
 
-    2 N @grocery Buy drinks
-    1 N @grocery Buy food
-    3 D @phone Invite Bob
-    4 N @phone Invite Wendy & David
-    - @phone Invite Charly
-    5 N Bake a yummy cake
-    - S Decorate table
-    - Decorate walls
+```
+2 N @grocery Buy drinks
+1 N @grocery Buy food
+3 D @phone Invite Bob
+4 N @phone Invite Wendy & David
+- @phone Invite Charly
+5 N Bake a yummy cake
+- S Decorate table
+- Decorate walls
+```
 
 Then Yokadi will:
 

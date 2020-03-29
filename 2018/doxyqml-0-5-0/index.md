@@ -18,7 +18,9 @@ Just like in [version 0.4.0](../doxyqml-0-4-0), most of the work has been done b
 
 As usual, you can get it using pip:
 
-    pip3 install --upgrade doxyqml
+```
+pip3 install --upgrade doxyqml
+```
 
 Or download the [source code][gh].
 

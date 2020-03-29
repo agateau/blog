@@ -33,66 +33,63 @@ To implement this I created a class named `DisabledActionShortcutMonitor`. This 
 
 disabledactionshortcutmonitor.h looks like this:
 
-.. sourcecode:: c++
-
-    class DisabledActionShortcutMonitor : public QObject
-    {
-        Q_OBJECT
-    public:
-        /**
-         * parent must be a widget because we need to create a QShortcut on it
-         */
-        DisabledActionShortcutMonitor(QAction* action, QWidget* parent);
-        ~DisabledActionShortcutMonitor();
-
-    Q_SIGNALS:
-        void activated();
-
-    protected:
-        bool eventFilter(QObject* object, QEvent* event);
-
-    private:
-        QShortcut* mShortcut;
-    };
+```c++
+class DisabledActionShortcutMonitor : public QObject
+{
+    Q_OBJECT
+public:
+    /**
+     * parent must be a widget because we need to create a QShortcut on it
+     */
+    DisabledActionShortcutMonitor(QAction* action, QWidget* parent);
+    ~DisabledActionShortcutMonitor();
+Q_SIGNALS:
+    void activated();
+protected:
+    bool eventFilter(QObject* object, QEvent* event);
+private:
+    QShortcut* mShortcut;
+};
+```
 
 And here is disabledactionshortcutmonitor.cpp:
 
-.. sourcecode:: c++
-
-    DisabledActionShortcutMonitor::DisabledActionShortcutMonitor(QAction* action, QWidget* parent)
-    : QObject(parent)
-    {
-        mShortcut = new QShortcut(parent);
-        connect(mShortcut, SIGNAL(activated()), SIGNAL(activated()));
-        action->installEventFilter(this);
-    }
-
-    DisabledActionShortcutMonitor::~DisabledActionShortcutMonitor()
-    {
-        delete mShortcut;
-    }
-
-    bool DisabledActionShortcutMonitor::eventFilter(QObject* object, QEvent* event)
-    {
-        if (event->type() == QEvent::ActionChanged) {
-            QAction* action = static_cast<QAction*>(object);
-            if (action->isEnabled()) {
-                // Unset the shortcut otherwise we get a dialog complaining about
-                // ambiguous shortcuts when the user tries to trigger the action
-                mShortcut->setKey(QKeySequence());
-            } else {
-                mShortcut->setKey(action->shortcut());
-            }
+```c++
+DisabledActionShortcutMonitor::DisabledActionShortcutMonitor(QAction* action, QWidget* parent)
+: QObject(parent)
+{
+    mShortcut = new QShortcut(parent);
+    connect(mShortcut, SIGNAL(activated()), SIGNAL(activated()));
+    action->installEventFilter(this);
+}
+DisabledActionShortcutMonitor::~DisabledActionShortcutMonitor()
+{
+    delete mShortcut;
+}
+bool DisabledActionShortcutMonitor::eventFilter(QObject* object, QEvent* event)
+{
+    if (event->type() == QEvent::ActionChanged) {
+        QAction* action = static_cast<QAction*>(object);
+        if (action->isEnabled()) {
+            // Unset the shortcut otherwise we get a dialog complaining about
+            // ambiguous shortcuts when the user tries to trigger the action
+            mShortcut->setKey(QKeySequence());
+        } else {
+            mShortcut->setKey(action->shortcut());
         }
-        return false;
     }
+    return false;
+}
+```
 
 You use it like this:
 
-    QAction* myAction = /*...*/;
-    // ...
-    DisabledActionShortcutMonitor* monitor = new DisabledActionShortcutMonitor(myAction, QApplication::activeWindow());
-    connect(monitor, SIGNAL(activated()), SLOT(doSomething()));
+```
+QAction* myAction = /*...*/;
+// ...
+DisabledActionShortcutMonitor* monitor = new DisabledActionShortcutMonitor(myAction, QApplication::activeWindow());
+connect(monitor, SIGNAL(activated()), SLOT(doSomething()));
+```
 
 `doSomething()` will be called whenever the user uses `myAction` shortcut while `myAction` is disabled.
 

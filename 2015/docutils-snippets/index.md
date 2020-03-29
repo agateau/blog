@@ -13,137 +13,122 @@ Available nodes are listed in the [Docutils Document Tree][doc-tree]. reStructur
 
 Let's start with an "Hello World", a simple paragraph:
 
-.. sourcecode:: python
-
-    from docutils import nodes
-    # ...
-
-    class HelloWorld(Directive):
-        def run(self):
-            para = nodes.paragraph(text='Hello World')
-            return [para]
+```python
+from docutils import nodes
+# ...
+class HelloWorld(Directive):
+    def run(self):
+        para = nodes.paragraph(text='Hello World')
+        return [para]
+```
 
 An error I made a lot when starting was to pass the text of the paragraph as a _positional_ argument. I kept writing that:
 
-.. sourcecode:: python
-
-    nodes.paragraph('Hello World')
+```python
+nodes.paragraph('Hello World')
+```
 
 Instead of this:
 
-.. sourcecode:: python
-
-    nodes.paragraph(text='Hello World')
+```python
+nodes.paragraph(text='Hello World')
+```
 
 It does not work because the first argument of `paragraph()` is the raw source: the string which would produce the paragraph if it came from a .rst document.
 
 Next example, let's create some sections, the equivalent of this .rst source:
 
-.. sourcecode:: rst
-
-    Hello
-    =====
-
-    Some text.
-
-    A Level 2 Title
-    ---------------
-
-    More text.
+```rst
+Hello
+=====
+Some text.
+A Level 2 Title
+---------------
+More text.
+```
 
 The code:
 
-.. sourcecode:: python
-
-    class Sections(Directive):
-        def run(self):
-            section = nodes.section()
-            section += nodes.title(text='Hello')
-            section += nodes.paragraph(text='Some text.')
-
-            subsection = nodes.section()
-            section += subsection
-
-            subsection += nodes.title(text='A Level 2 Title')
-            subsection += nodes.paragraph(text='More text.')
-
-            return [section]
+```python
+class Sections(Directive):
+    def run(self):
+        section = nodes.section()
+        section += nodes.title(text='Hello')
+        section += nodes.paragraph(text='Some text.')
+        subsection = nodes.section()
+        section += subsection
+        subsection += nodes.title(text='A Level 2 Title')
+        subsection += nodes.paragraph(text='More text.')
+        return [section]
+```
 
 Let's now create a bullet list, like the one which would be created by this .rst:
 
-.. sourcecode:: rst
-
-    - Apples
-    - Oranges
-    - Bananas
+```rst
+- Apples
+- Oranges
+- Bananas
+```
 
 This is done with a `bullet_list` node, which contains `list_item` nodes, which themselves contain `paragraph` nodes.
 
-.. sourcecode:: python
-
-    class BulletList(Directive):
-        def run(self):
-            fruits = ['Apples', 'Oranges', 'Bananas']
-
-            lst = nodes.bullet_list()
-            for fruit in fruits:
-                item = nodes.list_item()
-                lst += item
-                item += nodes.paragraph(text=fruit)
-
-            return [lst]
+```python
+class BulletList(Directive):
+    def run(self):
+        fruits = ['Apples', 'Oranges', 'Bananas']
+        lst = nodes.bullet_list()
+        for fruit in fruits:
+            item = nodes.list_item()
+            lst += item
+            item += nodes.paragraph(text=fruit)
+        return [lst]
+```
 
 And now for something a bit crazier, what about a table? The rough equivalent of:
 
-.. sourcecode:: rst
-
-    ============ ========== ======== =====
-    Product      Unit Price Quantity Price
-    ------------ ---------- -------- -----
-    Coffee       2          2        4
-    Orange Juice 3          1        3
-    Croissant    1.5        2        3
-    ============ ========== ======== =====
+```rst
+============ ========== ======== =====
+Product      Unit Price Quantity Price
+------------ ---------- -------- -----
+Coffee       2          2        4
+Orange Juice 3          1        3
+Croissant    1.5        2        3
+============ ========== ======== =====
+```
 
 This one is a bit more involved:
 
-.. sourcecode:: python
-
-    class TableExample(Directive):
-        def run(self):
-            header = ('Product', 'Unit Price', 'Quantity', 'Price')
-            colwidths = (2, 1, 1, 1)
-            data = [
-                ('Coffee', '2', '2', '4'),
-                ('Orange Juice', '3', '1', '3'),
-                ('Croissant', '1.5', '2', '3'),
-            ]
-
-            table = nodes.table()
-
-            tgroup = nodes.tgroup(cols=len(header))
-            table += tgroup
-            for colwidth in colwidths:
-                tgroup += nodes.colspec(colwidth=colwidth)
-
-            thead = nodes.thead()
-            tgroup += thead
-            thead += self.create_table_row(header)
-
-            tbody = nodes.tbody()
-            tgroup += tbody
-            for data_row in data:
-                tbody += self.create_table_row(data_row)
-
-            return [table]
-
-        def create_table_row(self, row_cells):
-            row = nodes.row()
-            for cell in row_cells:
-                entry = nodes.entry()
-                row += entry
-                entry += nodes.paragraph(text=cell)
-            return row
+```python
+class TableExample(Directive):
+    def run(self):
+        header = ('Product', 'Unit Price', 'Quantity', 'Price')
+        colwidths = (2, 1, 1, 1)
+        data = [
+            ('Coffee', '2', '2', '4'),
+            ('Orange Juice', '3', '1', '3'),
+            ('Croissant', '1.5', '2', '3'),
+        ]
+        table = nodes.table()
+        tgroup = nodes.tgroup(cols=len(header))
+        table += tgroup
+        for colwidth in colwidths:
+            tgroup += nodes.colspec(colwidth=colwidth)
+        thead = nodes.thead()
+        tgroup += thead
+        thead += self.create_table_row(header)
+        tbody = nodes.tbody()
+        tgroup += tbody
+        for data_row in data:
+            tbody += self.create_table_row(data_row)
+        return [table]
+    def create_table_row(self, row_cells):
+        row = nodes.row()
+        for cell in row_cells:
+            entry = nodes.entry()
+            row += entry
+            entry += nodes.paragraph(text=cell)
+        return row
+```
 
 That's it for today, hope this was helpful for some of you. If you want to experiment with this, here is the source code for all these examples: [docutils_snippets.py](docutils_snippets.py).
 

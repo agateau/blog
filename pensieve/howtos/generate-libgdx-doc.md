@@ -7,10 +7,14 @@ disqus: false
 Content
 Get libgdx sources:
 
-    git clone https://github.com/libgdx/libgdx
-    cd libgdx
-    git checkout x.y.z
+```
+git clone https://github.com/libgdx/libgdx
+cd libgdx
+git checkout x.y.z
+```
 
 Generate doc in a doc/ dir:
 
-    javadoc -d doc -sourcepath gdx/src -subpackages com
+```
+javadoc -d doc -sourcepath gdx/src -subpackages com
+```

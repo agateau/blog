@@ -42,14 +42,18 @@ First, setup a base dir. This dir is going to contain 3 repositories: the source
 for Ubiquity itself, the source for Ubiquity slideshow and a set of scripts I
 put together.
 
-    mkdir src/ubiquity
+```
+mkdir src/ubiquity
+```
 
 Get the repositories:
 
-    cd src/ubiquity
-    bzr clone lp:ubiquity code
-    bzr clone lp:ubiquity-slideshow-ubuntu slideshow
-    bzr clone lp:~agateau/+junk/ubiquity-scripts scripts
+```
+cd src/ubiquity
+bzr clone lp:ubiquity code
+bzr clone lp:ubiquity-slideshow-ubuntu slideshow
+bzr clone lp:~agateau/+junk/ubiquity-scripts scripts
+```
 
 ### Setting up a VM to accept our code
 
@@ -71,11 +75,15 @@ host._
 
 Open Konsole and create the folder which will contain the code to test:
 
-    [VM] mkdir -p src/ubiquity
+```
+[VM] mkdir -p src/ubiquity
+```
 
 Setup ssh:
 
-    [VM] sudo apt-get install openssh-server
+```
+[VM] sudo apt-get install openssh-server
+```
 
 For some reason, sshd does not start automatically for me and running `sudo
 start ssh` does not help.
@@ -85,33 +93,45 @@ workaround.
 
 Create the missing dir:
 
-    [VM] sudo mkdir /run/sshd
+```
+[VM] sudo mkdir /run/sshd
+```
 
 Start `sshd` by hand.
 
-    [VM] sudo /usr/sbin/sshd
+```
+[VM] sudo /usr/sbin/sshd
+```
 
 _Note: One must use the full path to the sshd binary, otherwise it does not start._
 
 Now we need to set a password for the `kubuntu` user, otherwise we can't ssh to it:
 
-    [VM] sudo passwd kubuntu
-    Enter new UNIX password:
-    Retype new UNIX password:
+```
+[VM] sudo passwd kubuntu
+Enter new UNIX password:
+Retype new UNIX password:
+```
 
 Before going back to the host, write down the IP address of the VM:
 
-    [VM] ifconfig
+```
+[VM] ifconfig
+```
 
 Go back to the host and install your ssh public key in the VM so that you
 don't have to enter the password of the `kubuntu` user every time you want to
 test a change.
 
-    [HOST] ssh-copy-id kubuntu@$VM_IP
+```
+[HOST] ssh-copy-id kubuntu@$VM_IP
+```
 
 Check it works:
 
-    [HOST] ssh kubuntu@$VM_IP
+```
+[HOST] ssh kubuntu@$VM_IP
+```
 
 You should get logged in the VM without entering the password.
 
@@ -119,7 +139,9 @@ You should get logged in the VM without entering the password.
 
 Time to push our code. From the host:
 
-    [HOST] ~/src/ubiquity/scripts/rsync-to-vm $VM_IP
+```
+[HOST] ~/src/ubiquity/scripts/rsync-to-vm $VM_IP
+```
 
 Now, switch back to the VM and let's do some final setup.  We are going to
 rename some of Ubiquity dirs to append "-distro" to their name and replace the
@@ -137,36 +159,44 @@ For example, in `/usr/lib/ubiquity`, the following changes will be done for the
 
 There are a few dirs to alter, so I created a script to do the work:
 
-    [VM] cd ~/src/ubiquity
-    [VM] scripts/setup setup
+```
+[VM] cd ~/src/ubiquity
+[VM] scripts/setup setup
+```
 
 _Note: no need to call `scripts/setup` with `sudo`, the script uses it when necessary._
 
 All symlinks have been created. You can check the status with:
 
-    [VM] scripts/setup status
-
-    lrwxrwxrwx 1 root root 14 mars  25 17:22 /usr/lib/ubiquity/plugins -> plugins-distro
-    lrwxrwxrwx 1 root root 15 mars  25 17:22 /usr/lib/ubiquity/ubiquity -> ubiquity-distro
-    lrwxrwxrwx 1 root root 9 mars  25 17:22 /usr/share/ubiquity/qt -> qt-distro
-    lrwxrwxrwx 1 root root 25 mars  25 17:22 /usr/share/ubiquity-slideshow -> ubiquity-slideshow-distro
+```
+[VM] scripts/setup status
+lrwxrwxrwx 1 root root 14 mars  25 17:22 /usr/lib/ubiquity/plugins -> plugins-distro
+lrwxrwxrwx 1 root root 15 mars  25 17:22 /usr/lib/ubiquity/ubiquity -> ubiquity-distro
+lrwxrwxrwx 1 root root 9 mars  25 17:22 /usr/share/ubiquity/qt -> qt-distro
+lrwxrwxrwx 1 root root 25 mars  25 17:22 /usr/share/ubiquity-slideshow -> ubiquity-slideshow-distro
+```
 
 To switch to our development version, run:
 
-    [VM] scripts/setup dev
+```
+[VM] scripts/setup dev
+```
 
 Symlinks look like this now:
 
-    [VM] scripts/setup status
-
-    lrwxrwxrwx 1 root root 11 mars  25 17:23 /usr/lib/ubiquity/plugins -> plugins-dev
-    lrwxrwxrwx 1 root root 12 mars  25 17:23 /usr/lib/ubiquity/ubiquity -> ubiquity-dev
-    lrwxrwxrwx 1 root root 6 mars  25 17:23 /usr/share/ubiquity/qt -> qt-dev
-    lrwxrwxrwx 1 root root 22 mars  25 17:23 /usr/share/ubiquity-slideshow -> ubiquity-slideshow-dev
+```
+[VM] scripts/setup status
+lrwxrwxrwx 1 root root 11 mars  25 17:23 /usr/lib/ubiquity/plugins -> plugins-dev
+lrwxrwxrwx 1 root root 12 mars  25 17:23 /usr/lib/ubiquity/ubiquity -> ubiquity-dev
+lrwxrwxrwx 1 root root 6 mars  25 17:23 /usr/share/ubiquity/qt -> qt-dev
+lrwxrwxrwx 1 root root 22 mars  25 17:23 /usr/share/ubiquity-slideshow -> ubiquity-slideshow-dev
+```
 
 We are now ready to work! We can run our version of Ubiquity with:
 
-    [VM] ubiquity -d kde_ui
+```
+[VM] ubiquity -d kde_ui
+```
 
 The `-d` switch turns on debug output, which can be found in
 `/var/log/installer/debug`.
@@ -175,11 +205,15 @@ The `-d` switch turns on debug output, which can be found in
 
 Hack on the host and whenever you want to test your changes, run:
 
-    [HOST] scripts/rsync-to-vm $VM_IP
+```
+[HOST] scripts/rsync-to-vm $VM_IP
+```
 
 Then switch to the VM and run Ubiquity:
 
-    [VM] ubiquity -d kde_ui
+```
+[VM] ubiquity -d kde_ui
+```
 
 _Note: Since the setup relies on the code being in `/home/kubuntu/src/ubiquity/code` and
 `/home/kubuntu/src/ubiquity/slideshow`, using Bazaar branches can be problematic.
@@ -192,19 +226,25 @@ your language, and let you pick between trying or installing Kubuntu.
 
 To quickly test the greeter mode from within the running Plasma session, run ubiquity with the `--greeter` option:
 
-    [VM] ubiquity -d --greeter kde_ui
+```
+[VM] ubiquity -d --greeter kde_ui
+```
 
 If you want to test the full thing, you must restart Ubiquity. To do so, switch to a console session (using Host-VM-key + F1) then run these commands:
 
-    [VM] sudo -i
-    [VM] stop --no-wait lightdm
-    [VM] stop ubiquity
-    [VM] pkill -9 X
-    [VM] start ubiquity
+```
+[VM] sudo -i
+[VM] stop --no-wait lightdm
+[VM] stop ubiquity
+[VM] pkill -9 X
+[VM] start ubiquity
+```
 
 You probably also want to make sure the greeter does not try to run the GTK+ frontend. _ubiquity-dm_ picks the GTK+ frontend if it is available, and since you now have the source code of Ubiquity installed, the GTK+ frontend is available. For now the hack I use is to rm it:
 
-    [VM] rm ~/src/ubiquity/code/ubiquity/frontend/gtk_ui.py
+```
+[VM] rm ~/src/ubiquity/code/ubiquity/frontend/gtk_ui.py
+```
 
 Note that you need to do so everytime you run _rsync-to-vm_, since it will bring back the `gtk_ui.py` file.
 
@@ -220,13 +260,17 @@ two steps:
 To test step 1, set the `UBIQUITY_OEM_USER_CONFIG` environment
 variable:
 
-    [VM] UBIQUITY_OEM_USER_CONFIG=1 ubiquity -d kde_ui
+```
+[VM] UBIQUITY_OEM_USER_CONFIG=1 ubiquity -d kde_ui
+```
 
 To test step 2, create a symlink named `oem-config` on the `ubiquity` script,
 and start Ubiquity from this script:
 
-    [VM] ln -s /usr/lib/ubiquity/bin/ubiquity oem-config
-    [VM] kdesudo ./oem-config -d kde_ui
+```
+[VM] ln -s /usr/lib/ubiquity/bin/ubiquity oem-config
+[VM] kdesudo ./oem-config -d kde_ui
+```
 
 _Note the source of the link is `/usr/lib/ubiquity/bin/ubiquity`, not
 `/usr/bin/ubiquity`. The latter is just a wrapper around the former._

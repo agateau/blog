@@ -11,8 +11,10 @@ Yokadi comes with a daemon, Yokadid, which pops notifications on your desktop fo
 
 Since I spend a lot of time in terminals, I figured out it would be nice to have a reminder there. To keep this discreet, I only wanted to show the number of due tasks. This is what it looks like:
 
-    [agateau ~/src d: 4]
-    $ █
+```
+[agateau ~/src d: 4]
+$ █
+```
 
 As you can see, the only indication that I have 4 tasks due is the `d: 4` part of my prompt.
 
@@ -22,10 +24,12 @@ I didn't want to access Yokadi database every time the prompt shows up, so inste
 
 First I created a short script called "ydue", which prints the number of overdue tasks matching a given filter. It looks like this:
 
-    #!/bin/sh
-    set -e
-    filter="$*"
-    yokadi "t_list --format plain --overdue $filter" | grep --count '^- ' || true
+```bash
+#!/bin/sh
+set -e
+filter="$*"
+yokadi "t_list --format plain --overdue $filter" | grep --count '^- ' || true
+```
 
 That's a bit hackish: it calls Yokadi to list all tasks matching the filter in plain mode, and prints the number of tasks, based on the fact that a task line starts with `-`.
 
@@ -33,18 +37,21 @@ That's a bit hackish: it calls Yokadi to list all tasks matching the filter in p
 
 Then I setup a cronjob to call `ydue` every 5 minutes and store the output in `~/.cache/taskcount`
 
-    */5 * * * * ydue "!geny%" > ~/.cache/taskcount
+```
+*/5 * * * * ydue "!geny%" > ~/.cache/taskcount
+```
 
 Finally, I modified my `.zshrc` to include the task count in the prompt if it's greater than 0.
 
-    if [ -e "$HOME/.cache/taskcount" ] ; then
-        local taskcount=$(cat $HOME/.cache/taskcount)
-        if [ "$taskcount" -gt 0 ] ; then
-            extraps="${extraps} d: $taskcount"
-        fi
+```bash
+if [ -e "$HOME/.cache/taskcount" ] ; then
+    local taskcount=$(cat $HOME/.cache/taskcount)
+    if [ "$taskcount" -gt 0 ] ; then
+        extraps="${extraps} d: $taskcount"
     fi
-
-    PS1="[$user$host %~$extraps]$nl$ "
+fi
+PS1="[$user$host %~$extraps]$nl$ "
+```
 
 (`$extraps` is a variable which can contain other info like the current branch when inside a git repository. `$nl` is a newline character)
 

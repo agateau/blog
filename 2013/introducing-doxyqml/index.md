@@ -31,48 +31,54 @@ In the spirit of Doxygen, Doxyqml tries to extract as much as possible from the
 code itself, to avoid duplication. For example, a property can be documented
 this way:
 
-    Item {
-        /// The text color of the element
-        property color textColor
-    }
+```
+Item {
+    /// The text color of the element
+    property color textColor
+}
+```
 
 Doxyqml will correctly extract the type of the `textColor` property as `color`.
 
 But what if the property is an alias? Something like this:
 
-    Item {
-        /// The text color of the element
-        property alias foregroundColor: innerText.color
-
-        Text {
-            id: innerText
-        }
+```
+Item {
+    /// The text color of the element
+    property alias foregroundColor: innerText.color
+    Text {
+        id: innerText
     }
+}
+```
 
 Doxyqml does not resolve aliases. In this case you need to help it a bit by
 providing the type. You can do so with a `type:<name>` annotation:
 
-    Item {
-        /// type:color The text color of the widget
-        property alias foregroundColor: innerText.color
-
-        Text {
-            id: innerText
-        }
+```
+Item {
+    /// type:color The text color of the widget
+    property alias foregroundColor: innerText.color
+    Text {
+        id: innerText
     }
+}
+```
 
 Types annotations are also used to document functions. Arguments and return
 values of QML functions are untyped, so you must use the `type:<name>`
 syntax to document them. Here is an example from the README:
 
-    /**
-     * Create a user
-     * @param type:string firstname User firstname
-     * @param type:string lastname User lastname
-     * @param type:int User age
-     * @return type:User The User object
-     */
-    function createUser(firstname, lastname, age);
+```
+/**
+ * Create a user
+ * @param type:string firstname User firstname
+ * @param type:string lastname User lastname
+ * @param type:int User age
+ * @return type:User The User object
+ */
+function createUser(firstname, lastname, age);
+```
 
 Signal parameters, on the other hand, are completely typed. Doxyqml will
 extract the parameter types for you.

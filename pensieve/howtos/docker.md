@@ -8,28 +8,35 @@ Currently for 17.9
 
 ## Example Dockerfile
 
-    FROM mhart/alpine-node:8
-    RUN some-command-at-build-time
-    COPY some-file to-this-dir
-
-    # Expose a port
-    EXPOSE 3030
-    # Run this command when starting the image
-    CMD ["some-command", "with", "args"]
+```
+FROM mhart/alpine-node:8
+RUN some-command-at-build-time
+COPY some-file to-this-dir
+# Expose a port
+EXPOSE 3030
+# Run this command when starting the image
+CMD ["some-command", "with", "args"]
+```
 
 ## Building an image
 
 Builds an image named "me/product:1.0" from the Dockerfile in $PWD.
 
-    docker build -t me/product:1.0 .
+```
+docker build -t me/product:1.0 .
+```
 
 ## Starting an image
 
-    docker run me/product:1.0
+```
+docker run me/product:1.0
+```
 
 To map a port:
 
-    docker run -p <outside_port>:<inside_port> me/product:1.0
+```
+docker run -p <outside_port>:<inside_port> me/product:1.0
+```
 
 To run in the background: `-d`
 
@@ -37,44 +44,63 @@ To run in the background: `-d`
 
 List running containers:
 
-    docker container ls
+```
+docker container ls
+```
 
 List all:
 
-    docker container ls -a
+```
+docker container ls -a
+```
 
 Stopping a container:
 
-    docker container stop <container_id>
+```
+docker container stop <container_id>
+```
 
 More violent:
 
-    docker container kill <container_id>
+```
+docker container kill <container_id>
+```
 
 Deleting a container:
 
-    docker container rm <container_id>
+```
+docker container rm <container_id>
+```
 
 ## Image management
 
-    docker image ls
-
-    docker image rm
+```
+docker image ls
+docker image rm
+```
 
 ## Cleanup
 
 Delete all stopped containers:
 
-    docker rm $(docker ps -a -q)
+```
+docker rm $(docker ps -a -q)
+```
 
 Delete all untagged/dangling images:
 
-    docker image rm $(docker image ls -q -f dangling=true)
+```
+docker image rm $(docker image ls -q -f dangling=true)
+```
 
 Clean all orphaned volumes:
 
-    docker volume prune
+```
+docker volume prune
+```
 
 More violent:
 
-    docker system prune
+```
+docker system prune
+```

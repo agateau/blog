@@ -9,8 +9,10 @@ One of the tools I use a lot to work with git repositories is [Tig][]. This hand
 
 Reading the [manual][] I found out Tig is extensible: one can bind shortcut keys to trigger commands. The bound commands can use of several state variables such as the current commit or the current branch. This makes it possible to use Tig as a commit selector for custom commands. Armed with this knowledge, I added these lines to `$HOME/.tigrc`:
 
-    bind main R !git rebase -i %(commit)^
-    bind diff R !git rebase -i %(commit)^
+```
+bind main R !git rebase -i %(commit)^
+bind diff R !git rebase -i %(commit)^
+```
 
 That worked! If you add these two lines to your `.tigrc` file, you can start Tig, scroll to the commit you want and press Shift+R to start the rebase from it. No more copying the commit id and going back to the command line!
 

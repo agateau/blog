@@ -47,30 +47,28 @@ The first element is to create a stable build environment. To do this I created
 a Docker with the necessary build components. Here is its Dockerfile, stored
 in the `ci` directory of the repository:
 
-    FROM ubuntu:18.04
-
-    RUN apt-get update \
-        && apt-get install -y -qq --no-install-recommends \
-            cmake \
-            dpkg-dev \
-            file \
-            g++ \
-            make \
-            ninja-build \
-            python3 \
-            python3-pip \
-            python3-setuptools \
-            qt5-default \
-            qtbase5-dev \
-            qttools5-dev \
-            rpm \
-            xvfb
-
-    COPY requirements.txt /tmp
-
-    RUN pip3 install -r /tmp/requirements.txt
-
-    ENTRYPOINT ["/bin/bash"]
+```docker
+FROM ubuntu:18.04
+RUN apt-get update \
+    && apt-get install -y -qq --no-install-recommends \
+        cmake \
+        dpkg-dev \
+        file \
+        g++ \
+        make \
+        ninja-build \
+        python3 \
+        python3-pip \
+        python3-setuptools \
+        qt5-default \
+        qtbase5-dev \
+        qttools5-dev \
+        rpm \
+        xvfb
+COPY requirements.txt /tmp
+RUN pip3 install -r /tmp/requirements.txt
+ENTRYPOINT ["/bin/bash"]
+```
 
 Nothing really complicated here, but there are a few interesting things to
 point out nevertheless.
@@ -89,11 +87,13 @@ build the Docker image:
 
 [qpropgen]: https://github.com/agateau/qpropgen
 
-    #!/bin/sh
-    set -ev
-    cd $(dirname $0)
-    cp ../3rdparty/qpropgen/requirements.txt .
-    docker build -t nanonote:1 .
+```bash
+#!/bin/sh
+set -ev
+cd $(dirname $0)
+cp ../3rdparty/qpropgen/requirements.txt .
+docker build -t nanonote:1 .
+```
 
 This gives us a clean build environment, now lets create a build script.
 
@@ -130,17 +130,16 @@ Now that we have a build script and a build environment, we can make Travis
 uses them. Here is Nanonote `.travis.yml` file. As you can see, it is just a
 few lines:
 
-    dist: xenial
-    language: minimal
-
-    services:
-    - docker
-
-    install:
-    - ci/build-docker
-
-    script:
-    - docker run -v $PWD:/root/nanonote nanonote:1 /root/nanonote/ci/build-app
+```yaml
+dist: xenial
+language: minimal
+services:
+- docker
+install:
+- ci/build-docker
+script:
+- docker run -v $PWD:/root/nanonote nanonote:1 /root/nanonote/ci/build-app
+```
 
 Not much to say here:
 

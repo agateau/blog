@@ -9,13 +9,15 @@ When I wake up, I often start the day with a few webcomics (yes, I am a slacker)
 
 Downloading the RSS feed, it turned out some articles do not have a complete URL, instead, the `<link>` item contains only an absolute path. The RSS spec says the `<link>` is an URL, so the feed is not spec-compliant, but that is probably to be expected when the feed announces itself like this :)
 
-    <?xml version="1.0" encoding="utf-8"?>
-    <rss version="2.0">
-    <channel>
-        <title>Penny Arcade</title>
-        <link>http://www.penny-arcade.com</link>
-        <description>News Fucker 6000</description>
-        ...
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0">
+<channel>
+    <title>Penny Arcade</title>
+    <link>http://www.penny-arcade.com</link>
+    <description>News Fucker 6000</description>
+    ...
+```
 
 Anyway, I made a small patch to add support for that spec deviation. Happy with my fix, I went bug-hunting on Bugzilla, wondering if someone had reported it before. I stumbled on [bug 117478][bug117478], which looked similar, but was actually about an ATOM feed. I thought the fix would be similar and dived into it. Turns out this new fix had nothing to do with the previous one... (by the way, [the feed from the bug][tbray] is quite interesting, I added it to my feed list)
 

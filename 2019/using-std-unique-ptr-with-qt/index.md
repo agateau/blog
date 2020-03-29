@@ -15,34 +15,44 @@ This is very Qt specific. In the rest of the C++ world, object ownership is more
 
 I am used to the Qt way, but I like the harder to misuse and self documenting aspect of the `unique_ptr` way. Look at this simple function:
 
-    Engine* createEngine();
+```c++
+Engine* createEngine();
+```
 
 With this signature we have no way to know if you are expected to delete the new engine. And the compiler cannot help us. This code builds:
 
-    {
-        Engine* engine = createEngine();
-        engine->start();
-        // Memory leak!
-    }
+```c++
+{
+    Engine* engine = createEngine();
+    engine->start();
+    // Memory leak!
+}
+```
 
 With this signature, on the other hand:
 
-    std::unique_ptr<Engine> createEngine();
+```c++
+std::unique_ptr<Engine> createEngine();
+```
 
 It is clear and hard to ignore that ownership is passed to the caller. This won't build:
 
-    {
-        Engine* engine = createEngine();
-        engine->start();
-    }
+```c++
+{
+    Engine* engine = createEngine();
+    engine->start();
+}
+```
 
 But this builds and does not leak:
 
-    {
-        std::unique_ptr<Engine> engine = createEngine();
-        engine->start();
-        // No leak, Engine instance is deleted when going out of scope
-    }
+```c++
+{
+    std::unique_ptr<Engine> engine = createEngine();
+    engine->start();
+    // No leak, Engine instance is deleted when going out of scope
+}
+```
 
 (And we can use `auto` to replace the lengthy `std::unique_ptr<Engine>` declaration)
 
@@ -52,21 +62,25 @@ We can also use this for "sink functions": declaring a function argument as `std
 
 Using `std::unique_ptr` for member variables brings similar benefits, but one point I really like is how it makes the class definition more self-documenting. Consider this class:
 
-    class Car {
-        /*...*/
-        World* mWorld;
-        Engine* mEngine;
-    }
+```c++
+class Car {
+    /*...*/
+    World* mWorld;
+    Engine* mEngine;
+}
+```
 
 Does `Car` owns `mWorld`, `mEngine`, both, none? We can guess, but we can't really know. Only the class documentation or our knowledge of the code base could tell us that `Car` owns `mEngine` but does not own `mWorld`.
 
 On the other hand, if we work on a code base where all owned objects are `std::unique_ptr` and all "borrowed" objects are raw pointers, then this class would be declared like this:
 
-    class Car {
-        /*...*/
-        World* mWorld;
-        std::unique_ptr<Engine> mEngine;
-    }
+```c++
+class Car {
+    /*...*/
+    World* mWorld;
+    std::unique_ptr<Engine> mEngine;
+}
+```
 
 This is more expressive.
 
@@ -76,34 +90,36 @@ We need to be careful with forward declarations. The following code won't build:
 
 Car.h:
 
-    #include <memory>
-
-    class Engine;
-
-    class Car {
-    public:
-        Car():
-    private:
-        std::unique_ptr<Engine> mEngine;
-    };
+```c++
+#include <memory>
+class Engine;
+class Car {
+public:
+    Car():
+private:
+    std::unique_ptr<Engine> mEngine;
+};
+```
 
 Car.cpp:
 
-    #include "Car.h"
-    #include "Engine.h"
-
-    Car::Car()
-        : mEngine(std::make_unique<Engine>()) {
-    }
+```c++
+#include "Car.h"
+#include "Engine.h"
+Car::Car()
+    : mEngine(std::make_unique<Engine>()) {
+}
+```
 
 main.cpp:
 
-    #include "Car.h"
-
-    int main() {
-        Car car;
-        return 0;
-    }
+```c++
+#include "Car.h"
+int main() {
+    Car car;
+    return 0;
+}
+```
 
 The compiler fails to build "main.cpp". It complains it cannot delete `mEngine` because the `Engine` class is incomplete. This happens because we have not declared a destructor in `Car`, so the compiler tries to generate one when building "main.cpp", and since "main.cpp" does not include "Engine.h", the `Engine` class is unknown there.
 
@@ -111,27 +127,27 @@ To solve this we need to declare `Car` destructor and tell the compiler to gener
 
 Car.h:
 
-    #include <memory>
-
-    class Engine;
-
-    class Car {
-        Car();
-        ~Car(); // <- Destructor declaration
-    private:
-        std::unique_ptr<Engine> mEngine;
-    };
+```c++
+#include <memory>
+class Engine;
+class Car {
+    Car();
+    ~Car(); // <- Destructor declaration
+private:
+    std::unique_ptr<Engine> mEngine;
+};
+```
 
 Car.cpp:
 
-    #include "Car.h"
-    #include "Engine.h"
-
-    Car::Car()
-        : mEngine(std::make_unique<Engine>()) {
-    }
-
-    Car::~Car() = default; // <- Destructor "definition"
+```c++
+#include "Car.h"
+#include "Engine.h"
+Car::Car()
+    : mEngine(std::make_unique<Engine>()) {
+}
+Car::~Car() = default; // <- Destructor "definition"
+```
 
 ## Using std::unique_ptr with Qt code
 
@@ -149,7 +165,9 @@ This also happens if you use a `unique_ptr` for a `QDialog` with the `Qt::WA_Del
 
 Another change compared to using raw pointers is that every time you pass the object to a method which takes a raw pointer, you need to call `.get()`. So for example connecting the `Engine::started()` signal to our `Car` instance would be done like this:
 
-    connect(mEngine.get(), &Engine::started, this, &Car::onEngineStarted);
+```c++
+connect(mEngine.get(), &Engine::started, this, &Car::onEngineStarted);
+```
 
 This is a bit annoying but again, it makes it explicit that you are "lending" your object to another function.
 
@@ -163,33 +181,45 @@ This means it is more cumbersome to implement sink functions with it. Here is an
 
 Suppose we want to create a function to shred a car. The Car instance received by this function should not be usable once it has been called, so we want to make it a sink function, like this:
 
-    void shredCar(std:unique_ptr<Car> car) {
-        // Shred that car
-    }
+```c++
+void shredCar(std:unique_ptr<Car> car) {
+    // Shred that car
+}
+```
 
 The compiler rightfully prevents us from calling `shredCar()` like this:
 
-    auto car = std::make_unique<Car>();
-    shredCar(car);
+```c++
+auto car = std::make_unique<Car>();
+shredCar(car);
+```
 
 Instead we have to write:
 
-    auto car = std::make_unique<Car>();
-    shredCar(std::move(car));
+```c++
+auto car = std::make_unique<Car>();
+shredCar(std::move(car));
+```
 
 This makes it explicit that `car` no longer points to a valid instance. Now lets write `shredCar()` using `QScopedPointer` instead:
 
-    void shredCar(QScopedPointer<Car> car) {
-        // Shred that car
-    }
+```c++
+void shredCar(QScopedPointer<Car> car) {
+    // Shred that car
+}
+```
 
 Since `QScopedPointer` does not support move, we can't write:
 
-    shredCar(std::move(car));
+```c++
+shredCar(std::move(car));
+```
 
 Instead we have to write this:
 
-    shredCar(QScopedPointer<Car>(car.take()));
+```c++
+shredCar(QScopedPointer<Car>(car.take()));
+```
 
 which is less readable, and less efficient since we create a new temporary QScopedPointer.
 
@@ -205,11 +235,13 @@ To make things even more explicit, I am contemplating the idea of creating a `bo
 
 Taking our `Car` example again, the class definition would look like this:
 
-    class Car {
-        /*...*/
-        borrowed_ptr<World> mWorld;
-        std::unique_ptr<Engine> mEngine;
-    }
+```c++
+class Car {
+    /*...*/
+    borrowed_ptr<World> mWorld;
+    std::unique_ptr<Engine> mEngine;
+}
+```
 
 Such a pointer would make code more readable at the cost of verbosity. It could also be really useful when generating bindings for other languages. What do you think?
 

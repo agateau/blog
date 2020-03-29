@@ -15,35 +15,34 @@ At this point, you can probably guess where I am heading to: I created another p
 
 Installation boils down to copying the `reposetup` binary to `/usr/local/bin` or similar, then creating a `/etc/reposetuprc` file with the following content:
 
-    # Path where repositories will be created
-    REPO_BASE_DIR=$HOME/public_html/git
-
-    # Repository url for read-write access
-    REPO_RW_URL=$USER@<yourserver>:public_html/git/$REPO_NAME
-
-    # Repository url for read-only access
-    REPO_RO_URL=http://<yourserver>/~$USER/git/$REPO_NAME
+```
+# Path where repositories will be created
+REPO_BASE_DIR=$HOME/public_html/git
+# Repository url for read-write access
+REPO_RW_URL=$USER@<yourserver>:public_html/git/$REPO_NAME
+# Repository url for read-only access
+REPO_RO_URL=http://<yourserver>/~$USER/git/$REPO_NAME
+```
 
 `REPO_RO_URL` can be omitted if you don't want to provide read-only access.
 
 Reposetup is ready. Now you can create a repository with:
 
-    $ ssh server.lan reposetup create testproj
+```
+$ ssh server.lan reposetup create testproj
+```
 
 Reposetup creates the repository and tells you how to push to it:
 
-    The "testproj" repository has been created. You can clone it with:
-
-        git clone you@server.lan:public_html/git/testproj
-
-    If you already have a local repository, you can push its content with:
-
-        git remote add origin you@server.lan:public_html/git/testproj
-        git push -u origin master
-
-    The url for read-only access is:
-
-        http://server.lan/~you/git/testproj
+```
+The "testproj" repository has been created. You can clone it with:
+    git clone you@server.lan:public_html/git/testproj
+If you already have a local repository, you can push its content with:
+    git remote add origin you@server.lan:public_html/git/testproj
+    git push -u origin master
+The url for read-only access is:
+    http://server.lan/~you/git/testproj
+```
 
 `create` is the main command, but there are a few others:
 

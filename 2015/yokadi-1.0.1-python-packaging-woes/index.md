@@ -21,8 +21,10 @@ There is [distutils][] in Python itself, which does half of the job and has a pa
 
 > Your users might not have setuptools installed on their machines, or even if they do, it might not be the right version. Fixing this is easy; just download ez_setup.py, and put it in the same directory as your setup.py script. (Be sure to add it to your revision control system, too.) Then add these two lines to the very top of your setup script, before the script imports anything from setuptools:
 >
-     import ez_setup
-     ez_setup.use_setuptools()
+```
+ import ez_setup
+ ez_setup.use_setuptools()
+```
 >
 > That’s it. The ez_setup module will automatically download a matching version of setuptools from PyPI, if it isn’t present on the target system. Whenever you install an updated version of setuptools, you should also update your projects' ez_setup.py files, so that a matching version gets installed on the target machine(s).
 > Whenever you install an updated version of setuptools, you should also update your projects' ez_setup.py files, so that a matching version gets installed on the target machine(s).
