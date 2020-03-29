@@ -87,3 +87,15 @@ check-need-push:
 			exit 1 ; \
 		fi \
 	fi
+
+lint:
+	# Requires `npm install markdownlint-cli`
+	markdownlint \
+		--ignore node_modules --ignore _build --ignore talks \
+		$$PWD
+
+fixlint:
+	markdownlint \
+		--fix \
+		--ignore node_modules --ignore _build --ignore talks \
+		$$PWD

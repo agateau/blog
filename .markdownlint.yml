@@ -1,0 +1,12 @@
+default: true
+ul-indent:
+    indent: 4
+code-block-style:
+    style: indented
+line_length: false
+first-line-h1: false
+no-trailing-punctuation: false
+no-inline-html: false
+commands-show-output: false
+# Disable this because in some articles `_` is used for image captions
+no-emphasis-as-heading: false

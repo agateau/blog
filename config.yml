@@ -4,6 +4,7 @@ canonical_url: https://agateau.com/
 ignore_files:
     - .*
     - _*
+    - node_modules
     - config.yml
     - Makefile
     - README
