@@ -27,7 +27,7 @@ build: checkdeps
 serve: build
 	run-rstblog serve
 
-deploy: check-tree clean build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir
+deploy: check-tree clean lint build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir
 
 deploy-all: deploy deploy-storage
 
