@@ -18,6 +18,7 @@ checkdeps:
 	which sassc > /dev/null
 	which run-rstblog > /dev/null
 	which rsync > /dev/null
+	which markdownlint > /dev/null
 
 build: checkdeps
 	run-rstblog build
@@ -89,7 +90,7 @@ check-need-push:
 	fi
 
 lint:
-	# Requires `npm install markdownlint-cli`
+	# Requires `make install-lint`
 	markdownlint \
 		--ignore node_modules --ignore _build --ignore talks \
 		$$PWD
@@ -99,3 +100,8 @@ fixlint:
 		--fix \
 		--ignore node_modules --ignore _build --ignore talks \
 		$$PWD
+
+install-lint:
+	pip install nodeenv
+	nodeenv -p
+	npm install -g markdownlint-cli
