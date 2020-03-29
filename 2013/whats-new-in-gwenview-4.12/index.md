@@ -19,7 +19,7 @@ As you can see, I went for a stacked design with wrapping text. It makes better 
 
 ## Nicer meta information window
 
-Related to the meta information sidebar, I worked a bit on the window which opens when you click the "More..." link in the meta information sidebar. The properties listed in the window were not sorted, making it difficult to find what one is looking for. They are now sorted alphabetically by property keys, and some useless properties, either unnamed or filled with large binary content, are now hidden. 
+Related to the meta information sidebar, I worked a bit on the window which opens when you click the "More..." link in the meta information sidebar. The properties listed in the window were not sorted, making it difficult to find what one is looking for. They are now sorted alphabetically by property keys, and some useless properties, either unnamed or filled with large binary content, are now hidden.
 
 [![Meta information dialog in 4.11 and 4.12](thumb-metainfo-dialog.png)](metainfo-dialog.png)
 
@@ -34,4 +34,3 @@ Thanks to great work from Martin Kyral, Gwenview can now display previews embedd
 > [Raw support] theoretically enables gwenview to support everything dcraw supports (I haven't found a raw file that gwenview doesn't show with this patch). The patch does not perform full demosaicing nor any tweaks (set white balance or so) and I don't think it shall - digikam, darktable or rawtherapee are much more suited for developing the 'digital negatives'.
 
 That's it for this cycle. Hope you are going to enjoy your (slightly) refreshed Gwenview 4.12!
-

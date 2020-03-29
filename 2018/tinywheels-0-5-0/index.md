@@ -35,7 +35,7 @@ I also changed the way AI racers pick their vehicle so that they never select th
 
 ## Under the hood
 
-I updated [libgdx][] from version 1.4.1 to 1.5.6. I still have a lot to catchup (current version is 1.9.8!) but I am going through this slowly because libgdx developers do not exactly practice [semantic versioning][semver]: they regularly make breaking API changes, even in patch releases. There are interesting features I want to use in the latest versions, such as animated tiles (useful for water tiles, for example) and improved gamepad support, so I am going to continue to catchup with each release of the game. 
+I updated [libgdx][] from version 1.4.1 to 1.5.6. I still have a lot to catchup (current version is 1.9.8!) but I am going through this slowly because libgdx developers do not exactly practice [semantic versioning][semver]: they regularly make breaking API changes, even in patch releases. There are interesting features I want to use in the latest versions, such as animated tiles (useful for water tiles, for example) and improved gamepad support, so I am going to continue to catchup with each release of the game.
 
 ## The last Tiny Wheels?
 

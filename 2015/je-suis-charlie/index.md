@@ -4,7 +4,7 @@ tags: [charlie]
 title: "Je suis Charlie"
 summary: |
     I usually do not write about politics, but this evening I am going to make an exception.
-    
+
 I usually do not write about politics, but this evening I am going to make an exception.
 
 In case you haven't heard the news, this morning gunmen entered the building of Charlie Hebdo, a French satiric newspaper, and opened fire on journalists, killing 12 people.

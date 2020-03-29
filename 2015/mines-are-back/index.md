@@ -4,14 +4,12 @@ pub_date: 2015-04-26 19:53:18 +01:00
 tags: [greenyetilab, race, gamedev]
 summary: New release brings back mines and comes with a desktop version!
 
-
 Time for a new Race release! What's new in this one?
 
 First, mines are back! They work a bit like bananas in Mario Kart now: they stay behind you until you drop them with the action button. Even when the mine is behind you, you can hit opponents with it, which is quite fun.
 
 ![This is going to hurt...](mines.png)
 _This is going to hurt..._
-
 
 Speaking of weapons, AI racers got a bit smarter with the gun: they now only shoot if there is another racer in front of them.
 

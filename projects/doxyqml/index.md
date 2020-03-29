@@ -29,4 +29,3 @@ Alternatively, you can clone the Git repository with:
 [dl]: https://github.com/agateau/doxyqml/releases/download/0.5.0/doxyqml-0.5.0.tar.bz2
 [gh]: https://github.com/agateau/doxyqml
 [pip]: http://www.pip-installer.org
-

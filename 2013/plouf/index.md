@@ -95,7 +95,6 @@ The source code is available from github: <https://github.com/agateau/plouf>.
 Just keep in mind you can't really read it online since the `.AMOS` files are
 not text files.
 
-
 [a500]: https://en.wikipedia.org/wiki/Amiga_500
 [AMOS]: https://en.wikipedia.org/wiki/AMOS_%28programming_language%29
 [adf]: /projects/plouf/plouf-1.1.adf

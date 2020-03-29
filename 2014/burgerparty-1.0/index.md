@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-09-26 16:54:29 +01:00
 tags: [greenyetilab, gamedev]
 
-
 It's release time!
 
 Burger Party 1.0 is finally out and available on Google Play! I spent a lot of time working on this game, and I think it has now reached the point where I can publish it without being too much ashamed about it :) At the time I am writing this, the final version has been uploaded to Google Play and I am impatiently waiting for it to go live. This F5 key is going to wear out really quick if it does not get there soon...

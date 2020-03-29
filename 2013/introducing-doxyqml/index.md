@@ -96,7 +96,6 @@ class diagrams.
 
 You can get Doxyqml from its [project page][doxyqml].
 
-
 [qml]: http://qt.digia.com/Product/qt-quick/
 [doxygen]: http://doxygen.org
 [api.kde.org]: http://api.kde.org

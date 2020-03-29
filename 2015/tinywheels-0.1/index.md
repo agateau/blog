@@ -4,7 +4,6 @@ pub_date: 2015-07-19 22:29:35 +01:00
 tags: [greenyetilab, pixelwheels, gamedev]
 summary: Finally a release of Tiny Wheels! It's still a very early alpha but I hope you enjoy it nevertheless.
 
-
 Time for a new release!
 
 I have been very busy with work lately, having changed job, not working from home anymore... I am getting used to my new routine and take advantage of my daily commute to hack on Tiny Wheels.
@@ -22,7 +21,6 @@ The desktop version also has a special feature: a split-screen two player mode.
 _Spreading havoc in the snow:_
 
 ![Screenshot](/projects/pixelwheels/0.1/snow.png)
-
 
 _Going after an heavily armored roadster in the city:_
 

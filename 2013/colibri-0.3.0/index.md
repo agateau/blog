@@ -32,8 +32,6 @@ Another change I made was moving the project from Gitorious to
 You can get the source code from [download.kde.org][src]. Kubuntu 13.04 users
 can also get it from the [Colibri PPA][ppa].
 
-
-
 [git]: https://projects.kde.org/projects/playground/base/colibri
 [src]: http://download.kde.org/stable/colibri/colibri-0.3.0.tar.bz2.mirrorlist
 [ppa]: https://launchpad.net/~agateau/+archive/colibri/

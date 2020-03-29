@@ -11,9 +11,11 @@ DONT: resize or reposition ourselves
 DONT: call invalidateHierarchy()
 
 ## After resizing ourself
+
 call invalidateHierarchy()
 
 ## After making changes which require children to be layouted
+
 call invalidate()
 
 ## Misc

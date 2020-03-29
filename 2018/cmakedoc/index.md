@@ -11,7 +11,7 @@ A long time ago (in 2010!) I created a Python command-line tool called CMakeDoc 
 
 [![CMakeDoc demonstration](thumb_demo.png)](demo.gif)
 
-That's all there is to it. It's a small tool, but it's saved me quite some time over the years. It's been available [on GitHub](https://github.com/agateau/cmakedoc) for a long time, but last week I decided to give it a bit more visibility: I adjusted a few things, created a `setup.py` for it, extended the README.md and released it on PyPI.  You can now install it with a simple `pip3 install cmakedoc` command. 
+That's all there is to it. It's a small tool, but it's saved me quite some time over the years. It's been available [on GitHub](https://github.com/agateau/cmakedoc) for a long time, but last week I decided to give it a bit more visibility: I adjusted a few things, created a `setup.py` for it, extended the README.md and released it on PyPI.  You can now install it with a simple `pip3 install cmakedoc` command.
 
 Fun fact: CMakeDoc was originally called CMakeHelp, but when I tried to upload it to PyPI, I found out there was already a CMakeHelp tool there, which looks abandoned and does not install, but forced me to rename the project nevertheless to be able to host it there. I seem to be making a habit of [renaming my projects because of name conflicts][rename] :)
 

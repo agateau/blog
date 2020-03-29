@@ -11,6 +11,7 @@ different revenue models, I sadly concluded [I would have to include ads][ads].
 That did not work out (surprise!): at its peak Burger Party reached a few
 thousand installations, which generated a meager $30 of revenue. I guess the
 reasons for this failure was that:
+
 1. There were not enough ads to make it work: I decided against permanent
    banners so the game only displayed interstitials between levels, and no more
    than one ad every two minutes,

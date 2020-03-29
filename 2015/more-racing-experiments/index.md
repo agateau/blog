@@ -25,7 +25,3 @@ A bunch of AI cars got stuck. Told you they are stupid :)
 Death Rally style!
 
 [![Death Rally Style!](thumb-death-rally-style.png)](death-rally-style.png)
-
-
-
-

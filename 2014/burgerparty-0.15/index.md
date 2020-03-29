@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-05-10 23:56:16 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Another new version of Burger Party. Version 0.15 brings a few small tweaks, nothing major. Here is what's new:
 
 - Reworked how ads are shown: they now appear between levels, never before the first level of the session and no more than once every 5 minutes.

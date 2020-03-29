@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-09-01 23:36:28 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 This new release of Burger Party is special: as you guessed from the title of this article, its version number is not 0.17 but 1.0rc1.
 
 RC1. Release Candidate 1. About time.
@@ -22,11 +21,9 @@ So, what's in the box? Quite a few changes:
     - The bottom bun is less round, making it look nicer when used as a middle bun
 
 - More sound effects:
-  - All images of the "New World" animation have sound effects
-
-  - There is now a sound effect when one gets a "Perfect" and a short jingle for the "New Item Unlocked" screen
-
-  - The "Game Over" jingle has been redone
+    - All images of the "New World" animation have sound effects
+    - There is now a sound effect when one gets a "Perfect" and a short jingle for the "New Item Unlocked" screen
+    - The "Game Over" jingle has been redone
 
 - There is now a tutorial when playing level 1.1
 

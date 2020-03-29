@@ -79,7 +79,7 @@ around the screen has been removed, reducing clutter a bit.
 Header titles are now aligned to the left of the screen, they look less odd on
 tabs which do not have many items, such as the Power tab.
 
-In containment mode, a shadow is now shown behind the text. This 
+In containment mode, a shadow is now shown behind the text. This
 improves the readability of text over highly-constrasted wallpapers.
 
 <a href="containment.png">![Homerun running as a containment](thumb_containment.png)</a>

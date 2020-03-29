@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-07-13 17:41:17 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Finally, a new release! This one comes packed with some substantial changes:
 
 The game difficulty has been adjusted: levels are shorter and a bit harder, making the game more challenging. One now gains back up to 4 seconds of extra time when customers are satisfied.

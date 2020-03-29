@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-02-13 23:13:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 ## Meh, ads
 
 This new version is a bit special. It is the first one which adds something I was not really looking forward to add: ads. I thought about this for a long time. I don't like ads much so my initial plan was to sell Burger Party for a small fee. I changed my mind after I went through the "Top Grossing Android Apps" category on Google Play Store: the first non-free app there is #38! And this app is Minecraft, which is massively well known. Clearly, Android users do not like to pay for applications. It might be different on other markets: for example Blackberry users seem to be more willing to pay for games. If/when I publish Burger Party on Blackberry World, I might try to sell it there, instead of relying on ads.

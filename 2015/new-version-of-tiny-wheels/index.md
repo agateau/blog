@@ -5,7 +5,6 @@ tags: [greenyetilab, pixelwheels, gamedev]
 og_image:
 summary:
 
-
 Time for a new release!
 
 I have been very busy with work lately, having changed job, not working from home anymore... I am getting used to my new routine and take advantage of my daily commute to hack on Tiny Wheels.

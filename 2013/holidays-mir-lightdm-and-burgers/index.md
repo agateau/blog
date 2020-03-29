@@ -3,7 +3,6 @@ public: true
 tags: [kde, mir, burgerparty, gamedev]
 title: "Holidays, Mir and... burgers"
 summary: Finding a coding distraction when free software news are depressing
-    
 
 On the second week of March, I went for some vacations in the mountains. I came
 back tired but refreshed.

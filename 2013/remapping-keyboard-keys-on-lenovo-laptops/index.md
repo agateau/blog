@@ -29,4 +29,3 @@ I started by identifying the key symbol for the "Print Screen" and the odd recta
 After logging out and back in, I now have a saner keyboard layout.
 
 There is only one drawback to this tip: when you are using an external keyboard and try to take a screenshot with the "Print Screen" key, don't be surprised if it opens the context menu instead :)
-

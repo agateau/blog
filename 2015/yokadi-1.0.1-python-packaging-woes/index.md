@@ -37,7 +37,7 @@ Another surprising aspect of source packaging is that you have to explicitly spe
 
 To make sure those problems do not come up again, I [updated Yokadi release script][release script] to test `pip install` works and wrote a script called [diffinst][] to compare the content of a git repository and a source archive, modulo some files to ignore, and report any differences (actually, I should include a call to diffinst in the release script)
 
-[release script]: https://github.com/agateau/yokadi/commit/b883ac2e65b54576d39609a51f7c97e0dee142dd 
+[release script]: https://github.com/agateau/yokadi/commit/b883ac2e65b54576d39609a51f7c97e0dee142dd
 [diffinst]: https://github.com/agateau/yokadi/blob/master/scripts/diffinst
 
 I need to spend time to get more familiar with setuptools and use it in Yokadi and my other Python-based projects, but I hope this aspect gets more love in future versions of Python.

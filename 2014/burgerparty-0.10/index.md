@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-01-23 17:22:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Here is a new version of Burger Party.
 
 The main change in this new version is the new way to gain stars. You used to get stars depending on your score, this has changed: in this new version, customers will now pay you between 1 and 3 coins, depending on how satisfied they are. When you have enough coins, you get a star. Stars cost more and more as you progress through levels.

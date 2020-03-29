@@ -118,21 +118,21 @@ A common change is accepting a variable number of arguments. If you are confiden
 
 If you want to support arguments which contain spaces, that's another story. The simplest solution I know of is to make use of Bash arrays. The changes would thus look like this:
 
-0. Change the shebang to `#!/bin/bash`.
+1. Change the shebang to `#!/bin/bash`.
 
-1. Declare an empty `args` _array_ before the while loop:
+2. Declare an empty `args` _array_ before the while loop:
 
         args=()
 
-2. Replace the code in the `*)` case with something like this:
+3. Replace the code in the `*)` case with something like this:
 
         *)
             args=("${args[@]}" "$1")
             ;;
 
-3. Same as before: remove the check for the last argument or alter it to check if `args` is empty.
+4. Same as before: remove the check for the last argument or alter it to check if `args` is empty.
 
-4. Iterate over the arguments with:
+5. Iterate over the arguments with:
 
         for arg in "${args[@]}" ; do
             # Do work here
@@ -151,8 +151,7 @@ Compared to `getopt`, this template has a few advantages but also limitations on
 - Cons
     - No support for concatenated short options: `-ab` is not the same as `-a -b`.
     - No support for separating option arguments with an equal sign: you must write `--output file.log` and not `--output=file.log`.
-    
-That's it for this template, hope it is useful to you.
 
+That's it for this template, hope it is useful to you.
 
 [getopt]: http://man7.org/linux/man-pages/man1/getopt.1.html

@@ -4,7 +4,6 @@ pub_date: 2015-08-11 08:07:06 +01:00
 tags: [greenyetilab, pixelwheels, gamedev]
 summary: "A new release of Tiny Wheels, featuring a new bonus: the turbo and several gameplay and user interface improvements!"
 
-
 I have been busy these days fighting some stupid illness, but I am fixed now. I worked a bit on Tiny Wheels nevertheless, so it's time to release a new version. Here are some of the changes of 0.2:
 
 ## User interface changes
@@ -13,7 +12,7 @@ I reworked the touch screen interface: buttons have a more pixel-art look, with 
 
 ![New HUD buttons in action](hud.png)
 
-The various screens you go through before starting the game now scale to the device size, so you don't get super tiny buttons on high density devices. The user interface looks a bit ugly right now because scaling is not smooth due to the game not using any scaling filter to achieve a pixel art look. Need to work on this to ensure it looks pixel-art-like, but not ugly. 
+The various screens you go through before starting the game now scale to the device size, so you don't get super tiny buttons on high density devices. The user interface looks a bit ugly right now because scaling is not smooth due to the game not using any scaling filter to achieve a pixel art look. Need to work on this to ensure it looks pixel-art-like, but not ugly.
 
 I also dropped the accelerometer and swipe input methods for now, they were unmaintained and not usable. I am probably going to bring back at least accelerometer input in the future.
 

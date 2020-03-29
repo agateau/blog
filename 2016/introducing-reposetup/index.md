@@ -29,7 +29,7 @@ Installation boils down to copying the `reposetup` binary to `/usr/local/bin` or
 Reposetup is ready. Now you can create a repository with:
 
     $ ssh server.lan reposetup create testproj
-    
+
 Reposetup creates the repository and tells you how to push to it:
 
     The "testproj" repository has been created. You can clone it with:

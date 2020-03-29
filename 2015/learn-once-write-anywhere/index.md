@@ -7,7 +7,7 @@ summary: |
 
 I am writing a web application for my current customer. The application is written using [React][], a "JavaScript library for building user interfaces" built by Facebook.
 
-React is an interesting beast. At first it feels weird, as in "What? I have to mix XML in my JS code? How ugly, can someone please think of the children^Wstandards!", then it gets into you (at least it did for me) and you start enjoying it. It's especially interesting when you have some QML experience: while it's not as declarative as QML, the way it strictly separates mutable state and immutable properties and takes advantage of this separation to automatically render the changed components makes React feels a bit like QML by certain aspects. 
+React is an interesting beast. At first it feels weird, as in "What? I have to mix XML in my JS code? How ugly, can someone please think of the children^Wstandards!", then it gets into you (at least it did for me) and you start enjoying it. It's especially interesting when you have some QML experience: while it's not as declarative as QML, the way it strictly separates mutable state and immutable properties and takes advantage of this separation to automatically render the changed components makes React feels a bit like QML by certain aspects.
 
 I started to follow a bit more closely what was going on in the React world and stumbled a few days ago on this presentation by Tom Occhino, announcing React Native:
 

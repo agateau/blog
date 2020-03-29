@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-01-12 18:17:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Happy new year!
 
 To celebrate the arrival of 2014, here is a new version of Burger Party.

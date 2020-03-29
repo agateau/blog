@@ -23,7 +23,7 @@ Concrete blocks do not really change anything for the player: they just replace 
 
 ![Blocks](blocks.png)
 
-The main difference between these new blocks and the old ones is that they are not defined as tiles in the track, so they do not have to be aligned to the tile grid and can be oriented in any direction. Blocks are not widely used yet, but I plan to make more use of them in future tracks. 
+The main difference between these new blocks and the old ones is that they are not defined as tiles in the track, so they do not have to be aligned to the tile grid and can be oriented in any direction. Blocks are not widely used yet, but I plan to make more use of them in future tracks.
 
 Another important change in this release is the work done on AI. Computer pilots are a bit smarter now: they get stuck less often and gained a limited ability to avoid mines. This might make the game harder! Missiles also  got smarter: they learned they should not lock on a target if there is a wall in between.
 

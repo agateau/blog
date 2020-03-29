@@ -100,6 +100,5 @@ That's it, I hope it helps you if you are in this peculiar situation. Comments o
 
 PS: Code for this feature is currently in [a review request on Gwenview reviewboard][review]. If you are a KDE developer with a few minutes to spare, why not have a look at it?
 
-
 [QShortcut]: http://qt-project.org/doc/qt-4.8/qshortcut.html
 [review]: https://git.reviewboard.kde.org/r/115020/

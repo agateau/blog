@@ -6,7 +6,7 @@ title: Building Qt apps with Travis CI and Docker
 I recently configured [Travis CI][] to build [Nanonote][], my minimalist
 note-taking application. We use Jenkins a lot at work, and despite the fact
 that I dislike the tool itself, it has proven invaluable in helping us catch
-errors early.  So I strongly believe in the values of Continuous Integration. 
+errors early.  So I strongly believe in the values of Continuous Integration.
 
 [Travis CI]: https://travis-ci.org
 [Nanonote]: https://github.com/agateau/nanonote
@@ -143,6 +143,7 @@ few lines:
     - docker run -v $PWD:/root/nanonote nanonote:1 /root/nanonote/ci/build-app
 
 Not much to say here:
+
 - We tell Travis to use an Ubuntu Xenial (16.04) distribution and Docker.
 - The "install" step builds the Docker image.
 - The "script" step mounts the source tree inside the Docker image and runs the
@@ -175,4 +176,4 @@ That's it for this description of Nanonote CI setup. It's still young so I
 might refine it, but it is already useful. I am probably going to create
 similar setups for my other C++ Qt projects.
 
-I hope it helped you as well. 
+I hope it helped you as well.

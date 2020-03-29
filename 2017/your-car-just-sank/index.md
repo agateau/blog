@@ -21,6 +21,7 @@ It still looks ugly, but a few things are now working:
 - Moving and rotating the vehicle to the recovery position
 
 There is more work to do on this topic though:
+
 - Adding a recovery "helper": the vehicle should not just translates to the recovery position. I am thinking about adding an helicopter which would fly in to carry your vehicle.
 - Render the vehicle differently when it's sinking
 - Squash a few bugs, in particular the translation animation is sometimes glitchy

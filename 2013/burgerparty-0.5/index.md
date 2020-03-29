@@ -3,7 +3,6 @@ public: true
 pub_date: 2013-10-27 23:22:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 [![Select world, or create your own burgers](/projects/burgerparty/0.5/thumb-world-selector.png)](/projects/burgerparty/0.5/world-selector.png)
 
 [![Big burgers scroll when they do not fit the bubble](/projects/burgerparty/0.5/thumb-scrolling-burger.png)](/projects/burgerparty/0.5/scrolling-burger.png)

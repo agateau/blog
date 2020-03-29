@@ -7,11 +7,11 @@ summary: |
 
 Suppose you are building a Qt application which must run on Linux, Mac OS and Windows. At some point, your application is likely to have to deal with file paths. Working on your Linux machine, but caring about your Windows users, you might be tempted to construct a file path like this:
 
-	QString filePath = someDir + QDir::separator() + "foo.ext";
+    QString filePath = someDir + QDir::separator() + "foo.ext";
 
 Don't do this! Make your life simpler and just use:
 
-	QString filePath = someDir + "/foo.ext";
+    QString filePath = someDir + "/foo.ext";
 
 As `QDir::separator()` [documentation][qdirsepdoc] says:
 

@@ -3,7 +3,6 @@ public: true
 tags: [pixelwheels, gamedev]
 title: Pixel Wheels 0.10.0!
 
-
 Now that I am back from holidays (and from [Akademy][], which was awesome!), it's time to release a new version of Pixel Wheels!
 
 [Akademy]: ../i-am-going-to-akademy

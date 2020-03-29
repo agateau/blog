@@ -3,7 +3,6 @@ public: true
 pub_date: 2013-09-14 09:02:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 [![Flatter World 1](thumb-flat-level-1.png)](flat-level-1.png)
 
 Here is a new alpha version of Burger Party. This new release comes with the following changes:

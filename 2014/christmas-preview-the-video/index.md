@@ -5,7 +5,6 @@ tags: [greenyetilab, race, preview, video, gamedev]
 og_image:
 summary: A short video showing of the game play of the yet-unnamed race game I am working on.
 
-
 As a follow-up to my [previous post](/2014/christmas-preview), here is a short video of the game in action, because videos speak louder than words, even if there is no audio for now :)
 
 <iframe width="640" height="480" src="//www.youtube.com/embed/N69O2wtprDI?rel=0" frameborder="0" allowfullscreen>

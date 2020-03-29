@@ -115,7 +115,7 @@ Now comes the main Item. It contains a ColumnLayout which holds a Rectangle faki
                 }
             }
 
-We can see DraggableItem used as a delegate of the ListView. Its API is simple: it wraps another item which shows the content (here it is a rectangle with a text and a one-pixel border at the bottom). 
+We can see DraggableItem used as a delegate of the ListView. Its API is simple: it wraps another item which shows the content (here it is a rectangle with a text and a one-pixel border at the bottom).
 
 DraggableItem has one property: `draggedItemParent`, which defines which item becomes the parent of our content item while it is being dragged around. Setting this to the main content of your window gives a more natural feeling when you drag the item below or above the ListView: the item is not clipped to its view and appears on top of the other UI elements.
 

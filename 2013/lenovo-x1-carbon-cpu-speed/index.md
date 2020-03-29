@@ -87,5 +87,4 @@ That was way too complicated than necessary, but it works now. Hopefully this ca
 
 This page was quite handy to learn more about this topic: <http://www.pantz.org/software/cpufreq/usingcpufreqonlinux.html>
 
-
 [kb]: http://agateau.com/2013/08/01/remapping-keyboard-keys-on-lenovo-laptops

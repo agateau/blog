@@ -4,7 +4,6 @@ pub_date: 2014-12-19 21:57:05 +01:00
 tags: [greenyetilab, inkscape]
 summary: Things to know when duplicating Inkscape clones
 
-
 I use Inkscape a lot, and for a long time I got puzzled by a strange behavior of duplicated clones. But first a short introduction of the features (feel free to skip if you are familiar with them):
 
 ## Clones

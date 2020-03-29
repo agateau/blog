@@ -39,7 +39,6 @@ You can also clone the source code from GitHub:
 <https://github.com/agateau/plouf>.  Plouf! has been written using AMOS, a
 game-friendly Basic.
 
-
 [adf]: /projects/plouf/plouf-1.1.adf
 [FS-UAE]: http://fengestad.no/fs-uae/
 [gh]: https://github.com/agateau/plouf

@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-03-16 21:13:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Time for a new release of Burger Party. In this version I made the difficult decision to remove the mini-games. The reason behind this is I was worried it would take way too long to get them to a level of quality I consider good enough for a public release.
 
 I initially decided to add the mini-games as an incentive for players to play the game again, instead of introducing more classical incentives like achievements. My reasoning was that getting a small game was a more satisfying reward than random emblems. Retrospectively I think it was a mistake. Last month I spent quite some time with the family playing [Zombie Tsunami][zt]. I can attest achievements are powerful motivators :-). This was the last push which made me decide to replace mini-games with achievements.

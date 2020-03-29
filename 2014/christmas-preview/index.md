@@ -4,7 +4,6 @@ pub_date: 2014-12-26 19:58:48 +01:00
 tags: [greenyetilab, race, christmas, preview, santa claus, gamedev]
 summary: Here is the very first preview of the next game I am working on, it is a top-down car game, and since it's Christmas you get to drive Santa Claus car in this exclusive version!
 
-
 It's Christmas time at Green Yeti Labs! I have a (one day late) little present for all of you: a very early version of what I have been working on for a few weeks. As I mentioned in an [earlier post][experiments], it's a top-down car game. It has changed quite a bit since this post though.
 
 Here is the pitch: some yet-unnamed villain decided to steal all the Christmas gifts from Santa Claus head quarters. That evil person got his minions to load all the gifts in their trucks, they are currently escaping on the road! Santa is furious. Unfortunately, his sled is out for its yearly check up before the great day, so he jumps in his car and goes after the bad trucks.

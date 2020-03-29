@@ -4,7 +4,6 @@ pub_date: 2015-04-06 22:53:30 +01:00
 tags: [greenyetilab, race, bonus, gamedev]
 summary:
 
-
 The bonus system is taking shape: racers can now pick them up and get one among the huge bonus list of gun, gun or gun... :) Not much choice for now because I was waiting for the code responsible for handling bonuses to stabilize before I build more on top of it. I think it's in a good enough shape now to start building more bonuses.
 
 AI competitors can also pick bonuses, but Artificial Stupidness would be a more appropriate term to describe their current behavior: they trigger the bonus as soon as they pick it up :). Another interesting aspect to work on later.

@@ -3,7 +3,6 @@ public: true
 pub_date: 2013-12-09 10:14:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Here comes a new version of Burger Party! This new version comes with a few significant changes.
 
 First, Burger Party now has a new world: Japan. You might remember I wrote earlier about [drawing its background](../japan-background/), it is finally in. This new world is far from finished, though: it is missing customers, a boss, a "unlocked item" image and some more world-specific ingredients, but then version number is only 0.7, so I think it's OK...
@@ -24,4 +23,3 @@ As usual, a few minor changes have made it in as well:
 - The gradients which appear in the customer bubble when the order is too tall has been fixed to always stretch to fill the bubble width
 
 [Get it from the usual place](/projects/burgerparty/)!
-

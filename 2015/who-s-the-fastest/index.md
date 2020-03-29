@@ -4,7 +4,6 @@ pub_date: 2015-05-27 19:10:49 +01:00
 tags: [greenyetilab, pixelwheels, gamedev]
 summary: Which racer drove the fastest?
 
-
 Over the weekend I added code to show racer times. Both total race time and best lap time are measured and displayed at the end of the race. They are not recorded anywhere for now, still pondering if they should.
 
 ![Racer Times](racer-times.png)

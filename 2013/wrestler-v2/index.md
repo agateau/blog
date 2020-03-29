@@ -3,7 +3,6 @@ public: true
 pub_date: 2013-11-07 16:20:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Burger Party needed a "boss" for the last level of the US world. After some
 thinking, I decided on a wrestler.
 
@@ -17,7 +16,6 @@ Then came up with a first version:
 
 But he was not tall enough, and looked a bit like he needed to visit the
 bathroom... Today I reworked it, here is version 2.
-
 
 [![Happy](thumb-happy.png)](happy.png)
 

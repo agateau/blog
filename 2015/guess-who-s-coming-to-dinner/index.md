@@ -4,7 +4,6 @@ pub_date: 2015-01-05 10:22:25 +01:00
 tags: [greenyetilab, burgerparty]
 summary: A new customer for the Japan world of Burger Party.
 
-
 In the current version of Burger Party, the "boss" customer of the Japanese world is a [girl wearing a dragon costume](/2014/back-to-work). I was not happy with it though: after I was done drawing it, it ended up not looking big enough to be a suitable boss, especially the boss of the last world.
 
 During this holiday I started sketching a more imposing replacement. Since this is Japan, I picked a Sumo wrestler:

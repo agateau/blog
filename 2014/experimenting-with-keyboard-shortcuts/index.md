@@ -63,5 +63,4 @@ Another good point of this approach is that, almost no shortcuts use function ke
 
 What about you, do you have unusual shortcut setups?
 
-
 [quasimode]: https://en.wikipedia.org/wiki/Mode_%28computer_interface%29#Quasimodes

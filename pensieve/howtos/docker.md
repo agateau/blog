@@ -8,16 +8,14 @@ Currently for 17.9
 
 ## Example Dockerfile
 
-```
-FROM mhart/alpine-node:8
-RUN some-command-at-build-time
-COPY some-file to-this-dir
+    FROM mhart/alpine-node:8
+    RUN some-command-at-build-time
+    COPY some-file to-this-dir
 
-# Expose a port
-EXPOSE 3030
-# Run this command when starting the image
-CMD ["some-command", "with", "args"]
-```
+    # Expose a port
+    EXPOSE 3030
+    # Run this command when starting the image
+    CMD ["some-command", "with", "args"]
 
 ## Building an image
 

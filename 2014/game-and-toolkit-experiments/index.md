@@ -4,7 +4,6 @@ pub_date: 2014-11-27 09:30:35 +01:00
 tags: [greenyetilab, ]
 summary: Taking a break from Burger Party marketing, I decided to do some experiments to decide what my next game will be and what tools I will use to build it.
 
-
 Taking a break from doing some marketing for Burger Party, I decided to do some experiments to decide what my next game will be.
 
 Starting a new game is the right time to experiment with other technologies. Burger Party is built with [LibGDX][] but my preferred language is actually Python, so I started looking around for a Python-based game library which would let me create games for mobile devices.

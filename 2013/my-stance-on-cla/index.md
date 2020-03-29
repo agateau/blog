@@ -97,4 +97,3 @@ the kittens on Earth, do not sign the CLA! Think about the kittens!
 
 Finally, remember this is not legal advice: I am not a lawyer, I just sometimes
 play one on IRC.
-

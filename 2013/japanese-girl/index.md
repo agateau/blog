@@ -3,7 +3,6 @@ public: true
 pub_date: 2013-12-16 21:24:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 This weekend I drew a new customer for the Japan world of Burger Party: a Japanese girl in traditional costume.
 
 As usual, I started with a sketch:

@@ -4,7 +4,6 @@ pub_date: 2015-03-12 09:09:06 +01:00
 tags: [greenyetilab, race, gamedev]
 summary: Determining who is currently leading the race is trickier than it sounds. Here is how I implemented it.
 
-
 I have been struggling for quite some time on a seemingly simple feature in Race: how to compute the position of the vehicles within the lap, ie: is a vehicle at the beginning of a lap, in the middle, or is it 80% done? And related to this, how close is it from the track borders? This is useful in many cases: to determine the player rank, to know if a lap has been completed (without cheating...) or to let the AI take decisions.
 
 I did quite a lot of research on the topic until I found this [great article][moto-gp-article] from one of the MotoGP developers. I implemented something similar by splitting the track into convex quadrilateral sections. The goal of these sections is to map the vehicle (x, y) coordinates into a "track" coordinate system where the first coordinate is the distance within the lap (distanceInLap) and the second coordinate is the distance from the track center (distanceFromTrackCenter).

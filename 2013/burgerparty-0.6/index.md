@@ -3,7 +3,6 @@ public: true
 pub_date: 2013-11-12 08:22:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Time for a new release of Burger Party!
 
 Many invisible adjustments in this new one, the most visible change is the work

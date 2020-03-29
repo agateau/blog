@@ -3,7 +3,6 @@ public: true
 pub_date: 2014-04-06 22:59:00 +02:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 Burger Party 0.13 is out! In this version I finally gave the Pirate world an "end boss". The US world had a [wrestler][], the Pirate world has a pirate chief, complete with a parrot on his shoulder:
 
 [wrestler]: /2013/wrestler-v2

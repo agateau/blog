@@ -31,7 +31,7 @@ A joint production from my son and me. This one is faaast!
 
 **Locking system**
 
-These new vehicles are not all directly available, and one of the previous vehicles is gone! 
+These new vehicles are not all directly available, and one of the previous vehicles is gone!
 
 Don't worry, they are not too far away: Pixel Wheels now features a reward system, so you have to unlock them. And since the game is really nice with you (maybe too nice?) selecting one of the locked vehicles will tell you what you have to do to unlock it:
 

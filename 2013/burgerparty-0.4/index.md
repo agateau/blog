@@ -3,7 +3,6 @@ public: true
 pub_date: 2013-10-04 22:30:00 +01:00
 tags: [greenyetilab, burgerparty, gamedev]
 
-
 [![Create your own burger](thumb-create-own-burger.png)](create-own-burger.png)
 
 Here is a new alpha version of Burger Party. This new release comes with the following changes:

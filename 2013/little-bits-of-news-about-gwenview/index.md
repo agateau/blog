@@ -26,7 +26,7 @@ Until now Gwenview has always been using its own version number, which was
 the same as KDE SC version number, except the major was 2 instead of
 4. For example, the version of Gwenview which came KDE SC 4.9.5 was 2.9.5.
 
-This made sense to me because the version of Gwenview shipped with KDE SC 4.0.0 was 
+This made sense to me because the version of Gwenview shipped with KDE SC 4.0.0 was
 the first major rewrite of Gwenview: so I bumped the version number to 2.0.0.
 
 Even if it made sense to me, people were often confused by these two version

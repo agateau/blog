@@ -27,7 +27,7 @@ First I created a short script called "ydue", which prints the number of overdue
     filter="$*"
     yokadi "t_list --format plain --overdue $filter" | grep --count '^- ' || true
 
-That's a bit hackish: it calls Yokadi to list all tasks matching the filter in plain mode, and prints the number of tasks, based on the fact that a task line starts with `- `.
+That's a bit hackish: it calls Yokadi to list all tasks matching the filter in plain mode, and prints the number of tasks, based on the fact that a task line starts with `-`.
 
 (Note the `|| true` so that the script does not exit with an error if grep does not find any task)
 

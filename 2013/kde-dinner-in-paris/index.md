@@ -5,7 +5,6 @@ title: "KDE Dinner in Paris"
 summary: |
     Setting up the first KDE Dinner in Paris to celebrate the release of KDE SC 4.10
 
-
 Nowadays, most of the KDE events happening in France are organized in Toulouse,
 thanks to the awesome work done by the KDE people from the Toulibre association.
 

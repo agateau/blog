@@ -42,4 +42,3 @@ it with the "Preview" button.
 
 Your machine is ready to use Colibri. Unless you unchecked "Start Colibri at
 login", it should continue to use Colibri next time you login.
-

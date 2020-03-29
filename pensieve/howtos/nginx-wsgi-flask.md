@@ -33,7 +33,7 @@ Try manually:
 
     sudo uwsgi --http-socket :9999 --ini /etc/uwsgi/apps-available/foo.ini
 
-Point your browser to http://yourhost:9999.
+Point your browser to <http://yourhost:9999>.
 
 ## nginx conf
 

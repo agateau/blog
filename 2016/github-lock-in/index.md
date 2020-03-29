@@ -82,4 +82,3 @@ I believe GitHub is not the problem: there are plenty of alternatives to host yo
 [SourceForge]: http://sourceforge.net
 [gg]: https://cloud.google.com/source-repositories/
 [Gitolite]: http://gitolite.com/gitolite/
-

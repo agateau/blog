@@ -96,7 +96,6 @@ First step is to reproduce all paint operations on a QPixmap.
          } else {
              drawPixmap(painter, m_pixmap);
 
-
 Now that we have the content of the widget in a QPixmap, we must save it. This
 is where one has to be creative to come up with a way to generate names which do
 not step on each others: since we are saving images for an animation, we can't
@@ -319,4 +318,3 @@ Dolphin from KDE SC 4.10.2 includes this fix. Hope you enjoy your smooth mouse
 over animations!
 
 [first-fix]: https://git.reviewboard.kde.org/r/108858/
-

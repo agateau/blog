@@ -237,6 +237,5 @@ If you read this far, then either you are interested in hacking on Ubiquity and
 I hope this article helps you, or you are an Ubiquity developer and I hope you
 did not spot too many mistakes. If you find some, please point them out.
 
-
 [ubiquity-raring]: /2013/04/11/hacking-on-ubiquity/
 [bzr-colo]: http://launchpad.net/bzr-colo
