@@ -149,10 +149,6 @@ That's it for today, hope this was helpful for some of you. If you want to exper
 
 PS: I am no Docutils expert, this article may suggest wrong ways to do things, please leave a comment if you notice any error.
 
-<a href="https://flattr.com/submit/auto?title=Docutils+Snippets&user_id=agateau&description=Some+notes+and+examples+of+Docutils+API+usage.&url=http%3A%2F%2Fagateau.com%2F2015%2Fdocutils-snippets">
-<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0">
-</a>
-
 [docutils]: http://docutils.sourceforge.net
 [rst]: http://docutils.sourceforge.net/rst.html
 [Sphinx]: http://sphinx-doc.org

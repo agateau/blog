@@ -87,6 +87,5 @@ That was way too complicated than necessary, but it works now. Hopefully this ca
 
 This page was quite handy to learn more about this topic: <http://www.pantz.org/software/cpufreq/usingcpufreqonlinux.html>
 
-<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2013%2F09%2F13%2Flenovo-x1-carbon-cpu-speed%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
 
 [kb]: http://agateau.com/2013/08/01/remapping-keyboard-keys-on-lenovo-laptops

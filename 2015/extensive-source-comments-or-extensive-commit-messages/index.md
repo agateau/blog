@@ -21,8 +21,4 @@ Recently I was listening to Thom Parkin talking about rebasing on [Git Minutes #
 
 So, "Write extensive source comments or extensive commit messages?" I'd say: "Do both".
 
-<a href="https://flattr.com/submit/auto?url=http%3A%2F%2Fagateau.com%2F2015%2Fextensive-source-comments-or-extensive-commit-messages&description=Which+are+more+importants%3F+Source+comments+or+commit+messages%3F&title=Extensive+Source+Comments+or+Extensive+Commit+Messages%3F&user_id=agateau">
-<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0">
-</a>
-
 [gm33]: http://episodes.gitminutes.com/2015/03/gitminutes-33-thom-parkin-on-mastering.html

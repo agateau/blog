@@ -47,7 +47,3 @@ You may have heard about this project as "mdview". It used to be named like this
 ## Want It?
 
 MUP is on GitHub: <https://github.com/agateau/mup>. `git clone` it and follow the instructions from the Install section of the README.
-
-<a href="https://flattr.com/submit/auto?title=MUP%2C+a+Markup+Previewer&user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2014%2Fmup-a-markup-previewer&description=Introducing+another+side-project+of+mine%3A+MUP">
-<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0">
-</a>

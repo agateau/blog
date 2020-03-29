@@ -32,7 +32,6 @@ Another change I made was moving the project from Gitorious to
 You can get the source code from [download.kde.org][src]. Kubuntu 13.04 users
 can also get it from the [Colibri PPA][ppa].
 
-<a href="http://flattr.com/thing/1347834/Colibri-0-3-0" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
 
 [git]: https://projects.kde.org/projects/playground/base/colibri

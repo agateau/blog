@@ -34,5 +34,3 @@ Note that the icon and text must describe which state the application will be in
 <a href="dragon-pause-after.png"><img src="thumb_dragon-pause-after.png" title="Dragon Player with KDualAction" height="36" width="300" alt="" class="aligncenter size-medium wp-image-531"/></a></p>
 <p>KDualAction is part of kdelibs 4.6, so any KDE trunk application can use it now.</p>
 <p>Note: I initially thought about porting all the "Show/hide 'ui element'" actions in KDE to use KDualAction, but it proved to be a bad idea: the Settings menus were more difficult to read after the change. If your application uses KToggleAction to toggle a user interface element with "Show Element" as unchecked state and "Hide Element" as checked state, you should not port your action to KDualAction, instead you should just remove the call to "setCheckedState("Hide Element")".</p>
-<a href="http://flattr.com/thing/83567/Introducing-KDualAction" target="_blank">
-<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0" title="Flattr this"/></a>

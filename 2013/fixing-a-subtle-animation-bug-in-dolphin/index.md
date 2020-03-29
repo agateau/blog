@@ -318,8 +318,5 @@ _[dolphin-after.webm](dolphin-after.webm)_
 Dolphin from KDE SC 4.10.2 includes this fix. Hope you enjoy your smooth mouse
 over animations!
 
-<a href="http://flattr.com/thing/1209610/Fixing-a-subtle-animation-bug-in-Dolphin" target="_blank">
-<img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
-
 [first-fix]: https://git.reviewboard.kde.org/r/108858/
 

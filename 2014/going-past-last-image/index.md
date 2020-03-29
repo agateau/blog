@@ -100,7 +100,6 @@ That's it, I hope it helps you if you are in this peculiar situation. Comments o
 
 PS: Code for this feature is currently in [a review request on Gwenview reviewboard][review]. If you are a KDE developer with a few minutes to spare, why not have a look at it?
 
-<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2014%2F01%2F22%2Fgoing-past-last-image%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>
 
 [QShortcut]: http://qt-project.org/doc/qt-4.8/qshortcut.html
 [review]: https://git.reviewboard.kde.org/r/115020/

@@ -237,7 +237,6 @@ If you read this far, then either you are interested in hacking on Ubiquity and
 I hope this article helps you, or you are an Ubiquity developer and I hope you
 did not spot too many mistakes. If you find some, please point them out.
 
-<a href="http://flattr.com/thing/1305089/Hacking-on-Ubiquity-the-setup" target="_blank"><img src="http://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0" /></a>
 
 [ubiquity-raring]: /2013/04/11/hacking-on-ubiquity/
 [bzr-colo]: http://launchpad.net/bzr-colo

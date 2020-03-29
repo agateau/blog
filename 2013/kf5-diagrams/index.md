@@ -120,4 +120,3 @@ In the long term I would like to include these tools in our API documentation ge
 
 [src]: http://quickgit.kde.org/?p=scratch%2Fgateau%2Fkf5dot.git&a=tree
 
-<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2013%2F12%2F05%2Fkf5-diagrams%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>

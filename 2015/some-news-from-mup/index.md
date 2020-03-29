@@ -40,7 +40,3 @@ Implementing the history for the back and forward buttons was a bit tricky to ge
 ## What's next?
 
 I am considering modernizing the application a bit. First migrating it to Python 3, then to Qt 5, we'll see how it goes.
-
-<a href="https://flattr.com/submit/auto?description=A+quick+update+of+the+changes+which+have+been+made+in+MUP+since+the+last+time+I+wrote+about+it.&url=http%3A%2F%2Fagateau.com%2F2015%2Fsome-news-from-mup&user_id=agateau&title=Some+news+from+MUP">
-<img src="https://api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" border="0">
-</a>

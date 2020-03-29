@@ -30,4 +30,3 @@ Alternatively, you can clone the Git repository with:
 [gh]: https://github.com/agateau/doxyqml
 [pip]: http://www.pip-installer.org
 
-.. flattr:: http://flattr.com/thing/1100293/Doxyqml

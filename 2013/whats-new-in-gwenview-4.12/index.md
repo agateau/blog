@@ -35,4 +35,3 @@ Thanks to great work from Martin Kyral, Gwenview can now display previews embedd
 
 That's it for this cycle. Hope you are going to enjoy your (slightly) refreshed Gwenview 4.12!
 
-<a href="https://flattr.com/submit/auto?user_id=agateau&url=http%3A%2F%2Fagateau.com%2F2013%2F12%2F12%2Fwhats-new-in-gwenview-4.12%2F" target="_blank"><img src="//api.flattr.com/button/flattr-badge-large.png" alt="Flattr this" title="Flattr this" border="0"></a>

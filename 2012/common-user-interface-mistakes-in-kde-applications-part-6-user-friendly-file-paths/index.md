@@ -41,7 +41,6 @@ few situations where one should use prettyUrl() instead of pathOrUrl().
 I am going to file a request to update KUrl documentation so that this mistake is less
 likely to happen.
 
-.. flattr:: http://flattr.com/thing/927088/Common-user-interface-mistakes-in-KDE-applications-part-6-User-friendly-file-paths
 
 [KUrl]: http://api.kde.org/4.9-api/kdelibs-apidocs/kdecore/html/classKUrl.html
 [prettyUrl]: http://api.kde.org/4.9-api/kdelibs-apidocs/kdecore/html/classKUrl.html#a813a6cdf2990c80d55b02dd50a4800be
