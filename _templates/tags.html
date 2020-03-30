@@ -1,0 +1,21 @@
+{% extends "layout.html" %}
+{% block title %}Tags{% endblock %}
+{% block body %}
+  <h1>Tags</h1>
+  <p>
+  {%- for group, _ in get_tags()|groupby("group") %}
+    <a href="#{{ group }}">{{ group.upper() }}</a>
+  {%- endfor %}
+  </p>
+
+  {%- for group, tags in get_tags()|groupby("group") %}
+    <h2 id="{{group }}">{{ group.upper() }}</h2>
+    <p>
+      {%- for tag in tags %}
+        <a href="{{ link_to('tag', tag=tag.name) }}">{{ tag.name }}</a>
+        {%- if tag.count > 1 %} <small>({{ tag.count }})</small>{% endif %}
+        {{- "," if not loop.last }}
+      {%- endfor %}
+    </p>
+  {%- endfor %}
+{% endblock %}
