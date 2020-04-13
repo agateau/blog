@@ -35,10 +35,8 @@ The first thing to do is to parse the log file. Since we read the log from stdin
 ```python
 import sys
 
-
 def parse_line(line):
     # TODO
-
 
 def parse_log():
     for line in sys.stdin.readlines():
@@ -46,11 +44,9 @@ def parse_log():
         if entry:
             yield entry
 
-
 def main():
     for entry in parse_log():
         print(entry)
-
 
 if __name__ == "__main__":
     main()
@@ -74,9 +70,7 @@ LOG_RE = re.compile(r"(?P<date>\w+ \d+ \d+:\d+:\d+)"
                     r" *[^:]*:"  # ignore any process identifier
                     r" (?P<message>.*)")
 
-
 Entry = namedtuple("Entry", ("date", "app", "message"))
-
 
 def parse_line(line):
     match = LOG_RE.match(line)
