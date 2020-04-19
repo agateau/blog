@@ -39,12 +39,14 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
       alt: This is going to hurt
     - full: 0.10.0/turbo.png
       alt: Turbooo!!!
+    - full: 0.16.0/country.png
+      alt: Racing in the country
     - full: 0.10.0/touch-controls.png
       alt: The touch controls, on Android
     - full: 0.13.0/championship-finished.png
       alt: Harvester won the championship!
     - full: 0.12.0/two-players.png
-      alt: Split screen mode
+      alt: Two player mode
 
 ## Get it
 
