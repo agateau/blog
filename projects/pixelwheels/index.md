@@ -2,6 +2,7 @@ public: yes
 tags: []
 title: Pixel Wheels
 disqus: false
+version: 0.16.0
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
@@ -51,7 +52,7 @@ The game is far from finished, but you can already play with it.
 
 ### Pixel Wheels for PC (Linux, Mac, Windows)
 
-<a href="/storage/pixelwheels/pixelwheels-0.15.0.zip" class="dl-button">pixelwheels-0.15.0.zip</a>
+<a href="/storage/pixelwheels/pixelwheels-{{ version }}.zip" class="dl-button">pixelwheels-{{ version }}.zip</a>
 
 (Requires a Java runtime)
 
@@ -61,7 +62,7 @@ Get Pixel Wheels on your Android device via:
 
 <a href="https://f-droid.org/fr/packages/com.agateau.tinywheels.android/" class="dl-button">F-Droid</a>
 <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
-<a href="/storage/pixelwheels/pixelwheels-0.15.0.apk" class="dl-button">Direct download</a>
+<a href="/storage/pixelwheels/pixelwheels-{{ version }}.apk" class="dl-button">Direct download</a>
 
 Getting the game through F-Droid or Google Play is recommended to ensure you receive updates when new versions are released.
 
