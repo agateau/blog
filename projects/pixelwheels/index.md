@@ -2,7 +2,7 @@ public: yes
 tags: []
 title: Pixel Wheels
 disqus: false
-version: 0.16.0
+version: 0.16.1
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
