@@ -14,13 +14,7 @@ include config.mk
 clean:
 	rm -rf $(BUILD_DIR)
 
-checkdeps:
-	which sassc > /dev/null
-	which run-rstblog > /dev/null
-	which rsync > /dev/null
-	which markdownlint > /dev/null
-
-build: checkdeps
+build: check-deps
 	run-rstblog build
 	[ -e _build/$(STORAGE_DIR) ] || ln -s $$PWD/$(STORAGE_DIR) _build/$(STORAGE_DIR)
 
@@ -90,7 +84,7 @@ check-need-push:
 	fi
 
 lint:
-	# Requires `make install-lint`
+	# Requires `make install-deps`
 	markdownlint \
 		--ignore node_modules --ignore _build --ignore talks \
 		$$PWD
@@ -101,7 +95,20 @@ fixlint:
 		--ignore node_modules --ignore _build --ignore talks \
 		$$PWD
 
-install-lint:
-	pip install nodeenv
-	nodeenv -p
-	npm install -g markdownlint-cli
+install-deps: install-markdownlint
+	sudo apt install sassc rsync
+
+NPM_BINARY=$(VIRTUAL_ENV)/bin/npm
+
+install-markdownlint: $(NPM_BINARY)
+	npm install -g markdownlint-cli@0.23.0
+
+$(NPM_BINARY):
+	pip install nodeenv==1.4.0
+	nodeenv --python-virtualenv --node 14.5.0
+
+check-deps:
+	which sassc > /dev/null
+	which rsync > /dev/null
+	which run-rstblog > /dev/null
+	which markdownlint > /dev/null
