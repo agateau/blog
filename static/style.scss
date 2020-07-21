@@ -488,3 +488,49 @@ Full size
         font-size: 100%;
     }
 }
+
+/*--------------------------------------
+
+Support page
+
+--------------------------------------*/
+.support-block {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-gap: 12px;
+
+    max-width: 60%;
+    margin-bottom: 24px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.support-block .support-title {
+    font-weight: bold;
+}
+
+.support-button img {
+    width: 40px;
+    height: 40px;
+}
+
+@media screen and (min-width: 600px) {
+    .support-block {
+        grid-template-columns: 60px 1fr;
+        max-width: 100%;
+        margin-bottom: 0;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    .support-button img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .support-blocks {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 36px;
+    }
+}
