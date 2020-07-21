@@ -4,27 +4,38 @@
 
 - Create a virtualenv
 - Install rstblog in it
-    git clone https://github.com/agateau/rstblog
-    git checkout integration
-    cd rstblog
-    pip install -r requirements.txt
-    pip install -e .
+
+```sh
+git clone https://github.com/agateau/rstblog
+git checkout integration
+cd rstblog
+pip install -r requirements.txt
+pip install -e .
+```
 
 - Install dependencies
 
-    make install-deps
+```sh
+make install-deps
+```
 
 ## Create config.mk
 
 ## Get storage files
 
-    make download-storage
+```sh
+make download-storage
+```
 
 ## Building
 
-    make
+```sh
+make
+```
 
 ## Deploying
 
-    make deploy
-    make deploy-storage
+```sh
+make deploy
+make deploy-storage
+```
