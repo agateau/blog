@@ -86,13 +86,13 @@ check-need-push:
 lint:
 	# Requires `make install-deps`
 	markdownlint \
-		--ignore node_modules --ignore _build --ignore talks \
+		--ignore node_modules --ignore _build --ignore talks --ignore support \
 		$$PWD
 
 fixlint:
 	markdownlint \
 		--fix \
-		--ignore node_modules --ignore _build --ignore talks \
+		--ignore node_modules --ignore _build --ignore talks --ignore support \
 		$$PWD
 
 install-deps: install-markdownlint
