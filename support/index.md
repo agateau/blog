@@ -1,3 +1,4 @@
+---
 public: yes
 tags: []
 title: "Support"
@@ -16,7 +17,7 @@ supportLinks:
   text: Buy one of my games
   button: itch-button.svg
   url: https://agateau.itch.io
-
+---
 I love writing free software, but it is difficult to make a living from it. In the server world, you can sell support and training. Unfortunately this does not work for end-user applications and games, which happen to be the areas I enjoy working on.
 
 This is where you come in: by supporting me, I can take days off from work and spend more time working on these free software apps and games.
