@@ -1,21 +1,5 @@
 {% extends "layout.html" %}
 {% block title %}{{ rst.title }}{% endblock %}
-{% block extrameta %}
-  <meta property="og:url" content="{{ ctx.url }}"/>
-  <meta property="og:title" content="{{ ctx.title }}"/>
-  {% if ctx.description %}
-    <meta property="og:description" content="{{ ctx.description }}"/>
-  {% endif %}
-  {% if ctx.image %}
-    <meta property="og:image" content="{{ ctx.image }}"/>
-  {% endif %}
-  {% if ctx.image_alt %}
-    <meta property="og:image:alt" content="{{ ctx.image_alt }}"/>
-  {% endif %}
-  {% if ctx.tags %}
-    <meta name="keywords" content="{{ ctx.tags|sort|join(', ')}}"/>
-  {% endif %}
-{% endblock %}
 {% block body %}
   <article>
     {%- if not config.hide_title %}

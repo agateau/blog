@@ -5,6 +5,22 @@
 <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta property="og:type" content="website"/>
+{%- if ctx %}
+  <meta property="og:url" content="{{ ctx.url }}"/>
+  <meta property="og:title" content="{{ ctx.title }}"/>
+  {% if ctx.description %}
+    <meta property="og:description" content="{{ ctx.description }}"/>
+  {% endif %}
+  {% if ctx.image %}
+    <meta property="og:image" content="{{ ctx.image }}"/>
+  {% endif %}
+  {% if ctx.image_alt %}
+    <meta property="og:image:alt" content="{{ ctx.image_alt }}"/>
+  {% endif %}
+  {% if ctx.tags %}
+    <meta name="keywords" content="{{ ctx.tags|sort|join(', ')}}"/>
+  {% endif %}
+{%- endif -%}
 {% block extrameta %}{% endblock %}
 
 <title>{% block title %}Home{% endblock %} | agateau.com</title>
