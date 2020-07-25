@@ -11,6 +11,8 @@ Nanonote main component is a QTextEdit with several "extensions" to provide cust
 
 Testing these extensions is not particularly difficult but it requires tedious setup to set the text, position the cursor, define the selection. Then you perform the action and have to write more tedious code to check the new text, cursor position and selection match your expectations. Not only is it tedious to write, it is also error-prone and hard to read.
 
+<!-- break -->
+
 Here is an example:
 
 ```c++
@@ -35,8 +37,6 @@ SECTION("indent whole lines") {
     CHECK(cursor.selectionEnd() == 12);
 }
 ```
-
-<!-- break -->
 
 (The `SECTION` and `CHECK` macros come from the [Catch2][] test framework I use to write Nanonote tests)
 
