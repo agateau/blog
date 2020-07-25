@@ -12,6 +12,7 @@ $headingColor: $darkColor;
 $hlineColor: transparentize($headingColor, 0.8);
 
 $headerBgColor: $darkColor;
+$headerBgHoverColor: lighten($darkColor, 10%);
 $headerTextColor: $linkColor;
 
 $buttonBgColor: lighten($linkColor, 50%);
@@ -123,21 +124,21 @@ nav ul {
     list-style: none;
 }
 
+nav a {
+    display: inline-block;
+    height: 100%;
+    padding: 0 1em;
+}
 nav a, footer a {
     text-decoration: none;
 }
 nav a:hover, footer a:hover {
-    text-decoration: underline;
-}
-nav ul li:not(:first-child):before {
-    content: ' | ';
-    color: #666;
+    background-color: $headerBgHoverColor;
 }
 
 nav ul li {
     display: inline;
     margin: 0;
-    padding: 0;
 }
 
 /*- Search ---------------------------*/
