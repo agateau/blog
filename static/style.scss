@@ -13,13 +13,19 @@ $hlineColor: transparentize($headingColor, 0.8);
 
 $headerBgColor: $darkColor;
 $headerBgHoverColor: lighten($darkColor, 10%);
-$headerTextColor: $linkColor;
+$headerTextColor: whitesmoke;
+
+$subheaderBgColor: #ecdbdb;
+$subheaderTextColor: black;
 
 $buttonBgColor: lighten($linkColor, 50%);
 $buttonBevelColor: $linkColor;
 $buttonTextColor: $darkColor;
 
 $h1VerticalMargin: 24pt;
+
+$sleeveWidth: 1000px;
+$sleevePadding: 1em;
 
 /*-------------------------------------
 
@@ -88,7 +94,7 @@ Layout
 
 -------------------------------------*/
 div.sleeve {
-    margin: 0 0.5em;
+    padding: 0 $sleevePadding;
 }
 
 header {
@@ -96,27 +102,32 @@ header {
     line-height: 2em;
     text-align: center;
     color: $headerTextColor;
-    font-size: 80%;
-    font-variant: all-small-caps;
 }
 
 header h1 {
-    display: inline;
-    font-size: 140%;
+    font-size: 100%;
     margin: 0;
+    padding: 1em 0;
     font-family: 'Open Sans', sans-serif;
+    color: $headerTextColor;
+    text-align: center;
 }
 
 header a {
-    color: whitesmoke;
+    color: $headerTextColor;
     text-decoration: none;
 }
 
-header p.title {
-    margin: 0;
+div.body {
+    clear: both;
 }
 
 /*- Navigation -----------------------*/
+nav {
+    display: block;
+    text-align: center;
+}
+
 nav ul {
     background-color: $headerBgColor;
     margin: 0;
@@ -127,7 +138,8 @@ nav ul {
 nav a {
     display: inline-block;
     height: 100%;
-    padding: 0 1em;
+    padding: 0 0.5em;
+    font-variant: all-small-caps;
 }
 nav a, footer a {
     text-decoration: none;
@@ -141,44 +153,7 @@ nav ul li {
     margin: 0;
 }
 
-/*- Search ---------------------------*/
-div.search-small {
-    text-align: center;
-    display: block;
-    background-color: #ddd;
-    line-height: 1em; /* necessary to keep the content vertically-centered */
-    padding: 0.5em 0;
-    margin: 0;
-    margin-bottom: 1em;
-}
-
-div.search-full {
-    display: none;
-}
-
-div.search form {
-    display: inline;
-    padding: 0;
-    margin: 0;
-    height: 16px;
-}
-
-input.search-field {
-    border: none;
-    border-radius: 0.75em;
-    height: 1.5em;
-    padding: 0;
-    margin: 0;
-    padding-left: 0.75em;
-    background-color: $lightColor;
-    width: 12em;
-}
-
 /*- Body -----------------------------*/
-div.body {
-    clear: both;
-}
-
 img, video {
     display: block;
     margin: 0 auto;
@@ -305,19 +280,49 @@ blockquote p {
     margin-left: 1.4em;
 }
 
-/*- Overview --------------------------*/
-article.overview {
-    margin-top: $h1VerticalMargin;
-    border-top: 2px dashed $hlineColor;
-}
-
-article.overview:first-child {
+/*- Blog posts -----------------------*/
+ul.blogposts {
+    list-style: none;
+    padding: 0;
     margin-top: 0;
-    border-top: none;
+
+    h2 {
+        border: none;
+        padding-bottom: 0;
+        margin-bottom: 0.5em;
+    }
+
+    .bloglinks {
+        font-size: 80%;
+    }
+
+    .meta {
+        opacity: 80%;
+    }
+
+    div.read-more {
+        font-size: 80%;
+    }
 }
 
-div.read-more {
-    font-size: 80%;
+div.allposts {
+    background-color: $subheaderBgColor;
+    color: $subheaderTextColor;
+
+    margin: 0 (-$sleevePadding);
+    padding: 0.5em;
+    text-align: center;
+
+    ul {
+        display: inline;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        padding-left: 0.5em;
+    }
+    li {
+        display: inline;
+    }
 }
 
 /*--------------------------------------
@@ -326,6 +331,7 @@ pagination
 
 --------------------------------------*/
 div.pagination {
+    grid-area: footer;
     margin: 36px 0 0 0;
     text-align: center;
 }
@@ -443,33 +449,31 @@ Medium size
     header {
         clear: both;
         line-height: 3em;
-        text-align: left;
-        margin-bottom: 1em;
     }
 
-    header h1 {
-        font-size: 100%;
-    }
-
-    nav {
+    div.allposts {
+        border-bottom-left-radius: 7px;
+        border-bottom-right-radius: 7px;
+        margin: 0;
+        padding: 0.5em 1em;
         float: right;
-    }
-
-    div.search-small {
-        display: none;
-    }
-
-    div.search-full {
-        float: right;
-        display: block;
-        padding-left: 0.5em;
-        padding-right: 0.5em;
     }
 
     div.sleeve {
-        max-width: 1000px;
+        max-width: $sleeveWidth;
         margin: 0 auto;
-        padding: 0;
+    }
+
+    div.blogposts-container {
+        aside {
+            border-left: 1px solid $hlineColor;
+            margin-left: 1em;
+            padding-left: 1em;
+        }
+    }
+
+    nav a {
+        padding: 0 1em;
     }
 }
 
@@ -478,15 +482,24 @@ Medium size
 Full size
 
 --------------------------------------*/
-@media screen and (min-width: 900px) {
+@media screen and (min-width: 800px) {
     body {
         font-size: 18px;
     }
-    input.search-field {
-        font-size: 18px;
-    }
+
     header {
-        font-size: 100%;
+        div.sleeve {
+            display: grid;
+            grid-template-columns: auto auto;
+        }
+        h1 {
+            text-align: left;
+            line-height: 3em;
+            padding: 0;
+        }
+        nav {
+            text-align: right;
+        }
     }
 }
 

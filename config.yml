@@ -18,6 +18,7 @@ modules:
         developer: 1
     blog:
         feed_url: /feed
+        index_url: /blog/
     tags:
         tag_feed_url: /tags/<tag>/feed
 feed:

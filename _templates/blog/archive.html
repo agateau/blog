@@ -1,19 +1,20 @@
 {% extends "layout.html" %}
-{% block title %}Blog Archive{% endblock %}
+{% block title %}Blog Archive by year{% endblock %}
 {% block body %}
+  <div class="allposts">
+    <a href="/blog/">Latest posts</a> | Archive by year | <a href="/tags/">Archive by tag</a>
+  </div>
+  <h1>Archive by year</h1>
 
-  <h1>Blog Archive</h1>
-
-    {%- for entry in archive %}
+  {%- for entry in archive %}
     <h2>{{ entry.year }} <small>({{ entry.entries|count }})</small></h2>
-      <ul>
-        {%- for entry in entry.entries %}
-          <li>
-            <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
-            {%- if entry.pub_date %}, {{ format_date(entry.pub_date, format='long') }}{% endif %}
-          </li>
-        {%- endfor %}
-      </ul>
-    {%- endfor %}
-  </ul>
+    <ul>
+      {%- for entry in entry.entries %}
+        <li>
+          <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+          {%- if entry.pub_date %}, {{ format_date(entry.pub_date, format='long') }}{% endif %}
+        </li>
+      {%- endfor %}
+    </ul>
+  {%- endfor %}
 {% endblock %}

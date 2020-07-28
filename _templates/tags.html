@@ -1,7 +1,10 @@
 {% extends "layout.html" %}
-{% block title %}Tags{% endblock %}
+{% block title %}Blog archive by tag{% endblock %}
 {% block body %}
-  <h1>Tags</h1>
+  <div class="allposts">
+    <a href="/blog/">Latest posts</a> | <a href="/archive/">Archive by year</a> | Archive by tag
+  </div>
+  <h1>Archive by tag</h1>
   <p>
   {%- for group, _ in get_tags()|groupby("group") %}
     <a href="#{{ group }}">{{ group.upper() }}</a>

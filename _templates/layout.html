@@ -1,37 +1,9 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<meta property="og:type" content="website"/>
-{%- if ctx %}
-  <meta property="og:url" content="{{ ctx.url }}"/>
-  <meta property="og:title" content="{{ ctx.title }}"/>
-  {% if ctx.description %}
-    <meta property="og:description" content="{{ ctx.description }}"/>
-  {% endif %}
-  {% if ctx.image %}
-    <meta property="og:image" content="{{ ctx.image }}"/>
-  {% endif %}
-  {% if ctx.image_alt %}
-    <meta property="og:image:alt" content="{{ ctx.image_alt }}"/>
-  {% endif %}
-  {% if ctx.tags %}
-    <meta name="keywords" content="{{ ctx.tags|sort|join(', ')}}"/>
-  {% endif %}
-{%- endif -%}
-{% block extrameta %}{% endblock %}
-
-<title>{% block title %}Home{% endblock %} | agateau.com</title>
-<link rel="stylesheet" href="/static/style.css" type="text/css">
+{% extends "base.html" %}
+{% block extracss %}
 <link rel="stylesheet" href="/static/wp-support.css" type="text/css">
-<link rel="alternate" href="/feed" title="Recent Blog Posts" type="application/atom+xml">
-{%- for link in links %}
-<link rel="{{ link.rel }}" href="{{ link.href }}"{% if link.media %} media="{{ link.media }}"{% endif %} type="{{ link.type }}">
-{%- endfor -%}
-
 <link rel="stylesheet" href="/static/colorbox.css" />
+{% endblock %}
+{% block extrajs %}
 <script src="/static/jquery.js"></script>
 <script src="/static/jquery.colorbox-min.js"></script>
 <script>
@@ -40,51 +12,30 @@ function onReady() {
 }
 $(document).ready(onReady);
 </script>
-</head>
-<body>
+{% endblock %}
+{% block basebody %}
 <header>
-  <div class="search-full">
-    <form action="https://duckduckgo.com">
-      <input type="hidden" name="sites" value="agateau.com">
-      <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
-    </form>
-  </div>
   <div class="sleeve">
     <h1><a href="/">Aurélien Gâteau</a></h1>
     <nav>
       <ul>
         <li><a href="/apps/">Apps</a></li>
         <li><a href="/games/">Games</a></li>
-        <li><a href="/archive/">Archive</a></li>
-        <!--
-        <li><a href="/article-series/">Article Series</a></li>
-        <li><a href="/talks/">Talks</a></li>
-        -->
-        <li><a href="/tags/">Tags</a></li>
-        <li><a href="/support/">Support</a></li>
+        <li><a href="/blog/">Blog</a></li>
+        <li><a href="/support/">Support Me</a></li>
         <li><a href="/about-me/">About</a></li>
       </ul>
     </nav>
   </div>
 </header>
 
-<div class="search-small">
-  <div class="sleeve">
-    <form action="https://duckduckgo.com">
-      <input type="hidden" name="sites" value="agateau.com">
-      <input type="text" name="q" class="search-field" placeholder="Search" title="Search this site using DuckDuckGo">
-    </form>
-  </div>
-</div>
-
-<div class="sleeve">
+<div class="sleeve main-wrapper">
   <div class="body">
     {% block body %}{% endblock %}
   </div>
   <footer>
-    <em>Hey, I am making a game! A retro arcade racing game called Pixel Wheels! <a href="/projects/pixelwheels">Check it out!</a></em>
+    {% block footer %}{% endblock %}
   </footer>
 </div>
 
-</body>
-</html>
+{% endblock %}
