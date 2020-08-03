@@ -27,6 +27,8 @@ $h1VerticalMargin: 24pt;
 $sleeveWidth: 1000px;
 $sleevePadding: 1em;
 
+$smallFontSize: 80%;
+
 /*-------------------------------------
 
 General style
@@ -293,7 +295,7 @@ ul.blogposts {
     }
 
     .bloglinks {
-        font-size: 80%;
+        font-size: $smallFontSize;
     }
 
     .meta {
@@ -301,7 +303,7 @@ ul.blogposts {
     }
 
     div.read-more {
-        font-size: 80%;
+        font-size: $smallFontSize;
     }
 }
 
@@ -322,6 +324,35 @@ div.allposts {
     }
     li {
         display: inline;
+    }
+}
+
+/*- Comments -------------------------*/
+#comments-container {
+    margin-left: -2em;
+
+    ul {
+        padding: 0;
+        margin: 0;
+        margin-left: 2em;
+        list-style: none;
+    }
+}
+
+li.comment {
+    margin-top: 1em;
+    .comment-meta {
+        color: #555;
+        a {
+            color: #555;
+        }
+    }
+    .message {
+        grid-area: message;
+
+        p {
+            margin: 0;
+        }
     }
 }
 
@@ -400,15 +431,9 @@ img.align-center {
     display: block;
 }
 
-div#disqus_thread {
-    clear: both;
-    border-top: 1px solid $hlineColor;
-    padding-top: 9px;
-}
-
 .date, .meta {
     color: #555;
-    font-size: 80%;
+    font-size: $smallFontSize;
 }
 
 .center {

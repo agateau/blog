@@ -1,5 +1,11 @@
 {% extends "layout.html" %}
 {% block title %}{{ rst.title }}{% endblock %}
+{% block extrajs %}
+{{ super() }}
+{%- if config.get('disqus', true) %}
+<script src="/static/comments.js"></script>
+{%- endif %}
+{% endblock %}
 {% block body %}
   <article>
     {%- if not config.hide_title %}
@@ -28,10 +34,9 @@
     </div>
   </article>
 
-  {% if 'disqus' in config.active_modules %}
-    <a name="comments"></a>
-    {{ get_disqus() }}
-  {% endif %}
+  {%- if config.get('disqus', true) %}
+  <section id="comments"></section>
+  {%- endif %}
 {% endblock %}
 {% block footer %}
     <em>Hey, I am making a game! A retro arcade racing game called Pixel Wheels! <a href="/projects/pixelwheels">Check it out!</a></em>
