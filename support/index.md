@@ -18,6 +18,8 @@ supportLinks:
   button: itch-button.svg
   url: https://agateau.itch.io
 ---
+## Why support me?
+
 I love writing free software, but it is difficult to make a living from it. In the server world, you can sell support and training. Unfortunately this does not work for end-user applications and games, which happen to be the areas I enjoy working on.
 
 This is where you come in: by supporting me, I can take days off from work and spend more time working on these free software apps and games.
@@ -40,4 +42,4 @@ You can support me in various ways:
 
 ## Previous supporters
 
-I asked for donations from 2010 to 2012. Generous donors from this period are all listed on [this page](/support-2010-2012). Thanks again to them!
+From November 2010 to April 2012 I asked for donations. The records of these is kept in a [separate page](/support-historic/). Thanks again to these generous supporters.
