@@ -54,6 +54,13 @@ function onCommentsReceived(comments) {
     var container = addDiv(section, null, null);
     container.setAttribute("id", "comments-container");
     createComments(container, comments);
+
+    // Scroll to the right comment if the url contains a hash (since HTML
+    // elements for comments are created on the fly, they do not exist when the
+    // page has finished loading so the browser does not scroll to it)
+    if (document.location.hash) {
+        document.location.replace(document.location.href);
+    }
 }
 
 function getURLWithoutHash() {
