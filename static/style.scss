@@ -340,7 +340,7 @@ div.allposts {
 }
 
 li.comment {
-    margin-top: 1em;
+    margin-top: 2em;
     .comment-meta {
         color: #555;
         a {
@@ -348,8 +348,6 @@ li.comment {
         }
     }
     .message {
-        grid-area: message;
-
         p {
             margin: 0;
         }
