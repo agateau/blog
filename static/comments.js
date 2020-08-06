@@ -28,7 +28,7 @@ function createComments(container, comments) {
         commentLi.setAttribute("id", comment.id);
         commentLi.setAttribute("class", "comment");
         if (comment.deleted) {
-            addDiv(commentLi, "message", "[deleted]");
+            addDiv(commentLi, "comment-meta", "[This comment has been deleted]");
         } else {
             const permalink = "<a href='#" + comment.id + "'>link</a>";
             const meta = comment.author
