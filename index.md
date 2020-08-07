@@ -1,7 +1,7 @@
 public: yes
 tags: []
 title: "Welcome!"
-disqus: false
+comments: false
 template: welcome.html
 description: Hi I am Aurélien. I create games, desktop and command-line apps.
 image: /static/images/avatar.png

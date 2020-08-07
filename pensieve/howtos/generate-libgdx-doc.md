@@ -2,7 +2,7 @@ public: no
 pub_date: 2017-12-17 19:08:10 +01:00
 tags: [howto, libgdx]
 title: "Generating libgdx API doc"
-disqus: false
+comments: false
 
 Content
 Get libgdx sources:

@@ -1,6 +1,6 @@
 public: yes
 tags: []
-disqus: false
+comments: false
 title: "Colibri"
 summary: Colibri provides an alternative to KDE4 Plasma notifications.
 

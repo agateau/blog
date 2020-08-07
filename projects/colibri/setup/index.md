@@ -1,6 +1,6 @@
 public: yes
 tags: []
-disqus: false
+comments: false
 title: Colibri Setup Guide
 summary: Setup guide to configure Colibri on a KDE system
 

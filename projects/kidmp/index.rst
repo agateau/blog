@@ -1,6 +1,6 @@
 public: yes
 tags: []
-disqus: false
+comments: false
 
 KidMP
 -----

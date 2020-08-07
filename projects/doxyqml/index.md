@@ -1,6 +1,6 @@
 public: yes
 tags: []
-disqus: false
+comments: false
 title: "Doxyqml"
 summary: Doxyqml makes it possible to use Doxygen to document QML files
 

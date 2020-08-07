@@ -5,7 +5,7 @@ public: no
 pub_date:
 tags: [howto, ]
 title: ""
-disqus: false
+comments: false
 
 ## First Heading
 

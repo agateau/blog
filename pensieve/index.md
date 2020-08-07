@@ -1,7 +1,7 @@
 public: no
 tags: []
 title: "Pensieve"
-disqus: false
+comments: false
 
 This is a set of pages where I store links to recent or old memories.
 

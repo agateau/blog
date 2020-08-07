@@ -2,7 +2,7 @@ public: no
 pub_date: 2018-12-31 21:35:41 +01:00
 tags: [howto, grub]
 title: "GRUB HTPC howto"
-disqus: false
+comments: false
 
 # GRUB HTPC howto
 

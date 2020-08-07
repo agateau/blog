@@ -1,7 +1,7 @@
 public: yes
 tags: []
 title: "Games"
-disqus: false
+comments: false
 
 ## Work in Progress
 

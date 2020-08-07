@@ -1,7 +1,7 @@
 public: yes
 tags: []
 title: "Apps"
-disqus: false
+comments: false
 
 Here are some of the apps and tools I created. You can find others on my [GitHub page](http://github.com/agateau).
 

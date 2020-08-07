@@ -1,7 +1,7 @@
 public: no
 tags: []
 title: "Video Games"
-disqus: false
+comments: false
 
 ## CPC
 

@@ -2,7 +2,7 @@
 public: yes
 tags: []
 title: "Support"
-disqus: false
+comments: false
 jinja: true
 supportLinks:
 - title: Ko-fi

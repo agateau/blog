@@ -2,7 +2,7 @@ public: no
 pub_date: 2014-12-10 17:44:00 +01:00
 tags: [openvpn, howto]
 title: "OpenVPN tips"
-disqus: false
+comments: false
 
 ## Starting a vpn with a config file
 

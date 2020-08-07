@@ -1,7 +1,7 @@
 public: false
 tags: [games, amiga, amos]
 title: "Plouf!"
-disqus: false
+comments: false
 
 Plouf! is an Amiga game I wrote a long time ago.
 

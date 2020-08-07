@@ -1,7 +1,7 @@
 public: yes
 tags: []
 title: "About me"
-disqus: false
+comments: false
 
 My name is Aurélien Gâteau, I am a French software engineer currently living in a small village near Paris with my wife and children.
 

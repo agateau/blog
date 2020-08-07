@@ -1,7 +1,7 @@
 public: yes
 tags: []
 title: Pixel Wheels
-disqus: false
+comments: false
 version: 0.16.1
 jinja: true
 

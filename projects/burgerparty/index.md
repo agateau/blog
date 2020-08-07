@@ -1,7 +1,7 @@
 public: yes
 tags: []
 title: Burger Party
-disqus: false
+comments: false
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 

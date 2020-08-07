@@ -2,7 +2,7 @@
 {% block title %}{{ rst.title }}{% endblock %}
 {% block extrajs %}
 {{ super() }}
-{%- if config.get('disqus', true) %}
+{%- if config.get('comments', true) %}
 <script src="/static/comments.js"></script>
 {%- endif %}
 {% endblock %}
@@ -34,7 +34,7 @@
     </div>
   </article>
 
-  {%- if config.get('disqus', true) %}
+  {%- if config.get('comments', true) %}
   <section id="comments"></section>
   {%- endif %}
 {% endblock %}

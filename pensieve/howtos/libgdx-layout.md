@@ -2,7 +2,7 @@ public: no
 pub_date: 2018-12-16 21:35:41 +01:00
 tags: [howto, libgdx]
 title: "libgdx layout tips"
-disqus: false
+comments: false
 
 ## layout()
 

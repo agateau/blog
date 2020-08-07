@@ -2,7 +2,7 @@ public: no
 pub_date: 2017-11-02 21:35:41 +01:00
 tags: [howto, docker]
 title: "Docker 1.12 howto"
-disqus: false
+comments: false
 
 ## Example Dockerfile
 

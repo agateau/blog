@@ -1,7 +1,7 @@
 public: no
 tags: []
 title: "Demos"
-disqus: false
+comments: false
 
 ## Amiga
 

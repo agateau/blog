@@ -2,7 +2,7 @@ public: no
 pub_date: 2017-11-19 13:02:58 +01:00
 tags: [howto, network]
 title: "IP Routing"
-disqus: false
+comments: false
 
 ```
 sudo -s
