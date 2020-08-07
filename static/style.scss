@@ -6,7 +6,8 @@ Constants
 $darkColor: #594F4F;
 $lightColor: #f8f6f6;
 $linkColor: #457aA8;
-$bodyColor: black;
+$textColor: black;
+$lighterTextColor: #666;
 
 $headingColor: $darkColor;
 $hlineColor: transparentize($headingColor, 0.8);
@@ -36,7 +37,7 @@ General style
 -------------------------------------*/
 body {
     font-family: "Segoe UI", Helvetica, Arial, sans-serif;
-    color: $bodyColor;
+    color: $textColor;
     margin: 0;
     padding: 0;
     background-color: $lightColor;
@@ -174,7 +175,7 @@ footer {
     padding-top: 42px;
     margin: 42px 0;
     border-top: 1px solid $hlineColor;
-    color: #777;
+    color: $lighterTextColor;
     font-size: 120%;
     font-family: serif;
     text-align: center;
@@ -266,7 +267,7 @@ blockquote {
     margin: 0 2em;
     padding: 6px;
     font-family: serif;
-    color: #555;
+    color: $lighterTextColor;
     background-color: #eee;
     position: relative;
 }
@@ -342,9 +343,9 @@ div.allposts {
 li.comment {
     margin-top: 2em;
     .comment-meta {
-        color: #555;
+        color: $lighterTextColor;
         a {
-            color: #555;
+            color: $lighterTextColor;
         }
     }
     .message {
