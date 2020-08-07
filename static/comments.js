@@ -1,8 +1,9 @@
 const COMMENT_META_SEPARATOR = " - ";
 
 function formatIsoDate(dateString) {
-    var date = new Date(dateString);
-    return date.toDateString() + ", " + date.getHours() + ":" + date.getMinutes();
+    const date = new Date(dateString);
+    const minutes = String(date.getMinutes()).padStart(2, "0");
+    return date.toDateString() + ", " + date.getHours() + ":" + minutes;
 }
 
 function addHTMLElement(parent, tagName, cssClass, content) {
