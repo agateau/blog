@@ -7,7 +7,7 @@ function formatIsoDate(dateString) {
 }
 
 function addHTMLElement(parent, tagName, cssClass, content) {
-    var element = document.createElement(tagName);
+    const element = document.createElement(tagName);
     if (cssClass) {
         element.setAttribute("class", cssClass);
     }
@@ -23,9 +23,9 @@ function addDiv(parent, cssClass, content) {
 }
 
 function createComments(container, comments) {
-    var ul = document.createElement("ul");
+    const ul = document.createElement("ul");
     comments.forEach(function(comment) {
-        var commentLi = document.createElement("li");
+        const commentLi = document.createElement("li");
         commentLi.setAttribute("id", comment.id);
         commentLi.setAttribute("class", "comment");
         if (comment.deleted) {
@@ -50,9 +50,9 @@ function onCommentsReceived(comments) {
     if (!comments) {
         return;
     }
-    var section = document.getElementById("comments");
+    const section = document.getElementById("comments");
     addHTMLElement(section, "h2", null, "Comments");
-    var container = addDiv(section, null, null);
+    const container = addDiv(section, null, null);
     container.setAttribute("id", "comments-container");
     createComments(container, comments);
 
@@ -67,14 +67,12 @@ function onCommentsReceived(comments) {
 }
 
 function getURLWithoutHash() {
-    var loc = document.location;
+    const loc = document.location;
     return loc.protocol + "//" + loc.host + "/" + loc.pathname;
 }
 
 function loadComments() {
-    var baseURL = getURLWithoutHash();
-    $.getJSON(baseURL + "/comments.json")
-        .success(onCommentsReceived);
+    $.getJSON(getURLWithoutHash() + "/comments.json").success(onCommentsReceived);
 }
 
 $(document).ready(loadComments);
