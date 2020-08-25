@@ -13,6 +13,10 @@ supportLinks:
   text: Donate via PayPal
   button: paypal-button.svg
   url: https://paypal.me/aureliengateau
+- title: Liberapay
+  text: Donate via Liberapay
+  button: liberapay-button.svg
+  url: https://liberapay.com/agateau/donate
 - title: itch.io
   text: Buy one of my games
   button: itch-button.svg
