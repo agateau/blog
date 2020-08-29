@@ -2,8 +2,6 @@ public: yes
 tags: []
 title: Pixel Wheels
 comments: false
-version: 0.16.1
-jinja: true
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
@@ -53,19 +51,15 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 
 The game is far from finished, but you can already play with it.
 
-### Pixel Wheels for PC (Linux, Mac, Windows)
+### Pixel Wheels for PC (Linux, macOS, Windows)
 
-<a href="/storage/pixelwheels/pixelwheels-{{ version }}.zip" class="dl-button">pixelwheels-{{ version }}.zip</a>
-
-(Requires a Java runtime)
+<a href="https://agateau.itch.io/pixelwheels" class="dl-button">Download from itch.io</a>
 
 ### Pixel Wheels for Android
 
-Get Pixel Wheels on your Android device via:
-
 <a href="https://f-droid.org/fr/packages/com.agateau.tinywheels.android/" class="dl-button">F-Droid</a>
 <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
-<a href="/storage/pixelwheels/pixelwheels-{{ version }}.apk" class="dl-button">Direct download</a>
+<a href="https://agateau.itch.io/pixelwheels" class="dl-button">itch.io</a>
 
 Getting the game through F-Droid or Google Play is recommended to ensure you receive updates when new versions are released.
 
