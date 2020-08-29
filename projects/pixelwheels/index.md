@@ -14,38 +14,28 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 .. gallery::
     :thumbsize: 300
 
-    - full: 0.14.0/title.png
+    - full: 0.17.0/title.png
       alt: Title screen
-    - full: 0.12.0/select-vehicle.png
+    - full: 0.17.0/select-vehicle.png
       alt: Select your vehicle
-    - full: 0.12.0/select-map.png
-      alt: Select map
-    - full: 0.10.0/go.png
+    - full: 0.17.0/select-track.png
+      alt: Select track
+    - full: 0.17.0/go.png
       alt: GO!
-    - full: 0.10.0/firing-missile.png
+    - full: 0.17.0/firing-missile.png
       alt: Firing a missile
-    - full: 0.10.0/catching-up.png
-      alt: Trying to catch up with the roadster
-    - full: 0.10.0/gun.png
-      alt: A bot is getting gunned down by another one
-    - full: 0.10.0/heli-dropped.png
-      alt: Being heli-dropped on  the track after a dive
-    - full: 0.10.0/mine-drop.png
-      alt: If you come too close, I am going to drop a mine on your way...
-    - full: 0.10.0/not-the-best-way.png
-      alt: That may not be the best way...
-    - full: 0.10.0/this-is-going-to-hurt.png
-      alt: This is going to hurt
-    - full: 0.10.0/turbo.png
-      alt: Turbooo!!!
-    - full: 0.16.0/country.png
-      alt: Racing in the country
-    - full: 0.10.0/touch-controls.png
+    - full: 0.17.0/turbo.png
+      alt: Trying to catch up with the police car
+    - full: 0.17.0/gun.png
+      alt: Shooting the rocket car with the gun
+    - full: 0.17.0/rescued.png
+      alt: The rescue copter will bring you back if you dive too deep
+    - full: 0.17.0/touch-controls-1.png
       alt: The touch controls, on Android
-    - full: 0.13.0/championship-finished.png
-      alt: Harvester won the championship!
-    - full: 0.12.0/two-players.png
-      alt: Two player mode
+    - full: 0.17.0/touch-controls-2.png
+      alt: Alternative touch controls
+    - full: 0.17.0/championship-finished.png
+      alt: Pickup won the championship!
 
 ## Get it
 
