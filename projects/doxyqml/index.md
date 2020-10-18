@@ -4,32 +4,8 @@ comments: false
 title: "Doxyqml"
 summary: Doxyqml makes it possible to use Doxygen to document QML files
 
-Doxyqml is an input filter for [Doxygen](http://www.doxygen.org), a
-documentation system for C++ and a few other languages.
+Doxyqml is an input filter for [Doxygen](http://www.doxygen.org), a documentation system for C++ and a few other languages.
 
 Doxyqml makes it possible to use Doxygen to document QML code.
 
-## More Information
-
-Have a look at the [GitHub page][gh].
-
-## Get It
-
-The simplest way to install Doxyqml is with [pip][]:
-
-```
-pip install doxyqml
-```
-
-You can also download the tarball and follow the instructions from the
-README.md. Latest release is [doxyqml-0.5.0.tar.bz2][dl].
-
-Alternatively, you can clone the Git repository with:
-
-```
-git clone https://github.com/agateau/doxyqml.git
-```
-
-[dl]: https://github.com/agateau/doxyqml/releases/download/0.5.0/doxyqml-0.5.0.tar.bz2
-[gh]: https://github.com/agateau/doxyqml
-[pip]: http://www.pip-installer.org
+I created this tool and maintained it until 2020, then handed over maintenance to the KDE SDK team. Its new home is: <https://invent.kde.org/sdk/doxyqml/>.
