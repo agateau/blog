@@ -5,6 +5,18 @@ title: "Support"
 comments: false
 jinja: true
 supportLinks:
+- title: Patreon
+  text: Become my Patron
+  button: patreon-button.png
+  url: https://patreon.com/agateau
+- title: GitHub
+  text: Become a sponsor
+  button: github-button.svg
+  url: https://github.com/sponsors/agateau
+- title: Liberapay
+  text: Donate via Liberapay
+  button: liberapay-button.svg
+  url: https://liberapay.com/agateau/donate
 - title: Ko-fi
   text: Buy me a coffee!
   button: ko-fi-button.png
@@ -13,10 +25,6 @@ supportLinks:
   text: Donate via PayPal
   button: paypal-button.svg
   url: https://paypal.me/aureliengateau
-- title: Liberapay
-  text: Donate via Liberapay
-  button: liberapay-button.svg
-  url: https://liberapay.com/agateau/donate
 - title: itch.io
   text: Buy one of my games
   button: itch-button.svg
