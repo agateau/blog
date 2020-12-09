@@ -5,7 +5,7 @@ ignore_files:
     - .*
     - _*
     - node_modules
-    - config.yml
+    - "*.yml"
     - Makefile
     - README.md
     - storage

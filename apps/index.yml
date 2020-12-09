@@ -1,0 +1,58 @@
+apps:
+- name: Nanonote
+  github: nanonote
+  description: A minimalist note taking application.
+- name: Lovi
+  github: lovi
+  description: Lovi is a log file viewer with configurable highlights.
+- name: SFXR-Qt
+  github: sfxr-qt
+  description: Qt port of SFXR, a sound effect generator, to generate 8bit-game like sound effects.
+- name: Colorpick
+  github: colorpick
+  description: |-
+    A color picker with a builtin loop and a contrast checker.
+
+    Makes it easy to check if text and background colors have enough contrast.
+- name: MUP
+  github: mup
+  description: An extensible markup previewer, capable of showing texts written in Markdown, reStructuredText, Asciidoc and other markup languages.
+
+cmdlinetools:
+- name: cookiecutter-qt-app
+  github: cookiecutter-qt-app
+  description: |-
+    [Cookiecutter](https://github.com/audreyr/cookiecutter) is a command-line tool to create projects from project templates.
+
+    cookiecutter-qt-app provides a cookiecutter template to build a real-world Qt application.
+- name: Yokadi
+  url: https://yokadi.github.io
+  description: A command-line-based, sqlite-powered TODO list.
+- name: Doxyqml
+  url: /projects/doxyqml/
+  description: A Doxygen input filter to document QML files.
+- name: QPropgen
+  github: qpropgen
+  description: Generates QObject properties from a YAML file.
+- name: pvmetatools
+  github: pvmetatools
+  description: |-
+    A command-line tool to read/write metadata of videos and images and rename files according to their metadata.
+
+    Useful to enforce consistent filenames on a personal photo collection.
+- name: git-bonsai
+  github: git-bonsai
+  description: |-
+    A command-line tool to tend the branches of your "git garden", making sure local branches are in sync with their matching remote branches and removing branches which can be safely removed.
+- name: devo
+  github: devo
+  description: |-
+    devo stands for "developer overlay". It is a set of shell tools to easily setup custom environments and switch between them.
+- name: cmakedoc
+  github: cmakedoc
+  description: |-
+    A command-line tool to easily search and read CMake documentation.
+- name: reposetup
+  github: reposetup
+  description: |-
+    Reposetup is a minimalist tool to manage repositories on a remote server. It requires only an ssh server and optionally a web server.
