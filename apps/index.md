@@ -11,15 +11,19 @@ Here are some of the apps and tools I created. You can find others on my [GitHub
 ## Graphical apps
 
 {% for app in apps: %}
-### [{{ app.name }}]({% if app.github %}https://github.com/agateau/{{ app.github }}{% else %}{{ app.url }}{% endif %})
+### [{{ app.name }}]({{ app.url }})
 
 {{ app.description }}
+{% if app.screenshot is defined %}
+
+[![Screenshot of {{ app.name }}]({{ app.screenshot }})]({{ app.url }})
+{% endif %}
 {% endfor %}
 
 ## Command line tools
 
 {% for app in cmdlinetools: %}
-### [{{ app.name }}]({% if app.github %}https://github.com/agateau/{{ app.github }}{% else %}{{ app.url }}{% endif %})
+### [{{ app.name }}]({{ app.url }})
 
 {{ app.description }}
 {% endfor %}
