@@ -1,71 +1,77 @@
-apps:
-- name: Nanonote
-  url: https://github.com/agateau/nanonote
-  screenshot: nanonote.png
-  description: A minimalist note taking application.
+categories:
+- name: Graphical Apps
+  apps:
+  - name: Nanonote
+    url: https://github.com/agateau/nanonote
+    screenshot: nanonote.png
+    description: A minimalist note taking application.
 
-- name: Lovi
-  url: https://github.com/agateau/lovi
-  screenshot: lovi.png
-  description: Lovi is a log file viewer with configurable highlights.
+  - name: Lovi
+    url: https://github.com/agateau/lovi
+    screenshot: lovi.png
+    description: Lovi is a log file viewer with configurable highlights.
 
-- name: SFXR-Qt
-  url: https://github.com/agateau/sfxr-qt
-  screenshot: sfxr-qt.png
-  description: Qt port of SFXR, a sound effect generator, to generate 8bit-game like sound effects.
+  - name: SFXR-Qt
+    url: https://github.com/agateau/sfxr-qt
+    screenshot: sfxr-qt.png
+    description: Qt port of SFXR, a sound effect generator, to generate 8bit-game like sound effects.
 
-- name: Colorpick
-  url: https://github.com/agateau/colorpick
-  screenshot: colorpick.png
-  description: |-
-    A color picker with a builtin loop and a contrast checker.
+  - name: Colorpick
+    url: https://github.com/agateau/colorpick
+    screenshot: colorpick.png
+    description: |-
+      A color picker with a builtin loop and a contrast checker.
 
-    Makes it easy to check if text and background colors have enough contrast.
+      Makes it easy to check if text and background colors have enough contrast.
 
-- name: MUP
-  url: https://github.com/agateau/mup
-  screenshot: mup.png
-  description: An extensible markup previewer, capable of showing texts written in Markdown, reStructuredText, Asciidoc and other markup languages.
+  - name: MUP
+    url: https://github.com/agateau/mup
+    screenshot: mup.png
+    description: An extensible markup previewer, capable of showing texts written in Markdown, reStructuredText, Asciidoc and other markup languages.
 
-cmdlinetools:
-- name: cookiecutter-qt-app
-  url: https://github.com/agateau/cookiecutter-qt-app
-  description: |-
-    [Cookiecutter](https://github.com/audreyr/cookiecutter) is a command-line tool to create projects from project templates.
+- name: Developer tools
+  apps:
+  - name: cookiecutter-qt-app
+    url: https://github.com/agateau/cookiecutter-qt-app
+    description: |-
+      [Cookiecutter](https://github.com/audreyr/cookiecutter) is a command-line tool to create projects from project templates.
 
-    cookiecutter-qt-app provides a cookiecutter template to build a real-world Qt application.
+      cookiecutter-qt-app provides a cookiecutter template to build a real-world Qt application.
 
-- name: QPropgen
-  url: https://github.com/agateau/qpropgen
-  description: Generates QObject properties from a YAML file.
+  - name: QPropgen
+    url: https://github.com/agateau/qpropgen
+    description: Generates QObject properties from a YAML file.
 
-- name: Yokadi
-  url: https://yokadi.github.io
-  description: A command-line-based, sqlite-powered TODO list.
+  - name: devo
+    url: https://github.com/agateau/devo
+    description: |-
+      devo stands for "developer overlay". It is a set of shell tools to easily setup custom environments and switch between them.
 
-- name: pvmetatools
-  url: https://github.com/agateau/pvmetatools
-  description: |-
-    A command-line tool to read/write metadata of videos and images and rename files according to their metadata.
+  - name: cmakedoc
+    url: https://github.com/agateau/cmakedoc
+    description: |-
+      A command-line tool to easily search and read CMake documentation.
 
-    Useful to enforce consistent filenames on a personal photo collection.
+  - name: git-bonsai
+    url: https://github.com/agateau/git-bonsai
+    description: |-
+      A command-line tool to tend the branches of your "git garden", making sure local branches are in sync with their matching remote branches and removing branches which can be safely removed.
 
-- name: git-bonsai
-  url: https://github.com/agateau/git-bonsai
-  description: |-
-    A command-line tool to tend the branches of your "git garden", making sure local branches are in sync with their matching remote branches and removing branches which can be safely removed.
+  - name: reposetup
+    url: https://github.com/agateau/reposetup
+    description: |-
+      Reposetup is a minimalist tool to manage repositories on a remote server. It requires only an ssh server and optionally a web server.
 
-- name: devo
-  url: https://github.com/agateau/devo
-  description: |-
-    devo stands for "developer overlay". It is a set of shell tools to easily setup custom environments and switch between them.
+- name: Other tools
+  apps:
+  - name: Yokadi
+    url: https://yokadi.github.io
+    description: A command-line-based, sqlite-powered TODO list.
 
-- name: cmakedoc
-  url: https://github.com/agateau/cmakedoc
-  description: |-
-    A command-line tool to easily search and read CMake documentation.
+  - name: pvmetatools
+    url: https://github.com/agateau/pvmetatools
+    description: |-
+      A set of command-line tools to read/write metadata of videos and images, and rename files according to their metadata.
 
-- name: reposetup
-  url: https://github.com/agateau/reposetup
-  description: |-
-    Reposetup is a minimalist tool to manage repositories on a remote server. It requires only an ssh server and optionally a web server.
+      Useful to enforce consistent file names in a personal photo collection.
+

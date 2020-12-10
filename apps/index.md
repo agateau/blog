@@ -8,9 +8,9 @@ jinja: true
 
 Here are some of the apps and tools I created. You can find others on my [GitHub page](http://github.com/agateau).
 
-## Graphical apps
-
-{% for app in apps: %}
+{% for category in categories: %}
+## {{ category.name }}
+{% for app in category.apps %}
 ### [{{ app.name }}]({{ app.url }})
 
 {{ app.description }}
@@ -19,11 +19,4 @@ Here are some of the apps and tools I created. You can find others on my [GitHub
 [![Screenshot of {{ app.name }}]({{ app.screenshot }})]({{ app.url }})
 {% endif %}
 {% endfor %}
-
-## Command line tools
-
-{% for app in cmdlinetools: %}
-### [{{ app.name }}]({{ app.url }})
-
-{{ app.description }}
 {% endfor %}
