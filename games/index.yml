@@ -1,0 +1,34 @@
+categories:
+- name: Work in Progress
+  apps:
+  - name: Pixel Wheels
+    url: /projects/pixelwheels/
+    screenshot: /projects/pixelwheels/0.17.0/go.png
+    platforms:
+    - Linux
+    - Windows
+    - macOS
+    - Android
+    description: |-
+      A PC and Android top-down pixel-art game. Race on various tracks, pick up
+      bonuses to boost your position or slow down competitors!
+
+- name: Finished Games
+  apps:
+  - name: Burger Party
+    url: /projects/burgerparty/
+    screenshot: /projects/burgerparty/1.0rc1/us-world.png
+    platforms:
+    - Android
+    description: |-
+      An Android game where you must prepare burgers fast enough to keep your customers happy.
+
+  - name: Plouf!
+    url: /projects/plouf/
+    screenshot: /2013/plouf/plouf-3players.png
+    platforms:
+    - Amiga
+    description: |-
+      A top-down Amiga game I wrote when I was a teenager. It features 2 or 3 players
+      sittings on floats in the sea, trying to sink each others by throwing sea
+      urchins.

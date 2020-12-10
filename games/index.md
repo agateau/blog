@@ -2,22 +2,18 @@ public: yes
 tags: []
 title: "Games"
 comments: false
+jinja: true
 
-## Work in Progress
+{% for category in categories: %}
+## {{ category.name }}
+{% for app in category.apps %}
+### [{{ app.name }}]({{ app.url }})
+<small>Platforms: {{ app.platforms|join(", ") }}</small>
 
-### [Pixel Wheels](/projects/pixelwheels/)
+{{ app.description }}
+{% if app.screenshot is defined %}
 
-A PC and Android top-down pixel-art game. Race on various tracks, pick up
-bonuses to boost your position or slow down competitors!
-
-## Finished Games
-
-### [Burger Party](/projects/burgerparty/)
-
-An Android game where you must prepare burgers fast enough to keep your customers happy.
-
-### [Plouf!](/projects/plouf/)
-
-A top-down Amiga game I wrote when I was a teenager. It features 2 or 3 players
-sittings on floats in the sea, trying to sink each others by throwing sea
-urchins.
+[![Screenshot of {{ app.name }}]({{ app.screenshot }})]({{ app.url }})
+{% endif %}
+{% endfor %}
+{% endfor %}

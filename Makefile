@@ -83,7 +83,7 @@ check-need-push:
 		fi \
 	fi
 
-MARKDOWNLINT_OPTS=--ignore node_modules --ignore _build --ignore talks --ignore apps/index.md
+MARKDOWNLINT_OPTS=--ignore node_modules --ignore _build --ignore talks --ignore apps/index.md --ignore games/index.md
 
 lint:
 	# Requires `make install-deps`
