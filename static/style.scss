@@ -100,31 +100,29 @@ div.body {
 nav {
     display: block;
     text-align: center;
-}
 
-nav ul {
-    background-color: $headerBgColor;
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
+    ul {
+        background-color: $headerBgColor;
+        margin: 0;
+        padding: 0;
+        list-style: none;
 
-nav a {
-    display: inline-block;
-    height: 100%;
-    padding: 0 0.5em;
-    font-variant: all-small-caps;
-}
-nav a {
-    text-decoration: none;
-}
-nav a:hover {
-    background-color: $headerBgHoverColor;
-}
+        li {
+            display: inline;
+            margin: 0;
+        }
+    }
 
-nav ul li {
-    display: inline;
-    margin: 0;
+    a {
+        display: inline-block;
+        height: 100%;
+        padding: 0 0.5em;
+        font-variant: all-small-caps;
+        text-decoration: none;
+    }
+    a:hover {
+        background-color: $headerBgHoverColor;
+    }
 }
 
 /*- Body -----------------------------*/
