@@ -115,10 +115,10 @@ nav a {
     padding: 0 0.5em;
     font-variant: all-small-caps;
 }
-nav a, footer a {
+nav a {
     text-decoration: none;
 }
-nav a:hover, footer a:hover {
+nav a:hover {
     background-color: $headerBgHoverColor;
 }
 
