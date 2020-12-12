@@ -1,0 +1,17 @@
+thumbnailSize: 144
+content:
+- name: Pixel Wheels
+  thumbnail: pixelwheels.png
+  url: /projects/pixelwheels
+  description: |-
+    A retro, top-down racing game.
+- name: Nanonote
+  thumbnail: nanonote.svg
+  url: https://github.com/agateau/nanonote
+  description: |-
+    A minimalist note taking application.
+- name: cookiecutter-qt-app
+  thumbnail: cookiecutter-qt-app.svg
+  url: https://github.com/agateau/cookiecutter-qt-app
+  description: |-
+    Easily create real-world Qt applications.

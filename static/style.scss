@@ -1,34 +1,4 @@
-/*-------------------------------------
-
-Constants
-
--------------------------------------*/
-$darkColor: #594F4F;
-$lightColor: #f8f6f6;
-$linkColor: #457aA8;
-$textColor: black;
-$lighterTextColor: #666;
-
-$headingColor: $darkColor;
-$hlineColor: transparentize($headingColor, 0.8);
-
-$headerBgColor: $darkColor;
-$headerBgHoverColor: lighten($darkColor, 10%);
-$headerTextColor: whitesmoke;
-
-$subheaderBgColor: #ecdbdb;
-$subheaderTextColor: black;
-
-$buttonBgColor: lighten($linkColor, 50%);
-$buttonBevelColor: $linkColor;
-$buttonTextColor: $darkColor;
-
-$h1VerticalMargin: 24pt;
-
-$sleeveWidth: 1000px;
-$sleevePadding: 1em;
-
-$smallFontSize: 80%;
+@import "constants";
 
 /*-------------------------------------
 
@@ -46,7 +16,7 @@ body {
 }
 
 a {
-    color: $linkColor;
+    color: $accentColor;
     font-weight: 400;
 }
 
@@ -105,6 +75,7 @@ header {
     line-height: 2em;
     text-align: center;
     color: $headerTextColor;
+    box-shadow: 0 $shadowOffset $shadowBlur $shadowColor;
 }
 
 header h1 {
@@ -161,7 +132,7 @@ img, video {
     display: block;
     margin: 0 auto;
     max-width: 100%;
-    max-height: auto;
+    height: auto;
 }
 
 img.badge {
@@ -311,20 +282,14 @@ ul.blogposts {
 div.allposts {
     background-color: $subheaderBgColor;
     color: $subheaderTextColor;
+    box-shadow: 0 $shadowOffset $shadowBlur $shadowColor;
 
     margin: 0 (-$sleevePadding);
     padding: 0.5em;
     text-align: center;
 
-    ul {
-        display: inline;
-        list-style: none;
-        margin: 0;
-        padding: 0;
-        padding-left: 0.5em;
-    }
-    li {
-        display: inline;
+    a {
+        color: $subheaderTextColor;
     }
 }
 

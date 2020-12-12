@@ -1,0 +1,30 @@
+$darkColor: #594F4F;
+$lightColor: #f8f6f6;
+$accentColor: #457aa8;
+$textColor: #3e3e3d;
+$lighterTextColor: #666;
+
+$headingColor: $darkColor;
+$hlineColor: transparentize($headingColor, 0.8);
+
+$headerBgColor: $darkColor;
+$headerBgHoverColor: lighten($darkColor, 10%);
+$headerTextColor: $lightColor;
+
+$subheaderBgColor: lighten($darkColor, 10%);
+$subheaderTextColor: $headerTextColor;
+
+$buttonBgColor: lighten($accentColor, 50%);
+$buttonBevelColor: $accentColor;
+$buttonTextColor: $darkColor;
+
+$h1VerticalMargin: 24pt;
+
+$sleeveWidth: 1000px;
+$sleevePadding: 1em;
+
+$smallFontSize: 80%;
+
+$shadowColor: transparentize(black, 0.5);
+$shadowOffset: 2px;
+$shadowBlur: 4px;

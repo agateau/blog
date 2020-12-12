@@ -6,13 +6,24 @@ template: welcome.html
 description: Hi I am Aurélien. I create games, desktop and command-line apps.
 image: /static/images/avatar.png
 image_alt: Aurélien Gâteau
+jinja: true
 
-# Hi, I am Aurélien
+I make open-source games, apps and tools, such as:
 
-## I make desktop and command-line [apps and tools](/apps/).
+<div class="app-blocks">
+{% for item in content %}
+  <a class="app-block dl-button" href="{{ item.url }}">
+    <figure>
+      <img src="/welcome/{{ item.thumbnail }}" width="{{ thumbnailSize }}" height="{{ thumbnailSize }}">
+      <figcaption><h2>{{ item.name }}</h2>
+      {{ item.description }}</figcaption>
+    </figure>
+  </a>
+{% endfor %}
+</div>
 
-## I also create [games](/games/).
+...and others.
 
-## All of them are free software.
+You can find them on my [games](/games/) and [apps](/apps/) pages.
 
-## Oh, and I have a [blog](/blog/).
+I also have a [blog](/blog/).
