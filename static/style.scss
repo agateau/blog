@@ -288,6 +288,11 @@ div.allposts {
 
     a {
         color: $subheaderTextColor;
+        text-decoration: none;
+        border-bottom: 1px solid transparentize($subheaderTextColor, 0.6);
+    }
+    a:hover {
+        border-bottom: 1px solid $subheaderTextColor;
     }
 }
 
