@@ -5,7 +5,7 @@ comments: false
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
-Pixel Wheels is a top-down racing game for PC (Linux, Mac, Windows) and Android.
+Pixel Wheels is a top-down racing game for PC (Linux, macOS, Windows) and Android.
 
 Race for the first place on various tracks. Pick up bonuses to boost your position or slow down competitors!
 
@@ -22,7 +22,7 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
       alt: Select track
     - full: 0.17.0/go.png
       alt: GO!
-    - full: 0.17.0/firing-missile.png
+    - full: 0.18.0/a-rocket-for-rocket.png
       alt: Firing a missile
     - full: 0.17.0/turbo.png
       alt: Trying to catch up with the police car
@@ -34,12 +34,12 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
       alt: The touch controls, on Android
     - full: 0.17.0/touch-controls-2.png
       alt: Alternative touch controls
-    - full: 0.17.0/championship-finished.png
-      alt: Pickup won the championship!
+    - full: 0.18.0/championship-finished.png
+      alt: Police car won the championship!
 
 ## Get it
 
-The game is far from finished, but you can already play with it.
+The game is not yet finished, but you can already play it.
 
 ### Pixel Wheels for PC (Linux, macOS, Windows)
 
