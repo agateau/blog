@@ -3,7 +3,7 @@ public: true
 tags: [pixelwheels]
 title: Pixel Wheels 0.18.0
 
-Hey, Pixel Wheels 0.18.0 is out! This version brings a new track to the game: "River". This track completes the "Country Life" championship: now all championships have two tracks. It's not much, but I think we can agree it's better than a one track championship, right?
+Hey, [Pixel Wheels][game page] 0.18.0 is out! This version brings a new track to the game: "River". This track completes the "Country Life" championship: now all championships have two tracks. It's not much, but I think we can agree it's better than a one track championship, right?
 
 ![River track](river-track.png)
 
