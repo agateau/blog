@@ -15,6 +15,8 @@ MAX_DELETE=10
 
 MARKDOWNLINT_OPTS=--ignore node_modules --ignore _build --ignore talks --ignore apps/index.md --ignore games/index.md
 
+DEPENDENCIES=sassc rsync run-rstblog markdownlint git
+
 include config.mk
 
 clean:
@@ -97,7 +99,10 @@ $(NPM_BINARY):
 	nodeenv --python-virtualenv --node 14.5.0
 
 check-deps:
-	which sassc > /dev/null
-	which rsync > /dev/null
-	which run-rstblog > /dev/null
-	which markdownlint > /dev/null
+	@echo "Checking dependencies..."
+	@for dep in $(DEPENDENCIES) ; do
+		if ! which $$dep > /dev/null ; then
+			echo "Missing dependency: $$dep"
+			exit 1
+		fi
+	done
