@@ -1,3 +1,7 @@
+SHELL := bash
+.SHELLFLAGS := -euo pipefail -c
+.ONESHELL:
+
 all: serve
 
 # Where rstblog creates the static site
@@ -8,6 +12,8 @@ OUT_GIT_DIR=$$HOME/www/blog-out
 STORAGE_DIR=storage
 
 MAX_DELETE=10
+
+MARKDOWNLINT_OPTS=--ignore node_modules --ignore _build --ignore talks --ignore apps/index.md --ignore games/index.md
 
 include config.mk
 
@@ -53,37 +59,20 @@ push-out-dir:
 	@echo "== Pushing out dir changes =="
 	cd $(OUT_GIT_DIR) && git push
 
-check-tree: check-clean-tree check-need-push
+check-tree: commit-changes push-local-commits
 
-check-clean-tree:
-	@echo "== Checking tree is clean =="
-	@if [ -n "$$(git status -s)" ] ; then \
-		echo "Tree is not clean:" ; \
-		git status -s ; \
-		echo -n "Commit all changes? [yN] " ; \
-		read answer ; \
-		if [ "$$answer" = "y" ] ; then \
-			git add . && git commit && $(MAKE) check-clean-tree ; \
-		else \
-			exit 1 ; \
-		fi \
+commit-changes:
+	@if [ -n "$$(git status -s)" ] ; then
+		echo "== Committing changes =="
+		git add . && git commit && $(MAKE) commit-changes
 	fi
 
-check-need-push:
-	@echo "== Checking no commits need to be pushed =="
-	@nb=$$(git rev-list origin/master..master | wc -l) ; \
-	if [ "$$nb" -ne 0 ] ; then \
-		echo "master has $$nb commit(s) to push." \
-		echo -n "Push them? [yN] " ; \
-		read answer ; \
-		if [ "$$answer" = "y" ] ; then \
-			git push && $(MAKE) check-need-push ; \
-		else \
-			exit 1 ; \
-		fi \
+push-local-commits:
+	@nb_commits=$$(git rev-list origin/master..master | wc -l)
+	if [ "$$nb_commits" -gt 0 ] ; then
+		echo "== Pushing local-only commits =="
+		git push && $(MAKE) push-local-commits
 	fi
-
-MARKDOWNLINT_OPTS=--ignore node_modules --ignore _build --ignore talks --ignore apps/index.md --ignore games/index.md
 
 lint:
 	# Requires `make install-deps`
