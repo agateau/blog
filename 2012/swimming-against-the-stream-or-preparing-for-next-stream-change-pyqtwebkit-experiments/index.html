@@ -10,7 +10,7 @@ title: "Swimming against the stream or preparing for next stream change? PyQt+We
 <p>In another corner we have QML, a declarative language coupled with JavaScript, which brings a whole new way to think about application development. Qt developers are betting a lot on QML, planning for it to be the preferred way to develop new applications with Qt 5.</p>
 <p>In yet another corner is the Web, a perfect demonstration of technology hijacking: what was once designed to present structured documents has become one of the most powerful way to create applications.</p>
 <p>Of those three technologies, I believe QML is the most innovative and powerful one, and I had high hopes it could secure a significant market share when Nokia and Intel were still planning to deliver it on their upcoming smart-phones and tablets. Now that Nokia switched to WP7 and Intel switched to EFL, I am a lot less confident QML will succeed. Experience shows that when two technologies are in competition, the best one does not automatically wins, parameters like market share and learning curve are as important as, if not more important than, technical excellence.</p>
-<p>Not willing to ignore the behemoth that is the Web, I started an experiment: how would it feel to develop an application which would mix Qt and HTML rendering? Thanks to QtWebKit, this kind of integration is easy to achieve. My experimentation subject is based on <a href="http://yokadi.github.com">Yokadi</a>, a command-line based TODO list I work on. I decided to create a graphical frontend for it. The result is this:</p>
+<p>Not willing to ignore the behemoth that is the Web, I started an experiment: how would it feel to develop an application which would mix Qt and HTML rendering? Thanks to QtWebKit, this kind of integration is easy to achieve. My experimentation subject is based on <a href="http://yokadi.github.io">Yokadi</a>, a command-line based TODO list I work on. I decided to create a graphical frontend for it. The result is this:</p>
 <p>
 <img src="qyok1.png" title="QYok due page" height="471" width="630" alt="" class="aligncenter size-full wp-image-1053"/>
 <img src="qyok2.png" title="QYok projects page" height="471" width="630" alt="" class="aligncenter size-full wp-image-1054"/>
@@ -21,7 +21,7 @@ title: "Swimming against the stream or preparing for next stream change? PyQt+We
 <li><a href="http://trac.webkit.org/wiki/QtWebKit">QtWebKit</a>, to display the task lists</li>
 <li><a href="http://jquery.com">jQuery</a>, to make it easier to manipulate the HTML and provide nice animations</li>
 <li><a href="http://jinja.pocoo.org/">Jinja2</a>, a Python-based template system, using a syntax similar to Django (and thus Grantlee)</li>
-<li>and of course, <a href="http://yokadi.github.com">Yokadi</a> itself, to provide access to the TODO database</li>
+<li>and of course, <a href="http://yokadi.github.io">Yokadi</a> itself, to provide access to the TODO database</li>
 </ul>
 <p>In this series of articles, I am going to describe how one can mix PyQt and WebKit together, based on my learnings from the QYok project. In particular I want to show ways to generate native-looking HTML code, to ensure your application does not look alien on your desktop.</p>
 <h1>Getting a Qt application to show HTML code</h1>
