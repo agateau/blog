@@ -9,10 +9,7 @@ When I was a child, I wanted to be a cartoonist. That was before I stumbled on t
 
 I still enjoy drawing, even if I lack the time to create real compositions nowadays. I guess the combination of these two passions is what got me interested in user experience, design and imaging.
 
-I mostly work on Qt and KDE software these days, but another part of me is getting back to game development. I created a simple Android game: [Burger Party][bp], and I am working on another: [Pixel Wheels][pw].
-
-[bp]: /projects/burgerparty/
-[pw]: /projects/pixelwheels/
+When I am not writing code for $JOB, I tend to relax by... writing more code! I create open-source [games](/games/), [apps and tools](/apps/).
 
 ## Contacting me
 
