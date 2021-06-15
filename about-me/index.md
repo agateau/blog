@@ -18,4 +18,4 @@ I mostly work on Qt and KDE software these days, but another part of me is getti
 
 You can contact me via [email](mailto:mail@agateau.com). I am also on [Mastodon](https://mastodon.xyz/@agateau), [Twitter](https://twitter.com/aureliengateau), [GitHub](https://github.com/agateau) and [LinkedIn](https://www.linkedin.com/pub/4/585/4b).
 
-On week days you can find me on Freenode IRC server, my nickname is agateau.
+On week days you can find me on [Libera Chat](https://libera.chat/) IRC server, my nickname is agateau.
