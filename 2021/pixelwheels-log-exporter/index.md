@@ -3,8 +3,6 @@ pub_date: 2021-09-06 19:33:14 +01:00
 tags: [pixelwheels, android, logs]
 title: Pixel Wheels log exporter
 
-![Bug hunting](bug.png)
-
 ## The problem
 
 You may have heard me complaining about it, but I struggled for a long time to understand and fix Pixel Wheels bug [#119](https://github.com/agateau/pixelwheels/issues/119).
