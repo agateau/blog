@@ -1,6 +1,6 @@
 pub_date: 2021-11-04 19:10:11 +01:00
 public: true
-tags: [inktober, drawing]
+tags: [inktober, drawing, starcraft]
 title: Inktober 2021, StarCraft!
 
 This year I once again participated to [Inktober][], the yearly challenge where you draw and ink one drawing a day each day of October. The Inktober web site provides a "prompt list": a list of words for each day, which you can (but are not forced to) follow.
