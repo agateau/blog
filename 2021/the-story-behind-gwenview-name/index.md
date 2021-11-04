@@ -8,7 +8,6 @@ title: The story behind Gwenview name
 The other day I was thinking about how I came to create Gwenview and realized the story of its genesis and the reason behind its unusual (for a KDE application) name is not widely known. Time to write an article on this topic. At least one long-hidden secret is going to be revealed in this article… so let's get started!
 
 ![Gwenview 0.1.0 icon](gwenview-icon-0.1.0.png)
-
 _This odd character was Gwenview 0.1.0 icon_
 
 <!-- break -->
@@ -32,7 +31,6 @@ So I rewrote what I had using Qt. At that time I had already switched to KDE 2, 
 [gv010]: https://sourceforge.net/projects/gwenview/files/gwenview/0.1.0/gwenview-0.1.0.tar.gz/download
 
 ![Gwenview 0.something running on KDE 3](gwenview-kde3.png)
-
 _Gwenview 0.something running on KDE 3_
 
 ## Why not rename the app?

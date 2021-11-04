@@ -133,6 +133,12 @@ img, video {
     height: auto;
 }
 
+/* Makes it possible to define an image caption with _my caption text_ in Markdown */
+img + em {
+    text-align: center;
+    display: block;
+}
+
 img.badge {
     width: auto;
     display: inline;
