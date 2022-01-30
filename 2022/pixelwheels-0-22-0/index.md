@@ -3,6 +3,8 @@ pub_date: 2022-01-29 20:22:57 +01:00
 tags: [pixelwheels]
 title: Pixel Wheels 0.22.0, translation galore!
 
+![Pixel Wheels 0.22.0](pw-022.png)
+
 ## More translations!
 
 First Pixel Wheels release of 2022 is out, and this one brings in some serious translation work! While 0.21.0 was available in 2 languages: English and French, version 0.22.0 bump this number to 7, adding the following supported languages:
