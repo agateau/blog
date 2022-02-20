@@ -43,7 +43,8 @@ The game is not yet finished, but you can already play it.
 
 ### Pixel Wheels for PC (Linux, macOS, Windows)
 
-<a href="https://agateau.itch.io/pixelwheels" class="dl-button">Download from itch.io</a>
+<a href="https://flathub.org/apps/details/com.agateau.PixelWheels" class="dl-button">Flathub</a>
+<a href="https://agateau.itch.io/pixelwheels" class="dl-button">itch.io</a>
 
 ### Pixel Wheels for Android
 
