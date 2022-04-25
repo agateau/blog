@@ -7,7 +7,7 @@ I can't believe it's been 3 months since Pixel Wheels 0.20.0 release! I am going
 
 ## "Parlez-vous Français?" (Pixel Wheels gets translation support)
 
-Pixel Wheels 0.21.0 now speaks multiple languages! Actually it only speaks French in addition to English for now, but 2 counts as multiple, right? Others languages are in the queue: Spanish should be in 0.22.0 and hopefully Bangali too (but this one requires more work on the code base to be correctly supported) If you are interested in translating Pixel Wheels to another language, head over to the [translation doc][trdoc].
+Pixel Wheels 0.21.0 now speaks multiple languages! Actually it only speaks French in addition to English for now, but 2 counts as multiple, right? Others languages are in the queue: Spanish should be in 0.22.0 and hopefully Bengali too (but this one requires more work on the code base to be correctly supported) If you are interested in translating Pixel Wheels to another language, head over to the [translation doc][trdoc].
 
 [trdoc]: https://github.com/agateau/pixelwheels/blob/6cb696cbf1f7f1134fc5b256e4a32a821a3ac415/docs/translations.md
 
