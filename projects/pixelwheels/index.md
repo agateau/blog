@@ -16,9 +16,9 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 
     - full: 0.17.0/title.png
       alt: Title screen
-    - full: 0.19.0/select-vehicle.png
+    - full: 0.23.0/select-vehicle.png
       alt: Select your vehicle
-    - full: 0.19.0/select-track.png
+    - full: 0.23.0/select-track.png
       alt: Select track
     - full: 0.17.0/go.png
       alt: GO!
@@ -34,8 +34,8 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
       alt: The touch controls, on Android
     - full: 0.17.0/touch-controls-2.png
       alt: Alternative touch controls
-    - full: 0.19.0/championship-finished.png
-      alt: Police car won the championship!
+    - full: 0.23.0/championship-finished.png
+      alt: Santa Truck won the championship!
 
 ## Get it
 
