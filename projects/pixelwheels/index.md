@@ -3,6 +3,8 @@ tags: []
 title: Pixel Wheels
 comments: false
 
+Home | [Vehicles](vehicles/)
+
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
 Pixel Wheels is a top-down racing game for PC (Linux, macOS, Windows) and Android.

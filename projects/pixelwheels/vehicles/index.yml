@@ -1,0 +1,109 @@
+vehicles:
+  - name: Red Lightning
+    icon: red.png
+    description: |
+      A muscle car, the very first vehicle added to the game.
+
+      Red, fast, with a good handling. You can't go wrong with this one.
+
+  - name: Highway Patrol
+    icon: police.png
+    description: |
+      Whoop! Whoop! This is, so far, the only animated vehicle of the game. Look at these flashing lights!
+
+      The cigarette lighter is missing, hopefully you don't smoke...
+
+      May be a reference to the [Bluesmobile](https://en.wikipedia.org/wiki/Bluesmobile), the police car from the Blues Brothers movie, before the loudspeaker was mounted on its roof.
+
+  - name: Pickup
+    icon: pickup.png
+    description: |
+      Your standard utility car. Robust and reliable.
+
+      May be a reference to [Mater][] from the Cars movie.
+
+      [Mater]: https://en.wikipedia.org/wiki/Mater_(Cars)
+
+  - name: Roadster
+    icon: roadster.png
+    description: |
+      When you want to race, but with a touch of British flair.
+
+      The color of this car is a reference to the [British racing green][brg].
+
+      [brg]: https://en.wikipedia.org/wiki/British_racing_green
+
+  - name: Ant On-1
+    icon: antonin.png
+    description: |
+      This vehicle went through several iterations. It started as a space truck but later evolved into a beach surf van.
+
+      The name is a reference to my son first name: Antonin, who drew the first versions of it.
+
+  - name: Santa Truck
+    icon: santa.png
+    description: |
+      Created a few Decembers ago. Legend has it that when Santa Claus is not riding his sled, he enjoys driving this big truck!
+
+      The only 6-wheeled vehicle of the game. The wheels on the middle axis can steer too.
+
+  - name: 2-Deuch
+    icon: 2cv.png
+    description: |
+      May be inspired from a true French classic: the [Citroën 2CV][2cv], in its "Charleston" livery. "Deudeuch" was a popular way to call the 2CV.
+
+      This is the car you need to go buy your daily baguette. Too bad there aren't any bakery in Pixel Wheels!
+
+      [2cv]: https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV
+
+  - name: Harvester
+    icon: harvester.png
+    description: |
+      Do you enjoy driving in the grass? Then the Harvester is for you!
+
+      This is the only vehicle with steering on the rear axis. Racing with it is very different because of this.
+
+      Obviously not drawn at scale :)
+
+  - name: Rocket
+    icon: rocket.png
+    description: |
+      When you want to go faaaast, nothing beats a rocket on wheels!
+
+      This vehicle is fast, but can be hard to master. Hitting a wall is quite punishing.
+
+  - name: Dark M
+    icon: dark-m.png
+    description: |
+      A dark and long vehicle.
+
+      This vehicle is inspired from a car you can see in a Tim Burton movie about a super hero battling against a very smily villain. The name is a reference to the title of another movie from Christopher Nolan about the same super hero.
+
+  - name: Jeep
+    icon: jeep.png
+    description: |
+      A large gas eater and carbon-monoxide producer. One of the few vehicles with large-size tires. These vehicles aren't good for the planet. Luckily, Pixel Wheels version does not contribute to climate change :)
+
+      May be inspired from the [Hummer H3][h3].
+
+      [h3]: https://en.wikipedia.org/wiki/Hummer_H3
+
+  - name: Miramar
+    icon: miramar.png
+    description: |
+      Another long vehicle. For the old-US-car lovers among you.
+
+      May be inspired from the [1960 Cadillac Eldorado Biarritz][cadillac]. Miramar is the name of a beach near Biarritz.
+
+      [cadillac]: https://en.wikipedia.org/wiki/Cadillac_Eldorado#Fourth_generation_(1959%E2%80%931960)
+
+  - name: Broster Truck
+    icon: bigfoot.png
+    description: |
+      An even larger gas eater! The only vehicle with huge-size tires. In fact, support for different tire sizes was added to the game just for this one!
+
+      Inspired from the trucks one can see on the fliers for monster truck exhibitions.
+
+      The name may be a reference to the [Broforce][] game.
+
+      [Broforce]: https://www.broforcegame.com/
