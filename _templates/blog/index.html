@@ -5,11 +5,10 @@
   Latest posts &bull; <a href="/archive/">Archive by year</a> &bull; <a href="/tags/">Archive by tag</a>
 </div>
 
-<h1>Latest posts</h1>
 <ul class="blogposts">
 {%- for entry in pagination.get_slice() %}
   <li>
-    <h2><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a></h2>
+    <h1><a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a></h1>
     <div class="meta">
       {{ format_date(entry.pub_date, format='long') }}, tagged
       {% for tag in entry.tags|sort(case_sensitive=true) %}
