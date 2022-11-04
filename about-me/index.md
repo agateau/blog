@@ -13,6 +13,6 @@ When I am not writing code for $JOB, I tend to relax by... writing more code! I 
 
 ## Contacting me
 
-You can contact me via [email](mailto:mail@agateau.com). I am also on [Mastodon](https://mastodon.xyz/@agateau), [Twitter](https://twitter.com/aureliengateau), [GitHub](https://github.com/agateau) and [LinkedIn](https://www.linkedin.com/pub/4/585/4b).
+You can contact me via [email](mailto:mail@agateau.com). I am also on <a href="https://mastodon.xyz/@agateau" rel="me">Mastodon</a>, [Twitter](https://twitter.com/aureliengateau), [GitHub](https://github.com/agateau) and [LinkedIn](https://www.linkedin.com/pub/4/585/4b).
 
 On week days you can find me on [Libera Chat](https://libera.chat/) IRC server, my nickname is agateau.
