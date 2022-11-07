@@ -1,3 +1,5 @@
+public: true
+pub_date: 2022-11-07 19:07:21 +01:00
 tags: [clyde, pixelwheels, monthlyupdate]
 title: October 2022 monthly update
 
