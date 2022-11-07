@@ -29,7 +29,7 @@ I fixed the listing of the game on Android TV, so that it appears in "games" and
 
 [#276]: https://github.com/agateau/pixelwheels/issues/276
 
-# XDG support
+### XDG support
 
 A [bug report][fpbug] on the Flatpak package, reminded me that while Pixel Wheels uses the default directories suggested by the [XDG Base Directory][spec] specification, it did not support the XDG environment variables. I fixed this, but I still have to test it solve the issue.
 
@@ -67,6 +67,6 @@ Not a lot of changes on the store beside the regular version updates:
 - one new package: [battop](https://github.com/svartalf/rust-battop)
 - git-filter-repo now works on macOS, but only in the `next` branch, as the fix needs some unreleased change on Clyde side
 
-## What's next
+## What's coming next?
 
 For November, I want to release Pixel Wheels 0.24.0, and a new version of Clyde. Let's see if I can get this done!
