@@ -18,9 +18,9 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 
     - full: 0.17.0/title.png
       alt: Title screen
-    - full: 0.23.0/select-vehicle.png
+    - full: 0.24.0/select-vehicle.png
       alt: Select your vehicle
-    - full: 0.23.0/select-track.png
+    - full: 0.24.0/select-track.png
       alt: Select track
     - full: 0.17.0/go.png
       alt: GO!
