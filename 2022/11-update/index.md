@@ -1,6 +1,6 @@
 pub_date: 2022-12-07 08:37:11 +01:00
 public: true
-tags: [clyde, pixelwheels, monthlyupdate]
+tags: [clyde, pixelwheels, git-bonsai, monthlyupdate]
 title: November 2022 monthly update, lots of releases!
 
 ## Introduction
