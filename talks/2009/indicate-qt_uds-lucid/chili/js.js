@@ -13,19 +13,19 @@ WEBSITE: http://noteslog.com/chili/
 	  _name: 'js'
 	, _case: true
 	, _main: {
-		  ml_comment: { 
+		  ml_comment: {
 			  _match: /\/\*[^*]*\*+(?:[^\/][^*]*\*+)*\//
 			, _style: 'color: gray;'
 		}
-		, sl_comment: { 
+		, sl_comment: {
 			  _match: /\/\/.*/
 			, _style: 'color: green;'
 		}
-		, string: { 
+		, string: {
 			  _match: /(?:\'[^\'\\\n]*(?:\\.[^\'\\\n]*)*\')|(?:\"[^\"\\\n]*(?:\\.[^\"\\\n]*)*\")/
 			, _style: 'color: teal;'
 		}
-		, num: { 
+		, num: {
 			  _match: /\b[+-]?(?:\d*\.?\d+|\d+\.?\d*)(?:[eE][+-]?\d+)?\b/
 			, _style: 'color: red;'
 		}
@@ -35,31 +35,31 @@ WEBSITE: http://noteslog.com/chili/
 				return this.x( all, '//num' );
 			}
 		}
-		, reg_exp: { 
+		, reg_exp: {
 			  _match: /\/[^\/\\\n]*(?:\\.[^\/\\\n]*)*\/[gim]*/
 			, _style: 'color: maroon;'
 		}
-		, brace: { 
+		, brace: {
 			  _match: /[\{\}]/
 			, _style: 'color: red; font-weight: bold;'
 		}
-		, statement: { 
+		, statement: {
 			  _match: /\b(with|while|var|try|throw|switch|return|if|for|finally|else|do|default|continue|const|catch|case|break)\b/
 			, _style: 'color: navy; font-weight: bold;'
 		}
-		, error: { 
+		, error: {
 			  _match: /\b(URIError|TypeError|SyntaxError|ReferenceError|RangeError|EvalError|Error)\b/
 			, _style: 'color: Coral;'
 		}
-		, object: { 
+		, object: {
 			  _match: /\b(String|RegExp|Object|Number|Math|Function|Date|Boolean|Array)\b/
 			, _style: 'color: DeepPink;'
 		}
-		, property: { 
+		, property: {
 			  _match: /\b(undefined|arguments|NaN|Infinity)\b/
 			, _style: 'color: Purple; font-weight: bold;'
 		}
-		, 'function': { 
+		, 'function': {
 			  _match: /\b(parseInt|parseFloat|isNaN|isFinite|eval|encodeURIComponent|encodeURI|decodeURIComponent|decodeURI)\b/
 			, _style: 'color: olive;'
 		}

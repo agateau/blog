@@ -41,5 +41,4 @@ game-friendly Basic.
 
 [adf]: /projects/plouf/plouf-1.1.adf
 [FS-UAE]: http://fengestad.no/fs-uae/
-[gh]: https://github.com/agateau/plouf
 [article]: /2013/plouf/

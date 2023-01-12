@@ -94,14 +94,14 @@ your smartphone in, only the relevant pictures and videos should be listed.
 
 .. thumbimg:: importer-mess.png
 
-_The importer showing covers of music albums on my phone (yes, I have odd musical tastes)_
+*The importer showing covers of music albums on my phone (yes, I have odd musical tastes)*
 
 .. thumbimg:: importer-picking-root-folder.png
 
-_After clicking on the "Google File-CD Gadget" button, I can restrict the importer to list the content of the photo folder and its subfolders_
+*After clicking on the "Google File-CD Gadget" button, I can restrict the importer to list the content of the photo folder and its subfolders*
 
 .. thumbimg:: importer.png
 
-_Now only my test pictures are listed, and it will show up this way next time I plug the phone_
+*Now only my test pictures are listed, and it will show up this way next time I plug the phone*
 
 That's it for this version, hope you like it!

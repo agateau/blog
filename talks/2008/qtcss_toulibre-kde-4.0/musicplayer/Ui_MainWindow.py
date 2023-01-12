@@ -118,4 +118,3 @@ class Ui_MainWindow(object):
         self.playingLabel.setText(QtGui.QApplication.translate("MainWindow", "Playing : Moby - 18", None, QtGui.QApplication.UnicodeUTF8))
         self.themesButton.setText(QtGui.QApplication.translate("MainWindow", "...", None, QtGui.QApplication.UnicodeUTF8))
         self.themesButton.setShortcut(QtGui.QApplication.translate("MainWindow", "Ctrl+R", None, QtGui.QApplication.UnicodeUTF8))
-

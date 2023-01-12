@@ -17,15 +17,15 @@ For example, given a repository like this:
 ```
 $ git log --all --oneline --graph
 *   f97c782 (HEAD -> master) Merging topic1
-|\  
+|\
 | *   f6bfa90 (topic1) Merging topic1-1
-| |\  
+| |\
 | | * 6943ed2 (topic1-1) Create topic1-1
-| |/  
+| |/
 | * 4ea41ff Create topic1
-|/  
+|/
 | * eec4ebe (topic2) Create topic2
-|/  
+|/
 * b8b1506 Init
 $ git branch
 * master
@@ -60,15 +60,15 @@ Now the repository looks cleaner:
 ```
 $ git log --all --oneline --graph
 *   39b904b (HEAD -> master) Merging topic1
-|\  
+|\
 | *   2e22609 Merging topic1-1
-| |\  
+| |\
 | | * d7c0943 Create topic1-1
-| |/  
+| |/
 | * 7e6b5e7 Create topic1
-|/  
+|/
 | * 5757873 (topic2) Create topic2
-|/  
+|/
 * dc94163 Init
 $ git branch
 * master

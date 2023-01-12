@@ -34,9 +34,6 @@ perimeter of the contribution:
 > “Contribution” means any work of authorship that is Submitted by You to Us in
 > which You own or assert ownership of the Copyright.
 
-[before]: https://web.archive.org/web/20110708114351/http://www.canonical.com/contributors
-[after]: https://web.archive.org/web/20110725185209/http://www.canonical.com/contributors
-
 Canonical CLA is rather similar to the CLA which Digia asks contributors to sign
 to get their code into Qt. Here are some handy links to compare them (with local
 versions in case they go away in the future):

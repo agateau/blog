@@ -79,5 +79,3 @@ QSlider::handle:horizontal::hover {
 	border-bottom: 1px solid red;
 	margin: 3px;
 }
-
-

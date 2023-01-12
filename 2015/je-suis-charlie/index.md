@@ -14,5 +14,3 @@ I am deeply affected by all those tragic deaths, but one of them hurt me even mo
 I can't find a good video of Cabu drawing, but the author of this homage does a good rendition of how he drew: <http://youtu.be/N_glhkomC80>.
 
 This evening it feels like a piece of my childhood (and of others French people around my age) has been murdered. May Cabu, his colleagues and the two policemen who died today rest in peace.
-
-[nytimes]: http://www.nytimes.com/2015/01/08/world/europe/charlie-hebdo-paris-shooting.html?hp&action=click&pgtype=Homepage&module=a-lede-package-region&region=top-news&WT.nav=top-news&_r=0

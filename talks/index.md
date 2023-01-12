@@ -48,4 +48,3 @@ in French, as indicated.
   [odp](2008/qtcss_toulibre-kde-4.0/qtcss.odp),
   [pdf](2008/qtcss_toulibre-kde-4.0/qtcss.pdf),
   [end of presentation example](2008/qtcss_toulibre-kde-4.0/musicplayer.tar.bz2) (dummy music player)
-

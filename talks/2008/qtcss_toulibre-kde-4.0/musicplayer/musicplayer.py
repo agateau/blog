@@ -49,7 +49,7 @@ def main():
 	app = QApplication(sys.argv)
 	appDir = os.path.dirname(sys.argv[0])
 	os.chdir(appDir)
-	window = MainWindow()	
+	window = MainWindow()
 	window.show()
 	app.exec_()
 

@@ -88,7 +88,7 @@ $.fn.chili = function( options ) {
 				, replacement: step._replace ? step._replace : book.defaultReplacement
 			};
 		} // prepareStep
-	
+
 		function knowHow( steps ) {
 			var prevLength = 1;
 			var exps = [];
@@ -292,28 +292,28 @@ $.fn.chili = function( options ) {
 							matches.push( aux[ aux.length - 2 ] );
 							matches.push( aux[ aux.length - 1 ] );
 							replacement = step.replacement
-								.apply( { 
-									x: function() { 
+								.apply( {
+									x: function() {
 										var subject = arguments[0];
 										var module  = arguments[1];
-										var context = { 
+										var context = {
 											  recipe:    step.recipe
-											, blockName: step.blockName 
+											, blockName: step.blockName
 										};
 										return applyModule( subject, module, context );
-									} 
+									}
 								}, matches );
 						}
 						else { //we expect step.replacement to be a string
 							replacement = step.replacement
 								.replace( /(\\\$)|(?:\$\$)|(?:\$(\d+))/g, function( m, escaped, K ) {
-									if( escaped ) {       /* \$ */ 
+									if( escaped ) {       /* \$ */
 										return "$";
 									}
-									else if( !K ) {       /* $$ */ 
+									else if( !K ) {       /* $$ */
 										return filter( aux[ j ] );
 									}
-									else if( K == "0" ) { /* $0 */ 
+									else if( K == "0" ) { /* $0 */
 										return step.stepName;
 									}
 									else {                /* $K */
@@ -323,7 +323,7 @@ $.fn.chili = function( options ) {
 						}
 						replacement = addPrefix( step.recipe._name, replacement );
 						return filter( prolog ) + replacement;
-					} 
+					}
 					else {
 						j+= step.length;
 					}
@@ -351,21 +351,21 @@ $.fn.chili = function( options ) {
 
 	} // cook
 
-	function loadStylesheetInline( sourceCode ) { 
-		if( document.createElement ) { 
-			var e = document.createElement( "style" ); 
-			e.type = "text/css"; 
-			if( e.styleSheet ) { // IE 
-				e.styleSheet.cssText = sourceCode; 
-			}  
-			else { 
-				var t = document.createTextNode( sourceCode ); 
-				e.appendChild( t ); 
-			} 
-			document.getElementsByTagName( "head" )[0].appendChild( e ); 
-		} 
+	function loadStylesheetInline( sourceCode ) {
+		if( document.createElement ) {
+			var e = document.createElement( "style" );
+			e.type = "text/css";
+			if( e.styleSheet ) { // IE
+				e.styleSheet.cssText = sourceCode;
+			}
+			else {
+				var t = document.createTextNode( sourceCode );
+				e.appendChild( t );
+			}
+			document.getElementsByTagName( "head" )[0].appendChild( e );
+		}
 	} // loadStylesheetInline
-			
+
 	function checkSpices( recipe ) {
 		var name = recipe._name;
 		if( ! book.queue[ name ] ) {
@@ -423,7 +423,7 @@ $.fn.chili = function( options ) {
 					book.queue[ path ].push( el );
 				}
 				/* a recipe could have been already downloaded */
-				makeDish( el, path ); 
+				makeDish( el, path );
 			}
 			else {
 				/* static setups come here */
@@ -455,7 +455,7 @@ $.fn.chili = function( options ) {
 		}
 
 		var dish = cook( ingredients, recipe ); // all happens here
-	
+
 		if( book.replaceTab ) {
 			dish = dish.replace( /\t/g, book.replaceTab );
 		}
@@ -467,7 +467,7 @@ $.fn.chili = function( options ) {
 		//tried also the function replaceHtml from http://blog.stevenlevithan.com/archives/faster-than-innerhtml
 		//but it was not faster nor without sideffects (it was not possible to count spans into el)
 
-		//opera and safari select PRE text correctly 
+		//opera and safari select PRE text correctly
 		if( $.browser.msie || $.browser.mozilla ) {
 			enableSelectionHelper( el );
 		}
@@ -521,7 +521,7 @@ $.fn.chili = function( options ) {
 				var selected = '';
 				if( $.browser.msie ) {
 					selected = document.selection.createRange().htmlText;
-					if( '' == selected ) { 
+					if( '' == selected ) {
 						return;
 					}
 					selected = preserveNewLines( selected );
@@ -581,7 +581,7 @@ $.fn.chili = function( options ) {
 	} // getSelectedText
 
 	function preserveNewLines( html ) {
-		do { 
+		do {
 			var newline_flag = ChiliBook.unique();
 		}
 		while( html.indexOf( newline_flag ) > -1 );
@@ -640,25 +640,25 @@ $.fn.chili = function( options ) {
 						var lastPiece = pieces.pop();
 						before = pieces.join( br );
 						var aux = (before ? before + br : '') //+ replace1( lastPiece + content, open );
-							+ (lastPiece + content).replace( /((.*?)(?:&nbsp;|\xA0)<br>)|(.*)/ig, 
+							+ (lastPiece + content).replace( /((.*?)(?:&nbsp;|\xA0)<br>)|(.*)/ig,
 							function( tmp, not_last_line, not_last, last ) {
 								var aux2 = makeListItem1( not_last_line, not_last, last, open );
 								return aux2;
-							} 
+							}
 						);
 						return aux;
 					}
 					else {
 						return all;
 					}
-				} 
+				}
 			)
 			//transform newlines outside of a span
-			.replace( /(<li>.*?<\/li>)|((.*?)(?:&nbsp;|\xA0)<br>)|(.+)/ig, 
+			.replace( /(<li>.*?<\/li>)|((.*?)(?:&nbsp;|\xA0)<br>)|(.+)/ig,
 				function( tmp, prev_li, not_last_line, not_last, last ) {
 					var aux2 = makeListItem2( not_last_line, not_last, last, prev_li );
 					return aux2;
-				} 
+				}
 			)
 			//fix empty lines for Opera
 			.replace( /<li><\/li>/ig, empty_line )
@@ -669,8 +669,8 @@ $.fn.chili = function( options ) {
 
 	function revealChars( tmp ) {
 		return $
-			.map( tmp.split(''), 
-				function(n, i) { 
+			.map( tmp.split(''),
+				function(n, i) {
 					return ' ' + n + ' ' + n.charCodeAt( 0 ) + ' ';
 				} )
 			.join(' ');
