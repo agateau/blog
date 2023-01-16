@@ -87,6 +87,6 @@ I also took the time to add tests command to most packages. Unfortunately, some 
 
 For January, I am working on Pixel Wheels. Since new translations have been added, I am probably going to release a 0.24.2 version to include them, and a few other bug fixes.
 
-We are already January 12, there aren't that much time left, so I am not going to promise too much :)
+We are already January 12, there isn't that much time left, so I am not going to promise too much :)
 
 Thanks for reading, if you want to support my FOSS work, head over to the [support page](/support). Thanks a ton!
