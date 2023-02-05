@@ -13,9 +13,7 @@ STORAGE_DIR=storage
 
 MAX_DELETE=10
 
-MARKDOWNLINT_OPTS=--ignore node_modules --ignore _build --ignore talks --ignore apps/index.md --ignore games/index.md
-
-DEPENDENCIES=sassc rsync run-rstblog markdownlint git
+DEPENDENCIES=sassc rsync run-rstblog git
 
 include config.mk
 
@@ -29,7 +27,7 @@ build: check-deps
 serve: build
 	run-rstblog serve
 
-deploy: check-tree clean lint build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir
+deploy: check-tree clean build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir
 
 deploy-all: deploy deploy-storage
 
@@ -76,27 +74,10 @@ push-local-commits:
 		git push && $(MAKE) push-local-commits
 	fi
 
-lint:
-	# Requires `make install-deps`
-	markdownlint $(MARKDOWNLINT_OPTS) \
-		$$PWD
-
-fixlint:
-	markdownlint $(MARKDOWNLINT_OPTS) \
-		--fix \
-		$$PWD
-
-install-deps: install-markdownlint
+install-deps:
 	sudo apt install sassc rsync
 
 NPM_BINARY=$(VIRTUAL_ENV)/bin/npm
-
-install-markdownlint: $(NPM_BINARY)
-	npm install -g markdownlint-cli@0.23.0
-
-$(NPM_BINARY):
-	pip install nodeenv==1.4.0
-	nodeenv --python-virtualenv --node 14.5.0
 
 check-deps:
 	@echo "Checking dependencies..."
