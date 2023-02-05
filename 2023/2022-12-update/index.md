@@ -1,6 +1,6 @@
 public: true
 pub_date: 2023-01-09 18:44:41 +01:00
-tags: [clyde, pixelwheels, monthlyupdate]
+tags: [clyde, pixelwheels, yokadi, monthlyupdate]
 title: December 2022 monthly update
 
 ## Introduction
