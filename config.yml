@@ -2,6 +2,7 @@ active_modules: [pygments, blog, tags, thumbimg, gallery]
 author: Aurélien Gâteau
 canonical_url: https://agateau.com/
 ignore_files:
+    - "!.well-known"
     - .*
     - _*
     - node_modules
