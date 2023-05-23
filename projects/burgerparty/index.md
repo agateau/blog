@@ -26,7 +26,7 @@ Burger Party is available on Google Play for Android.
 
 or as a direct apk download:
 
-<a href="/storage/burgerparty/burgerparty-1.3.0-gp.apk" class="dl-button">burgerparty-1.3.0-gp.apk</a>
+<a href="/storage/burgerparty/burgerparty-1.4.1-agc.apk" class="dl-button">burgerparty-1.4.1-agc.apk</a>
 
 ## Source Code
 
