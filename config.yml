@@ -20,5 +20,5 @@ modules:
     tags:
         tag_feed_url: /tags/<tag>/feed
 feed:
-    name: "Aurélien Gâteau website"
+    name: "Aurélien Gâteau"
     subtitle: "Code, pixels, user interfaces and occasional developer tips"
