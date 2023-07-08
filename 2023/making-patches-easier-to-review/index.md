@@ -1,7 +1,7 @@
 public: true
 pub_date: 2023-07-07 20:09:33 +01:00
 tags: [tips, git, dev, pko]
-title: The Gentle art of making patches easier to review
+title: The gentle art of making patches easier to review
 
 I recently stumbled upon this excellent 2014 article about patch review by Sage Sharp: [The Gentle Art of Patch Review](https://sage.thesharps.us/2014/09/01/the-gentle-art-of-patch-review/).
 
