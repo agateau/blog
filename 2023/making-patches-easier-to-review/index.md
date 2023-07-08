@@ -66,7 +66,7 @@ You know what? That's fine! Just like the first draft of a novel writer is not p
 Again, this takes practice to get right, but here are a few tips to get started:
 
 - Splitting commits is more complicated than joining them, so it's simpler to create smaller commits and join them later.
-- You can create partial commits using `git add -p` or [git gui](/blog/2016/an-intro-to-git-gui).
+- You can create partial commits using `git add -p` or [git gui](/2016/an-intro-to-git-gui).
 - Before starting a large history rewriting session, create a quick backup branch with `git branch backup`. This serves two purposes:
     1. If things go wrong, it's easy to revert to a known good state using `git reset --hard backup` (you can also use `git reflog` to do that, but I find this approach simpler).
     2. When you are done with your rewrite, you can run `git diff backup` to check if the end result is similar enough.
