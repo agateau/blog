@@ -1,6 +1,6 @@
 pub_date: 2015-04-19 23:29:55 +02:00
 public: true
-tags: [development, source-control, quality]
+tags: [dev, git, tips, quality]
 title: "Extensive Source Comments or Extensive Commit Messages?"
 summary: |
     What is more important? Source comments or commit messages?
