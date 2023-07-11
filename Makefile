@@ -20,9 +20,13 @@ include config.mk
 clean:
 	rm -rf $(BUILD_DIR)
 
-build: check-deps
+build: check-deps config.yml
 	run-rstblog build
 	[ -e _build/$(STORAGE_DIR) ] || ln -s $$PWD/$(STORAGE_DIR) _build/$(STORAGE_DIR)
+
+config.yml: static/style.scss
+	hash=$$(md5sum static/style.scss | awk '{print $$1}')
+	sed -i "s/css_hash: .*/css_hash: $$hash/" config.yml
 
 serve: build
 	run-rstblog serve

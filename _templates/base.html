@@ -24,7 +24,7 @@
 {% block extrameta %}{% endblock %}
 
 <title>{% block title %}Home{% endblock %} | agateau.com</title>
-<link rel="stylesheet" href="/static/style.css" type="text/css">
+<link rel="stylesheet" href="/static/style.css?hash={{ config.css_hash }}" type="text/css">
 <link rel="stylesheet" href="/static/wp-support.css" type="text/css">
 <link rel="alternate" href="/feed" title="Recent Blog Posts" type="application/atom+xml">
 {%- for link in links %}
