@@ -301,6 +301,10 @@ div.allposts {
     }
 }
 
+/*- Mastodon -------------------------*/
+.mastodon {
+}
+
 /*- Comments -------------------------*/
 #comments-container {
     margin-left: -2em;
@@ -355,14 +359,11 @@ article meta
 --------------------------------------*/
 div.meta {
     height: 3em;
+    text-align: right;
 }
 
 div.share {
     float: left;
-}
-
-div.tags {
-    float: right;
 }
 
 /*--------------------------------------

@@ -27,6 +27,11 @@
         {%- endfor %}
       </div>
       {% endif %}
+      {%- if config.get('mastodon') %}
+      <div class="mastodon">
+        <a href="{{ config.get('mastodon') }}">Discuss this post on Mastodon</a>
+      </div>
+      {% endif %}
     </div>
   </article>
 
