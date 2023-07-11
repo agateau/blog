@@ -2,6 +2,7 @@ public: yes
 tags: []
 title: Burger Party
 comments: false
+jinja: true
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
@@ -18,15 +19,11 @@ You just opened a burger restaurant, let's see if you can put together burgers f
 
 ## Get it
 
-Burger Party is available on Google Play for Android.
-
 <a name="get-it"></a>
 
-<a href="https://play.google.com/store/apps/details?id=com.agateau.burgerparty" alt="Available on Google Play"><img class="badge" src="/static/images/badge/google-play.png"></a>
-
-or as a direct apk download:
-
-<a href="/storage/burgerparty/burgerparty-1.4.1-agc.apk" class="dl-button">burgerparty-1.4.1-agc.apk</a>
+<a href="https://f-droid.org/packages/com.agateau.burgerparty/" class="dl-button">F-Droid</a>
+<a href="https://play.google.com/store/apps/details?id=com.agateau.burgerparty" class="dl-button">Google Play</a>
+<a href="/storage/burgerparty/burgerparty-{{ latest_version }}-agc.apk" class="dl-button">Direct download</a>
 
 ## Source Code
 

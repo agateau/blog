@@ -50,7 +50,7 @@ The game is not yet finished, but you can already play it.
 
 ### Pixel Wheels for Android
 
-<a href="https://f-droid.org/fr/packages/com.agateau.tinywheels.android/" class="dl-button">F-Droid</a>
+<a href="https://f-droid.org/packages/com.agateau.tinywheels.android/" class="dl-button">F-Droid</a>
 <a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
 <a href="https://agateau.itch.io/pixelwheels" class="dl-button">itch.io</a>
 
