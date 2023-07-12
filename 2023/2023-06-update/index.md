@@ -1,7 +1,10 @@
+---
 public: true
 pub_date: 2023-07-11 08:05:30 +01:00
 tags: [monthlyupdate, pixelwheels, burgerparty]
 title: June 2023 monthly update
+mastodon: https://mastodon.xyz/@agateau/110699929211368005
+---
 
 ## Introduction
 
