@@ -17,73 +17,73 @@ DEPENDENCIES=sassc rsync run-rstblog git
 
 include config.mk
 
-clean:
+clean: ## Delete the builde dir
 	rm -rf $(BUILD_DIR)
 
-build: check-deps config.yml
+build: check-deps config.yml ## Build the site
 	run-rstblog build
 	[ -e _build/$(STORAGE_DIR) ] || ln -s $$PWD/$(STORAGE_DIR) _build/$(STORAGE_DIR)
 
-config.yml: static/style.scss
+config.yml: static/style.scss ## Update css_hash in config.yml based on static/style.scss
 	hash=$$(md5sum static/style.scss | awk '{print $$1}')
 	sed -i "s/css_hash: .*/css_hash: $$hash/" config.yml
 
-serve: build
+serve: build  ## Build the site and start a server to test it
 	run-rstblog serve
 
-deploy: check-tree clean build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir
+deploy: check-tree clean build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir ## Deploy latest content
 
-deploy-all: deploy deploy-storage
+deploy-all: deploy deploy-storage ## Deploy content and storage
 
-download-storage:
+download-storage: ## Update STORAGE_DIR from backup site
 	rsync -avzP $(STORAGE_BACKUP_URL)/ $(STORAGE_DIR)
 
-deploy-storage:
+deploy-storage: ## `rsync` STORAGE_DIR to backup and deploy sites
 	@echo "== Updating backup site =="
 	rsync -avzP $(STORAGE_DIR)/ $(STORAGE_BACKUP_URL)
 	@echo "== Deploying =="
 	rsync -avzP $(STORAGE_DIR)/ $(DEPLOY_ROOT_URL)/$(STORAGE_DIR)
 
 # internal targets
-pull-out-dir:
+pull-out-dir: ## `git pull` in OUT_GIT_DIR
 	@echo "== Checking out dir is up to date =="
 	git -C $(OUT_GIT_DIR) pull
 
-rsync-to-out-dir:
+rsync-to-out-dir: ## `rsync` the build dir to OUT_GIT_DIR
 	@echo "== Rsyncing changes to out dir =="
 	rsync -av --delete --max-delete=$(MAX_DELETE) --exclude '.git' --exclude $(STORAGE_DIR) \
 		$(BUILD_DIR)/ $(OUT_GIT_DIR)
 
-commit-out-dir:
+commit-out-dir: ## `git commit` changes in OUT_GIT_DIR
 	@echo "== Commiting changes in out dir =="
 	cd $(OUT_GIT_DIR) && git add .
 	cd $(OUT_GIT_DIR) && git commit -a -m 'Deploying'
 
-push-out-dir:
+push-out-dir: ## `git push` changes in OUT_GIT_DIR
 	@echo "== Pushing out dir changes =="
 	cd $(OUT_GIT_DIR) && git push
 
 check-tree: commit-changes push-local-commits
 
-commit-changes:
+commit-changes: ## `git commit` local changes
 	@if [ -n "$$(git status -s)" ] ; then
 		echo "== Committing changes =="
 		git add . && git commit && $(MAKE) commit-changes
 	fi
 
-push-local-commits:
+push-local-commits: ## `git push` non-pushed-yet commits
 	@nb_commits=$$(git rev-list origin/master..master | wc -l)
 	if [ "$$nb_commits" -gt 0 ] ; then
 		echo "== Pushing local-only commits =="
 		git push && $(MAKE) push-local-commits
 	fi
 
-install-deps:
+install-deps: ## Install required dependencies using apt
 	sudo apt install sassc rsync
 
 NPM_BINARY=$(VIRTUAL_ENV)/bin/npm
 
-check-deps:
+check-deps: ## Check all required dependencies are installed
 	@echo "Checking dependencies..."
 	@for dep in $(DEPENDENCIES) ; do
 		if ! which $$dep > /dev/null ; then
@@ -91,3 +91,7 @@ check-deps:
 			exit 1
 		fi
 	done
+
+help: ## List commands
+	@grep '^[a-zA-Z]' Makefile | sort \
+		| awk -F ':.*?## ' 'NF==2 {printf "  %-26s%s\n", $$1, $$2}'
