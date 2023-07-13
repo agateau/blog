@@ -1,7 +1,9 @@
 public: yes
 tags: []
-title: "About me"
+title: "About"
 comments: false
+
+## About me
 
 My name is Aurélien Gâteau, I am a French software engineer currently living in a small village near Paris with my wife and children.
 
@@ -11,8 +13,15 @@ I still enjoy drawing, even if I lack the time to create real compositions nowad
 
 When I am not writing code for $JOB, I tend to relax by... writing more code! I create open-source [games](/games/), [apps and tools](/apps/).
 
-## Contacting me
+### Contact
 
-You can contact me via [email](mailto:mail@agateau.com). I am also on <a href="https://mastodon.xyz/@agateau" rel="me">Mastodon</a>, [Twitter](https://twitter.com/aureliengateau), [GitHub](https://github.com/agateau) and [LinkedIn](https://www.linkedin.com/pub/4/585/4b).
+You can contact me via [email](mailto:mail@agateau.com). I am also on <a href="https://mastodon.xyz/@agateau" rel="me">Mastodon</a>, [GitHub](https://github.com/agateau) and [LinkedIn](https://www.linkedin.com/pub/4/585/4b).
 
 On week days you can find me on [Libera Chat](https://libera.chat/) IRC server, my nickname is agateau.
+
+## About this site <a id="about-site"> </a>
+
+Unless otherwise stated, you may use the content of this site as follow:
+
+- Code examples are released into the public domain, with no rights reserved,
+- The remaining content is copyright Aurélien Gâteau, licensed under [CC-BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/).
