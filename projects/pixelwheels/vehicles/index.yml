@@ -105,3 +105,14 @@ vehicles:
       The name may be a reference to the [Broforce][] game.
 
       [Broforce]: https://www.broforcegame.com/
+
+  - name: BRGP42
+    icon: brgp42.png
+    version: 0.25.0
+    description: |
+      An old-school Formula 1 racing car, coming straight from the 60s!
+
+      A speed daemon, probably inspired from the [Lola Mk4A][mk4a]. The name may come from [chassis BRGP42][brgp42], the only Lola Mk4A chassis to reach the first place of the podium.
+
+      [mk4a]: https://en.wikipedia.org/wiki/Lola_Mk4
+      [brgp42]: https://www.ultimatecarpage.com/chassis/871/Lola-Mk4-Climax-BRGP42.html
