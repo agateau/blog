@@ -16,9 +16,9 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 .. gallery::
     :thumbsize: 300
 
-    - full: 0.17.0/title.png
+    - full: 0.25.0/title.png
       alt: Title screen
-    - full: 0.24.0/select-vehicle.png
+    - full: 0.25.0/select-vehicle.png
       alt: Select your vehicle
     - full: 0.24.0/select-track.png
       alt: Select track
@@ -32,6 +32,8 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
       alt: Shooting the rocket car with the gun
     - full: 0.17.0/rescued.png
       alt: The rescue copter will bring you back if you dive too deep
+    - full: 0.25.0/split-screen.png
+      alt: 4 player split-screen
     - full: 0.17.0/touch-controls-1.png
       alt: The touch controls, on Android
     - full: 0.17.0/touch-controls-2.png
