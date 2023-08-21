@@ -6,7 +6,7 @@ comments: false
 jinja: true
 ---
 
-[Home](../) | Vehicles
+[Home](../) | Vehicles | [Goodies](../goodies/)
 {% for vehicle in vehicles: %}
 
 ## {{ vehicle.name }}

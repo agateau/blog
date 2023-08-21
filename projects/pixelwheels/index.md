@@ -3,7 +3,7 @@ tags: []
 title: Pixel Wheels
 comments: false
 
-Home | [Vehicles](vehicles/)
+Home | [Vehicles](vehicles/) | [Goodies](goodies/)
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
