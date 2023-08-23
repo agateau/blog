@@ -9,7 +9,7 @@ comments: false
 
 ## Game tile
 
-Here is a game tile by Isaac Edgington to use in [Lutris][] or other game libraries.
+Here is a Pixel Wheels cover tile made by Isaac E to be used in game management apps such as [Lutris][].
 
 [Lutris]: https://lutris.net/
 
