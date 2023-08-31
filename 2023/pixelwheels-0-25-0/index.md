@@ -3,7 +3,7 @@ public: true
 pub_date: 2023-08-18 18:48:33 +01:00
 tags: [pixelwheels]
 title: Pixel Wheels 0.25.0 is out!
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/110983018609779426
 ---
 
 Finally, after way too long, here is version 0.25.0 of [Pixel Wheels][pw]!
