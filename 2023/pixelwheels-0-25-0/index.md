@@ -28,7 +28,7 @@ Pixel Wheels lets you visit the 60s with the BRGP42!
 
 ![BRGP42](brgp42.png)
 
-Read more about the inspiration behind this car on the [vehicles](/projects/pixelwheels/vehicles).
+Read more about the inspiration behind this car on the [vehicles page](/projects/pixelwheels/vehicles).
 
 ## More translations!
 
