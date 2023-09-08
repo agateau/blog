@@ -15,6 +15,8 @@ MAX_DELETE=10
 
 DEPENDENCIES=sassc rsync run-rstblog git
 
+STEP=_scripts/step
+
 include config.mk
 
 clean: ## Delete the builde dir
@@ -38,43 +40,46 @@ deploy-all: deploy deploy-storage ## Deploy content and storage
 download-storage: ## Update STORAGE_DIR from backup site
 	rsync -avzP $(STORAGE_BACKUP_URL)/ $(STORAGE_DIR)
 
+h:
+	@$(STEP) YO oyoy oy
+
 deploy-storage: ## `rsync` STORAGE_DIR to backup and deploy sites
-	@echo "== Updating backup site =="
+	@$(STEP) "Updating backup site"
 	rsync -avzP $(STORAGE_DIR)/ $(STORAGE_BACKUP_URL)
-	@echo "== Deploying =="
+	@$(STEP) "Deploying"
 	rsync -avzP $(STORAGE_DIR)/ $(DEPLOY_ROOT_URL)/$(STORAGE_DIR)
 
 # internal targets
 pull-out-dir: ## `git pull` in OUT_GIT_DIR
-	@echo "== Checking out dir is up to date =="
+	@$(STEP) "Checking out dir is up to date"
 	git -C $(OUT_GIT_DIR) pull
 
 rsync-to-out-dir: ## `rsync` the build dir to OUT_GIT_DIR
-	@echo "== Rsyncing changes to out dir =="
+	@$(STEP) "Rsyncing changes to out dir"
 	rsync -av --delete --max-delete=$(MAX_DELETE) --exclude '.git' --exclude $(STORAGE_DIR) \
 		$(BUILD_DIR)/ $(OUT_GIT_DIR)
 
 commit-out-dir: ## `git commit` changes in OUT_GIT_DIR
-	@echo "== Commiting changes in out dir =="
+	@$(STEP) "Commiting changes in out dir"
 	cd $(OUT_GIT_DIR) && git add .
 	cd $(OUT_GIT_DIR) && git commit -a -m 'Deploying'
 
 push-out-dir: ## `git push` changes in OUT_GIT_DIR
-	@echo "== Pushing out dir changes =="
+	@$(STEP) "Pushing out dir changes"
 	cd $(OUT_GIT_DIR) && git push
 
 check-tree: commit-changes push-local-commits
 
 commit-changes: ## `git commit` local changes
 	@if [ -n "$$(git status -s)" ] ; then
-		echo "== Committing changes =="
+		@$(STEP) "Committing changes"
 		git add . && git commit && $(MAKE) commit-changes
 	fi
 
 push-local-commits: ## `git push` non-pushed-yet commits
 	@nb_commits=$$(git rev-list origin/master..master | wc -l)
 	if [ "$$nb_commits" -gt 0 ] ; then
-		echo "== Pushing local-only commits =="
+		@$(STEP) "Pushing local-only commits"
 		git push && $(MAKE) push-local-commits
 	fi
 
@@ -84,7 +89,7 @@ install-deps: ## Install required dependencies using apt
 NPM_BINARY=$(VIRTUAL_ENV)/bin/npm
 
 check-deps: ## Check all required dependencies are installed
-	@echo "Checking dependencies..."
+	@$(STEP) "Checking dependencies..."
 	@for dep in $(DEPENDENCIES) ; do
 		if ! which $$dep > /dev/null ; then
 			echo "Missing dependency: $$dep"

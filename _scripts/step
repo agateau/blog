@@ -1,0 +1,9 @@
+#!/bin/sh
+set -e
+
+color="\033[34m"
+norm="\033[00m"
+
+echo
+echo "${color}# $*${norm}"
+echo
