@@ -3,7 +3,7 @@ public: true
 pub_date: 2023-10-18 07:05:30 +01:00
 tags: [monthlyupdate, pixelwheels, burgerparty, sfxr-qt, nanonote, colorpick]
 title: September 2023 monthly update
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/111193325602323571
 ---
 
 ## Introduction
