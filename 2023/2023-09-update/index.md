@@ -33,7 +33,7 @@ Finally, I improved keyboard navigation: it is now possible to move the focus al
 
 Only one small fix on Clyde this month. I recently added a `.pre-commit.yaml` file to the clyde-store repository and it turns out it broke `clyde search` because the command tried to load the `.pre-commit.yaml` file as a package… embarrassing. I fixed that.
 
-## Conclusion
+## What's next
 
 That's all for this month, not as much work as planned, but progress nevertheless. Next month I shall finally do the Burger Party and Nanonote releases. I scheduled a day-off from work to make sure the releases really happen this time!
 
