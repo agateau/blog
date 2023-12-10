@@ -3,6 +3,7 @@ public: true
 pub_date: 2023-12-08 07:05:30 +01:00
 tags: [monthlyupdate, pixelwheels, burgerparty, nanonote, clyde]
 title: October-November 2023 monthly update
+mastodon: https://mastodon.xyz/@agateau/111558381064873017
 ---
 
 ## Introduction
