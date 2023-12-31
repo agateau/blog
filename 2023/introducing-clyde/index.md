@@ -35,7 +35,7 @@ No: compared to other package managers, Clyde does not require application devel
 
 ## Getting started in 2 minutes
 
-- Download version 0.6.0 for your machine from the [release page](https://github.com/agateau/releases/0.6.0).
+- Download version 0.6.0 for your machine from the [release page](https://github.com/agateau/clyde/releases/0.6.0).
 - Unpack it and set it up:
 
 ```
