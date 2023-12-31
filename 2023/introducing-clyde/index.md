@@ -3,6 +3,7 @@ public: true
 pub_date: 2023-12-31 19:17:40 +01:00
 tags: [clyde]
 title: "Clyde: a cross-platform package manager for pre-built applications"
+mastodon: "https://mastodon.xyz/@agateau/111675034022166854"
 ---
 
 ## Introduction
