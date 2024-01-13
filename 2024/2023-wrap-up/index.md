@@ -48,7 +48,7 @@ or, grouped by project:
 
 (I haven't written about [Poglyph](https://gitlab.com/agateau/poglyph) yet. It's a set of two small CLI tools to find missing glyphs in fonts. I extracted it from an internal Pixel Wheels tool and now use it in Burger Party)
 
-I was happily surprised by the number of released I managed to push. It's a bit more than I expected.
+I was happily surprised by the number of releases I managed to push. It's a bit more than I expected.
 
 ## Pixel Wheels
 
