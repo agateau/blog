@@ -1,9 +1,9 @@
 ---
 public: true
 pub_date: 2024-01-09 08:59:37 +01:00
-tags: []
+tags: [monthlyupdate, pixelwheels, burgerparty, clyde]
 title: 2023 Wrap Up
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/111750602455737375
 ---
 
 <!-- break -->
