@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-02-06 18:42:24 +01:00
 tags: [pixelwheels, statusupdate]
 title: January 2024 update, Pixel Wheels new track
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/111885786985000391
 ---
 
 Following my [2023 wrap up][], here is the first status update where I focus on a single topic for the month, with the hope of making the update a more enjoyable read.
