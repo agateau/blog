@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-03-04 14:57:15 +01:00
 tags: [pixelwheels, statusupdate]
 title: February 2024 update, Pixel Wheels hit effect
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/112038397350067147
 ---
 
 For this February status update,  I want to show the work I have been doing on Pixel Wheels "hit effect". The "hit effect" is what happens when a vehicle is hit by a gun bullet, a missile, or triggers a mine.
