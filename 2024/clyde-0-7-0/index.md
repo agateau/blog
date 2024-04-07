@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-04-07 08:45:40 +02:00
 tags: [clyde, statusupdate, forgejo]
 title: March 2024 update, Clyde 0.7.0
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/112229120400566258
 ---
 
 The focus of this month was on [Clyde](https://github.com/agateau/clyde). There was a number of changes I wanted to make, and I am happy to report I was able to implement most of them and release [Clyde 0.7.0][clyde-0.7.0] on April 2!
