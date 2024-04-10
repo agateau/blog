@@ -54,6 +54,8 @@ For now the only package using this new fetcher is [Forgejo][] itself, but I wou
 
 Some projects publish multiple assets in the same release. This is problematic for Clyde fetchers because they try to get them all and gets confused as to which asset to use.
 
+The new `include` fetcher option makes it possible to provide a regular-expression to limit which assets Clyde should look at.
+
 Examples of such packages include [DuckDB][], which I just packaged, or the [redistributable Python builds by Gregory Szorc][python], which I am in the process of packaging (but the Windows launchers are getting in the way...)
 
 ## Get it
