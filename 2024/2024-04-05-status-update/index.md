@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-06-07 08:13:58 +01:00
 tags: [pixelwheels, statusupdate]
 title: April-May status update, return of the rotating camera!
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/112593318302718655
 ---
 
 ## Introduction
