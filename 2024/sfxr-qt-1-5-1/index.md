@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-06-24 08:25:58 +01:00
 tags: [sfxr-qt]
 title: SFXR-Qt 1.5.1
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/112672668802949715
 ---
 
 It's been a very long time since the last release of [SFXR-Qt][], my Qt port of SFXR retro sound effect generator.
