@@ -30,5 +30,3 @@ SFXR-Qt 1.5.1 is now available for download from [GitHub][release]. Get it and h
 [#22]: https://github.com/agateau/sfxr-qt/issues/22
 [SFXR-Qt]: https://github.com/agateau/sfxr-qt
 [release]: https://github.com/agateau/sfxr-qt/releases/1.5.1
-
-
