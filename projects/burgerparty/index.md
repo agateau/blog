@@ -6,7 +6,7 @@ jinja: true
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 
-Burger Party is an addictive burger game for Android.
+Burger Party is a fun and cute burger game for Android.
 
 You just opened a burger restaurant, let's see if you can put together burgers fast enough to satisfy your ever growing number of customers! As you progress through the levels, unlock new items and visit new places!
 
