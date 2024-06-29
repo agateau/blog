@@ -1,11 +1,15 @@
 ---
 public: yes
 tags: []
-title: Pixel Wheels vehicles
+title: Pixel Wheels goodies
 comments: false
 ---
 
 [Home](../) | [Vehicles](../vehicles/) | Goodies
+
+## Pixel Wheels T-shirts and other goodies
+
+Buy Pixel Wheels T-shirts, caps, mugs and other goodies on [Pixel Wheels shop](/redirect/bp-goodies)!
 
 ## Game tile
 
