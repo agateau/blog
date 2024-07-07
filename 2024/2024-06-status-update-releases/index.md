@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-07-06 20:06:59 +01:00
 tags: [statusupdate, clyde, burgerparty, sfxr-qt]
 title: June status update, releases galore!
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/112744530664078850
 ---
 
 ## Introduction
@@ -26,7 +26,7 @@ On June 24, I released [SFXR-Qt 1.5.1](https://github.com/agateau/sfxr-qt/releas
 
 On June 30, I released [Burger Party 1.4.4](/projects/burgerparty). This new release makes the game available in another new language: this time it's Hungarian, thanks to Balázs Úr!
 
-![Burger Party in Hungarian](burgerparty-hu.png).
+![Burger Party in Hungarian](burgerparty-hu.png)
 
 ## What's next?
 
