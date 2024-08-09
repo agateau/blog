@@ -48,11 +48,8 @@ To work around that, Pixel Wheels source tree has long contained a Python CLI to
 
 Note however that it was developed for Pixel Wheels, so it's very much tuned to the way I use Aseprite. Contributions to fix limitations (or any other issues) are most welcome!
 
-It's the first project I [host on GitLab][asetools-gitlab], trying to reduce my dependency on GitHub a bit (still a long way to go on that topic...)
-
 [Aseprite]: https://aseprite.com
 [asetools-pypi]: https://pypi.org/project/asetools
-[asetools-gitlab]: https://gitlab.com/agateau/asetools
 
 ## What's next?
 
