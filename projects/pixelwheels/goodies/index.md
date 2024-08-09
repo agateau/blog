@@ -9,7 +9,7 @@ comments: false
 
 ## Pixel Wheels T-shirts and other goodies
 
-Buy Pixel Wheels T-shirts, caps, mugs and other goodies on [Pixel Wheels shop](/redirect/bp-goodies)!
+Buy Pixel Wheels T-shirts, caps, mugs and other goodies on [Pixel Wheels shop](/redirect/pw-goodies)!
 
 ## Game tile
 
