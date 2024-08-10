@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-08-08 08:31:27 +01:00
 tags: [statusupdate, pixelwheels, asetools, aseprite]
 title: July status update, Pixel Wheels progress
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/112936961437053987
 ---
 
 ## Introduction
