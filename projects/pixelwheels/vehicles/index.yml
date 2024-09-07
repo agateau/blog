@@ -1,20 +1,20 @@
 vehicles:
   - name: Red Lightning
-    icon: red.png
+    id: red
     description: |
       A muscle car, the very first vehicle added to the game.
 
       Red, fast, with a good handling. You can't go wrong with this one.
 
   - name: Highway Patrol
-    icon: police.png
+    id: police
     description: |
       If you are [on a mission from God](https://www.youtube.com/watch?v=LMoD2m5pzZU), this car is for you. The cigarette lighter is missing, hopefully you don't smoke...
 
       May be a reference to the [Bluesmobile](https://en.wikipedia.org/wiki/Bluesmobile), the police car from the Blues Brothers movie, before the loudspeaker was mounted on its roof.
 
   - name: Pickup
-    icon: pickup.png
+    id: pickup
     description: |
       Your standard utility car. Robust and reliable.
 
@@ -23,7 +23,7 @@ vehicles:
       [Mater]: https://en.wikipedia.org/wiki/Mater_(Cars)
 
   - name: Roadster
-    icon: roadster.png
+    id: roadster
     description: |
       When you want to race, but with a touch of British flair.
 
@@ -32,21 +32,21 @@ vehicles:
       [brg]: https://en.wikipedia.org/wiki/British_racing_green
 
   - name: Ant On-1
-    icon: antonin.png
+    id: antonin
     description: |
       This vehicle went through several iterations. It started as a space truck but later evolved into a beach surf van.
 
       The name is a reference to my son first name: Antonin, who drew the first versions of it.
 
   - name: Santa Truck
-    icon: santa.png
+    id: santa
     description: |
       Created a few Decembers ago. Legend has it that when Santa Claus is not riding his sled, he enjoys driving this big truck!
 
       The only 6-wheeled vehicle of the game. The wheels on the middle axis can steer too.
 
   - name: 2-Deuch
-    icon: 2cv.png
+    id: 2cv
     description: |
       May be inspired from a true French classic: the [Citroën 2CV][2cv], in its Charleston livery. "Deudeuch" was a popular way to call the 2CV.
 
@@ -55,7 +55,7 @@ vehicles:
       [2cv]: https://en.wikipedia.org/wiki/Citro%C3%ABn_2CV
 
   - name: Harvester
-    icon: harvester.png
+    id: harvester
     description: |
       Do you enjoy driving in the grass? Then the Harvester is for you!
 
@@ -64,21 +64,21 @@ vehicles:
       Obviously not drawn at scale :)
 
   - name: Rocket
-    icon: rocket.png
+    id: rocket
     description: |
       When you want to go faaaast, nothing beats a rocket on wheels!
 
       This vehicle is fast, but can be hard to master. Hitting a wall is quite punishing.
 
   - name: Dark M
-    icon: dark-m.png
+    id: dark-m
     description: |
       A dark and long vehicle.
 
       This vehicle is inspired from a car you can see in a Tim Burton movie about a super hero battling against a very smily villain. The name is a reference to the title of another movie from Christopher Nolan about the same super hero.
 
   - name: Jeep
-    icon: jeep.png
+    id: jeep
     description: |
       A large gas eater and carbon-monoxide producer. One of the few vehicles with large-size tires. These vehicles aren't good for the planet. Luckily, Pixel Wheels version does not contribute to climate change :)
 
@@ -87,7 +87,7 @@ vehicles:
       [h3]: https://en.wikipedia.org/wiki/Hummer_H3
 
   - name: Miramar
-    icon: miramar.png
+    id: miramar
     description: |
       Another long vehicle. For the old-US-car lovers among you.
 
@@ -96,7 +96,7 @@ vehicles:
       [cadillac]: https://en.wikipedia.org/wiki/Cadillac_Eldorado#Fourth_generation_(1959%E2%80%931960)
 
   - name: Broster Truck
-    icon: bigfoot.png
+    id: bigfoot
     description: |
       An even larger gas eater! The only vehicle with huge-size tires. In fact, support for different tire sizes was added to the game just for this one!
 
@@ -107,7 +107,7 @@ vehicles:
       [Broforce]: https://www.broforcegame.com/
 
   - name: BRGP42
-    icon: brgp42.png
+    id: brgp42
     version: 0.25.0
     description: |
       An old-school Formula 1 racing car, coming straight from the 60s!
