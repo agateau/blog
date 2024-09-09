@@ -17,6 +17,11 @@
 
     {{ rst.fragment }}
 
+    {%- if config.get('mastodon') %}
+    <div class="mastodon">
+      <a href="{{ config.get('mastodon') }}">Discuss on Mastodon</a>
+    </div>
+    {% endif %}
     <div class="meta">
       {% if ctx.tags %}
       <div class="tags">This post was tagged
@@ -25,11 +30,6 @@
           {%- if loop.last and not loop.first %} and {% endif %}
           <a href="{{ link_to('tag', tag=tag) }}">{{ tag }}</a>
         {%- endfor %}
-      </div>
-      {% endif %}
-      {%- if config.get('mastodon') %}
-      <div class="mastodon">
-        <a href="{{ config.get('mastodon') }}">Discuss this post on Mastodon</a>
       </div>
       {% endif %}
     </div>

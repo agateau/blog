@@ -303,6 +303,27 @@ div.allposts {
 
 /*- Mastodon -------------------------*/
 .mastodon {
+    text-align: center;
+
+    a {
+        color: $buttonTextColor;
+        padding: 0.7em;
+        border-radius: 9px;
+        border: 1px solid $buttonBevelColor;
+        text-decoration: none;
+        box-shadow: inset 0 -4px 0 $buttonBevelColor;
+        background-color: $buttonBgColor;
+    }
+
+    a:hover {
+        background-color: lighten($buttonBgColor, 1%);
+    }
+
+    a:active {
+        position: relative;
+        top: 3px;
+        box-shadow: inset 0 -1px 0 $buttonBevelColor;
+    }
 }
 
 /*- Comments -------------------------*/
@@ -358,6 +379,7 @@ article meta
 
 --------------------------------------*/
 div.meta {
+    margin-top: 36px;
     height: 3em;
     text-align: right;
 }
