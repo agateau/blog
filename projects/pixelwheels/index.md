@@ -28,8 +28,8 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
       alt: Firing a missile
     - full: 0.17.0/turbo.png
       alt: Trying to catch up with the police car
-    - full: 0.17.0/gun.png
-      alt: Shooting the rocket car with the gun
+    - full: 0.26.0/gun.png
+      alt: BRGP42 shooting two cars with the gun
     - full: 0.17.0/rescued.png
       alt: The rescue copter will bring you back if you dive too deep
     - full: 0.25.0/split-screen.png
