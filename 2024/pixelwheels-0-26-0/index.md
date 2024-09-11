@@ -2,7 +2,7 @@
 public: true
 pub_date: 2024-09-09 08:01:11 +01:00
 tags: [pixelwheels]
-title: Pixel Wheels 0.26.0 is finally here!
+title: Pixel Wheels 0.26.0 is here!
 mastodon:
 ---
 
