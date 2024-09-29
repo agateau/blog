@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-09-27 07:41:13 +01:00
 tags: [rant]
 title: Why I don't use a Mac
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/113222330588528254
 ---
 
 ## Introduction
