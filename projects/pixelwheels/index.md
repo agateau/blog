@@ -60,13 +60,13 @@ Getting the game through F-Droid or Google Play is recommended to ensure you rec
 
 *Note: it may take a few days for the latest version to appear on F-Droid.*
 
-### Speed runs
-
-Pixel Wheels has a [Speedrun page](https://www.speedrun.com/Pixel_Wheels).
-
 ### Source Code
 
 Pixel Wheels source code is available on [GitHub](https://github.com/agateau/pixelwheels).
+
+## Speed runs
+
+Pixel Wheels has a [Speedrun page](https://www.speedrun.com/Pixel_Wheels)!
 
 ## Bug Reports
 
