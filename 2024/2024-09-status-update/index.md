@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-10-09 08:23:16 +01:00
 tags: [pixelwheels, statusupdate]
 title: September status update, Pixel Wheels has been released!
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/113284982018695780
 ---
 
 ## Introduction
