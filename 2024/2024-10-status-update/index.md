@@ -3,7 +3,7 @@ public: true
 pub_date: 2024-11-10 07:36:54 +01:00
 tags: [statusupdate, pixelwheels]
 title: October status update
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/113459980422243559
 ---
 
 ## Introduction
