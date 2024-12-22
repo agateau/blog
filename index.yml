@@ -10,8 +10,8 @@ content:
   url: https://github.com/agateau/nanonote
   description: |-
     A minimalist note taking application.
-- name: cookiecutter-qt-app
-  thumbnail: cookiecutter-qt-app.svg
-  url: https://github.com/agateau/cookiecutter-qt-app
+- name: Clyde
+  thumbnail: clyde.png
+  url: https://github.com/agateau/clyde
   description: |-
-    Easily create real-world Qt applications.
+    Package manager for prebuilt applications.
