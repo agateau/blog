@@ -16,10 +16,10 @@ modules:
         style: tango
     blog:
         feed_url: /feed
-        index_url: /blog/
+        archive_year_url: /<year>/
     tags:
         tag_feed_url: /tags/<tag>/feed
 feed:
     name: "Aurélien Gâteau"
     subtitle: "Code, pixels, user interfaces and occasional developer tips"
-css_hash: 6db2fccf2ece4cc96e521638566ed81c
+css_hash: 9e7f99afb0557135a68b062f7597f00c

@@ -3,9 +3,7 @@
 {% block title %}Blog Archive by year{% endblock %}
 {% block body %}
   <div class="allposts">
-    Blog posts &bull; <a href="/tags/">By tag</a>
+    <a href="/blog/">Blog posts</a> &bull; <a href="/tags/">By tag</a>
   </div>
-  {%- for entry in archive %}
-    {{ year_entry(entry) }}
-  {%- endfor %}
+  {{ year_entry(entry) }}
 {% endblock %}

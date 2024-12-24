@@ -1,0 +1,13 @@
+{% macro year_entry(entry) -%}
+  <h1>{{ entry.year }}</h1>
+  <ul class="archive-by-year">
+    {%- for entry in entry.entries %}
+      <li>
+        <span class="date">{{ format_date(entry.pub_date, format='MMM d') }}</span>
+        <span class="entry-title">
+          <a href="{{ link_to('page', slug=entry.slug) }}">{{ entry.title }}</a>
+        </span>
+      </li>
+    {%- endfor %}
+  </ul>
+{% endmacro %}

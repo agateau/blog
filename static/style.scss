@@ -301,6 +301,14 @@ div.allposts {
     }
 }
 
+/*- Archive by year ------------------*/
+.archive-by-year {
+    .date {
+        width: 4em;
+        display: inline-block;
+    }
+}
+
 /*- Mastodon -------------------------*/
 .mastodon {
     text-align: center;
