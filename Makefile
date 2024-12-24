@@ -19,7 +19,7 @@ STEP=_scripts/step
 
 include config.mk
 
-clean: ## Delete the builde dir
+clean: ## Delete the build dir
 	rm -rf $(BUILD_DIR)
 
 build: check-deps config.yml ## Build the site
@@ -33,15 +33,16 @@ config.yml: static/style.scss ## Update css_hash in config.yml based on static/s
 serve: build  ## Build the site and start a server to test it
 	run-rstblog serve
 
+just-serve:
+	cd $(BUILD_DIR)
+	python -m http.server 5000
+
 deploy: check-tree clean build pull-out-dir rsync-to-out-dir commit-out-dir push-out-dir ## Deploy latest content
 
 deploy-all: deploy deploy-storage ## Deploy content and storage
 
 download-storage: ## Update STORAGE_DIR from backup site
 	rsync -avzP $(STORAGE_BACKUP_URL)/ $(STORAGE_DIR)
-
-h:
-	@$(STEP) YO oyoy oy
 
 deploy-storage: ## `rsync` STORAGE_DIR to backup and deploy sites
 	@$(STEP) "Updating backup site"
