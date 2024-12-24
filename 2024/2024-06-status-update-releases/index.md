@@ -1,7 +1,7 @@
 ---
 public: true
 pub_date: 2024-07-06 20:06:59 +01:00
-tags: [statusupdate, clyde, burgerparty, sfxr-qt]
+tags: [monthlyupdate, clyde, burgerparty, sfxr-qt]
 title: June status update, releases galore!
 mastodon: https://mastodon.xyz/@agateau/112744530664078850
 ---

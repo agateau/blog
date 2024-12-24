@@ -1,8 +1,8 @@
 ---
 public: true
 pub_date: 2024-04-07 08:45:40 +02:00
-tags: [clyde, statusupdate, forgejo]
-title: March 2024 update, Clyde 0.7.0
+tags: [clyde, monthlyupdate, forgejo]
+title: March update, Clyde 0.7.0
 mastodon: https://mastodon.xyz/@agateau/112229120400566258
 ---
 

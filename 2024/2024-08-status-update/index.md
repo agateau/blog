@@ -1,7 +1,7 @@
 ---
 public: true
 pub_date: 2024-09-06 07:46:01 +01:00
-tags: [statusupdate, pixelwheels]
+tags: [monthlyupdate, pixelwheels]
 title: August status update, has Pixel Wheels been released?
 mastodon: https://mastodon.xyz/@agateau/113095449422725700
 ---

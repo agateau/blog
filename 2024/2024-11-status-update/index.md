@@ -1,7 +1,7 @@
 ---
 public: true
 pub_date: 2024-12-04 22:39:39 +01:00
-tags: [statusupdate, regexnight]
+tags: [monthlyupdate, regexnight]
 title: November status update
 mastodon: https://mastodon.xyz/@agateau/113599144847512648
 ---
