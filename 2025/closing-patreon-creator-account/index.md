@@ -10,7 +10,7 @@ I have been running a Patreon creator account for a few years now. I finally dec
 
 ## It does not really work for me
 
-I can't say I have a massive number of supporters: I had 3 at some point but now I am down to onle 1.
+I can't say I have a massive number of supporters: I had 3 at some point but now I am down to only 1.
 
 I think there are at least 3 reasons for that:
 
