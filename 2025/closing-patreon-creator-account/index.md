@@ -3,7 +3,7 @@ public: true
 pub_date: 2025-01-10 09:39:39 +01:00
 tags: [monthlyupdate]
 title: Closing my Patreon creator account
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/113857179621965476
 ---
 
 I have been running a Patreon creator account for a few years now. I finally decided to close it. In this article I want to explain why I made this decision.
