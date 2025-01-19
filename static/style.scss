@@ -157,7 +157,7 @@ footer {
 
 /* margins and stuff */
 p, div.line-block, ul, ol, pre, table {
-    margin: 25px 0 25px 0;
+    margin: $paragraphMargin 0;
 }
 dt {
     margin: 25px 0 16px 0;
@@ -455,7 +455,8 @@ Button
 --------------------------------------*/
 .dl-button {
     color: $buttonTextColor;
-    padding: 0.7em;
+    padding: 12px;
+    padding-bottom: 12px + 4px;
     border-radius: 9px;
     border: 1px solid $buttonBevelColor;
     text-decoration: none;
@@ -547,9 +548,8 @@ Support page
     grid-gap: 12px;
 
     max-width: 60%;
-    margin-bottom: 24px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 24px auto;
+    align-items: center;
 }
 
 .support-block .support-title {
@@ -565,9 +565,7 @@ Support page
     .support-block {
         grid-template-columns: 60px 1fr;
         max-width: 100%;
-        margin-bottom: 0;
-        margin-left: 0;
-        margin-right: 0;
+        margin: 0;
     }
 
     .support-button img {
@@ -579,5 +577,6 @@ Support page
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 36px;
+        margin-bottom: $paragraphMargin;
     }
 }
