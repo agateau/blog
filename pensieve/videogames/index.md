@@ -3,6 +3,21 @@ tags: []
 title: "Video Games"
 comments: false
 
+## Handheld
+
+- Sub Patrol. A foldable handheld game where one pluck the leaks of a submarine and then try to sink destroyers with torpedos. Solar-powered. <https://www.retrohandheldgames.com/bandai/sub-attack-gekisen-u-boat-sub-patrol-567>.
+
+.. gallery::
+    :thumbsize: 300
+
+    - full: sub-patrol/sub-patrol-folded.jpg
+      alt: Folded
+    - full: sub-patrol/sub-patrol-level1.jpg
+      alt: Plucking leaks
+    - full: sub-patrol/sub-patrol-level2.jpg
+      alt: Sending a torpedo while avoiding depth charges
+
+
 ## CPC
 
 - Arkanoid
