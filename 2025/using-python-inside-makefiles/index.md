@@ -3,7 +3,7 @@ public: true
 pub_date: 2025-02-22 12:56:49 +01:00
 tags: [makefile, tips]
 title: "Using Python inside Makefiles"
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/114061091389949752
 ---
 
 ## Introduction
