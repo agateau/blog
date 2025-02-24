@@ -8,11 +8,11 @@ mastodon:
 
 ## Introduction
 
-This is the introduction of [Wikipedia article about Make](https://en.wikipedia.org/wiki/Make_(software)):
+Make is an ubiquitous tool to build software. It reads a configuration file (traditionally called `Makefile`). This file lists the targets to build, their dependencies and the recipes to build the targets from their dependencies.
 
-> In software development, Make is a command-line interface software tool that performs actions ordered by configured dependencies as defined in a configuration file called a makefile.
+Traditionally, the recipes are written in shell script. In this article I present how some creative use of Make variables can let us write those in Python instead.
 
-By default, the actions to perform (together called a recipe) are shell commands. In this article I explain how to abuse some of Make variables to force it to use Python.
+Why? Well, I thought it would be an interesting challenge!
 
 Disclaimers:
 
@@ -21,7 +21,7 @@ Disclaimers:
 
 ## Telling Make to use Python
 
-Make lets you define the shell to use to run target recipes via the `SHELL` variable. You can use this to force it to use `bash` for example instead of whatever `/bin/sh` points to. Nothing stops you from setting it to `python`...
+Make lets you define the shell to use to run target recipes via the `SHELL` variable. You can use it to force Make to use `bash` instead of whatever `/bin/sh` points to. Nothing stops you from setting it to `python`:
 
 ```Makefile
 # step1.mk
@@ -145,7 +145,7 @@ That works. Let's move on to something trickier.
 
 ## Python blocks
 
-Python is famous for its use of indentation to define blocks. Can we make this work inside a Makefile?
+If we want to write some serious Python-based recipes, at some point we are going to need `if` or `for` loops. Python uses indentation to define blocks. Can we make this work inside a Makefile?
 
 ```Makefile
 # step5.mk
@@ -179,7 +179,7 @@ IndentationError: expected an indented block after 'with' statement on line 2
 make: *** [step5.mk:9: foo] Error 1
 ```
 
-No luck. It looks like Make removes all leading tabs from the command before running it. In `step5.mk` all indentation is done using real tabs, so there are two tabs at the start of  the `for` line. If I replace the tabs with `--->`, the file looks like this:
+No luck. It looks like Make removes all leading tabs from the recipe lines before running it. In `step5.mk` all indentation is done using real tabs, so there are two tabs at the start of  the `for` line. Here is the same file with tabs replaced with `--->`:
 
 ```
 # step5.mk
@@ -230,7 +230,7 @@ I am line 2
 I am line 3
 ```
 
-Yes, it works. If that sounds like a bad idea to you, then you are not alone 😅.
+Yes, it works. If that sounds like a bad idea to you, then you are not alone...
 
 A slightly less cursed approach is to use the `.RECIPEPREFIX` variable. This variable tells Make we want to use another character to indent our recipes:
 
@@ -253,6 +253,8 @@ foo:
 
 ([step7.mk](step7.mk))
 
-This works as well. Whether it's better or worse is up to you to decide 😁. It is certainly going to look weird to others.
+This works as well. Whether it's better or worse is up to you to decide... It is certainly going to look weird to others. In fact I had to disable syntax-highlighting on this snippet because [Pygment](https://pygments.org), the syntax highlighter used for this site, got very confused…
 
-Fun fact: I had to disable syntax-highlighting on this snippet because [Pygment](https://pygments.org), the syntax highlighter used for this site, got very confused…
+## Takeaways
+
+With some combination of `SHELL`, `.ONESHELL:`, some creative use of tabs and spaces or of `.RECIPEPREFIX` it turns out one can use Python inside a Makefile, for maximum fun and confusion!
