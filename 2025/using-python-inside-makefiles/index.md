@@ -75,7 +75,7 @@ Bummer, that does not work. This is because Make executes each line of the recip
 1. `python -c "import sys"`
 2. `python -c "print(sys.version)"`
 
-ℹ️_The `-c` is defined in the `.SHELLFLAGGS` variable._
+ℹ️_The `-c` is defined in the `.SHELLFLAGS` variable._
 
 This is not what we want. Fortunately Make provides a way to change this behavior. When the Makefile contains the `.ONESHELL:` pseudo target, Make passes the whole recipe at once to the shell.
 
