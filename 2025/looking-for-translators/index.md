@@ -3,7 +3,7 @@ public: true
 pub_date: 2025-07-01 08:37:48 +01:00
 tags: [pixelwheels]
 title: Pixel Wheels is looking for translators
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/114780148245983645
 ---
 Breaking news! I am preparing for version 1.0.0 of Pixel Wheels!
 
