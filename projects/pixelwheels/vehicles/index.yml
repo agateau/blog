@@ -116,3 +116,14 @@ vehicles:
 
       [mk4a]: https://en.wikipedia.org/wiki/Lola_Mk4
       [brgp42]: https://www.ultimatecarpage.com/chassis/871/Lola-Mk4-Climax-BRGP42.html
+
+  - name: C15 Vindieu
+    id: c15
+    version: 0.1.0
+    description: |
+      A panel van from 1984, very common in France ([Wikipedia page][c15-wiki]).
+
+      The C15 gained a small cult following, to the point that there are multiple songs about it! The name "C15 Vindieu" is a reference to one of them: [C15 Vindieu][c15-matafan], a funny song by DJ Matafan.
+
+      [c15-wiki]: https://en.wikipedia.org/wiki/Citro%C3%ABn_C15
+      [c15-matafan]: https://www.youtube.com/watch?v=B_Dm4vlLrWg
