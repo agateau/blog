@@ -3,7 +3,13 @@ tags: []
 title: Pixel Wheels
 comments: false
 
-Home | [Vehicles](vehicles/) | [Goodies](goodies/)
+<nav class="page-nav">
+<ul>
+    <li class="active"><span>Home</span></li>
+    <li><a href="vehicles/">Vehicles</a></li>
+    <li><a href="goodies/">Goodies</a></li>
+</ul>
+</nav>
 
 <div style="float: right; margin-left: 6px"><img src="icon.png"></div>
 

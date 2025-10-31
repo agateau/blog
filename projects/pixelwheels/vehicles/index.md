@@ -6,7 +6,14 @@ comments: false
 jinja: true
 ---
 
-[Home](../) | Vehicles | [Goodies](../goodies/)
+<nav class="page-nav">
+<ul>
+    <li><a href="../">Home</a></li>
+    <li class="active"><span>Vehicles</span></li>
+    <li><a href="../goodies/">Goodies</a></li>
+</ul>
+</nav>
+
 {% for vehicle in vehicles: %}
 
 ## <span id="{{ vehicle.id }}">{{ vehicle.name }}</span>

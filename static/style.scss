@@ -96,7 +96,7 @@ div.body {
 }
 
 /*- Navigation -----------------------*/
-nav {
+nav.top-nav {
     display: block;
     text-align: center;
 
@@ -431,6 +431,60 @@ ul.thumbnails li {
 
 /*--------------------------------------
 
+Page nav
+
+--------------------------------------*/
+nav.page-nav {
+    margin-bottom: 1em;
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        height: 3em;
+    }
+    $pageNavRadius: 1em;
+    li {
+        display: inline-block;
+        float: left;
+        margin: 0;
+        height: 2 * $pageNavRadius;
+        background-color: $headerBgColor;
+        color: $headerTextColor;
+        font-variant: all-small-caps;
+        box-shadow: 0 $shadowOffset $shadowBlur $shadowColor;
+    }
+    li:first-child {
+        border-top-left-radius: $pageNavRadius;
+        border-bottom-left-radius: $pageNavRadius;
+    }
+    li:last-child {
+        border-top-right-radius: $pageNavRadius;
+        border-bottom-right-radius: $pageNavRadius;
+    }
+    li.active {
+        background-color: darken($headerBgColor, 10%); /*$headerBgHoverColor;*/
+    }
+    li > * {
+        display: inline-block;
+        padding: 0.2em 1.4em;
+    }
+    li:first-child > * {
+        padding-left: 1.5em;
+    }
+    li:last-child > * {
+        padding-right: 1.5em;
+    }
+    li a {
+        color: $headerTextColor;
+        text-decoration: none;
+    }
+    li:hover {
+        background-color: $headerBgHoverColor;
+    }
+}
+
+/*--------------------------------------
+
 Misc
 
 --------------------------------------*/
@@ -506,7 +560,7 @@ Medium size
         }
     }
 
-    nav a {
+    nav.top-nav a {
         padding: 0 1em;
     }
 }
@@ -531,7 +585,7 @@ Full size
             line-height: 3em;
             padding: 0;
         }
-        nav {
+        nav.top-nav {
             text-align: right;
         }
     }

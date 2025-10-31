@@ -5,7 +5,13 @@ title: Pixel Wheels goodies
 comments: false
 ---
 
-[Home](../) | [Vehicles](../vehicles/) | Goodies
+<nav class="page-nav">
+<ul>
+    <li><a href="../">Home</a></li>
+    <li><a href="../vehicles/">Vehicles</a></li>
+    <li class="active"><span>Goodies</span></li>
+</ul>
+</nav>
 
 ## Pixel Wheels T-shirts and other goodies
 
