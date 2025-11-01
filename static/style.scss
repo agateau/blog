@@ -462,7 +462,7 @@ nav.page-nav {
         border-bottom-right-radius: $pageNavRadius;
     }
     li.active {
-        background-color: darken($headerBgColor, 10%); /*$headerBgHoverColor;*/
+        background-color: $headerBgActiveColor;
     }
     li > * {
         display: inline-block;

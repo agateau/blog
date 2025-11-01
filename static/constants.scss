@@ -12,6 +12,7 @@ $hlineColor: transparentize($headingColor, 0.8);
 $headerBgColor: $darkColor;
 $headerBgHoverColor: lighten($darkColor, 10%);
 $headerTextColor: $lightColor;
+$headerBgActiveColor: darken($darkColor, 10%);
 
 $subheaderBgColor: lighten($darkColor, 10%);
 $subheaderTextColor: $headerTextColor;
