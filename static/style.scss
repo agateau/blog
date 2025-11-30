@@ -504,7 +504,7 @@ img.align-center {
 
 /*--------------------------------------
 
-Button
+dl-button
 
 --------------------------------------*/
 .dl-button {
@@ -632,5 +632,42 @@ Support page
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 36px;
         margin-bottom: $paragraphMargin;
+    }
+}
+
+/*--------------------------------------
+
+Pixel Wheels merch
+
+--------------------------------------*/
+.pwmerch-container {
+    a {
+        display: block;
+        margin-bottom: 1em;
+    }
+
+    img {
+        border: 1px solid #ccdbff;
+        border-radius: 5px;
+    }
+
+    .thumbnail-container {
+        display: grid;
+        grid-gap: 12px;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+    }
+
+    .caption {
+        text-align: center;
+        padding-top: 0.5em;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .pwmerch-container {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(3, 1fr);
     }
 }

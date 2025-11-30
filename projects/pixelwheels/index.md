@@ -7,7 +7,7 @@ comments: false
 <ul>
     <li class="active"><span>Home</span></li>
     <li><a href="vehicles/">Vehicles</a></li>
-    <li><a href="goodies/">Goodies</a></li>
+    <li><a href="goodies/">Merch</a></li>
 </ul>
 </nav>
 

@@ -10,7 +10,7 @@ jinja: true
 <ul>
     <li><a href="../">Home</a></li>
     <li class="active"><span>Vehicles</span></li>
-    <li><a href="../goodies/">Goodies</a></li>
+    <li><a href="../goodies/">Merch</a></li>
 </ul>
 </nav>
 

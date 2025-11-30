@@ -1,0 +1,14 @@
+thumbnailSize: 140
+items:
+  - url: https://www.redbubble.com/people/agateau/shop?artistUserName=agateau&asc=u&collections=4022553&iaCode=u-tees&sortOrder=top%20selling
+    name: T-Shirts
+    title: Fancy or classic T-Shirts
+    thumbnailPrefix: shop/tshirts-
+  - url: https://www.redbubble.com/people/agateau/shop?artistUserName=agateau&asc=u&collections=4022553&iaCode=all-stickers
+    name: Stickers
+    title: Stick Pixel Wheels everywhere!
+    thumbnailPrefix: shop/stickers-
+  - url: https://www.redbubble.com/people/agateau/shop?artistUserName=agateau&asc=u&collections=4022553&iaCode=u-accessories&sortOrder=top%20selling
+    name: Accessories
+    title: Caps, buttons, tote bags, hats, mouse pads and more!
+    thumbnailPrefix: shop/accessories-
