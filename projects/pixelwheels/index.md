@@ -17,6 +17,13 @@ Pixel Wheels is a top-down racing game for PC (Linux, macOS, Windows) and Androi
 
 Race for the first place on various tracks. Pick up bonuses to boost your position or slow down competitors!
 
+## Trailer
+
+<p class="full-width-video-16-9">
+<iframe src="https://www.youtube.com/embed/dfTI45BL1Vs?si=fhR8tEcR-ih09hJI" title="Pixel Wheels Trailer" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
+</iframe>
+</p>
+
 ## Gallery
 
 .. gallery::
