@@ -56,8 +56,6 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 
 ## Get it<a name="get-it"> </a>
 
-The game is not yet finished, but you can already play it.
-
 ### Pixel Wheels for PC (Linux, macOS, Windows)
 
 <a href="https://flathub.org/apps/details/com.agateau.PixelWheels" class="dl-button">Flathub</a>
