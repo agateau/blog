@@ -3,7 +3,7 @@ public: true
 pub_date: 2025-12-17 08:18:22 +01:00
 tags: [pixelwheels]
 title: Pixel Wheels 1.0 is finally out!
-mastodon:
+mastodon: https://mastodon.xyz/@agateau/115758931637646289
 ---
 
 In July I [announced Pixel Wheels 1.0 rc1][rc1] and wrote:
