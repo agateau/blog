@@ -64,7 +64,7 @@ Race for the first place on various tracks. Pick up bonuses to boost your positi
 ### Pixel Wheels for Android
 
 <a href="https://f-droid.org/packages/com.agateau.tinywheels.android/" class="dl-button">F-Droid</a>
-<a href="https://play.google.com/apps/testing/com.agateau.tinywheels.android" class="dl-button">Google Play</a>
+<a href="https://play.google.com/store/apps/details?id=com.agateau.tinywheels.android" class="dl-button">Google Play</a>
 <a href="https://agateau.itch.io/pixelwheels" class="dl-button">itch.io</a>
 
 Getting the game through F-Droid or Google Play is recommended to ensure you receive updates when new versions are released.

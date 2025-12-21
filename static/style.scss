@@ -508,6 +508,7 @@ dl-button
 
 --------------------------------------*/
 .dl-button {
+    display: inline-block;
     color: $buttonTextColor;
     padding: 12px;
     padding-bottom: 12px + 4px;
@@ -526,6 +527,15 @@ dl-button
     position: relative;
     top: 3px;
     box-shadow: inset 0 -1px 0 $buttonBevelColor;
+}
+
+/*--------------------------------------
+
+img.get-button
+
+--------------------------------------*/
+img.get-button {
+    display: inline-block;
 }
 
 /*--------------------------------------
@@ -703,3 +713,5 @@ Pixel Wheels merch
         grid-template-columns: repeat(3, 1fr);
     }
 }
+/* vi: sw=4 ts=4
+*/
