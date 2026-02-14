@@ -12,13 +12,13 @@ This is what it looks like:
 .. thumbimg :: git-gui-screenshot.png
     :alt: git gui screenshot
 
-Yes, it's indeed a bit ugly, thanks to it using tcl-tk, just like its most widely known brother, `gitk`.
+It's indeed a bit ugly, thanks to it using tcl-tk, just like its more widely known brother, `gitk`, but its capabilities makes it a pleasant tool to use.
 
-On the left side you can see two lists: the top list contains all your unstaged changes, the bottom list contains all your staged changes (ie: files which have been added with `git add`, or removed with `git rm`).
+On the left side you can see two lists: the top list contains all your unstaged changes, the bottom list contains all your staged changes (ie: files that have been added with `git add`, or removed with `git rm`).
 
-The right side, contains a large view which shows the change of the currently selected file and in the bottom a text area where you can enter your commit message as well as a few widgets to trigger different actions.
+The right side contains a large view that shows the change of the currently selected file and in the bottom a text area where you can enter your commit message as well as a few widgets to trigger different actions.
 
-How does one uses it? Easy: to stage a file to commit click on the icon of the file in the top-left side: the file disappears from the top list and appears in the bottom one. If you click on the name of the file, it gets selected, and you can see the changes in the main area.
+How does one uses it? Easy: to stage a file to commit click on the icon of the file in the top-left side: the file moves from the top list to the bottom one. If you click on the name of the file, it gets selected and you can see the changes in the main area.
 
 ## Why use `git gui` instead of the command line?
 
@@ -26,7 +26,7 @@ For a few reasons: first it provides an easy way to review your commits before t
 
 Second, and most importantly, it is much easier to do partial commits with `git gui`. Partial commits, if you are not familiar with this, is the ability to commit only parts of a file. This (slightly controversial) feature is useful to clean up a commit or to break a set of unrelated changes in separate commits. Often necessary when I land back on Earth after a frenzy coding session. It's also useful to split commits when doing an interactive rebase.
 
-The command-line way to do so is `git add -p`, but that is really tedious because it shows one hunk at a time, you don't have a global view of all the changes. With `git gui` you can just scroll the diff, just right-click on a change and select "Stage Hunk For Commit". If you change your mind, select the file in the Staged list, right click the staged hunk and select "Unstage Hunk From Commit".
+The command-line way to do so is `git add -p`, but that is really tedious because it shows one hunk at a time, you don't have a global view of all the changes. With `git gui` you can just scroll the diff, right-click on a change and select "Stage Hunk For Commit". If you change your mind, select the file in the Staged list, right click the staged hunk and select "Unstage Hunk From Commit".
 
 It's even better when you want to do finer grained commits and stage only lines: with `git add -p` you have to edit diffs. That is really not efficient and very error prone. This is where `git gui` really shines: select the lines you want to commit (either additions or removals), right click and select "Stage Lines For Commit". Done.
 
@@ -42,7 +42,7 @@ Here I remove a debug line after staging all changes:
 
 ## "But it's a graphical application, it can't be as fast as the command line!"
 
-It turns out that, at least for me, `git gui` is fast enough. It starts up instantly and has a set of shortcuts which makes it possible to do many operations without using the mouse. Here is the list of shortcuts I use most often:
+It turns out that, at least for me, `git gui` is fast enough. It starts up instantly and has a set of shortcuts that makes it possible to do many operations without using the mouse. Here is the list of shortcuts I use most often:
 
 - Ctrl+T/Ctrl+U: Stage/unstage selected file
 - Ctrl+I: Stage all files (asks if you want to add new files if there are any)
